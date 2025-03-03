@@ -1,0 +1,35 @@
+loop5: detected capacity change from 0 to 128
+------------[ cut here ]------------
+UBSAN: shift-out-of-bounds in fs/befs/super.c:96:9
+shift exponent 3229888891 is too large for 32-bit type 'int'
+CPU: 0 UID: 0 PID: 11637 Comm: syz.5.14 Not tainted 6.14.0-rc4 #1
+Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+Call Trace:
+ <TASK>
+ __dump_stack lib/dump_stack.c:94 [inline]
+ dump_stack_lvl+0x180/0x1b0 lib/dump_stack.c:120
+ ubsan_epilogue lib/ubsan.c:231 [inline]
+ __ubsan_handle_shift_out_of_bounds+0x1d2/0x350 lib/ubsan.c:468
+ befs_check_sb.cold+0x19/0x6f fs/befs/super.c:96
+ befs_fill_super+0x59f/0xcc0 fs/befs/linuxvfs.c:841
+ get_tree_bdev_flags+0x396/0x630 fs/super.c:1636
+ vfs_get_tree+0x93/0x350 fs/super.c:1814
+ do_new_mount+0x368/0x730 fs/namespace.c:3560
+ path_mount+0x4a6/0x17f0 fs/namespace.c:3887
+ do_mount fs/namespace.c:3900 [inline]
+ __do_sys_mount fs/namespace.c:4111 [inline]
+ __se_sys_mount fs/namespace.c:4088 [inline]
+ __x64_sys_mount+0x288/0x310 fs/namespace.c:4088
+ do_syscall_x64 arch/x86/entry/common.c:52 [inline]
+ do_syscall_64+0xcb/0x260 arch/x86/entry/common.c:83
+ entry_SYSCALL_64_after_hwframe+0x77/0x7f
+RIP: 0033:0x7fd3503ba41e
+Code: 48 c7 c0 ff ff ff ff eb aa e8 5e 20 00 00 66 2e 0f 1f 84 00 00 00 00 00 0f 1f 40 00 f3 0f 1e fa 49 89 ca b8 a5 00 00 00 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 c7 c1 a8 ff ff ff f7 d8 64 89 01 48
+RSP: 002b:00007fd35120dda8 EFLAGS: 00000246 ORIG_RAX: 00000000000000a5
+RAX: ffffffffffffffda RBX: 0000000000009e24 RCX: 00007fd3503ba41e
+RDX: 0000400000000100 RSI: 0000400000009e40 RDI: 00007fd35120de00
+RBP: 00007fd35120de40 R08: 00007fd35120de40 R09: 0000000003008001
+R10: 0000000003008001 R11: 0000000000000246 R12: 0000400000000100
+R13: 0000400000009e40 R14: 00007fd35120de00 R15: 00004000000001c0
+ </TASK>
+---[ end trace ]---
