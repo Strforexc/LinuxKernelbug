@@ -1,0 +1,384 @@
+Warning: Permanently added '[localhost]:41406' (ED25519) to the list of known hosts.
+executing program
+syzkaller login: [   60.632758][ T9404] loop0: detected capacity change from 0 to 32768
+[   60.656385][ T9404] gfs2: fsid=syz:syz: Trying to join cluster "lock_nolock", "syz:syz"
+[   60.657207][ T9404] gfs2: fsid=syz:syz: Now mounting FS (format 1801)...
+[   60.667842][ T9404] gfs2: fsid=syz:syz.0: journal 0 mapped with 4 extents in 0ms
+[   60.669685][  T786] gfs2: fsid=syz:syz.0: jid=0, already locked for use
+[   60.670371][  T786] gfs2: fsid=syz:syz.0: jid=0: Looking at journal...
+[   60.771723][  T786] gfs2: fsid=syz:syz.0: jid=0: Journal head lookup took 101ms
+[   60.774754][  T786] gfs2: fsid=syz:syz.0: jid=0: Done
+[   60.775601][ T9404] gfs2: fsid=syz:syz.0: first mount done, others may mount
+[   60.952748][ T9404] gfs2: fsid=syz:syz.0: found 1 quota changes
+[   61.009367][ T9404] syz-executor946: attempt to access beyond end of device
+[   61.009367][ T9404] loop0: rw=1, sector=131324, nr_sectors = 4 limit=32768
+[   61.012094][ T9404] gfs2: fsid=syz:syz.0: Error 10 writing to journal, jid=0
+[   61.015043][ T9435] gfs2: fsid=syz:syz.0: about to withdraw this file system
+[   66.034918][ T9435] gfs2: fsid=syz:syz.0: Journal recovery skipped for jid 0 until next mount.
+[   66.036532][ T9435] gfs2: fsid=syz:syz.0: Glock dequeues delayed: 0
+[   66.040881][ T9435] gfs2: fsid=syz:syz.0: File system withdrawn
+[   66.042065][ T9435] CPU: 0 UID: 0 PID: 9435 Comm: gfs2_logd/syz:s Not tainted 6.14.0-rc4 #1
+[   66.042099][ T9435] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   66.042115][ T9435] Call Trace:
+[   66.042126][ T9435]  <TASK>
+[   66.042138][ T9435]  dump_stack_lvl+0x180/0x1b0
+[   66.044459][ T9435]  gfs2_withdraw+0x300/0x520
+[   66.045280][ T9435]  ? __pfx_gfs2_withdraw+0x10/0x10
+[   66.045315][ T9435]  ? _raw_spin_unlock_irqrestore+0x5e/0x80
+[   66.045376][ T9435]  gfs2_logd+0xcf3/0xf10
+[   66.045421][ T9435]  ? __pfx_gfs2_logd+0x10/0x10
+[   66.045451][ T9435]  ? _raw_spin_unlock_irqrestore+0x5e/0x80
+[   66.045489][ T9435]  ? __pfx_autoremove_wake_function+0x10/0x10
+[   66.045533][ T9435]  ? __kthread_parkme+0x157/0x240
+[   66.045581][ T9435]  ? __pfx_gfs2_logd+0x10/0x10
+[   66.045613][ T9435]  kthread+0x3b3/0x760
+[   66.045647][ T9435]  ? __pfx_kthread+0x10/0x10
+[   66.045684][ T9435]  ? _raw_spin_unlock_irq+0x23/0x60
+[   66.045719][ T9435]  ? __pfx_kthread+0x10/0x10
+[   66.045752][ T9435]  ret_from_fork+0x48/0x80
+[   66.045797][ T9435]  ? __pfx_kthread+0x10/0x10
+[   66.045831][ T9435]  ret_from_fork_asm+0x1a/0x30
+[   66.045885][ T9435]  </TASK>
+[   66.065427][ T9404] ==================================================================
+[   66.066971][ T9404] BUG: KASAN: slab-use-after-free in gfs2_discard+0x2ed/0x360
+[   66.068427][ T9404] Read of size 8 at addr ffff888000a97168 by task syz-executor946/9404
+[   66.070077][ T9404] 
+[   66.070979][ T9404] CPU: 0 UID: 0 PID: 9404 Comm: syz-executor946 Not tainted 6.14.0-rc4 #1
+[   66.071014][ T9404] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   66.071032][ T9404] Call Trace:
+[   66.071044][ T9404]  <TASK>
+[   66.071056][ T9404]  dump_stack_lvl+0x116/0x1b0
+[   66.071096][ T9404]  print_address_description.constprop.0+0x2c/0x420
+[   66.071143][ T9404]  ? gfs2_discard+0x2ed/0x360
+[   66.071184][ T9404]  print_report+0xaa/0x270
+[   66.071223][ T9404]  ? gfs2_discard+0x2ed/0x360
+[   66.071263][ T9404]  ? kasan_addr_to_slab+0x27/0x80
+[   66.071300][ T9404]  ? gfs2_discard+0x2ed/0x360
+[   66.071353][ T9404]  kasan_report+0xbd/0x100
+[   66.071397][ T9404]  ? gfs2_discard+0x2ed/0x360
+[   66.071445][ T9404]  gfs2_discard+0x2ed/0x360
+[   66.071484][ T9404]  ? __pfx_truncate_folio_batch_exceptionals+0x10/0x10
+[   66.071534][ T9404]  gfs2_invalidate_folio+0x210/0x490
+[   66.071579][ T9404]  ? __pfx_gfs2_invalidate_folio+0x10/0x10
+[   66.071625][ T9404]  truncate_cleanup_folio+0x2ea/0x480
+[   66.071669][ T9404]  truncate_inode_pages_range+0x214/0xe20
+[   66.071721][ T9404]  ? __pfx_truncate_inode_pages_range+0x10/0x10
+[   66.071767][ T9404]  ? hlock_class+0x4e/0x140
+[   66.071799][ T9404]  ? validate_chain+0x145/0x9c0
+[   66.071848][ T9404]  ? __pfx_validate_chain+0x10/0x10
+[   66.071890][ T9404]  ? hlock_class+0x4e/0x140
+[   66.071920][ T9404]  ? mark_lock+0x38/0x400
+[   66.071964][ T9404]  ? __lock_acquire+0xb97/0x16a0
+[   66.072012][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   66.072059][ T9404]  ? find_held_lock+0x2d/0x120
+[   66.072093][ T9404]  ? __lock_release+0x103/0x470
+[   66.072136][ T9404]  ? truncate_inode_pages_final+0x63/0x90
+[   66.072180][ T9404]  ? __pfx___lock_release+0x10/0x10
+[   66.072225][ T9404]  ? hlock_class+0x4e/0x140
+[   66.072255][ T9404]  ? mark_lock+0x38/0x400
+[   66.072299][ T9404]  ? mark_held_locks+0x9f/0xf0
+[   66.072353][ T9404]  ? _raw_spin_unlock_irq+0x23/0x60
+[   66.072392][ T9404]  ? lockdep_hardirqs_on+0x7c/0x120
+[   66.072437][ T9404]  gfs2_evict_inode+0x32b/0xcb0
+[   66.072477][ T9404]  ? __lock_release+0x103/0x470
+[   66.072520][ T9404]  ? __pfx_gfs2_evict_inode+0x10/0x10
+[   66.072563][ T9404]  ? evict+0x3af/0x940
+[   66.072591][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   66.072639][ T9404]  ? __pfx_gfs2_evict_inode+0x10/0x10
+[   66.072680][ T9404]  evict+0x3f2/0x940
+[   66.072707][ T9404]  ? iput_final+0x326/0x4b0
+[   66.072738][ T9404]  ? __pfx_evict+0x10/0x10
+[   66.072766][ T9404]  ? __pfx_lock_acquire+0x10/0x10
+[   66.072812][ T9404]  ? iput_final+0x326/0x4b0
+[   66.072843][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   66.072892][ T9404]  iput_final+0x32e/0x4b0
+[   66.072921][ T9404]  ? __pfx_gfs2_drop_inode+0x10/0x10
+[   66.072963][ T9404]  iput+0x185/0x1c0
+[   66.072995][ T9404]  gfs2_put_super+0x2b5/0x750
+[   66.073039][ T9404]  ? __pfx_gfs2_put_super+0x10/0x10
+[   66.073084][ T9404]  generic_shutdown_super+0x156/0x390
+[   66.073137][ T9404]  kill_block_super+0x3b/0x90
+[   66.073167][ T9404]  gfs2_kill_sb+0x380/0x430
+[   66.073202][ T9404]  deactivate_locked_super+0xbb/0x140
+[   66.073236][ T9404]  deactivate_super+0xb1/0xd0
+[   66.073269][ T9404]  cleanup_mnt+0x2df/0x430
+[   66.073311][ T9404]  task_work_run+0x16c/0x270
+[   66.073361][ T9404]  ? __pfx_task_work_run+0x10/0x10
+[   66.073397][ T9404]  ? switch_task_namespaces+0xe2/0x100
+[   66.073451][ T9404]  do_exit+0x8ba/0x1110
+[   66.073497][ T9404]  ? __pfx_do_exit+0x10/0x10
+[   66.073544][ T9404]  ? _raw_spin_unlock_irq+0x23/0x60
+[   66.073586][ T9404]  do_group_exit+0xd3/0x2a0
+[   66.073633][ T9404]  __x64_sys_exit_group+0x3e/0x50
+[   66.073681][ T9404]  x64_sys_call+0xf6a/0x1890
+[   66.073714][ T9404]  do_syscall_64+0xcb/0x260
+[   66.073755][ T9404]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   66.073796][ T9404] RIP: 0033:0x7f8933783011
+[   66.073820][ T9404] Code: Unable to access opcode bytes at 0x7f8933782fe7.
+[   66.073833][ T9404] RSP: 002b:00007ffd19fd8b88 EFLAGS: 00000246 ORIG_RAX: 00000000000000e7
+[   66.073863][ T9404] RAX: ffffffffffffffda RBX: 00007f89338281b0 RCX: 00007f8933783011
+[   66.073883][ T9404] RDX: 000000000000003c RSI: 00000000000000e7 RDI: 0000000000000001
+[   66.073902][ T9404] RBP: 0000000000000001 R08: ffffffffffffffb8 R09: 000000000001f6db
+[   66.073921][ T9404] R10: 0000000000000000 R11: 0000000000000246 R12: 00007f89338281b0
+[   66.073940][ T9404] R13: 0000000000000000 R14: 00007f8933828f40 R15: 00007f89337383c0
+[   66.073971][ T9404]  </TASK>
+[   66.073981][ T9404] 
+[   66.131144][ T9404] Allocated by task 9404:
+[   66.131509][ T9404]  kasan_save_stack+0x24/0x50
+[   66.131954][ T9404]  kasan_save_track+0x14/0x40
+[   66.132374][ T9404]  __kasan_slab_alloc+0x97/0xa0
+[   66.132793][ T9404]  kmem_cache_alloc_noprof+0x167/0x400
+[   66.133267][ T9404]  gfs2_trans_add_data+0x4bf/0x800
+[   66.133700][ T9404]  gfs2_unstuffer_folio+0x1d5/0x930
+[   66.134165][ T9404]  __gfs2_unstuff_inode+0x392/0x750
+[   66.134667][ T9404]  gfs2_unstuff_dinode+0xb5/0x1b0
+[   66.135285][ T9404]  gfs2_adjust_quota+0x10c/0xc00
+[   66.135876][ T9404]  do_sync+0xb17/0xe90
+[   66.136365][ T9404]  gfs2_quota_sync+0x31f/0x540
+[   66.136981][ T9404]  gfs2_sync_fs+0x44/0xc0
+[   66.137581][ T9404]  sync_filesystem+0x116/0x2a0
+[   66.138218][ T9404]  generic_shutdown_super+0x74/0x390
+[   66.138936][ T9404]  kill_block_super+0x3b/0x90
+[   66.139577][ T9404]  gfs2_kill_sb+0x380/0x430
+[   66.140205][ T9404]  deactivate_locked_super+0xbb/0x140
+[   66.140946][ T9404]  deactivate_super+0xb1/0xd0
+[   66.141556][ T9404]  cleanup_mnt+0x2df/0x430
+[   66.142150][ T9404]  task_work_run+0x16c/0x270
+[   66.142811][ T9404]  do_exit+0x8ba/0x1110
+[   66.143386][ T9404]  do_group_exit+0xd3/0x2a0
+[   66.144044][ T9404]  __x64_sys_exit_group+0x3e/0x50
+[   66.144759][ T9404]  x64_sys_call+0xf6a/0x1890
+[   66.145405][ T9404]  do_syscall_64+0xcb/0x260
+[   66.146080][ T9404]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   66.146898][ T9404] 
+[   66.147221][ T9404] Freed by task 9404:
+[   66.147743][ T9404]  kasan_save_stack+0x24/0x50
+[   66.148372][ T9404]  kasan_save_track+0x14/0x40
+[   66.148874][ T9404]  kasan_save_free_info+0x3b/0x80
+[   66.149297][ T9404]  __kasan_slab_free+0x54/0x80
+[   66.149699][ T9404]  kmem_cache_free+0x134/0x400
+[   66.150097][ T9404]  gfs2_log_flush+0x1647/0x2990
+[   66.150532][ T9404]  do_sync+0x5cc/0xe90
+[   66.150897][ T9404]  gfs2_quota_sync+0x31f/0x540
+[   66.151384][ T9404]  gfs2_sync_fs+0x44/0xc0
+[   66.151758][ T9404]  sync_filesystem+0x116/0x2a0
+[   66.152170][ T9404]  generic_shutdown_super+0x74/0x390
+[   66.152644][ T9404]  kill_block_super+0x3b/0x90
+[   66.153058][ T9404]  gfs2_kill_sb+0x380/0x430
+[   66.153458][ T9404]  deactivate_locked_super+0xbb/0x140
+[   66.153940][ T9404]  deactivate_super+0xb1/0xd0
+[   66.154348][ T9404]  cleanup_mnt+0x2df/0x430
+[   66.154897][ T9404]  task_work_run+0x16c/0x270
+[   66.155526][ T9404]  do_exit+0x8ba/0x1110
+[   66.156104][ T9404]  do_group_exit+0xd3/0x2a0
+[   66.156769][ T9404]  __x64_sys_exit_group+0x3e/0x50
+[   66.157495][ T9404]  x64_sys_call+0xf6a/0x1890
+[   66.158148][ T9404]  do_syscall_64+0xcb/0x260
+[   66.158777][ T9404]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   66.159571][ T9404] 
+[   66.159895][ T9404] The buggy address belongs to the object at ffff888000a97150
+[   66.159895][ T9404]  which belongs to the cache gfs2_bufdata of size 80
+[   66.161438][ T9404] The buggy address is located 24 bytes inside of
+[   66.161438][ T9404]  freed 80-byte region [ffff888000a97150, ffff888000a971a0)
+[   66.162611][ T9404] 
+[   66.162831][ T9404] The buggy address belongs to the physical page:
+[   66.163429][ T9404] page: refcount:0 mapcount:0 mapping:0000000000000000 index:0x0 pfn:0xa97
+[   66.164231][ T9404] flags: 0x7ff00000000000(node=0|zone=0|lastcpupid=0x7ff)
+[   66.165030][ T9404] page_type: f5(slab)
+[   66.165599][ T9404] raw: 007ff00000000000 ffff88801f30e3c0 dead000000000122 0000000000000000
+[   66.166755][ T9404] raw: 0000000000000000 0000000080240024 00000000f5000000 0000000000000000
+[   66.167850][ T9404] page dumped because: kasan: bad access detected
+[   66.168667][ T9404] page_owner tracks the page as allocated
+[   66.169166][ T9404] page last allocated via order 0, migratetype Unmovable, gfp_mask 0x52c40(GFP_NOFS|__GFP_NOWARN|__GFP_NORETRY|__GFP_COMP), pid 9404, tgid 9404 (syz-executor946), ts 61002915736, free_ts 60421766963
+[   66.170830][ T9404]  post_alloc_hook+0x1a3/0x1d0
+[   66.171239][ T9404]  get_page_from_freelist+0x8a5/0xfa0
+[   66.171734][ T9404]  __alloc_frozen_pages_noprof+0x1d8/0x3b0
+[   66.172239][ T9404]  alloc_pages_mpol+0x1f2/0x550
+[   66.172664][ T9404]  allocate_slab+0x229/0x310
+[   66.173054][ T9404]  ___slab_alloc+0x7f3/0x12b0
+[   66.173457][ T9404]  __slab_alloc.constprop.0+0x56/0xc0
+[   66.174009][ T9404]  kmem_cache_alloc_noprof+0x275/0x400
+[   66.174552][ T9404]  gfs2_trans_add_meta+0x863/0xce0
+[   66.175244][ T9404]  gfs2_alloc_blocks+0x41b/0x1870
+[   66.175938][ T9404]  __gfs2_unstuff_inode+0x33c/0x750
+[   66.176635][ T9404]  gfs2_unstuff_dinode+0xb5/0x1b0
+[   66.177324][ T9404]  gfs2_adjust_quota+0x10c/0xc00
+[   66.178003][ T9404]  do_sync+0xb17/0xe90
+[   66.178592][ T9404]  gfs2_quota_sync+0x31f/0x540
+[   66.179266][ T9404]  gfs2_sync_fs+0x44/0xc0
+[   66.179888][ T9404] page last free pid 9427 tgid 9427 stack trace:
+[   66.180743][ T9404]  free_frozen_pages+0x71f/0xff0
+[   66.181413][ T9404]  __put_partials+0x13b/0x190
+[   66.181929][ T9404]  qlist_free_all+0x50/0x130
+[   66.182359][ T9404]  kasan_quarantine_reduce+0x1a5/0x1f0
+[   66.182842][ T9404]  __kasan_slab_alloc+0x6f/0xa0
+[   66.183278][ T9404]  kmem_cache_alloc_noprof+0x167/0x400
+[   66.183802][ T9404]  getname_flags+0xd2/0x620
+[   66.184200][ T9404]  do_sys_openat2+0xf2/0x1d0
+[   66.184646][ T9404]  __x64_sys_openat+0x140/0x200
+[   66.185279][ T9404]  do_syscall_64+0xcb/0x260
+[   66.185875][ T9404]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   66.186719][ T9404] 
+[   66.187057][ T9404] Memory state around the buggy address:
+[   66.187827][ T9404]  ffff888000a97000: fa fb fb fb fb fb fb fb fb fb fc fc fc fc fa fb
+[   66.188886][ T9404]  ffff888000a97080: fb fb fb fb fb fb fb fb fc fc fc fc fa fb fb fb
+[   66.189949][ T9404] >ffff888000a97100: fb fb fb fb fb fb fc fc fc fc fa fb fb fb fb fb
+[   66.190966][ T9404]                                                           ^
+[   66.191644][ T9404]  ffff888000a97180: fb fb fb fb fc fc fc fc fc fc fc fc fc fc fc fc
+[   66.192337][ T9404]  ffff888000a97200: fc fc fc fc fc fc fc fc fc fc fc fc fc fc fc fc
+[   66.193025][ T9404] ==================================================================
+[   66.193892][ T9404] Kernel panic - not syncing: KASAN: panic_on_warn set ...
+[   66.194583][ T9404] CPU: 0 UID: 0 PID: 9404 Comm: syz-executor946 Not tainted 6.14.0-rc4 #1
+[   66.195704][ T9404] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   66.196938][ T9404] Call Trace:
+[   66.197405][ T9404]  <TASK>
+[   66.197814][ T9404]  dump_stack_lvl+0x3d/0x1b0
+[   66.198466][ T9404]  panic+0x6d5/0x790
+[   66.199011][ T9404]  ? mark_held_locks+0x9f/0xf0
+[   66.199662][ T9404]  ? __pfx_panic+0x10/0x10
+[   66.200272][ T9404]  ? irqentry_exit+0x3b/0xa0
+[   66.200844][ T9404]  ? lockdep_hardirqs_on+0x7c/0x120
+[   66.201301][ T9404]  ? gfs2_discard+0x2ed/0x360
+[   66.201719][ T9404]  ? gfs2_discard+0x2ed/0x360
+[   66.202161][ T9404]  check_panic_on_warn+0xb1/0xc0
+[   66.202607][ T9404]  ? gfs2_discard+0x2ed/0x360
+[   66.203015][ T9404]  end_report+0x83/0xa0
+[   66.203393][ T9404]  kasan_report+0xcd/0x100
+[   66.203782][ T9404]  ? gfs2_discard+0x2ed/0x360
+[   66.204182][ T9404]  gfs2_discard+0x2ed/0x360
+[   66.204613][ T9404]  ? __pfx_truncate_folio_batch_exceptionals+0x10/0x10
+[   66.205542][ T9404]  gfs2_invalidate_folio+0x210/0x490
+[   66.206277][ T9404]  ? __pfx_gfs2_invalidate_folio+0x10/0x10
+[   66.207087][ T9404]  truncate_cleanup_folio+0x2ea/0x480
+[   66.207848][ T9404]  truncate_inode_pages_range+0x214/0xe20
+[   66.208651][ T9404]  ? __pfx_truncate_inode_pages_range+0x10/0x10
+[   66.209281][ T9404]  ? hlock_class+0x4e/0x140
+[   66.209712][ T9404]  ? validate_chain+0x145/0x9c0
+[   66.210171][ T9404]  ? __pfx_validate_chain+0x10/0x10
+[   66.210659][ T9404]  ? hlock_class+0x4e/0x140
+[   66.211077][ T9404]  ? mark_lock+0x38/0x400
+[   66.211501][ T9404]  ? __lock_acquire+0xb97/0x16a0
+[   66.211933][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   66.212416][ T9404]  ? find_held_lock+0x2d/0x120
+[   66.212841][ T9404]  ? __lock_release+0x103/0x470
+[   66.213249][ T9404]  ? truncate_inode_pages_final+0x63/0x90
+[   66.213767][ T9404]  ? __pfx___lock_release+0x10/0x10
+[   66.214200][ T9404]  ? hlock_class+0x4e/0x140
+[   66.214634][ T9404]  ? mark_lock+0x38/0x400
+[   66.215162][ T9404]  ? mark_held_locks+0x9f/0xf0
+[   66.215852][ T9404]  ? _raw_spin_unlock_irq+0x23/0x60
+[   66.216578][ T9404]  ? lockdep_hardirqs_on+0x7c/0x120
+[   66.217288][ T9404]  gfs2_evict_inode+0x32b/0xcb0
+[   66.217967][ T9404]  ? __lock_release+0x103/0x470
+[   66.218653][ T9404]  ? __pfx_gfs2_evict_inode+0x10/0x10
+[   66.219404][ T9404]  ? evict+0x3af/0x940
+[   66.219965][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   66.220548][ T9404]  ? __pfx_gfs2_evict_inode+0x10/0x10
+[   66.221010][ T9404]  evict+0x3f2/0x940
+[   66.221378][ T9404]  ? iput_final+0x326/0x4b0
+[   66.221791][ T9404]  ? __pfx_evict+0x10/0x10
+[   66.222199][ T9404]  ? __pfx_lock_acquire+0x10/0x10
+[   66.222655][ T9404]  ? iput_final+0x326/0x4b0
+[   66.223057][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   66.223485][ T9404]  iput_final+0x32e/0x4b0
+[   66.223843][ T9404]  ? __pfx_gfs2_drop_inode+0x10/0x10
+[   66.224287][ T9404]  iput+0x185/0x1c0
+[   66.224690][ T9404]  gfs2_put_super+0x2b5/0x750
+[   66.225122][ T9404]  ? __pfx_gfs2_put_super+0x10/0x10
+[   66.225611][ T9404]  generic_shutdown_super+0x156/0x390
+[   66.226102][ T9404]  kill_block_super+0x3b/0x90
+[   66.226545][ T9404]  gfs2_kill_sb+0x380/0x430
+[   66.226958][ T9404]  deactivate_locked_super+0xbb/0x140
+[   66.227454][ T9404]  deactivate_super+0xb1/0xd0
+[   66.227877][ T9404]  cleanup_mnt+0x2df/0x430
+[   66.228274][ T9404]  task_work_run+0x16c/0x270
+[   66.228705][ T9404]  ? __pfx_task_work_run+0x10/0x10
+[   66.229147][ T9404]  ? switch_task_namespaces+0xe2/0x100
+[   66.229668][ T9404]  do_exit+0x8ba/0x1110
+[   66.230043][ T9404]  ? __pfx_do_exit+0x10/0x10
+[   66.230461][ T9404]  ? _raw_spin_unlock_irq+0x23/0x60
+[   66.230913][ T9404]  do_group_exit+0xd3/0x2a0
+[   66.231318][ T9404]  __x64_sys_exit_group+0x3e/0x50
+[   66.231778][ T9404]  x64_sys_call+0xf6a/0x1890
+[   66.232194][ T9404]  do_syscall_64+0xcb/0x260
+[   66.232612][ T9404]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   66.233148][ T9404] RIP: 0033:0x7f8933783011
+[   66.233592][ T9404] Code: Unable to access opcode bytes at 0x7f8933782fe7.
+[   66.234216][ T9404] RSP: 002b:00007ffd19fd8b88 EFLAGS: 00000246 ORIG_RAX: 00000000000000e7
+[   66.234963][ T9404] RAX: ffffffffffffffda RBX: 00007f89338281b0 RCX: 00007f8933783011
+[   66.235659][ T9404] RDX: 000000000000003c RSI: 00000000000000e7 RDI: 0000000000000001
+[   66.236324][ T9404] RBP: 0000000000000001 R08: ffffffffffffffb8 R09: 000000000001f6db
+[   66.237013][ T9404] R10: 0000000000000000 R11: 0000000000000246 R12: 00007f89338281b0
+[   66.237655][ T9404] R13: 0000000000000000 R14: 00007f8933828f40 R15: 00007f89337383c0
+[   66.238381][ T9404]  </TASK>
+[   66.238782][ T9404] Kernel Offset: disabled
+[   66.239173][ T9404] Rebooting in 86400 seconds..
+
+VM DIAGNOSIS:
+10:48:33  Registers:
+info registers vcpu 0
+RAX=0000000000000020 RBX=00000000000003f8 RCX=0000000000000000 RDX=00000000000003f8
+RSI=0000000000000000 RDI=ffffffff9b037a00 RBP=ffffffff9b0379c0 RSP=ffffc90002536f68
+R8 =0000000000000000 R9 =0000000000000000 R10=0000000000000000 R11=0000000000000000
+R12=0000000000000000 R13=0000000000000020 R14=ffffffff9b0379c0 R15=0000000000000000
+RIP=ffffffff8540d9bf RFL=00000002 [-------] CPL=0 II=0 A20=1 SMM=0 HLT=0
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 00005555676903c0 ffffffff 00c00000
+GS =0000 ffff88802b600000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe0000003000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000001000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=000055e384319000 CR3=0000000027da0000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=0000000000000000 0000000000000000 XMM01=0000000000000000 0000000000000000
+XMM02=0000000000000000 0000000000000000 XMM03=0000000000000000 0000000000000000
+XMM04=0000000000000000 00000000000000ff XMM05=75665f656b61775f 65766f6d65726f74
+XMM06=75615f7866705f5f 203f20205d353334 XMM07=3954205b5d393834 3534302e36362020
+XMM08=676f6c2f62696c2f 7261762f223d656d XMM09=ffff0000000000ff 000000000000ffff
+XMM10=0000000000000000 0000000000000000 XMM11=ffff000000000000 00000000000000ff
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000
+info registers vcpu 1
+RAX=dffffc0000000000 RBX=ffff88802141ca80 RCX=0000000000000000 RDX=1ffff11008c6a7f8
+RSI=0000000000000000 RDI=ffff888046353fc0 RBP=0000000000000000 RSP=ffffc90001f67ef8
+R8 =0000000000000000 R9 =0000000000000000 R10=0000000000000000 R11=0000000000000000
+R12=ffff888046353980 R13=0000000000000001 R14=0000000000000000 R15=0000000000000000
+RIP=ffffffff8187ab9d RFL=00000246 [---Z-P-] CPL=0 II=0 A20=1 SMM=0 HLT=0
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 00007f7cf461c900 ffffffff 00c00000
+GS =0000 ffff88807ee00000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe000004a000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000048000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=00007f7cf2c30030 CR3=0000000045a62000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=0000000000000000 0000000000000000 XMM01=59b918e766459db3 a848527be7a7d1ca
+XMM02=000000000022fca0 ac8bc31478ec8511 XMM03=000000000022ff80 a1d511be26f162ba
+XMM04=5837fe9dc1c91f32 00000000000ae618 XMM05=8a291f9160c593b3 000000000022ff80
+XMM06=a1d511be26f162ba 000000000022fca0 XMM07=ac8bc31478ec8511 00000000000b0c58
+XMM08=d3fdd5f48436fbd7 00000000000aeac0 XMM09=ffffffffffff00ff ff00ff0000000000
+XMM10=0000000000000000 0000000000000000 XMM11=ffffffffffffffff ffffffffffffffff
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000
