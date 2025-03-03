@@ -1,0 +1,873 @@
+Warning: Permanently added '[localhost]:65293' (ED25519) to the list of known hosts.
+2025/03/02 19:51:21 ignoring optional flag "sandboxArg"="0"
+2025/03/02 19:51:22 parsed 1 programs
+syzkaller login: [   93.365713][ T9422] cgroup: Unknown subsys name 'net'
+[   93.471296][ T9422] cgroup: Unknown subsys name 'cpuset'
+[   93.478926][ T9422] cgroup: Unknown subsys name 'rlimit'
+[   97.162800][ T9422] Adding 124996k swap on ./swap-file.  Priority:0 extents:1 across:124996k 
+[   99.776363][   T69] wlan0: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[   99.777140][   T69] wlan0: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[   99.935729][   T28] wlan1: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[   99.936460][   T28] wlan1: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[  100.052993][ T9444] chnl_net:caif_netlink_parms(): no params data found
+[  100.170638][   T57] Bluetooth: hci0: unexpected cc 0x0c03 length: 249 > 1
+[  100.178065][   T57] Bluetooth: hci0: unexpected cc 0x1003 length: 249 > 9
+[  100.188069][   T57] Bluetooth: hci0: unexpected cc 0x1001 length: 249 > 9
+[  100.189905][   T57] Bluetooth: hci0: unexpected cc 0x0c23 length: 249 > 4
+[  100.190829][   T57] Bluetooth: hci0: unexpected cc 0x0c25 length: 249 > 3
+[  100.191573][   T57] Bluetooth: hci0: unexpected cc 0x0c38 length: 249 > 2
+[  100.585268][ T9444] bridge0: port 1(bridge_slave_0) entered blocking state
+[  100.586529][ T9444] bridge0: port 1(bridge_slave_0) entered disabled state
+[  100.587254][ T9444] bridge_slave_0: entered allmulticast mode
+[  100.588417][ T9444] bridge_slave_0: entered promiscuous mode
+[  100.603158][ T9444] bridge0: port 2(bridge_slave_1) entered blocking state
+[  100.603833][ T9444] bridge0: port 2(bridge_slave_1) entered disabled state
+[  100.604500][ T9444] bridge_slave_1: entered allmulticast mode
+[  100.605710][ T9444] bridge_slave_1: entered promiscuous mode
+[  100.674196][ T9444] bond0: (slave bond_slave_0): Enslaving as an active interface with an up link
+[  100.676556][ T9444] bond0: (slave bond_slave_1): Enslaving as an active interface with an up link
+[  100.957521][ T9444] team0: Port device team_slave_0 added
+[  100.980059][ T9444] team0: Port device team_slave_1 added
+[  101.104161][ T9444] batman_adv: batadv0: Adding interface: batadv_slave_0
+[  101.105463][ T9444] batman_adv: batadv0: The MTU of interface batadv_slave_0 is too small (1500) to handle the transport of batman-adv packets. Packets going over this interface will be fragmented on layer2 which could impact the performance. Setting the MTU to 1560 would solve the problem.
+[  101.115050][ T9444] batman_adv: batadv0: Not using interface batadv_slave_0 (retrying later): interface not active
+[  101.129862][ T9444] batman_adv: batadv0: Adding interface: batadv_slave_1
+[  101.130493][ T9444] batman_adv: batadv0: The MTU of interface batadv_slave_1 is too small (1500) to handle the transport of batman-adv packets. Packets going over this interface will be fragmented on layer2 which could impact the performance. Setting the MTU to 1560 would solve the problem.
+[  101.132603][ T9444] batman_adv: batadv0: Not using interface batadv_slave_1 (retrying later): interface not active
+[  101.235835][ T9444] hsr_slave_0: entered promiscuous mode
+[  101.236827][ T9444] hsr_slave_1: entered promiscuous mode
+[  101.507074][ T9444] netdevsim netdevsim3 netdevsim0: renamed from eth0
+[  101.517605][ T9444] netdevsim netdevsim3 netdevsim1: renamed from eth1
+[  101.520183][ T9444] netdevsim netdevsim3 netdevsim2: renamed from eth2
+[  101.525942][ T9444] netdevsim netdevsim3 netdevsim3: renamed from eth3
+[  101.646977][ T9444] 8021q: adding VLAN 0 to HW filter on device bond0
+[  101.672762][ T9444] 8021q: adding VLAN 0 to HW filter on device team0
+[  101.689781][ T1124] bridge0: port 1(bridge_slave_0) entered blocking state
+[  101.690565][ T1124] bridge0: port 1(bridge_slave_0) entered forwarding state
+[  101.698433][ T1124] bridge0: port 2(bridge_slave_1) entered blocking state
+[  101.699086][ T1124] bridge0: port 2(bridge_slave_1) entered forwarding state
+[  101.817263][ T9444] 8021q: adding VLAN 0 to HW filter on device batadv0
+[  101.841926][ T9444] veth0_vlan: entered promiscuous mode
+[  101.847710][ T9444] veth1_vlan: entered promiscuous mode
+[  101.860092][ T9444] veth0_macvtap: entered promiscuous mode
+[  101.862485][ T9444] veth1_macvtap: entered promiscuous mode
+[  101.869944][ T9444] batman_adv: batadv0: Interface activated: batadv_slave_0
+[  101.874327][ T9444] batman_adv: batadv0: Interface activated: batadv_slave_1
+[  101.877539][ T9444] netdevsim netdevsim3 netdevsim0: set [1, 0] type 2 family 0 port 6081 - 0
+[  101.878395][ T9444] netdevsim netdevsim3 netdevsim1: set [1, 0] type 2 family 0 port 6081 - 0
+[  101.879155][ T9444] netdevsim netdevsim3 netdevsim2: set [1, 0] type 2 family 0 port 6081 - 0
+[  101.879875][ T9444] netdevsim netdevsim3 netdevsim3: set [1, 0] type 2 family 0 port 6081 - 0
+2025/03/02 19:51:33 executed programs: 0
+[  102.044257][ T5149] Bluetooth: hci1: unexpected cc 0x0c03 length: 249 > 1
+[  102.046092][ T5149] Bluetooth: hci1: unexpected cc 0x1003 length: 249 > 9
+[  102.047016][ T5149] Bluetooth: hci1: unexpected cc 0x1001 length: 249 > 9
+[  102.048298][ T5149] Bluetooth: hci1: unexpected cc 0x0c23 length: 249 > 4
+[  102.049212][ T5149] Bluetooth: hci1: unexpected cc 0x0c25 length: 249 > 3
+[  102.050040][ T5149] Bluetooth: hci1: unexpected cc 0x0c38 length: 249 > 2
+[  102.162326][ T9749] Bluetooth: hci3: unexpected cc 0x0c03 length: 249 > 1
+[  102.166928][ T9749] Bluetooth: hci2: unexpected cc 0x0c03 length: 249 > 1
+[  102.169030][ T9749] Bluetooth: hci3: unexpected cc 0x1003 length: 249 > 9
+[  102.170511][T10223] Bluetooth: hci2: unexpected cc 0x1003 length: 249 > 9
+[  102.171541][T10223] Bluetooth: hci3: unexpected cc 0x1001 length: 249 > 9
+[  102.172995][T10223] Bluetooth: hci3: unexpected cc 0x0c23 length: 249 > 4
+[  102.173902][T10223] Bluetooth: hci3: unexpected cc 0x0c25 length: 249 > 3
+[  102.174699][T10223] Bluetooth: hci3: unexpected cc 0x0c38 length: 249 > 2
+[  102.175938][T10223] Bluetooth: hci2: unexpected cc 0x1001 length: 249 > 9
+[  102.177067][T10223] Bluetooth: hci2: unexpected cc 0x0c23 length: 249 > 4
+[  102.178128][T10223] Bluetooth: hci2: unexpected cc 0x0c25 length: 249 > 3
+[  102.179507][T10223] Bluetooth: hci2: unexpected cc 0x0c38 length: 249 > 2
+[  102.206880][T10223] Bluetooth: hci4: unexpected cc 0x0c03 length: 249 > 1
+[  102.209919][T10223] Bluetooth: hci4: unexpected cc 0x1003 length: 249 > 9
+[  102.216428][T10223] Bluetooth: hci4: unexpected cc 0x1001 length: 249 > 9
+[  102.217588][T10223] Bluetooth: hci4: unexpected cc 0x0c23 length: 249 > 4
+[  102.218694][T10223] Bluetooth: hci4: unexpected cc 0x0c25 length: 249 > 3
+[  102.219731][T10223] Bluetooth: hci4: unexpected cc 0x0c38 length: 249 > 2
+[  102.307584][T10223] Bluetooth: hci5: unexpected cc 0x0c03 length: 249 > 1
+[  102.319501][   T57] Bluetooth: hci6: unexpected cc 0x0c03 length: 249 > 1
+[  102.321064][   T57] Bluetooth: hci5: unexpected cc 0x1003 length: 249 > 9
+[  102.321870][   T57] Bluetooth: hci6: unexpected cc 0x1003 length: 249 > 9
+[  102.328670][T10229] Bluetooth: hci5: unexpected cc 0x1001 length: 249 > 9
+[  102.329438][T10229] Bluetooth: hci6: unexpected cc 0x1001 length: 249 > 9
+[  102.330726][T10229] Bluetooth: hci5: unexpected cc 0x0c23 length: 249 > 4
+[  102.331901][   T57] Bluetooth: hci5: unexpected cc 0x0c25 length: 249 > 3
+[  102.332626][T10229] Bluetooth: hci6: unexpected cc 0x0c23 length: 249 > 4
+[  102.333264][T10229] Bluetooth: hci5: unexpected cc 0x0c38 length: 249 > 2
+[  102.340482][ T5149] Bluetooth: hci6: unexpected cc 0x0c25 length: 249 > 3
+[  102.341442][ T5149] Bluetooth: hci6: unexpected cc 0x0c38 length: 249 > 2
+[  102.592186][   T11] netdevsim netdevsim3 netdevsim3 (unregistering): unset [1, 0] type 2 family 0 port 6081 - 0
+[  102.726567][T10205] chnl_net:caif_netlink_parms(): no params data found
+[  102.931613][T10214] chnl_net:caif_netlink_parms(): no params data found
+[  102.943324][T10226] chnl_net:caif_netlink_parms(): no params data found
+[  103.003565][T10230] chnl_net:caif_netlink_parms(): no params data found
+[  103.011928][T10215] chnl_net:caif_netlink_parms(): no params data found
+[  103.073343][T10205] bridge0: port 1(bridge_slave_0) entered blocking state
+[  103.074097][T10205] bridge0: port 1(bridge_slave_0) entered disabled state
+[  103.075093][T10205] bridge_slave_0: entered allmulticast mode
+[  103.076314][T10205] bridge_slave_0: entered promiscuous mode
+[  103.078310][T10205] bridge0: port 2(bridge_slave_1) entered blocking state
+[  103.078998][T10205] bridge0: port 2(bridge_slave_1) entered disabled state
+[  103.079731][T10205] bridge_slave_1: entered allmulticast mode
+[  103.080946][T10205] bridge_slave_1: entered promiscuous mode
+[  103.221840][T10226] bridge0: port 1(bridge_slave_0) entered blocking state
+[  103.222685][T10226] bridge0: port 1(bridge_slave_0) entered disabled state
+[  103.223542][T10226] bridge_slave_0: entered allmulticast mode
+[  103.231713][T10226] bridge_slave_0: entered promiscuous mode
+[  103.235964][T10205] bond0: (slave bond_slave_0): Enslaving as an active interface with an up link
+[  103.239977][T10226] bridge0: port 2(bridge_slave_1) entered blocking state
+[  103.240689][T10226] bridge0: port 2(bridge_slave_1) entered disabled state
+[  103.241406][T10226] bridge_slave_1: entered allmulticast mode
+[  103.242771][T10226] bridge_slave_1: entered promiscuous mode
+[  103.279040][T10240] chnl_net:caif_netlink_parms(): no params data found
+[  103.290809][T10205] bond0: (slave bond_slave_1): Enslaving as an active interface with an up link
+[  103.349445][T10215] bridge0: port 1(bridge_slave_0) entered blocking state
+[  103.350355][T10215] bridge0: port 1(bridge_slave_0) entered disabled state
+[  103.351229][T10215] bridge_slave_0: entered allmulticast mode
+[  103.352580][T10215] bridge_slave_0: entered promiscuous mode
+[  103.354142][T10214] bridge0: port 1(bridge_slave_0) entered blocking state
+[  103.357511][T10214] bridge0: port 1(bridge_slave_0) entered disabled state
+[  103.358376][T10214] bridge_slave_0: entered allmulticast mode
+[  103.359775][T10214] bridge_slave_0: entered promiscuous mode
+[  103.403637][T10226] bond0: (slave bond_slave_0): Enslaving as an active interface with an up link
+[  103.420747][T10230] bridge0: port 1(bridge_slave_0) entered blocking state
+[  103.421365][T10230] bridge0: port 1(bridge_slave_0) entered disabled state
+[  103.421997][T10230] bridge_slave_0: entered allmulticast mode
+[  103.423063][T10230] bridge_slave_0: entered promiscuous mode
+[  103.424809][T10230] bridge0: port 2(bridge_slave_1) entered blocking state
+[  103.425431][T10230] bridge0: port 2(bridge_slave_1) entered disabled state
+[  103.426136][T10230] bridge_slave_1: entered allmulticast mode
+[  103.427174][T10230] bridge_slave_1: entered promiscuous mode
+[  103.428615][T10215] bridge0: port 2(bridge_slave_1) entered blocking state
+[  103.429426][T10215] bridge0: port 2(bridge_slave_1) entered disabled state
+[  103.430212][T10215] bridge_slave_1: entered allmulticast mode
+[  103.431513][T10215] bridge_slave_1: entered promiscuous mode
+[  103.442076][T10214] bridge0: port 2(bridge_slave_1) entered blocking state
+[  103.442763][T10214] bridge0: port 2(bridge_slave_1) entered disabled state
+[  103.443600][T10214] bridge_slave_1: entered allmulticast mode
+[  103.445218][T10214] bridge_slave_1: entered promiscuous mode
+[  103.478657][T10205] team0: Port device team_slave_0 added
+[  103.483930][T10226] bond0: (slave bond_slave_1): Enslaving as an active interface with an up link
+[  103.529688][T10215] bond0: (slave bond_slave_0): Enslaving as an active interface with an up link
+[  103.540210][T10205] team0: Port device team_slave_1 added
+[  103.543094][T10214] bond0: (slave bond_slave_0): Enslaving as an active interface with an up link
+[  103.571086][T10226] team0: Port device team_slave_0 added
+[  103.573400][T10226] team0: Port device team_slave_1 added
+[  103.585425][T10230] bond0: (slave bond_slave_0): Enslaving as an active interface with an up link
+[  103.588421][T10230] bond0: (slave bond_slave_1): Enslaving as an active interface with an up link
+[  103.591560][T10215] bond0: (slave bond_slave_1): Enslaving as an active interface with an up link
+[  103.609392][T10214] bond0: (slave bond_slave_1): Enslaving as an active interface with an up link
+[  103.677717][T10205] batman_adv: batadv0: Adding interface: batadv_slave_0
+[  103.678473][T10205] batman_adv: batadv0: The MTU of interface batadv_slave_0 is too small (1500) to handle the transport of batman-adv packets. Packets going over this interface will be fragmented on layer2 which could impact the performance. Setting the MTU to 1560 would solve the problem.
+[  103.680901][T10205] batman_adv: batadv0: Not using interface batadv_slave_0 (retrying later): interface not active
+[  103.683039][T10205] batman_adv: batadv0: Adding interface: batadv_slave_1
+[  103.683736][T10205] batman_adv: batadv0: The MTU of interface batadv_slave_1 is too small (1500) to handle the transport of batman-adv packets. Packets going over this interface will be fragmented on layer2 which could impact the performance. Setting the MTU to 1560 would solve the problem.
+[  103.687815][T10205] batman_adv: batadv0: Not using interface batadv_slave_1 (retrying later): interface not active
+[  103.699510][   T11] netdevsim netdevsim3 netdevsim2 (unregistering): unset [1, 0] type 2 family 0 port 6081 - 0
+[  103.719140][T10226] batman_adv: batadv0: Adding interface: batadv_slave_0
+[  103.719785][T10226] batman_adv: batadv0: The MTU of interface batadv_slave_0 is too small (1500) to handle the transport of batman-adv packets. Packets going over this interface will be fragmented on layer2 which could impact the performance. Setting the MTU to 1560 would solve the problem.
+[  103.721918][T10226] batman_adv: batadv0: Not using interface batadv_slave_0 (retrying later): interface not active
+[  103.723290][T10240] bridge0: port 1(bridge_slave_0) entered blocking state
+[  103.723985][T10240] bridge0: port 1(bridge_slave_0) entered disabled state
+[  103.728870][T10240] bridge_slave_0: entered allmulticast mode
+[  103.729963][T10240] bridge_slave_0: entered promiscuous mode
+[  103.764856][T10214] team0: Port device team_slave_0 added
+[  103.765854][T10226] batman_adv: batadv0: Adding interface: batadv_slave_1
+[  103.766450][T10226] batman_adv: batadv0: The MTU of interface batadv_slave_1 is too small (1500) to handle the transport of batman-adv packets. Packets going over this interface will be fragmented on layer2 which could impact the performance. Setting the MTU to 1560 would solve the problem.
+[  103.768531][T10226] batman_adv: batadv0: Not using interface batadv_slave_1 (retrying later): interface not active
+[  103.769838][T10240] bridge0: port 2(bridge_slave_1) entered blocking state
+[  103.770482][T10240] bridge0: port 2(bridge_slave_1) entered disabled state
+[  103.771155][T10240] bridge_slave_1: entered allmulticast mode
+[  103.772252][T10240] bridge_slave_1: entered promiscuous mode
+[  103.783498][T10230] team0: Port device team_slave_0 added
+[  103.788141][T10215] team0: Port device team_slave_0 added
+[  103.790243][T10215] team0: Port device team_slave_1 added
+[  103.797701][T10214] team0: Port device team_slave_1 added
+[  103.808615][T10240] bond0: (slave bond_slave_0): Enslaving as an active interface with an up link
+[  103.811114][T10230] team0: Port device team_slave_1 added
+[  103.842893][T10240] bond0: (slave bond_slave_1): Enslaving as an active interface with an up link
+[  103.869975][T10215] batman_adv: batadv0: Adding interface: batadv_slave_0
+[  103.870594][T10215] batman_adv: batadv0: The MTU of interface batadv_slave_0 is too small (1500) to handle the transport of batman-adv packets. Packets going over this interface will be fragmented on layer2 which could impact the performance. Setting the MTU to 1560 would solve the problem.
+[  103.872668][T10215] batman_adv: batadv0: Not using interface batadv_slave_0 (retrying later): interface not active
+[  103.883347][T10214] batman_adv: batadv0: Adding interface: batadv_slave_0
+[  103.884121][T10214] batman_adv: batadv0: The MTU of interface batadv_slave_0 is too small (1500) to handle the transport of batman-adv packets. Packets going over this interface will be fragmented on layer2 which could impact the performance. Setting the MTU to 1560 would solve the problem.
+[  103.888030][T10214] batman_adv: batadv0: Not using interface batadv_slave_0 (retrying later): interface not active
+[  103.933202][T10230] batman_adv: batadv0: Adding interface: batadv_slave_0
+[  103.934036][T10230] batman_adv: batadv0: The MTU of interface batadv_slave_0 is too small (1500) to handle the transport of batman-adv packets. Packets going over this interface will be fragmented on layer2 which could impact the performance. Setting the MTU to 1560 would solve the problem.
+[  103.942585][T10230] batman_adv: batadv0: Not using interface batadv_slave_0 (retrying later): interface not active
+[  103.962801][T10205] hsr_slave_0: entered promiscuous mode
+[  103.963734][T10205] hsr_slave_1: entered promiscuous mode
+[  103.964635][T10205] debugfs: Directory 'hsr0' with parent 'hsr' already present!
+[  103.965482][T10205] Cannot create hsr debugfs directory
+[  103.966274][T10215] batman_adv: batadv0: Adding interface: batadv_slave_1
+[  103.966863][T10215] batman_adv: batadv0: The MTU of interface batadv_slave_1 is too small (1500) to handle the transport of batman-adv packets. Packets going over this interface will be fragmented on layer2 which could impact the performance. Setting the MTU to 1560 would solve the problem.
+[  103.968960][T10215] batman_adv: batadv0: Not using interface batadv_slave_1 (retrying later): interface not active
+[  103.970668][T10214] batman_adv: batadv0: Adding interface: batadv_slave_1
+[  103.971397][T10214] batman_adv: batadv0: The MTU of interface batadv_slave_1 is too small (1500) to handle the transport of batman-adv packets. Packets going over this interface will be fragmented on layer2 which could impact the performance. Setting the MTU to 1560 would solve the problem.
+[  103.975053][T10214] batman_adv: batadv0: Not using interface batadv_slave_1 (retrying later): interface not active
+[  103.984215][T10226] hsr_slave_0: entered promiscuous mode
+[  103.991789][T10226] hsr_slave_1: entered promiscuous mode
+[  103.992638][T10226] debugfs: Directory 'hsr0' with parent 'hsr' already present!
+[  103.993315][T10226] Cannot create hsr debugfs directory
+[  103.997359][T10240] team0: Port device team_slave_0 added
+[  103.998411][T10230] batman_adv: batadv0: Adding interface: batadv_slave_1
+[  103.999127][T10230] batman_adv: batadv0: The MTU of interface batadv_slave_1 is too small (1500) to handle the transport of batman-adv packets. Packets going over this interface will be fragmented on layer2 which could impact the performance. Setting the MTU to 1560 would solve the problem.
+[  104.001608][T10230] batman_adv: batadv0: Not using interface batadv_slave_1 (retrying later): interface not active
+[  104.004255][T10240] team0: Port device team_slave_1 added
+[  104.060751][T10240] batman_adv: batadv0: Adding interface: batadv_slave_0
+[  104.061492][T10240] batman_adv: batadv0: The MTU of interface batadv_slave_0 is too small (1500) to handle the transport of batman-adv packets. Packets going over this interface will be fragmented on layer2 which could impact the performance. Setting the MTU to 1560 would solve the problem.
+[  104.064039][T10240] batman_adv: batadv0: Not using interface batadv_slave_0 (retrying later): interface not active
+[  104.115920][T10223] Bluetooth: hci1: command tx timeout
+[  104.120122][T10240] batman_adv: batadv0: Adding interface: batadv_slave_1
+[  104.120878][T10240] batman_adv: batadv0: The MTU of interface batadv_slave_1 is too small (1500) to handle the transport of batman-adv packets. Packets going over this interface will be fragmented on layer2 which could impact the performance. Setting the MTU to 1560 would solve the problem.
+[  104.123495][T10240] batman_adv: batadv0: Not using interface batadv_slave_1 (retrying later): interface not active
+[  104.141360][T10215] hsr_slave_0: entered promiscuous mode
+[  104.142798][T10215] hsr_slave_1: entered promiscuous mode
+[  104.143882][T10215] debugfs: Directory 'hsr0' with parent 'hsr' already present!
+[  104.146259][T10215] Cannot create hsr debugfs directory
+[  104.193379][T10214] hsr_slave_0: entered promiscuous mode
+[  104.194266][T10214] hsr_slave_1: entered promiscuous mode
+[  104.195318][T10214] debugfs: Directory 'hsr0' with parent 'hsr' already present!
+[  104.195961][T10214] Cannot create hsr debugfs directory
+[  104.208877][T10230] hsr_slave_0: entered promiscuous mode
+[  104.209804][T10230] hsr_slave_1: entered promiscuous mode
+[  104.210507][T10230] debugfs: Directory 'hsr0' with parent 'hsr' already present!
+[  104.211118][T10230] Cannot create hsr debugfs directory
+[  104.265467][T10223] Bluetooth: hci2: command tx timeout
+[  104.265597][ T5149] Bluetooth: hci3: command tx timeout
+[  104.266047][T10229] Bluetooth: hci4: command tx timeout
+[  104.344669][T10223] Bluetooth: hci5: command tx timeout
+[  104.346837][T10240] hsr_slave_0: entered promiscuous mode
+[  104.347733][T10240] hsr_slave_1: entered promiscuous mode
+[  104.348450][T10240] debugfs: Directory 'hsr0' with parent 'hsr' already present!
+[  104.349079][T10240] Cannot create hsr debugfs directory
+[  104.434683][T10223] Bluetooth: hci6: command tx timeout
+[  104.654305][   T11] netdevsim netdevsim3 netdevsim1 (unregistering): unset [1, 0] type 2 family 0 port 6081 - 0
+[  105.402288][   T11] netdevsim netdevsim3 netdevsim0 (unregistering): unset [1, 0] type 2 family 0 port 6081 - 0
+[  105.555595][   T11] bridge_slave_1: left allmulticast mode
+[  105.556570][   T11] bridge_slave_1: left promiscuous mode
+[  105.558007][   T11] bridge0: port 2(bridge_slave_1) entered disabled state
+[  105.565277][   T11] bridge_slave_0: left allmulticast mode
+[  105.566124][   T11] bridge_slave_0: left promiscuous mode
+[  105.567799][   T11] bridge0: port 1(bridge_slave_0) entered disabled state
+[  105.967637][   T11] bond0 (unregistering): (slave bond_slave_0): Releasing backup interface
+[  105.969772][   T11] bond0 (unregistering): (slave bond_slave_1): Releasing backup interface
+[  105.971511][   T11] bond0 (unregistering): Released all slaves
+[  106.110836][   T11] hsr_slave_0: left promiscuous mode
+[  106.112799][   T11] hsr_slave_1: left promiscuous mode
+[  106.113792][   T11] batman_adv: batadv0: Interface deactivated: batadv_slave_0
+[  106.115648][   T11] batman_adv: batadv0: Removing interface: batadv_slave_0
+[  106.117896][   T11] batman_adv: batadv0: Interface deactivated: batadv_slave_1
+[  106.118854][   T11] batman_adv: batadv0: Removing interface: batadv_slave_1
+[  106.128098][   T11] veth1_macvtap: left promiscuous mode
+[  106.128831][   T11] veth0_macvtap: left promiscuous mode
+[  106.129698][   T11] veth1_vlan: left promiscuous mode
+[  106.130435][   T11] veth0_vlan: left promiscuous mode
+[  106.197997][T10223] Bluetooth: hci1: command tx timeout
+[  106.346517][T10223] Bluetooth: hci3: command tx timeout
+[  106.347020][T10223] Bluetooth: hci2: command tx timeout
+[  106.347467][T10223] Bluetooth: hci4: command tx timeout
+[  106.421817][   T11] team0 (unregistering): Port device team_slave_1 removed
+[  106.429152][T10229] Bluetooth: hci5: command tx timeout
+[  106.446977][   T11] team0 (unregistering): Port device team_slave_0 removed
+[  106.506647][T10229] Bluetooth: hci6: command tx timeout
+[  106.994692][T10226] netdevsim netdevsim3 netdevsim0: renamed from eth0
+[  106.998151][T10226] netdevsim netdevsim3 netdevsim1: renamed from eth1
+[  107.000905][T10226] netdevsim netdevsim3 netdevsim2: renamed from eth2
+[  107.076372][T10226] netdevsim netdevsim3 netdevsim3: renamed from eth3
+[  107.212249][T10205] netdevsim netdevsim2 netdevsim0: renamed from eth0
+[  107.260971][T10205] netdevsim netdevsim2 netdevsim1: renamed from eth1
+[  107.265754][T10205] netdevsim netdevsim2 netdevsim2: renamed from eth2
+[  107.282849][T10205] netdevsim netdevsim2 netdevsim3: renamed from eth3
+[  107.313758][T10230] netdevsim netdevsim5 netdevsim0: renamed from eth0
+[  107.323153][T10230] netdevsim netdevsim5 netdevsim1: renamed from eth1
+[  107.328853][T10226] 8021q: adding VLAN 0 to HW filter on device bond0
+[  107.329752][T10230] netdevsim netdevsim5 netdevsim2: renamed from eth2
+[  107.332800][T10230] netdevsim netdevsim5 netdevsim3: renamed from eth3
+[  107.403271][T10226] 8021q: adding VLAN 0 to HW filter on device team0
+[  107.432548][T10214] netdevsim netdevsim1 netdevsim0: renamed from eth0
+[  107.440077][   T27] bridge0: port 1(bridge_slave_0) entered blocking state
+[  107.441099][   T27] bridge0: port 1(bridge_slave_0) entered forwarding state
+[  107.473867][   T27] bridge0: port 2(bridge_slave_1) entered blocking state
+[  107.474514][   T27] bridge0: port 2(bridge_slave_1) entered forwarding state
+[  107.481795][T10214] netdevsim netdevsim1 netdevsim1: renamed from eth1
+[  107.484483][T10214] netdevsim netdevsim1 netdevsim2: renamed from eth2
+[  107.493554][T10214] netdevsim netdevsim1 netdevsim3: renamed from eth3
+[  107.538000][T10205] 8021q: adding VLAN 0 to HW filter on device bond0
+[  107.570839][T10215] netdevsim netdevsim0 netdevsim0: renamed from eth0
+[  107.583037][T10215] netdevsim netdevsim0 netdevsim1: renamed from eth1
+[  107.588188][T10215] netdevsim netdevsim0 netdevsim2: renamed from eth2
+[  107.592249][T10215] netdevsim netdevsim0 netdevsim3: renamed from eth3
+[  107.599741][T10205] 8021q: adding VLAN 0 to HW filter on device team0
+[  107.650792][   T39] bridge0: port 1(bridge_slave_0) entered blocking state
+[  107.651416][   T39] bridge0: port 1(bridge_slave_0) entered forwarding state
+[  107.678665][T10240] netdevsim netdevsim4 netdevsim0: renamed from eth0
+[  107.682981][T10240] netdevsim netdevsim4 netdevsim1: renamed from eth1
+[  107.692708][ T1124] bridge0: port 2(bridge_slave_1) entered blocking state
+[  107.693386][ T1124] bridge0: port 2(bridge_slave_1) entered forwarding state
+[  107.698258][T10240] netdevsim netdevsim4 netdevsim2: renamed from eth2
+[  107.713304][T10230] 8021q: adding VLAN 0 to HW filter on device bond0
+[  107.717409][T10240] netdevsim netdevsim4 netdevsim3: renamed from eth3
+[  107.721827][T10214] 8021q: adding VLAN 0 to HW filter on device bond0
+[  107.757985][T10205] hsr0: Slave B (hsr_slave_1) is not up; please bring it up to get a fully working HSR network
+[  107.767450][T10226] 8021q: adding VLAN 0 to HW filter on device batadv0
+[  107.779412][T10230] 8021q: adding VLAN 0 to HW filter on device team0
+[  107.781774][T10214] 8021q: adding VLAN 0 to HW filter on device team0
+[  107.805557][   T27] bridge0: port 1(bridge_slave_0) entered blocking state
+[  107.806261][   T27] bridge0: port 1(bridge_slave_0) entered forwarding state
+[  107.846980][   T27] bridge0: port 2(bridge_slave_1) entered blocking state
+[  107.847690][   T27] bridge0: port 2(bridge_slave_1) entered forwarding state
+[  107.850880][   T27] bridge0: port 1(bridge_slave_0) entered blocking state
+[  107.851517][   T27] bridge0: port 1(bridge_slave_0) entered forwarding state
+[  107.863156][T10215] 8021q: adding VLAN 0 to HW filter on device bond0
+[  107.869631][   T27] bridge0: port 2(bridge_slave_1) entered blocking state
+[  107.870265][   T27] bridge0: port 2(bridge_slave_1) entered forwarding state
+[  107.882154][T10240] 8021q: adding VLAN 0 to HW filter on device bond0
+[  107.883749][T10215] 8021q: adding VLAN 0 to HW filter on device team0
+[  107.900132][T10214] hsr0: Slave A (hsr_slave_0) is not up; please bring it up to get a fully working HSR network
+[  107.901015][T10214] hsr0: Slave B (hsr_slave_1) is not up; please bring it up to get a fully working HSR network
+[  107.926800][   T27] bridge0: port 1(bridge_slave_0) entered blocking state
+[  107.927443][   T27] bridge0: port 1(bridge_slave_0) entered forwarding state
+[  107.941121][   T27] bridge0: port 2(bridge_slave_1) entered blocking state
+[  107.941747][   T27] bridge0: port 2(bridge_slave_1) entered forwarding state
+[  107.959828][T10240] 8021q: adding VLAN 0 to HW filter on device team0
+[  107.975020][T10226] veth0_vlan: entered promiscuous mode
+[  107.980950][   T27] bridge0: port 1(bridge_slave_0) entered blocking state
+[  107.981616][   T27] bridge0: port 1(bridge_slave_0) entered forwarding state
+[  108.000586][T10205] 8021q: adding VLAN 0 to HW filter on device batadv0
+[  108.017821][   T27] bridge0: port 2(bridge_slave_1) entered blocking state
+[  108.018495][   T27] bridge0: port 2(bridge_slave_1) entered forwarding state
+[  108.022836][T10226] veth1_vlan: entered promiscuous mode
+[  108.042733][T10226] veth0_macvtap: entered promiscuous mode
+[  108.070131][T10226] veth1_macvtap: entered promiscuous mode
+[  108.111394][T10214] 8021q: adding VLAN 0 to HW filter on device batadv0
+[  108.114458][T10226] batman_adv: batadv0: Interface activated: batadv_slave_0
+[  108.122946][T10205] veth0_vlan: entered promiscuous mode
+[  108.148191][T10205] veth1_vlan: entered promiscuous mode
+[  108.165773][T10226] batman_adv: batadv0: Interface activated: batadv_slave_1
+[  108.190178][T10226] netdevsim netdevsim3 netdevsim0: set [1, 0] type 2 family 0 port 6081 - 0
+[  108.190969][T10226] netdevsim netdevsim3 netdevsim1: set [1, 0] type 2 family 0 port 6081 - 0
+[  108.191731][T10226] netdevsim netdevsim3 netdevsim2: set [1, 0] type 2 family 0 port 6081 - 0
+[  108.192475][T10226] netdevsim netdevsim3 netdevsim3: set [1, 0] type 2 family 0 port 6081 - 0
+[  108.244079][T10214] veth0_vlan: entered promiscuous mode
+[  108.252347][T10214] veth1_vlan: entered promiscuous mode
+[  108.264914][T10229] Bluetooth: hci1: command tx timeout
+[  108.273589][T10205] veth0_macvtap: entered promiscuous mode
+[  108.301291][T10205] veth1_macvtap: entered promiscuous mode
+[  108.312369][T10230] 8021q: adding VLAN 0 to HW filter on device batadv0
+[  108.334109][T10214] veth0_macvtap: entered promiscuous mode
+[  108.358733][T10205] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[  108.359694][T10205] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  108.367825][T10205] batman_adv: batadv0: Interface activated: batadv_slave_0
+[  108.385864][T10214] veth1_macvtap: entered promiscuous mode
+[  108.391391][T10205] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[  108.392282][T10205] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  108.393637][T10205] batman_adv: batadv0: Interface activated: batadv_slave_1
+[  108.405765][   T28] wlan0: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[  108.406449][   T28] wlan0: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[  108.422840][T10205] netdevsim netdevsim2 netdevsim0: set [1, 0] type 2 family 0 port 6081 - 0
+[  108.423643][T10205] netdevsim netdevsim2 netdevsim1: set [1, 0] type 2 family 0 port 6081 - 0
+[  108.424397][T10205] netdevsim netdevsim2 netdevsim2: set [1, 0] type 2 family 0 port 6081 - 0
+[  108.426254][T10229] Bluetooth: hci4: command tx timeout
+[  108.426759][T10229] Bluetooth: hci2: command tx timeout
+[  108.427236][T10229] Bluetooth: hci3: command tx timeout
+[  108.445068][T10205] netdevsim netdevsim2 netdevsim3: set [1, 0] type 2 family 0 port 6081 - 0
+[  108.506114][T10223] Bluetooth: hci5: command tx timeout
+[  108.511706][T10214] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[  108.512622][T10214] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  108.513454][T10214] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[  108.514320][T10214] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  108.519695][T10214] batman_adv: batadv0: Interface activated: batadv_slave_0
+[  108.531907][T10215] 8021q: adding VLAN 0 to HW filter on device batadv0
+[  108.563484][T10214] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[  108.564382][T10214] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  108.571121][T10214] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[  108.572018][T10214] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  108.573705][T10214] batman_adv: batadv0: Interface activated: batadv_slave_1
+[  108.578925][   T66] wlan1: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[  108.579604][   T66] wlan1: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[  108.585015][T10223] Bluetooth: hci6: command tx timeout
+[  108.593766][T10214] netdevsim netdevsim1 netdevsim0: set [1, 0] type 2 family 0 port 6081 - 0
+[  108.595918][T10214] netdevsim netdevsim1 netdevsim1: set [1, 0] type 2 family 0 port 6081 - 0
+[  108.596667][T10214] netdevsim netdevsim1 netdevsim2: set [1, 0] type 2 family 0 port 6081 - 0
+[  108.597431][T10214] netdevsim netdevsim1 netdevsim3: set [1, 0] type 2 family 0 port 6081 - 0
+[  108.601041][T10240] 8021q: adding VLAN 0 to HW filter on device batadv0
+[  108.686056][   T28] wlan0: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[  108.686740][   T28] wlan0: Creating new IBSS network, BSSID 50:50:50:50:50:50
+2025/03/02 19:51:40 executed programs: 12
+[  108.749308][T12296] loop3: detected capacity change from 0 to 2048
+[  108.783329][T12296] EXT4-fs (loop3): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  108.800357][   T28] wlan1: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[  108.801095][   T28] wlan1: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[  108.818168][T10230] veth0_vlan: entered promiscuous mode
+[  108.845323][T12294] EXT4-fs error (device loop3): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  108.850019][T10215] veth0_vlan: entered promiscuous mode
+[  108.861513][T12294] EXT4-fs (loop3): Delayed block allocation failed for inode 18 at logical offset 0 with max blocks 91 with error 28
+[  108.864907][T12294] EXT4-fs (loop3): This should not happen!! Data will be lost
+[  108.864907][T12294] 
+[  108.865705][T12294] EXT4-fs (loop3): Total free blocks count 0
+[  108.866217][T12294] EXT4-fs (loop3): Free/Dirty block details
+[  108.866751][T12294] EXT4-fs (loop3): free_blocks=2415919104
+[  108.867261][T12294] EXT4-fs (loop3): dirty_blocks=96
+[  108.867699][T12294] EXT4-fs (loop3): Block reservation details
+[  108.868212][T12294] EXT4-fs (loop3): i_reserved_data_blocks=6
+[  108.875619][T12296] EXT4-fs (loop3): Delayed block allocation failed for inode 18 at logical offset 92 with max blocks 1 with error 28
+[  108.888619][T10215] veth1_vlan: entered promiscuous mode
+[  108.937762][ T2999] wlan0: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[  108.938459][ T2999] wlan0: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[  108.954930][T10230] veth1_vlan: entered promiscuous mode
+[  108.976142][T12328] loop2: detected capacity change from 0 to 2048
+[  109.006144][T12328] EXT4-fs (loop2): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  109.007003][T10215] veth0_macvtap: entered promiscuous mode
+[  109.045985][   T28] wlan1: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[  109.046725][   T28] wlan1: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[  109.060978][T12327] EXT4-fs error (device loop2): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  109.064443][T12327] EXT4-fs (loop2): Delayed block allocation failed for inode 18 at logical offset 0 with max blocks 209 with error 28
+[  109.069713][T12327] EXT4-fs (loop2): This should not happen!! Data will be lost
+[  109.069713][T12327] 
+[  109.070795][T12327] EXT4-fs (loop2): Total free blocks count 0
+[  109.071315][T12327] EXT4-fs (loop2): Free/Dirty block details
+[  109.074055][T12327] EXT4-fs (loop2): free_blocks=2415919104
+[  109.074777][T12327] EXT4-fs (loop2): dirty_blocks=224
+[  109.075279][T12327] EXT4-fs (loop2): Block reservation details
+[  109.075780][T12327] EXT4-fs (loop2): i_reserved_data_blocks=14
+[  109.080698][T12328] EXT4-fs (loop2): Delayed block allocation failed for inode 18 at logical offset 210 with max blocks 1 with error 28
+[  109.091645][T10230] veth0_macvtap: entered promiscuous mode
+[  109.097300][T10215] veth1_macvtap: entered promiscuous mode
+[  109.120930][T10230] veth1_macvtap: entered promiscuous mode
+[  109.166589][T10240] veth0_vlan: entered promiscuous mode
+[  109.177916][T10230] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[  109.180597][T10230] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.181774][T10230] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[  109.182803][T10230] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.183622][T10230] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[  109.184457][T10230] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.186312][T10230] batman_adv: batadv0: Interface activated: batadv_slave_0
+[  109.191063][T10215] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[  109.191978][T10215] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.192791][T10215] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[  109.193640][T10215] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.194440][T10215] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[  109.221181][T10215] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.222010][T10215] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[  109.222890][T10215] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.225689][T10215] batman_adv: batadv0: Interface activated: batadv_slave_0
+[  109.229548][T10215] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[  109.230388][T10215] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.231150][T10215] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[  109.231978][T10215] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.232791][T10215] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[  109.233631][T10215] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.238628][T10215] batman_adv: batadv0: Interface activated: batadv_slave_1
+[  109.243373][T10215] netdevsim netdevsim0 netdevsim0: set [1, 0] type 2 family 0 port 6081 - 0
+[  109.244142][T10215] netdevsim netdevsim0 netdevsim1: set [1, 0] type 2 family 0 port 6081 - 0
+[  109.245251][T10215] netdevsim netdevsim0 netdevsim2: set [1, 0] type 2 family 0 port 6081 - 0
+[  109.245992][T10215] netdevsim netdevsim0 netdevsim3: set [1, 0] type 2 family 0 port 6081 - 0
+[  109.249433][T10230] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[  109.250339][T10230] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.251190][T10230] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[  109.252020][T10230] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.252833][T10230] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[  109.255997][T10230] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.256813][T10230] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[  109.257657][T10230] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.259136][T10230] batman_adv: batadv0: Interface activated: batadv_slave_1
+[  109.261433][T10240] veth1_vlan: entered promiscuous mode
+[  109.283708][T10230] netdevsim netdevsim5 netdevsim0: set [1, 0] type 2 family 0 port 6081 - 0
+[  109.284482][T10230] netdevsim netdevsim5 netdevsim1: set [1, 0] type 2 family 0 port 6081 - 0
+[  109.286870][T10230] netdevsim netdevsim5 netdevsim2: set [1, 0] type 2 family 0 port 6081 - 0
+[  109.287591][T10230] netdevsim netdevsim5 netdevsim3: set [1, 0] type 2 family 0 port 6081 - 0
+[  109.309137][T10240] veth0_macvtap: entered promiscuous mode
+[  109.311657][T10240] veth1_macvtap: entered promiscuous mode
+[  109.326512][T10240] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[  109.327361][T10240] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.328118][T10240] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[  109.328931][T10240] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.330074][T10240] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[  109.331408][T10240] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.332185][T10240] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[  109.332997][T10240] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.333757][T10240] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[  109.345058][T10240] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.346579][T10240] batman_adv: batadv0: Interface activated: batadv_slave_0
+[  109.355933][T12346] loop1: detected capacity change from 0 to 2048
+[  109.371576][T12346] EXT4-fs (loop1): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  109.391298][T12355] loop3: detected capacity change from 0 to 2048
+[  109.409680][T12355] EXT4-fs (loop3): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  109.450345][T10240] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[  109.451207][T10240] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.451994][T10240] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[  109.452853][T10240] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.453662][T10240] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[  109.454502][T10240] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.463651][T12345] EXT4-fs error (device loop1): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  109.471110][T12345] EXT4-fs (loop1): Delayed block allocation failed for inode 18 at logical offset 0 with max blocks 189 with error 28
+[  109.475177][T12354] EXT4-fs error (device loop3): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  109.485096][T12354] EXT4-fs (loop3): Delayed block allocation failed for inode 18 at logical offset 0 with max blocks 203 with error 28
+[  109.486141][T12354] EXT4-fs (loop3): This should not happen!! Data will be lost
+[  109.486141][T12354] 
+[  109.489613][T12354] EXT4-fs (loop3): Total free blocks count 0
+[  109.490126][T12354] EXT4-fs (loop3): Free/Dirty block details
+[  109.490634][T12354] EXT4-fs (loop3): free_blocks=2415919104
+[  109.491122][T12354] EXT4-fs (loop3): dirty_blocks=208
+[  109.491571][T12354] EXT4-fs (loop3): Block reservation details
+[  109.492101][T12354] EXT4-fs (loop3): i_reserved_data_blocks=13
+[  109.497042][T10240] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[  109.497909][T10240] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.498967][T12345] EXT4-fs (loop1): This should not happen!! Data will be lost
+[  109.498967][T12345] 
+[  109.499761][T12345] EXT4-fs (loop1): Total free blocks count 0
+[  109.500290][T12345] EXT4-fs (loop1): Free/Dirty block details
+[  109.500813][T12345] EXT4-fs (loop1): free_blocks=2415919104
+[  109.501305][T12345] EXT4-fs (loop1): dirty_blocks=192
+[  109.501735][T12345] EXT4-fs (loop1): Block reservation details
+[  109.502244][T12345] EXT4-fs (loop1): i_reserved_data_blocks=12
+[  109.508999][T12355] EXT4-fs (loop3): Delayed block allocation failed for inode 18 at logical offset 204 with max blocks 1 with error 28
+[  109.511173][T12346] EXT4-fs (loop1): Delayed block allocation failed for inode 18 at logical offset 190 with max blocks 1 with error 28
+[  109.516634][T12368] loop2: detected capacity change from 0 to 2048
+[  109.536521][T10240] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[  109.537435][T10240] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[  109.548892][T12368] EXT4-fs (loop2): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  109.615732][T12363] EXT4-fs error (device loop2): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  109.621237][T10240] batman_adv: batadv0: Interface activated: batadv_slave_1
+[  109.623283][T12363] EXT4-fs (loop2): Delayed block allocation failed for inode 18 at logical offset 0 with max blocks 129 with error 28
+[  109.624444][T12363] EXT4-fs (loop2): This should not happen!! Data will be lost
+[  109.624444][T12363] 
+[  109.632856][T12363] EXT4-fs (loop2): Total free blocks count 0
+[  109.633384][T12363] EXT4-fs (loop2): Free/Dirty block details
+[  109.633888][T12363] EXT4-fs (loop2): free_blocks=2415919104
+[  109.634407][T12363] EXT4-fs (loop2): dirty_blocks=144
+[  109.644162][T10240] netdevsim netdevsim4 netdevsim0: set [1, 0] type 2 family 0 port 6081 - 0
+[  109.659312][T12363] EXT4-fs (loop2): Block reservation details
+[  109.659871][T12363] EXT4-fs (loop2): i_reserved_data_blocks=9
+[  109.663432][T12368] EXT4-fs (loop2): Delayed block allocation failed for inode 18 at logical offset 130 with max blocks 1 with error 28
+[  109.668835][T10240] netdevsim netdevsim4 netdevsim1: set [1, 0] type 2 family 0 port 6081 - 0
+[  109.669597][T10240] netdevsim netdevsim4 netdevsim2: set [1, 0] type 2 family 0 port 6081 - 0
+[  109.673608][T10240] netdevsim netdevsim4 netdevsim3: set [1, 0] type 2 family 0 port 6081 - 0
+[  109.957337][T12412] loop2: detected capacity change from 0 to 2048
+[  109.974050][T12412] EXT4-fs (loop2): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  109.998226][T12414] loop1: detected capacity change from 0 to 2048
+[  110.041659][T12414] EXT4-fs (loop1): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  110.067932][T12407] EXT4-fs error (device loop2): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  110.076492][T12407] EXT4-fs (loop2): Delayed block allocation failed for inode 18 at logical offset 0 with max blocks 135 with error 28
+[  110.077588][T12407] EXT4-fs (loop2): This should not happen!! Data will be lost
+[  110.077588][T12407] 
+[  110.078393][T12407] EXT4-fs (loop2): Total free blocks count 0
+[  110.078883][T12407] EXT4-fs (loop2): Free/Dirty block details
+[  110.079413][T12407] EXT4-fs (loop2): free_blocks=2415919104
+[  110.079925][T12407] EXT4-fs (loop2): dirty_blocks=144
+[  110.080370][T12407] EXT4-fs (loop2): Block reservation details
+[  110.080985][T12407] EXT4-fs (loop2): i_reserved_data_blocks=9
+[  110.113295][T12425] loop3: detected capacity change from 0 to 2048
+[  110.115736][T12412] EXT4-fs (loop2): Delayed block allocation failed for inode 18 at logical offset 136 with max blocks 1 with error 28
+[  110.118857][T12413] EXT4-fs error (device loop1): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  110.120343][T12413] EXT4-fs (loop1): Delayed block allocation failed for inode 18 at logical offset 0 with max blocks 133 with error 28
+[  110.121373][T12413] EXT4-fs (loop1): This should not happen!! Data will be lost
+[  110.121373][T12413] 
+[  110.122188][T12413] EXT4-fs (loop1): Total free blocks count 0
+[  110.122746][T12413] EXT4-fs (loop1): Free/Dirty block details
+[  110.123258][T12413] EXT4-fs (loop1): free_blocks=2415919104
+[  110.127331][T12425] EXT4-fs (loop3): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  110.127858][T12413] EXT4-fs (loop1): dirty_blocks=144
+[  110.132903][T12413] EXT4-fs (loop1): Block reservation details
+[  110.133464][T12413] EXT4-fs (loop1): i_reserved_data_blocks=9
+[  110.149655][   T66] wlan0: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[  110.150381][   T66] wlan0: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[  110.180783][ T2964] wlan0: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[  110.181510][ T2964] wlan0: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[  110.186743][T12414] EXT4-fs (loop1): Delayed block allocation failed for inode 18 at logical offset 134 with max blocks 1 with error 28
+[  110.212280][T12421] EXT4-fs error (device loop3): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  110.229984][T12421] EXT4-fs (loop3): Delayed block allocation failed for inode 18 at logical offset 0 with max blocks 251 with error 28
+[  110.231069][T12421] EXT4-fs (loop3): This should not happen!! Data will be lost
+[  110.231069][T12421] 
+[  110.231884][T12421] EXT4-fs (loop3): Total free blocks count 0
+[  110.232410][T12421] EXT4-fs (loop3): Free/Dirty block details
+[  110.232936][T12421] EXT4-fs (loop3): free_blocks=2415919104
+[  110.233423][T12421] EXT4-fs (loop3): dirty_blocks=256
+[  110.233904][T12421] EXT4-fs (loop3): Block reservation details
+[  110.234442][T12421] EXT4-fs (loop3): i_reserved_data_blocks=16
+[  110.283124][T12425] EXT4-fs (loop3): Delayed block allocation failed for inode 18 at logical offset 252 with max blocks 1 with error 28
+[  110.345275][T10223] Bluetooth: hci1: command tx timeout
+[  110.455264][ T2999] wlan1: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[  110.455981][ T2999] wlan1: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[  110.504741][T10223] Bluetooth: hci3: command tx timeout
+[  110.505265][T10223] Bluetooth: hci2: command tx timeout
+[  110.505758][T10223] Bluetooth: hci4: command tx timeout
+[  110.584927][T10229] Bluetooth: hci5: command tx timeout
+[  110.652846][ T2999] wlan1: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[  110.653609][ T2999] wlan1: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[  110.669791][T10229] Bluetooth: hci6: command tx timeout
+[  110.717799][T12493] loop0: detected capacity change from 0 to 2048
+[  110.736626][ T2964] wlan0: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[  110.737424][ T2964] wlan0: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[  110.750759][T12493] EXT4-fs (loop0): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  110.779527][T12501] loop2: detected capacity change from 0 to 2048
+[  110.815793][T12501] EXT4-fs (loop2): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  110.844987][T12490] EXT4-fs error (device loop0): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  110.846310][T12490] EXT4-fs (loop0): Delayed block allocation failed for inode 18 at logical offset 0 with max blocks 61 with error 28
+[  110.847336][T12490] EXT4-fs (loop0): This should not happen!! Data will be lost
+[  110.847336][T12490] 
+[  110.848151][T12490] EXT4-fs (loop0): Total free blocks count 0
+[  110.848680][T12490] EXT4-fs (loop0): Free/Dirty block details
+[  110.849180][T12490] EXT4-fs (loop0): free_blocks=2415919104
+[  110.849670][T12490] EXT4-fs (loop0): dirty_blocks=64
+[  110.850104][T12490] EXT4-fs (loop0): Block reservation details
+[  110.850608][T12490] EXT4-fs (loop0): i_reserved_data_blocks=4
+[  110.890756][T12493] EXT4-fs (loop0): Delayed block allocation failed for inode 18 at logical offset 62 with max blocks 1 with error 28
+[  110.902804][T12517] loop1: detected capacity change from 0 to 2048
+[  110.916772][T12491] EXT4-fs error (device loop2): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  110.936333][T12491] EXT4-fs (loop2): Delayed block allocation failed for inode 18 at logical offset 0 with max blocks 207 with error 28
+[  110.937342][T12491] EXT4-fs (loop2): This should not happen!! Data will be lost
+[  110.937342][T12491] 
+[  110.938115][T12491] EXT4-fs (loop2): Total free blocks count 0
+[  110.938648][T12491] EXT4-fs (loop2): Free/Dirty block details
+[  110.939121][T12491] EXT4-fs (loop2): free_blocks=2415919104
+[  110.939600][T12491] EXT4-fs (loop2): dirty_blocks=208
+[  110.940048][T12491] EXT4-fs (loop2): Block reservation details
+[  110.940567][T12491] EXT4-fs (loop2): i_reserved_data_blocks=13
+[  110.943768][T12529] loop5: detected capacity change from 0 to 2048
+[  110.961223][T12517] EXT4-fs (loop1): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  110.967407][T12529] EXT4-fs (loop5): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  110.980199][T12501] EXT4-fs (loop2): Delayed block allocation failed for inode 18 at logical offset 208 with max blocks 1 with error 28
+[  111.014220][   T66] wlan1: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[  111.015143][   T66] wlan1: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[  111.041781][T12524] loop3: detected capacity change from 0 to 2048
+[  111.074789][T12527] EXT4-fs error (device loop5): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  111.076097][T12527] EXT4-fs (loop5): Delayed block allocation failed for inode 18 at logical offset 0 with max blocks 77 with error 28
+[  111.077103][T12527] EXT4-fs (loop5): This should not happen!! Data will be lost
+[  111.077103][T12527] 
+[  111.077903][T12527] EXT4-fs (loop5): Total free blocks count 0
+[  111.078406][T12527] EXT4-fs (loop5): Free/Dirty block details
+[  111.078911][T12527] EXT4-fs (loop5): free_blocks=2415919104
+[  111.079386][T12527] EXT4-fs (loop5): dirty_blocks=80
+[  111.079816][T12527] EXT4-fs (loop5): Block reservation details
+[  111.080319][T12527] EXT4-fs (loop5): i_reserved_data_blocks=5
+[  111.091254][T12515] EXT4-fs error (device loop1): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  111.092555][T12515] EXT4-fs (loop1): Delayed block allocation failed for inode 18 at logical offset 0 with max blocks 181 with error 28
+[  111.093548][T12515] EXT4-fs (loop1): This should not happen!! Data will be lost
+[  111.093548][T12515] 
+[  111.094311][T12515] EXT4-fs (loop1): Total free blocks count 0
+[  111.102042][T12515] EXT4-fs (loop1): Free/Dirty block details
+[  111.102620][T12515] EXT4-fs (loop1): free_blocks=2415919104
+[  111.103102][T12515] EXT4-fs (loop1): dirty_blocks=192
+[  111.103544][T12515] EXT4-fs (loop1): Block reservation details
+[  111.104023][T12515] EXT4-fs (loop1): i_reserved_data_blocks=12
+[  111.109123][T12524] EXT4-fs (loop3): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  111.142354][T12529] EXT4-fs (loop5): Delayed block allocation failed for inode 18 at logical offset 78 with max blocks 1 with error 28
+[  111.151032][T12517] EXT4-fs (loop1): Delayed block allocation failed for inode 18 at logical offset 182 with max blocks 1 with error 28
+[  111.194749][T12523] EXT4-fs error (device loop3): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  111.196337][T12523] EXT4-fs (loop3): Delayed block allocation failed for inode 18 at logical offset 0 with max blocks 303 with error 28
+[  111.197311][T12523] EXT4-fs (loop3): This should not happen!! Data will be lost
+[  111.197311][T12523] 
+[  111.198125][T12523] EXT4-fs (loop3): Total free blocks count 0
+[  111.198624][T12523] EXT4-fs (loop3): Free/Dirty block details
+[  111.199176][T12523] EXT4-fs (loop3): free_blocks=2415919104
+[  111.199666][T12523] EXT4-fs (loop3): dirty_blocks=304
+[  111.200106][T12523] EXT4-fs (loop3): Block reservation details
+[  111.200620][T12523] EXT4-fs (loop3): i_reserved_data_blocks=19
+[  111.204606][T12524] EXT4-fs (loop3): Delayed block allocation failed for inode 18 at logical offset 304 with max blocks 1 with error 28
+[  111.535836][T12589] loop4: detected capacity change from 0 to 2048
+[  111.553361][T12589] EXT4-fs (loop4): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  111.657680][T12587] EXT4-fs error (device loop4): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  111.690878][T12587] EXT4-fs (loop4): Delayed block allocation failed for inode 18 at logical offset 0 with max blocks 96 with error 28
+[  111.692168][T12587] EXT4-fs (loop4): This should not happen!! Data will be lost
+[  111.692168][T12587] 
+[  111.722025][T12589] EXT4-fs (loop4): Delayed block allocation failed for inode 18 at logical offset 96 with max blocks 1 with error 28
+[  111.723014][T12589] EXT4-fs (loop4): This should not happen!! Data will be lost
+[  111.723014][T12589] 
+[  111.723796][T12589] EXT4-fs (loop4): Total free blocks count 0
+[  111.724298][T12589] EXT4-fs (loop4): Free/Dirty block details
+[  111.738143][T12587] EXT4-fs (loop4): Total free blocks count 0
+[  111.738684][T12587] EXT4-fs (loop4): Free/Dirty block details
+[  111.739176][T12587] EXT4-fs (loop4): free_blocks=2415919104
+[  111.745537][T12621] loop3: detected capacity change from 0 to 2048
+[  111.808942][T12621] EXT4-fs (loop3): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  111.826230][T12646] loop5: detected capacity change from 0 to 2048
+[  111.847082][T12646] EXT4-fs (loop5): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  111.875388][T12616] EXT4-fs error (device loop3): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  111.916366][T12621] ------------[ cut here ]------------
+[  111.917033][T12621] kernel BUG at fs/ext4/inline.c:235!
+[  111.917478][T12621] Oops: invalid opcode: 0000 [#1] PREEMPT SMP KASAN PTI
+[  111.918065][T12621] CPU: 1 UID: 0 PID: 12621 Comm: syz.3.32 Not tainted 6.14.0-rc4 #1
+[  111.918727][T12621] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[  111.919502][T12621] RIP: 0010:ext4_write_inline_data+0x346/0x3e0
+[  111.920396][T12621] Code: d0 f6 4b ff e8 cb f6 4b ff 42 8d 6c 25 c4 41 bd 3c 00 00 00 45 29 e5 e9 e8 fe ff ff e8 b3 f6 4b ff 90 0f 0b e8 ab f6 4b ff 90 <0f> 0b e8 63 95 ac ff e9 fb fd ff ff 4c 89 f7 e8 56 95 ac ff e9 96
+[  111.923272][T12621] RSP: 0018:ffffc9000850f628 EFLAGS: 00010246
+[  111.923785][T12621] RAX: 0000000000000000 RBX: ffff8880520d65c0 RCX: 0000000000000000
+[  111.924419][T12621] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000000
+[  111.925097][T12621] RBP: 0000000000000ffc R08: 0000000000000000 R09: 0000000000000000
+[  111.925780][T12621] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000004
+[  111.926421][T12621] R13: 0000000000001000 R14: ffff8880520d6b6a R15: ffffc9000850f6c0
+[  111.927067][T12621] FS:  00007fe767ae8640(0000) GS:ffff88807ee00000(0000) knlGS:0000000000000000
+[  111.927788][T12621] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  111.928312][T12621] CR2: 00007fe767aa6658 CR3: 000000006a452000 CR4: 00000000000006f0
+[  111.928980][T12621] DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+[  111.929632][T12621] DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400
+[  111.930279][T12621] Call Trace:
+[  111.930570][T12621]  <TASK>
+[  111.930834][T12621]  ? die+0x32/0x90
+[  111.931174][T12621]  ? do_trap+0x1fd/0x260
+[  111.931558][T12621]  ? ext4_write_inline_data+0x346/0x3e0
+[  111.932014][T12621]  ? do_error_trap+0x107/0x240
+[  111.932418][T12621]  ? ext4_write_inline_data+0x346/0x3e0
+[  111.932882][T12621]  ? ext4_write_inline_data+0x346/0x3e0
+[  111.933356][T12621]  ? handle_invalid_op+0x34/0x50
+[  111.933789][T12621]  ? ext4_write_inline_data+0x346/0x3e0
+[  111.934267][T12621]  ? exc_invalid_op+0x5d/0x80
+[  111.934701][T12621]  ? asm_exc_invalid_op+0x1a/0x20
+[  111.935146][T12621]  ? ext4_write_inline_data+0x346/0x3e0
+[  111.935628][T12621]  ? ext4_write_inline_data+0x345/0x3e0
+[  111.936110][T12621]  ext4_write_inline_data_end+0x25f/0xc20
+[  111.936597][T12621]  ? __pfx_ext4_write_inline_data_end+0x10/0x10
+[  111.937113][T12621]  ? ext4_da_write_begin+0x22b/0x710
+[  111.937558][T12621]  ? rcu_is_watching+0x12/0xd0
+[  111.937960][T12621]  ext4_da_write_end+0x201/0x2d0
+[  111.938376][T12621]  generic_perform_write+0x51c/0x910
+[  111.938824][T12621]  ? __pfx_generic_perform_write+0x10/0x10
+[  111.939322][T12621]  ? __mark_inode_dirty+0x178/0x720
+[  111.939788][T12621]  ? generic_update_time+0xcb/0xf0
+[  111.940254][T12621]  ? mnt_put_write_access_file+0x45/0xf0
+[  111.940742][T12621]  ext4_buffered_write_iter+0x11a/0x440
+[  111.941206][T12621]  ext4_file_write_iter+0x350/0x420
+[  111.941639][T12621]  iter_file_splice_write+0xa0a/0x1080
+[  111.942113][T12621]  ? __pfx_iter_file_splice_write+0x10/0x10
+[  111.942628][T12621]  ? __pfx_lock_acquire+0x10/0x10
+[  111.943064][T12621]  ? __lock_release+0x103/0x470
+[  111.943489][T12621]  ? __pfx_iter_file_splice_write+0x10/0x10
+[  111.943996][T12621]  direct_splice_actor+0x194/0x6f0
+[  111.944445][T12621]  splice_direct_to_actor+0x343/0x9c0
+[  111.944931][T12621]  ? __pfx_direct_splice_actor+0x10/0x10
+[  111.945410][T12621]  ? __pfx_splice_direct_to_actor+0x10/0x10
+[  111.945911][T12621]  ? __fget_files+0x1e8/0x3b0
+[  111.946313][T12621]  ? __pfx___lock_release+0x10/0x10
+[  111.946765][T12621]  ? do_raw_spin_unlock+0x54/0x240
+[  111.947208][T12621]  do_splice_direct+0x176/0x250
+[  111.947630][T12621]  ? __pfx_do_splice_direct+0x10/0x10
+[  111.948075][T12621]  ? __pfx_direct_file_splice_eof+0x10/0x10
+[  111.948598][T12621]  ? rw_verify_area+0xcf/0x6a0
+[  111.948995][T12621]  do_sendfile+0xa79/0xd90
+[  111.949377][T12621]  ? __pfx_do_sendfile+0x10/0x10
+[  111.949798][T12621]  ? __x64_sys_futex+0x1ca/0x4e0
+[  111.950215][T12621]  ? __x64_sys_futex+0x1d3/0x4e0
+[  111.950639][T12621]  __x64_sys_sendfile64+0x1de/0x220
+[  111.951072][T12621]  ? __pfx___x64_sys_sendfile64+0x10/0x10
+[  111.951561][T12621]  do_syscall_64+0xcb/0x260
+[  111.951939][T12621]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[  111.952443][T12621] RIP: 0033:0x7fe766bb85ad
+[  111.952856][T12621] Code: 02 b8 ff ff ff ff c3 66 0f 1f 44 00 00 f3 0f 1e fa 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 c7 c1 a8 ff ff ff f7 d8 64 89 01 48
+[  111.954415][T12621] RSP: 002b:00007fe767ae7f98 EFLAGS: 00000246 ORIG_RAX: 0000000000000028
+[  111.955118][T12621] RAX: ffffffffffffffda RBX: 00007fe766e45fa0 RCX: 00007fe766bb85ad
+[  111.955785][T12621] RDX: 0000000000000000 RSI: 0000000000000005 RDI: 0000000000000004
+[  111.956467][T12621] RBP: 00007fe766c6a8d6 R08: 0000000000000000 R09: 0000000000000000
+[  111.957151][T12621] R10: 0001000000201005 R11: 0000000000000246 R12: 0000000000000000
+[  111.957832][T12621] R13: 0000000000000000 R14: 00007fe766e45fa0 R15: 00007fe767ac8000
+[  111.958518][T12621]  </TASK>
+[  111.958804][T12621] Modules linked in:
+[  111.959651][T12621] ---[ end trace 0000000000000000 ]---
+[  111.973153][T12646] EXT4-fs error (device loop5): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  111.974412][T12643] EXT4-fs (loop5): Delayed block allocation failed for inode 18 at logical offset 0 with max blocks 632 with error 28
+[  111.988625][T12646] EXT4-fs (loop5): Delayed block allocation failed for inode 18 at logical offset 632 with max blocks 1 with error 28
+[  111.989616][T12646] EXT4-fs (loop5): This should not happen!! Data will be lost
+[  111.989616][T12646] 
+[  111.990397][T12643] EXT4-fs (loop5): This should not happen!! Data will be lost
+[  111.990397][T12643] 
+[  111.991152][T12643] EXT4-fs (loop5): Total free blocks count 0
+[  111.991647][T12643] EXT4-fs (loop5): Free/Dirty block details
+[  111.992157][T12643] EXT4-fs (loop5): free_blocks=2415919104
+[  111.992642][T12643] EXT4-fs (loop5): dirty_blocks=640
+[  111.993060][T12643] EXT4-fs (loop5): Block reservation details
+[  112.000152][T12652] loop1: detected capacity change from 0 to 2048
+[  112.023272][T12621] RIP: 0010:ext4_write_inline_data+0x346/0x3e0
+[  112.023856][T12621] Code: d0 f6 4b ff e8 cb f6 4b ff 42 8d 6c 25 c4 41 bd 3c 00 00 00 45 29 e5 e9 e8 fe ff ff e8 b3 f6 4b ff 90 0f 0b e8 ab f6 4b ff 90 <0f> 0b e8 63 95 ac ff e9 fb fd ff ff 4c 89 f7 e8 56 95 ac ff e9 96
+[  112.034788][T12652] EXT4-fs (loop1): mounted filesystem 00000000-0000-0000-0000-000000000000 r/w without journal. Quota mode: none.
+[  112.041343][T12621] RSP: 0018:ffffc9000850f628 EFLAGS: 00010246
+[  112.041892][T12621] RAX: 0000000000000000 RBX: ffff8880520d65c0 RCX: 0000000000000000
+[  112.064873][T12621] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000000
+[  112.065598][T12621] RBP: 0000000000000ffc R08: 0000000000000000 R09: 0000000000000000
+[  112.066249][T12621] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000004
+[  112.066904][T12621] R13: 0000000000001000 R14: ffff8880520d6b6a R15: ffffc9000850f6c0
+[  112.088325][T12621] FS:  00007fe767ae8640(0000) GS:ffff88807ee00000(0000) knlGS:0000000000000000
+[  112.089074][T12621] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  112.089682][T12621] CR2: 00007ffcf48cccc0 CR3: 000000006a452000 CR4: 00000000000006f0
+[  112.090347][T12621] DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+[  112.094385][T12651] EXT4-fs error (device loop1): ext4_mb_generate_buddy:1217: group 0, block bitmap and bg descriptor inconsistent: 25 vs 150994969 free clusters
+[  112.098957][T12651] EXT4-fs (loop1): Delayed block allocation failed for inode 18 at logical offset 0 with max blocks 275 with error 28
+[  112.101183][T12651] EXT4-fs (loop1): This should not happen!! Data will be lost
+[  112.101183][T12651] 
+[  112.101954][T12651] EXT4-fs (loop1): Total free blocks count 0
+[  112.102431][T12651] EXT4-fs (loop1): Free/Dirty block details
+[  112.102908][T12651] EXT4-fs (loop1): free_blocks=2415919104
+[  112.103363][T12651] EXT4-fs (loop1): dirty_blocks=288
+[  112.103786][T12651] EXT4-fs (loop1): Block reservation details
+[  112.104276][T12651] EXT4-fs (loop1): i_reserved_data_blocks=18
+[  112.104574][T12621] DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400
+[  112.105441][T12621] Kernel panic - not syncing: Fatal exception
+[  112.106051][T12621] Kernel Offset: disabled
+[  112.106425][T12621] Rebooting in 86400 seconds..
+
+VM DIAGNOSIS:
+03:51:43  Registers:
+info registers vcpu 0
+RAX=dffffc0000000000 RBX=ffff88807ffda400 RCX=1ffff1100fffb4cc RDX=1ffff1100fffb4d6
+RSI=0000000000000000 RDI=ffff88807ffda6b0 RBP=00000000000000d0 RSP=ffffc900029eeda0
+R8 =0000000000000001 R9 =0000000000000000 R10=0000000000000002 R11=0000000000000000
+R12=ffffea0001ae9b08 R13=0000000000000002 R14=ffffea0001ae9b10 R15=ffff88807ffda660
+RIP=ffffffff8210c0b3 RFL=00000006 [-----P-] CPL=0 II=0 A20=1 SMM=0 HLT=0
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 00007fd1965c4640 ffffffff 00c00000
+GS =0000 ffff88802b600000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe0000003000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000001000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=00005648dd292e18 CR3=0000000066a9c000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=0000000000000000 0000000000000000 XMM01=0000000000000000 0000000000000000
+XMM02=0000000000000000 0000000000000000 XMM03=0000000000000000 0000000000000000
+XMM04=ffffffffffffffff ff00000000000000 XMM05=762f736563697665 642f3d4854415056
+XMM06=6f6f6c2f6b636f6c 622f6c6175747269 XMM07=6f6c623d4d455453 5953425553003170
+XMM08=00000000003a646d 65747379733a3d53 XMM09=ffff000000000000 000000ffff00ffff
+XMM10=0000000000200000 0000000000200000 XMM11=ffff00ff00ffffff ffff00ff00ffffff
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000
+info registers vcpu 1
+RAX=0000000000000066 RBX=00000000000003f8 RCX=0000000000000000 RDX=00000000000003f8
+RSI=0000000000000000 RDI=ffffffff9b037a00 RBP=ffffffff9b0379c0 RSP=ffffc9000850ee60
+R8 =0000000000000000 R9 =0000000000000000 R10=0000000000000000 R11=0000000000000000
+R12=0000000000000000 R13=0000000000000066 R14=ffffffff9b0379c0 R15=0000000000000000
+RIP=ffffffff8540d9bf RFL=00000002 [-------] CPL=0 II=0 A20=1 SMM=0 HLT=0
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 00007fe767ae8640 ffffffff 00c00000
+GS =0000 ffff88807ee00000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe000004a000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000048000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=00007fe767aa6658 CR3=000000006a452000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=0000000000020140 00007fe767a86000 XMM01=0000000000000000 0000000000000000
+XMM02=000000000003fde8 000000060001b354 XMM03=0000000000000000 0000020446505853
+XMM04=0000000000000000 0000000000000000 XMM05=0000000000000000 0000000000000000
+XMM06=0000000000000006 00007fff52277870 XMM07=0000001b31a20218 0000001b31a20218
+XMM08=0000000000000000 0000000000000000 XMM09=0000000000000000 0000000000000000
+XMM10=0000000000000000 0000000000000000 XMM11=0000000000000000 0000000000000000
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000
