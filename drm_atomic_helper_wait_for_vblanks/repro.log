@@ -1,0 +1,312 @@
+syzkaller login: [   54.201530][ T9366] sshd (9366) used greatest stack depth: 22496 bytes left
+Warning: Permanently added '[localhost]:56782' (ED25519) to the list of known hosts.
+Setting up swapspace version 1, size = 122.1 MiB (127995904 bytes)
+no label, UUID=453ff512-bd06-47a2-820c-281122c49291
+[   66.735501][ T9410] Adding 124996k swap on ./swap-file.  Priority:0 extents:1 across:124996k 
+[   66.773137][ T5151] Bluetooth: hci0: unexpected cc 0x0c03 length: 249 > 1
+[   66.774678][ T5151] Bluetooth: hci0: unexpected cc 0x1003 length: 249 > 9
+[   66.775665][ T5151] Bluetooth: hci0: unexpected cc 0x1001 length: 249 > 9
+[   66.776927][ T5151] Bluetooth: hci0: unexpected cc 0x0c23 length: 249 > 4
+[   66.777816][ T5151] Bluetooth: hci0: unexpected cc 0x0c25 length: 249 > 3
+[   66.778558][ T5151] Bluetooth: hci0: unexpected cc 0x0c38 length: 249 > 2
+[   66.916026][ T9423] chnl_net:caif_netlink_parms(): no params data found
+[   66.983982][ T9423] bridge0: port 1(bridge_slave_0) entered blocking state
+[   66.985132][ T9423] bridge0: port 1(bridge_slave_0) entered disabled state
+[   66.985810][ T9423] bridge_slave_0: entered allmulticast mode
+[   66.986927][ T9423] bridge_slave_0: entered promiscuous mode
+[   66.989513][ T9423] bridge0: port 2(bridge_slave_1) entered blocking state
+[   66.990178][ T9423] bridge0: port 2(bridge_slave_1) entered disabled state
+[   66.990879][ T9423] bridge_slave_1: entered allmulticast mode
+[   66.991933][ T9423] bridge_slave_1: entered promiscuous mode
+[   67.015623][ T9423] bond0: (slave bond_slave_0): Enslaving as an active interface with an up link
+[   67.017783][ T9423] bond0: (slave bond_slave_1): Enslaving as an active interface with an up link
+[   67.040463][ T9423] team0: Port device team_slave_0 added
+[   67.042240][ T9423] team0: Port device team_slave_1 added
+[   67.062488][ T9423] batman_adv: batadv0: Adding interface: batadv_slave_0
+[   67.063822][ T9423] batman_adv: batadv0: The MTU of interface batadv_slave_0 is too small (1500) to handle the transport of batman-adv packets. Packets going over this interface will be fragmented on layer2 which could impact the performance. Setting the MTU to 1560 would solve the problem.
+[   67.065920][ T9423] batman_adv: batadv0: Not using interface batadv_slave_0 (retrying later): interface not active
+[   67.068368][ T9423] batman_adv: batadv0: Adding interface: batadv_slave_1
+[   67.068933][ T9423] batman_adv: batadv0: The MTU of interface batadv_slave_1 is too small (1500) to handle the transport of batman-adv packets. Packets going over this interface will be fragmented on layer2 which could impact the performance. Setting the MTU to 1560 would solve the problem.
+[   67.071019][ T9423] batman_adv: batadv0: Not using interface batadv_slave_1 (retrying later): interface not active
+[   67.100283][ T9423] hsr_slave_0: entered promiscuous mode
+[   67.101315][ T9423] hsr_slave_1: entered promiscuous mode
+[   67.203551][ T9423] netdevsim netdevsim0 netdevsim0: renamed from eth0
+[   67.208425][ T9423] netdevsim netdevsim0 netdevsim1: renamed from eth1
+[   67.211874][ T9423] netdevsim netdevsim0 netdevsim2: renamed from eth2
+[   67.220660][ T9423] netdevsim netdevsim0 netdevsim3: renamed from eth3
+[   67.241934][ T9423] bridge0: port 2(bridge_slave_1) entered blocking state
+[   67.242697][ T9423] bridge0: port 2(bridge_slave_1) entered forwarding state
+[   67.243807][ T9423] bridge0: port 1(bridge_slave_0) entered blocking state
+[   67.244547][ T9423] bridge0: port 1(bridge_slave_0) entered forwarding state
+[   67.286307][ T9423] 8021q: adding VLAN 0 to HW filter on device bond0
+[   67.294116][ T3535] bridge0: port 1(bridge_slave_0) entered disabled state
+[   67.297239][ T3535] bridge0: port 2(bridge_slave_1) entered disabled state
+[   67.306708][ T9423] 8021q: adding VLAN 0 to HW filter on device team0
+[   67.311957][ T3535] bridge0: port 1(bridge_slave_0) entered blocking state
+[   67.312642][ T3535] bridge0: port 1(bridge_slave_0) entered forwarding state
+[   67.318922][ T3535] bridge0: port 2(bridge_slave_1) entered blocking state
+[   67.319601][ T3535] bridge0: port 2(bridge_slave_1) entered forwarding state
+[   67.361674][ T9423] 8021q: adding VLAN 0 to HW filter on device batadv0
+[   67.387955][ T9423] veth0_vlan: entered promiscuous mode
+[   67.392557][ T9423] veth1_vlan: entered promiscuous mode
+[   67.409441][ T9423] veth0_macvtap: entered promiscuous mode
+[   67.412254][ T9423] veth1_macvtap: entered promiscuous mode
+[   67.439178][ T9423] batman_adv: batadv0: Interface activated: batadv_slave_0
+[   67.451056][ T9423] batman_adv: batadv0: Interface activated: batadv_slave_1
+[   67.459376][ T9423] netdevsim netdevsim0 netdevsim0: set [1, 0] type 2 family 0 port 6081 - 0
+[   67.461427][ T9423] netdevsim netdevsim0 netdevsim1: set [1, 0] type 2 family 0 port 6081 - 0
+[   67.464832][ T9423] netdevsim netdevsim0 netdevsim2: set [1, 0] type 2 family 0 port 6081 - 0
+[   67.466723][ T9423] netdevsim netdevsim0 netdevsim3: set [1, 0] type 2 family 0 port 6081 - 0
+[   67.551208][ T1158] wlan0: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[   67.551936][ T1158] wlan0: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[   67.573168][ T1158] wlan1: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[   67.573885][ T1158] wlan1: Creating new IBSS network, BSSID 50:50:50:50:50:50
+executing program
+[   67.631262][ T1158] ==================================================================
+[   67.632205][ T1158] BUG: KASAN: slab-use-after-free in drm_atomic_helper_wait_for_vblanks+0x801/0x8d0
+[   67.633306][ T1158] Read of size 1 at addr ffff88802312e409 by task kworker/u9:5/1158
+[   67.634197][ T1158] 
+[   67.634498][ T1158] CPU: 0 UID: 0 PID: 1158 Comm: kworker/u9:5 Not tainted 6.14.0-rc4 #1
+[   67.634519][ T1158] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   67.634531][ T1158] Workqueue: events_unbound commit_work
+[   67.634551][ T1158] Call Trace:
+[   67.634559][ T1158]  <TASK>
+[   67.634566][ T1158]  dump_stack_lvl+0x116/0x1b0
+[   67.634599][ T1158]  print_address_description.constprop.0+0x2c/0x420
+[   67.634628][ T1158]  ? drm_atomic_helper_wait_for_vblanks+0x801/0x8d0
+[   67.634661][ T1158]  print_report+0xaa/0x270
+[   67.634685][ T1158]  ? drm_atomic_helper_wait_for_vblanks+0x801/0x8d0
+[   67.634717][ T1158]  ? kasan_addr_to_slab+0x27/0x80
+[   67.634739][ T1158]  ? drm_atomic_helper_wait_for_vblanks+0x801/0x8d0
+[   67.634771][ T1158]  kasan_report+0xbd/0x100
+[   67.634796][ T1158]  ? drm_atomic_helper_wait_for_vblanks+0x801/0x8d0
+[   67.634832][ T1158]  drm_atomic_helper_wait_for_vblanks+0x801/0x8d0
+[   67.634865][ T1158]  ? preempt_schedule_common+0x44/0xc0
+[   67.634891][ T1158]  ? __pfx_drm_atomic_helper_wait_for_vblanks+0x10/0x10
+[   67.634925][ T1158]  ? _raw_spin_unlock_irqrestore+0x65/0x80
+[   67.634949][ T1158]  ? drm_atomic_helper_commit_hw_done+0x337/0x4a0
+[   67.634972][ T1158]  drm_atomic_helper_commit_tail+0x8a/0xa0
+[   67.634991][ T1158]  commit_tail+0x357/0x400
+[   67.635011][ T1158]  process_one_work+0x109d/0x18c0
+[   67.635037][ T1158]  ? __pfx_lock_acquire+0x10/0x10
+[   67.635065][ T1158]  ? __pfx_process_one_work+0x10/0x10
+[   67.635089][ T1158]  ? assign_work+0x194/0x250
+[   67.635109][ T1158]  worker_thread+0x677/0xe90
+[   67.635133][ T1158]  ? __pfx_worker_thread+0x10/0x10
+[   67.635156][ T1158]  kthread+0x3b3/0x760
+[   67.635176][ T1158]  ? __pfx_kthread+0x10/0x10
+[   67.635207][ T1158]  ? _raw_spin_unlock_irq+0x23/0x60
+[   67.635229][ T1158]  ? __pfx_kthread+0x10/0x10
+[   67.635249][ T1158]  ret_from_fork+0x48/0x80
+[   67.635278][ T1158]  ? __pfx_kthread+0x10/0x10
+[   67.635298][ T1158]  ret_from_fork_asm+0x1a/0x30
+[   67.635323][ T1158]  </TASK>
+[   67.635330][ T1158] 
+[   67.656914][ T1158] Allocated by task 9423:
+[   67.657372][ T1158]  kasan_save_stack+0x24/0x50
+[   67.657873][ T1158]  kasan_save_track+0x14/0x40
+[   67.658386][ T1158]  __kasan_kmalloc+0xba/0xc0
+[   67.658865][ T1158]  drm_atomic_helper_crtc_duplicate_state+0x73/0xe0
+[   67.659530][ T1158]  drm_atomic_get_crtc_state+0x191/0x490
+[   67.660100][ T1158]  page_flip_common+0x57/0x320
+[   67.660602][ T1158]  drm_atomic_helper_page_flip+0xb8/0x190
+[   67.661175][ T1158]  drm_mode_page_flip_ioctl+0xf20/0x1280
+[   67.661748][ T1158]  drm_ioctl_kernel+0x1f0/0x3f0
+[   67.662247][ T1158]  drm_ioctl+0x588/0xb70
+[   67.662670][ T1158]  __x64_sys_ioctl+0x1af/0x210
+[   67.663134][ T1158]  do_syscall_64+0xcb/0x260
+[   67.663589][ T1158]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   67.664149][ T1158] 
+[   67.664403][ T1158] Freed by task 9423:
+[   67.664782][ T1158]  kasan_save_stack+0x24/0x50
+[   67.665243][ T1158]  kasan_save_track+0x14/0x40
+[   67.665702][ T1158]  kasan_save_free_info+0x3b/0x80
+[   67.666196][ T1158]  __kasan_slab_free+0x54/0x80
+[   67.666664][ T1158]  kfree+0x12e/0x420
+[   67.667054][ T1158]  drm_atomic_state_default_clear+0x43f/0xe10
+[   67.667650][ T1158]  __drm_atomic_state_free+0x185/0x2b0
+[   67.668145][ T1158]  drm_client_modeset_commit_atomic+0x697/0x7d0
+[   67.668725][ T1158]  drm_client_modeset_commit_locked+0x147/0x1c0
+[   67.669317][ T1158]  drm_client_modeset_commit+0x51/0x90
+[   67.669833][ T1158]  drm_fb_helper_lastclose+0xc5/0x160
+[   67.670339][ T1158]  drm_fbdev_client_restore+0x2c/0x50
+[   67.670834][ T1158]  drm_client_dev_restore+0x18b/0x2a0
+[   67.671344][ T1158]  drm_release+0x2cd/0x360
+[   67.671732][ T1158]  __fput+0x402/0xb50
+[   67.672088][ T1158]  __fput_sync+0xc3/0x100
+[   67.672479][ T1158]  __x64_sys_close+0x8a/0x120
+[   67.672895][ T1158]  do_syscall_64+0xcb/0x260
+[   67.673301][ T1158]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   67.673812][ T1158] 
+[   67.674024][ T1158] The buggy address belongs to the object at ffff88802312e400
+[   67.674024][ T1158]  which belongs to the cache kmalloc-512 of size 512
+[   67.675192][ T1158] The buggy address is located 9 bytes inside of
+[   67.675192][ T1158]  freed 512-byte region [ffff88802312e400, ffff88802312e600)
+[   67.676297][ T1158] 
+[   67.676512][ T1158] The buggy address belongs to the physical page:
+[   67.677073][ T1158] page: refcount:0 mapcount:0 mapping:0000000000000000 index:0x0 pfn:0x2312c
+[   67.677801][ T1158] head: order:2 mapcount:0 entire_mapcount:0 nr_pages_mapped:0 pincount:0
+[   67.678533][ T1158] ksm flags: 0xfff00000000040(head|node=0|zone=1|lastcpupid=0x7ff)
+[   67.679215][ T1158] page_type: f5(slab)
+[   67.679573][ T1158] raw: 00fff00000000040 ffff88801b441c80 ffffea00009bce00 dead000000000003
+[   67.680311][ T1158] raw: 0000000000000000 0000000080100010 00000000f5000000 0000000000000000
+[   67.680997][ T1158] head: 00fff00000000040 ffff88801b441c80 ffffea00009bce00 dead000000000003
+[   67.681699][ T1158] head: 0000000000000000 0000000080100010 00000000f5000000 0000000000000000
+[   67.682407][ T1158] head: 00fff00000000002 ffffea00008c4b01 ffffffffffffffff 0000000000000000
+[   67.683114][ T1158] head: 0000000000000004 0000000000000000 00000000ffffffff 0000000000000000
+[   67.683794][ T1158] page dumped because: kasan: bad access detected
+[   67.684322][ T1158] page_owner tracks the page as allocated
+[   67.684790][ T1158] page last allocated via order 2, migratetype Unmovable, gfp_mask 0xd20c0(__GFP_IO|__GFP_FS|__GFP_NOWARN|__GFP_NORETRY|__GFP_COMP|__GFP_NOMEMALLOC), pid 1, tgid 1 (systemd), ts 32724774721, free_ts 32661160367
+[   67.686431][ T1158]  post_alloc_hook+0x1a3/0x1d0
+[   67.686825][ T1158]  get_page_from_freelist+0x8a5/0xfa0
+[   67.687278][ T1158]  __alloc_frozen_pages_noprof+0x1d8/0x3b0
+[   67.687779][ T1158]  alloc_pages_mpol+0x1f2/0x550
+[   67.688204][ T1158]  allocate_slab+0x229/0x310
+[   67.688585][ T1158]  ___slab_alloc+0x7f3/0x12b0
+[   67.688974][ T1158]  __slab_alloc.constprop.0+0x56/0xc0
+[   67.689431][ T1158]  __kmalloc_cache_noprof+0x280/0x450
+[   67.689872][ T1158]  kernfs_fop_open+0x287/0xe30
+[   67.690324][ T1158]  do_dentry_open+0x734/0x1c30
+[   67.690719][ T1158]  vfs_open+0x82/0x400
+[   67.691074][ T1158]  do_open+0x983/0xfb0
+[   67.691436][ T1158]  path_openat+0x277/0x6b0
+[   67.691822][ T1158]  do_filp_open+0x1f8/0x460
+[   67.692228][ T1158]  do_sys_openat2+0x16a/0x1d0
+[   67.692622][ T1158]  __x64_sys_openat+0x140/0x200
+[   67.693029][ T1158] page last free pid 5327 tgid 5327 stack trace:
+[   67.693554][ T1158]  free_frozen_pages+0x71f/0xff0
+[   67.693984][ T1158]  __put_partials+0x13b/0x190
+[   67.694407][ T1158]  qlist_free_all+0x50/0x130
+[   67.694810][ T1158]  kasan_quarantine_reduce+0x1a5/0x1f0
+[   67.695285][ T1158]  __kasan_slab_alloc+0x6f/0xa0
+[   67.695713][ T1158]  __kmalloc_node_noprof+0x1c0/0x570
+[   67.696192][ T1158]  alloc_slab_obj_exts+0x47/0xd0
+[   67.696637][ T1158]  allocate_slab+0x26f/0x310
+[   67.697054][ T1158]  ___slab_alloc+0x7f3/0x12b0
+[   67.697501][ T1158]  __slab_alloc.constprop.0+0x56/0xc0
+[   67.697974][ T1158]  kmem_cache_alloc_lru_noprof+0x27a/0x410
+[   67.698533][ T1158]  shmem_alloc_inode+0x27/0x50
+[   67.698952][ T1158]  alloc_inode+0x64/0x250
+[   67.699358][ T1158]  new_inode+0x22/0x230
+[   67.699736][ T1158]  __shmem_get_inode+0x11a/0xaa0
+[   67.700157][ T1158]  shmem_get_inode+0x37/0x110
+[   67.700568][ T1158] 
+[   67.700773][ T1158] Memory state around the buggy address:
+[   67.701231][ T1158]  ffff88802312e300: fc fc fc fc fc fc fc fc fc fc fc fc fc fc fc fc
+[   67.701872][ T1158]  ffff88802312e380: fc fc fc fc fc fc fc fc fc fc fc fc fc fc fc fc
+[   67.702539][ T1158] >ffff88802312e400: fa fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb
+[   67.703222][ T1158]                       ^
+[   67.703591][ T1158]  ffff88802312e480: fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb
+[   67.704255][ T1158]  ffff88802312e500: fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb
+[   67.704885][ T1158] ==================================================================
+[   67.706093][ T1158] Kernel panic - not syncing: KASAN: panic_on_warn set ...
+[   67.706684][ T1158] CPU: 0 UID: 0 PID: 1158 Comm: kworker/u9:5 Not tainted 6.14.0-rc4 #1
+[   67.707371][ T1158] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   67.708087][ T1158] Workqueue: events_unbound commit_work
+[   67.708549][ T1158] Call Trace:
+[   67.708825][ T1158]  <TASK>
+[   67.709072][ T1158]  dump_stack_lvl+0x3d/0x1b0
+[   67.709464][ T1158]  panic+0x6d5/0x790
+[   67.709798][ T1158]  ? __pfx_panic+0x10/0x10
+[   67.710187][ T1158]  ? irqentry_exit+0x3b/0xa0
+[   67.710599][ T1158]  ? preempt_schedule_thunk+0x1a/0x30
+[   67.711057][ T1158]  ? preempt_schedule_common+0x44/0xc0
+[   67.711522][ T1158]  ? drm_atomic_helper_wait_for_vblanks+0x801/0x8d0
+[   67.712060][ T1158]  ? drm_atomic_helper_wait_for_vblanks+0x801/0x8d0
+[   67.712604][ T1158]  check_panic_on_warn+0xb1/0xc0
+[   67.713025][ T1158]  ? drm_atomic_helper_wait_for_vblanks+0x801/0x8d0
+[   67.713567][ T1158]  end_report+0x83/0xa0
+[   67.713916][ T1158]  kasan_report+0xcd/0x100
+[   67.714298][ T1158]  ? drm_atomic_helper_wait_for_vblanks+0x801/0x8d0
+[   67.714840][ T1158]  drm_atomic_helper_wait_for_vblanks+0x801/0x8d0
+[   67.715373][ T1158]  ? preempt_schedule_common+0x44/0xc0
+[   67.715827][ T1158]  ? __pfx_drm_atomic_helper_wait_for_vblanks+0x10/0x10
+[   67.716420][ T1158]  ? _raw_spin_unlock_irqrestore+0x65/0x80
+[   67.716918][ T1158]  ? drm_atomic_helper_commit_hw_done+0x337/0x4a0
+[   67.717453][ T1158]  drm_atomic_helper_commit_tail+0x8a/0xa0
+[   67.717926][ T1158]  commit_tail+0x357/0x400
+[   67.718310][ T1158]  process_one_work+0x109d/0x18c0
+[   67.718746][ T1158]  ? __pfx_lock_acquire+0x10/0x10
+[   67.719203][ T1158]  ? __pfx_process_one_work+0x10/0x10
+[   67.719677][ T1158]  ? assign_work+0x194/0x250
+[   67.720100][ T1158]  worker_thread+0x677/0xe90
+[   67.720522][ T1158]  ? __pfx_worker_thread+0x10/0x10
+[   67.720960][ T1158]  kthread+0x3b3/0x760
+[   67.721317][ T1158]  ? __pfx_kthread+0x10/0x10
+[   67.721715][ T1158]  ? _raw_spin_unlock_irq+0x23/0x60
+[   67.722155][ T1158]  ? __pfx_kthread+0x10/0x10
+[   67.722545][ T1158]  ret_from_fork+0x48/0x80
+[   67.722927][ T1158]  ? __pfx_kthread+0x10/0x10
+[   67.723331][ T1158]  ret_from_fork_asm+0x1a/0x30
+[   67.723747][ T1158]  </TASK>
+[   67.724156][ T1158] Kernel Offset: disabled
+[   67.724528][ T1158] Rebooting in 86400 seconds..
+
+VM DIAGNOSIS:
+23:16:32  Registers:
+info registers vcpu 0
+RAX=0000000000000035 RBX=00000000000003f8 RCX=0000000000000000 RDX=00000000000003f8
+RSI=0000000000000000 RDI=ffffffff9b037a00 RBP=ffffffff9b0379c0 RSP=ffffc90006677488
+R8 =0000000000000000 R9 =0000000000000000 R10=0000000000000000 R11=0000000000000000
+R12=0000000000000000 R13=0000000000000035 R14=ffffffff9b0379c0 R15=0000000000000000
+RIP=ffffffff8540d9bf RFL=00000002 [-------] CPL=0 II=0 A20=1 SMM=0 HLT=0
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 0000000000000000 ffffffff 00c00000
+GS =0000 ffff88802b600000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe0000003000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000001000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=00007f305915af70 CR3=000000000e180000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=ffff000000000000 0000000000000000 XMM01=2323232323232323 2323232323232323
+XMM02=ffffffffffffffff ffffffffffffffff XMM03=0000000000000000 0000000000000000
+XMM04=ffff000000000000 0000000000000000 XMM05=00007fff05fb91bc 00007f3059119eb0
+XMM06=000000020003a2f8 00007fff05fb940c XMM07=0000000000000000 0000000000000000
+XMM08=0000000000000000 0000000000000000 XMM09=0000000000000000 0000000000000000
+XMM10=0000000000000000 0000000000000000 XMM11=0000000000000000 0000000000000000
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000
+info registers vcpu 1
+RAX=0000000000000000 RBX=1ffff9200008ffc1 RCX=0000000000000000 RDX=0000000000000000
+RSI=0000000000000000 RDI=0000000000000000 RBP=0000000000000000 RSP=ffffc9000047fdf8
+R8 =0000000000000000 R9 =0000000000000000 R10=0000000000000000 R11=0000000000000000
+R12=0000000000000000 R13=ffff888040ec0000 R14=dffffc0000000000 R15=0000000000000000
+RIP=ffffffff8b63aafe RFL=00000246 [---Z-P-] CPL=0 II=0 A20=1 SMM=0 HLT=1
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 0000000000000000 ffffffff 00c00000
+GS =0000 ffff88807ee00000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe000004a000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000048000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=00007fd1681176f4 CR3=000000004c14a000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=0000000000000000 0000000000000000 XMM01=203934300cd6bf76 c6d3ed4815f47c23
+XMM02=8aa0cf989b04ca5f aa76763e88d1c7f9 XMM03=0c00000000000000 0000000000000002
+XMM04=0000000000000000 0000000000000001 XMM05=32382d326137342d 363064622d323135
+XMM06=66663335343d4449 5555202c6c656261 XMM07=6c206f6e0a297365 7479622034303935
+XMM08=6168732f7273752f 206e692073656c69 XMM09=ffffffffffffffff ffffffffffffffff
+XMM10=0000000000000000 0000000000000000 XMM11=00ffff0000000000 00ffffffff000000
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000

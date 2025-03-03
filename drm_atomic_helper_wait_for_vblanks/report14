@@ -1,0 +1,165 @@
+==================================================================
+BUG: KASAN: slab-use-after-free in drm_atomic_helper_wait_for_vblanks+0x801/0x8d0 drivers/gpu/drm/drm_atomic_helper.c:1662
+Read of size 1 at addr ffff88807b391009 by task kworker/u10:0/28
+
+CPU: 1 UID: 0 PID: 28 Comm: kworker/u10:0 Not tainted 6.14.0-rc4 #1
+Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+Workqueue: events_unbound commit_work
+Call Trace:
+ <TASK>
+ __dump_stack lib/dump_stack.c:94 [inline]
+ dump_stack_lvl+0x116/0x1b0 lib/dump_stack.c:120
+ print_address_description.constprop.0+0x2c/0x420 mm/kasan/report.c:408
+ print_report+0xaa/0x270 mm/kasan/report.c:521
+ kasan_report+0xbd/0x100 mm/kasan/report.c:634
+ drm_atomic_helper_wait_for_vblanks+0x801/0x8d0 drivers/gpu/drm/drm_atomic_helper.c:1662
+ drm_atomic_helper_commit_tail+0x8a/0xa0 drivers/gpu/drm/drm_atomic_helper.c:1758
+ commit_tail+0x357/0x400 drivers/gpu/drm/drm_atomic_helper.c:1835
+ process_one_work+0x109d/0x18c0 kernel/workqueue.c:3236
+ process_scheduled_works kernel/workqueue.c:3317 [inline]
+ worker_thread+0x677/0xe90 kernel/workqueue.c:3398
+ kthread+0x3b3/0x760 kernel/kthread.c:464
+ ret_from_fork+0x48/0x80 arch/x86/kernel/process.c:148
+ ret_from_fork_asm+0x1a/0x30 arch/x86/entry/entry_64.S:244
+ </TASK>
+
+Allocated by task 15244:
+ kasan_save_stack+0x24/0x50 mm/kasan/common.c:47
+ kasan_save_track+0x14/0x40 mm/kasan/common.c:68
+ poison_kmalloc_redzone mm/kasan/common.c:377 [inline]
+ __kasan_kmalloc+0xba/0xc0 mm/kasan/common.c:394
+ kmalloc_noprof include/linux/slab.h:901 [inline]
+ drm_atomic_helper_crtc_duplicate_state+0x73/0xe0 drivers/gpu/drm/drm_atomic_state_helper.c:177
+ drm_atomic_get_crtc_state+0x191/0x490 drivers/gpu/drm/drm_atomic.c:360
+ page_flip_common+0x57/0x320 drivers/gpu/drm/drm_atomic_helper.c:3631
+ drm_atomic_helper_page_flip+0xb8/0x190 drivers/gpu/drm/drm_atomic_helper.c:3692
+ drm_mode_page_flip_ioctl+0xf20/0x1280 drivers/gpu/drm/drm_plane.c:1516
+ drm_ioctl_kernel+0x1f0/0x3f0 drivers/gpu/drm/drm_ioctl.c:796
+ drm_ioctl+0x588/0xb70 drivers/gpu/drm/drm_ioctl.c:893
+ vfs_ioctl fs/ioctl.c:51 [inline]
+ __do_sys_ioctl fs/ioctl.c:906 [inline]
+ __se_sys_ioctl fs/ioctl.c:892 [inline]
+ __x64_sys_ioctl+0x1af/0x210 fs/ioctl.c:892
+ do_syscall_x64 arch/x86/entry/common.c:52 [inline]
+ do_syscall_64+0xcb/0x260 arch/x86/entry/common.c:83
+ entry_SYSCALL_64_after_hwframe+0x77/0x7f
+
+Freed by task 15243:
+ kasan_save_stack+0x24/0x50 mm/kasan/common.c:47
+ kasan_save_track+0x14/0x40 mm/kasan/common.c:68
+ kasan_save_free_info+0x3b/0x80 mm/kasan/generic.c:576
+ poison_slab_object mm/kasan/common.c:247 [inline]
+ __kasan_slab_free+0x54/0x80 mm/kasan/common.c:264
+ kasan_slab_free include/linux/kasan.h:233 [inline]
+ slab_free_hook mm/slub.c:2353 [inline]
+ slab_free mm/slub.c:4609 [inline]
+ kfree+0x12e/0x420 mm/slub.c:4757
+ drm_atomic_state_default_clear+0x43f/0xe10 drivers/gpu/drm/drm_atomic.c:224
+ drm_atomic_state_clear drivers/gpu/drm/drm_atomic.c:293 [inline]
+ __drm_atomic_state_free+0x185/0x2b0 drivers/gpu/drm/drm_atomic.c:310
+ kref_put include/linux/kref.h:65 [inline]
+ drm_atomic_state_put include/drm/drm_atomic.h:538 [inline]
+ drm_client_modeset_commit_atomic+0x697/0x7d0 drivers/gpu/drm/drm_client_modeset.c:1085
+ drm_client_modeset_commit_locked+0x147/0x1c0 drivers/gpu/drm/drm_client_modeset.c:1182
+ drm_client_modeset_commit+0x51/0x90 drivers/gpu/drm/drm_client_modeset.c:1208
+ __drm_fb_helper_restore_fbdev_mode_unlocked drivers/gpu/drm/drm_fb_helper.c:237 [inline]
+ drm_fb_helper_restore_fbdev_mode_unlocked drivers/gpu/drm/drm_fb_helper.c:264 [inline]
+ drm_fb_helper_lastclose+0xc5/0x160 drivers/gpu/drm/drm_fb_helper.c:1977
+ drm_fbdev_client_restore+0x2c/0x50 drivers/gpu/drm/clients/drm_fbdev_client.c:31
+ drm_client_dev_restore+0x18b/0x2a0 drivers/gpu/drm/drm_client_event.c:104
+ drm_lastclose drivers/gpu/drm/drm_file.c:396 [inline]
+ drm_release+0x2cd/0x360 drivers/gpu/drm/drm_file.c:429
+ __fput+0x402/0xb50 fs/file_table.c:464
+ task_work_run+0x16c/0x270 kernel/task_work.c:227
+ resume_user_mode_work include/linux/resume_user_mode.h:50 [inline]
+ exit_to_user_mode_loop kernel/entry/common.c:114 [inline]
+ exit_to_user_mode_prepare include/linux/entry-common.h:329 [inline]
+ __syscall_exit_to_user_mode_work kernel/entry/common.c:207 [inline]
+ syscall_exit_to_user_mode+0x27b/0x2a0 kernel/entry/common.c:218
+ do_syscall_64+0xd8/0x260 arch/x86/entry/common.c:89
+ entry_SYSCALL_64_after_hwframe+0x77/0x7f
+
+The buggy address belongs to the object at ffff88807b391000
+ which belongs to the cache kmalloc-512 of size 512
+The buggy address is located 9 bytes inside of
+ freed 512-byte region [ffff88807b391000, ffff88807b391200)
+
+The buggy address belongs to the physical page:
+page: refcount:0 mapcount:0 mapping:0000000000000000 index:0x0 pfn:0x7b390
+head: order:2 mapcount:0 entire_mapcount:0 nr_pages_mapped:0 pincount:0
+flags: 0x4fff00000000040(head|node=1|zone=1|lastcpupid=0x7ff)
+page_type: f5(slab)
+raw: 04fff00000000040 ffff88801b441c80 ffffea00016f8200 dead000000000002
+raw: 0000000000000000 0000000000100010 00000000f5000000 0000000000000000
+head: 04fff00000000040 ffff88801b441c80 ffffea00016f8200 dead000000000002
+head: 0000000000000000 0000000000100010 00000000f5000000 0000000000000000
+head: 04fff00000000002 ffffea0001ece401 ffffffffffffffff 0000000000000000
+head: 0000000000000004 0000000000000000 00000000ffffffff 0000000000000000
+page dumped because: kasan: bad access detected
+page_owner tracks the page as allocated
+page last allocated via order 2, migratetype Unmovable, gfp_mask 0xd20c0(__GFP_IO|__GFP_FS|__GFP_NOWARN|__GFP_NORETRY|__GFP_COMP|__GFP_NOMEMALLOC), pid 14933, tgid 14929 (syz.6.300), ts 150240306762, free_ts 149834103808
+ set_page_owner include/linux/page_owner.h:32 [inline]
+ post_alloc_hook+0x1a3/0x1d0 mm/page_alloc.c:1551
+ prep_new_page mm/page_alloc.c:1559 [inline]
+ get_page_from_freelist+0x8a5/0xfa0 mm/page_alloc.c:3477
+ __alloc_frozen_pages_noprof+0x1d8/0x3b0 mm/page_alloc.c:4739
+ alloc_pages_mpol+0x1f2/0x550 mm/mempolicy.c:2270
+ alloc_slab_page mm/slub.c:2423 [inline]
+ allocate_slab+0x229/0x310 mm/slub.c:2587
+ ___slab_alloc+0x7f3/0x12b0 mm/slub.c:3826
+ __slab_alloc.constprop.0+0x56/0xc0 mm/slub.c:3916
+ __slab_alloc_node mm/slub.c:3991 [inline]
+ slab_alloc_node mm/slub.c:4152 [inline]
+ __do_kmalloc_node mm/slub.c:4293 [inline]
+ __kmalloc_noprof+0x30d/0x580 mm/slub.c:4306
+ kmalloc_noprof include/linux/slab.h:905 [inline]
+ kzalloc_noprof include/linux/slab.h:1037 [inline]
+ copy_splice_read+0x15c/0xb70 fs/splice.c:339
+ do_splice_read+0x2c7/0x370 fs/splice.c:984
+ splice_direct_to_actor+0x2a4/0x9c0 fs/splice.c:1089
+ do_splice_direct_actor fs/splice.c:1207 [inline]
+ do_splice_direct+0x176/0x250 fs/splice.c:1233
+ do_sendfile+0xa79/0xd90 fs/read_write.c:1363
+ __do_sys_sendfile64 fs/read_write.c:1424 [inline]
+ __se_sys_sendfile64 fs/read_write.c:1410 [inline]
+ __x64_sys_sendfile64+0x1de/0x220 fs/read_write.c:1410
+ do_syscall_x64 arch/x86/entry/common.c:52 [inline]
+ do_syscall_64+0xcb/0x260 arch/x86/entry/common.c:83
+ entry_SYSCALL_64_after_hwframe+0x77/0x7f
+page last free pid 24 tgid 24 stack trace:
+ reset_page_owner include/linux/page_owner.h:25 [inline]
+ free_pages_prepare mm/page_alloc.c:1127 [inline]
+ __free_pages_ok+0x61f/0xe70 mm/page_alloc.c:1271
+ __folio_put+0x304/0x3d0 mm/swap.c:112
+ skb_kfree_head net/core/skbuff.c:996 [inline]
+ skb_free_head+0x108/0x1d0 net/core/skbuff.c:1008
+ skb_release_data+0x558/0x730 net/core/skbuff.c:1035
+ skb_release_all net/core/skbuff.c:1100 [inline]
+ __kfree_skb net/core/skbuff.c:1114 [inline]
+ consume_skb+0xbf/0x100 net/core/skbuff.c:1346
+ sctp_chunk_destroy net/sctp/sm_make_chunk.c:1503 [inline]
+ sctp_chunk_put+0x1ae/0x2c0 net/sctp/sm_make_chunk.c:1530
+ sctp_inq_chunk_free net/sctp/inqueue.c:46 [inline]
+ sctp_inq_pop+0x5f9/0xf50 net/sctp/inqueue.c:141
+ sctp_assoc_bh_rcv+0x10e/0x6c0 net/sctp/associola.c:998
+ sctp_inq_push+0x1dc/0x270 net/sctp/inqueue.c:88
+ sctp_rcv+0x18d9/0x1f20 net/sctp/input.c:243
+ sctp6_rcv+0x3d/0x60 net/sctp/ipv6.c:1126
+ ip6_protocol_deliver_rcu+0xea9/0x1410 net/ipv6/ip6_input.c:436
+ ip6_input_finish+0x105/0x190 net/ipv6/ip6_input.c:480
+ NF_HOOK include/linux/netfilter.h:314 [inline]
+ ip6_input+0x10b/0x310 net/ipv6/ip6_input.c:491
+ dst_input include/net/dst.h:469 [inline]
+ ip6_rcv_finish net/ipv6/ip6_input.c:79 [inline]
+ NF_HOOK include/linux/netfilter.h:314 [inline]
+ ipv6_rcv+0x276/0x680 net/ipv6/ip6_input.c:309
+ __netif_receive_skb_one_core+0x12e/0x1f0 net/core/dev.c:5899
+
+Memory state around the buggy address:
+ ffff88807b390f00: fc fc fc fc fc fc fc fc fc fc fc fc fc fc fc fc
+ ffff88807b390f80: fc fc fc fc fc fc fc fc fc fc fc fc fc fc fc fc
+>ffff88807b391000: fa fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb
+                      ^
+ ffff88807b391080: fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb
+ ffff88807b391100: fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb
+==================================================================
