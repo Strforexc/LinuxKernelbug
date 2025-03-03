@@ -1,0 +1,341 @@
+Warning: Permanently added '[localhost]:64705' (ED25519) to the list of known hosts.
+executing program
+syzkaller login: [   60.886316][ T9404] loop0: detected capacity change from 0 to 32768
+[   60.898313][ T9404] bcachefs (/dev/loop0): error reading default superblock: checksum error, type crc32c_nonzero: got 5c95dacc should be 29d2fb78
+[   61.037062][ T9404] bcachefs (loop0): starting version 1.7: mi_btree_bitmap opts=compression=lz4,nojournal_transaction_names
+[   61.038826][ T9404] bcachefs (loop0): recovering from clean shutdown, journal seq 7
+[   61.040546][ T9404] bcachefs (loop0): Doing compatible version upgrade from 1.7: mi_btree_bitmap to 1.20: directory_size
+[   61.040546][ T9404]   running recovery passes: check_allocations,check_extents_to_backpointers,check_inodes,check_dirents
+[   61.059205][ T9404] ==================================================================
+[   61.060422][ T9404] BUG: KASAN: use-after-free in crc32c_le_base+0xdb/0xf0
+[   61.061270][ T9404] Read of size 1 at addr ffff888050380000 by task syz-executor801/9404
+[   61.062183][ T9404] 
+[   61.062566][ T9404] CPU: 1 UID: 0 PID: 9404 Comm: syz-executor801 Not tainted 6.14.0-rc4 #1
+[   61.062593][ T9404] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   61.062606][ T9404] Call Trace:
+[   61.062616][ T9404]  <TASK>
+[   61.062627][ T9404]  dump_stack_lvl+0x116/0x1b0
+[   61.062675][ T9404]  print_address_description.constprop.0+0x2c/0x420
+[   61.062710][ T9404]  ? crc32c_le_base+0xdb/0xf0
+[   61.062729][ T9404]  print_report+0xaa/0x270
+[   61.062751][ T9404]  ? crc32c_le_base+0xdb/0xf0
+[   61.062769][ T9404]  ? kasan_addr_to_slab+0x27/0x80
+[   61.062790][ T9404]  ? crc32c_le_base+0xdb/0xf0
+[   61.062808][ T9404]  kasan_report+0xbd/0x100
+[   61.062832][ T9404]  ? crc32c_le_base+0xdb/0xf0
+[   61.062852][ T9404]  crc32c_le_base+0xdb/0xf0
+[   61.062872][ T9404]  crc32c_le_arch+0x183/0x1d0
+[   61.062899][ T9404]  bch2_checksum_update+0x136/0x1a0
+[   61.062939][ T9404]  bch2_checksum+0x104/0x2c0
+[   61.062957][ T9404]  ? __pfx_bch2_checksum+0x10/0x10
+[   61.062979][ T9404]  ? trace_kfree+0x38/0xe0
+[   61.063002][ T9404]  ? kfree+0x38/0x420
+[   61.063035][ T9404]  ? __pfx_validate_bset_keys+0x10/0x10
+[   61.063078][ T9404]  ? __pfx_validate_bset+0x10/0x10
+[   61.063110][ T9404]  ? bch2_bpos_to_text+0x2c0/0x3c0
+[   61.063157][ T9404]  ? prt_str+0x13e/0x3b0
+[   61.063180][ T9404]  ? bch2_journal_seq_is_blacklisted+0x257/0x380
+[   61.063213][ T9404]  bch2_btree_node_read_done+0x28e7/0x4b90
+[   61.063246][ T9404]  ? bch2_bkey_pick_read_device+0x89b/0x1740
+[   61.063267][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   61.063293][ T9404]  ? __pfx_bch2_btree_node_read_done+0x10/0x10
+[   61.063314][ T9404]  ? bch2_bkey_pick_read_device+0x89b/0x1740
+[   61.063344][ T9404]  ? bch2_bkey_pick_read_device+0x8aa/0x1740
+[   61.063367][ T9404]  ? __pfx_bch2_bkey_pick_read_device+0x10/0x10
+[   61.063386][ T9404]  ? __lock_release+0x103/0x470
+[   61.063420][ T9404]  ? btree_node_read_work+0x62d/0x1060
+[   61.063445][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   61.063472][ T9404]  ? btree_node_read_work+0x670/0x1060
+[   61.063492][ T9404]  btree_node_read_work+0x670/0x1060
+[   61.063513][ T9404]  ? mark_lock+0x400/0x400
+[   61.063539][ T9404]  ? __pfx_btree_node_read_work+0x10/0x10
+[   61.063559][ T9404]  ? bch2_congested_acct+0x100/0x260
+[   61.063586][ T9404]  ? bch2_latency_acct+0x200/0x2a0
+[   61.063616][ T9404]  ? __pfx_bch2_latency_acct+0x10/0x10
+[   61.063650][ T9404]  ? bio_associate_blkg+0x139/0x290
+[   61.063672][ T9404]  bch2_btree_node_read+0x855/0xc50
+[   61.063694][ T9404]  ? __pfx_bch2_btree_node_read+0x10/0x10
+[   61.063717][ T9404]  ? __pfx___mutex_unlock_slowpath+0x10/0x10
+[   61.063744][ T9404]  ? bch2_trans_unlock+0x74/0x1a0
+[   61.063771][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   61.063796][ T9404]  ? bch2_trans_unlock+0x74/0x1a0
+[   61.063825][ T9404]  __bch2_btree_root_read+0x288/0x410
+[   61.063847][ T9404]  ? __pfx___bch2_btree_root_read+0x10/0x10
+[   61.063868][ T9404]  ? __mutex_unlock_slowpath+0x145/0x400
+[   61.063896][ T9404]  ? __bch2_trans_get+0x782/0xfa0
+[   61.063916][ T9404]  bch2_btree_root_read+0x54/0xa0
+[   61.063937][ T9404]  read_btree_roots+0x2ba/0x760
+[   61.063962][ T9404]  ? __pfx_read_btree_roots+0x10/0x10
+[   61.063988][ T9404]  ? journal_replay_entry_early+0x157/0x960
+[   61.064020][ T9404]  bch2_fs_recovery+0x1822/0x2fa0
+[   61.064047][ T9404]  ? __pfx_bch2_fs_recovery+0x10/0x10
+[   61.064071][ T9404]  ? find_held_lock+0x2d/0x120
+[   61.064091][ T9404]  ? bch2_get_next_online_dev+0x475/0x830
+[   61.064115][ T9404]  ? percpu_ref_put_many.constprop.0+0xc4/0x2a0
+[   61.064138][ T9404]  ? bch2_get_next_online_dev+0x475/0x830
+[   61.064161][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   61.064187][ T9404]  ? bch2_get_next_online_dev+0x475/0x830
+[   61.064210][ T9404]  ? bch2_get_next_online_dev+0x47f/0x830
+[   61.064234][ T9404]  ? llist_reverse_order+0x4d/0x70
+[   61.064263][ T9404]  ? __closure_wake_up+0x31/0x3f0
+[   61.064289][ T9404]  bch2_fs_start+0x33d/0x690
+[   61.064318][ T9404]  bch2_fs_get_tree+0x105a/0x1470
+[   61.064343][ T9404]  ? __pfx_bch2_fs_get_tree+0x10/0x10
+[   61.064361][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   61.064392][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   61.064420][ T9404]  ? safesetid_security_capable+0xc4/0x1e0
+[   61.064444][ T9404]  ? bpf_lsm_capable+0x9/0x10
+[   61.064464][ T9404]  ? security_capable+0x210/0x260
+[   61.064485][ T9404]  vfs_get_tree+0x93/0x350
+[   61.064502][ T9404]  do_new_mount+0x368/0x730
+[   61.064529][ T9404]  ? __pfx_do_new_mount+0x10/0x10
+[   61.064556][ T9404]  ? safesetid_security_capable+0xc4/0x1e0
+[   61.064579][ T9404]  ? bpf_lsm_capable+0x9/0x10
+[   61.064597][ T9404]  ? security_capable+0x210/0x260
+[   61.064617][ T9404]  path_mount+0x4a6/0x17f0
+[   61.064645][ T9404]  ? strncpy_from_user+0x20e/0x2f0
+[   61.064671][ T9404]  ? putname+0x134/0x170
+[   61.064697][ T9404]  ? __pfx_path_mount+0x10/0x10
+[   61.064725][ T9404]  ? putname+0x134/0x170
+[   61.064751][ T9404]  __x64_sys_mount+0x288/0x310
+[   61.064780][ T9404]  ? __pfx___x64_sys_mount+0x10/0x10
+[   61.064812][ T9404]  do_syscall_64+0xcb/0x260
+[   61.064837][ T9404]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   61.064863][ T9404] RIP: 0033:0x7fd43c12352e
+[   61.064878][ T9404] Code: 48 c7 c0 ff ff ff ff eb aa e8 de 07 00 00 66 2e 0f 1f 84 00 00 00 00 00 0f 1f 40 00 f3 0f 1e fa 49 89 ca b8 a5 00 00 00 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 c7 c1 b8 ff ff ff f7 d8 64 89 01 48
+[   61.064895][ T9404] RSP: 002b:00007ffdd2c845d8 EFLAGS: 00000282 ORIG_RAX: 00000000000000a5
+[   61.064912][ T9404] RAX: ffffffffffffffda RBX: 000055558d764378 RCX: 00007fd43c12352e
+[   61.064923][ T9404] RDX: 0000400000000040 RSI: 0000400000005dc0 RDI: 00007ffdd2c84600
+[   61.064934][ T9404] RBP: 00007ffdd2c84600 R08: 00007ffdd2c84640 R09: 0000000000005d8e
+[   61.064945][ T9404] R10: 0000000000014002 R11: 0000000000000282 R12: 0000400000005dc0
+[   61.064955][ T9404] R13: 0000400000000040 R14: 00007ffdd2c84640 R15: 0000000000000004
+[   61.064971][ T9404]  </TASK>
+[   61.064977][ T9404] 
+[   61.122154][ T9404] The buggy address belongs to the physical page:
+[   61.122797][ T9404] page: refcount:0 mapcount:0 mapping:0000000000000000 index:0x0 pfn:0x50380
+[   61.123537][ T9404] flags: 0x4fff00000000000(node=1|zone=1|lastcpupid=0x7ff)
+[   61.124129][ T9404] page_type: f0(buddy)
+[   61.124477][ T9404] raw: 04fff00000000000 ffff88807ffda878 ffff88807ffda878 0000000000000000
+[   61.125255][ T9404] raw: 0000000000000000 0000000000000007 00000000f0000000 0000000000000000
+[   61.126074][ T9404] page dumped because: kasan: bad access detected
+[   61.126701][ T9404] page_owner tracks the page as freed
+[   61.127207][ T9404] page last allocated via order 5, migratetype Reclaimable, gfp_mask 0x452cd0(GFP_KERNEL_ACCOUNT|__GFP_NOWARN|__GFP_NORETRY|__GFP_COMP|__GFP_RECLAIMABLE), pid 9404, tgid 9404 (syz-executor801), ts 60986225234, free_ts 61057148815
+[   61.129501][ T9404]  post_alloc_hook+0x1a3/0x1d0
+[   61.130041][ T9404]  get_page_from_freelist+0x8a5/0xfa0
+[   61.130568][ T9404]  __alloc_frozen_pages_noprof+0x1d8/0x3b0
+[   61.131192][ T9404]  __alloc_pages_noprof+0xc/0x1c0
+[   61.131665][ T9404]  ___kmalloc_large_node+0x8b/0x1b0
+[   61.132126][ T9404]  __kmalloc_large_node_noprof+0x1a/0x80
+[   61.132609][ T9404]  __kmalloc_node_noprof+0x39e/0x570
+[   61.133062][ T9404]  __kvmalloc_node_noprof+0x7e/0x1c0
+[   61.133518][ T9404]  btree_node_data_alloc.constprop.0+0xe9/0x2a0
+[   61.134059][ T9404]  __bch2_btree_node_mem_alloc+0x37/0xa0
+[   61.134562][ T9404]  bch2_fs_btree_cache_init+0x110/0x560
+[   61.135173][ T9404]  bch2_fs_alloc+0x16fc/0x1e30
+[   61.135722][ T9404]  bch2_fs_open+0x91b/0xb90
+[   61.136240][ T9404]  bch2_fs_get_tree+0xf83/0x1470
+[   61.136779][ T9404]  vfs_get_tree+0x93/0x350
+[   61.137231][ T9404]  do_new_mount+0x368/0x730
+[   61.137684][ T9404] page last free pid 9404 tgid 9404 stack trace:
+[   61.138273][ T9404]  __free_pages_ok+0x61f/0xe70
+[   61.138695][ T9404]  __folio_put+0x304/0x3d0
+[   61.139078][ T9404]  kvfree+0x46/0x50
+[   61.139422][ T9404]  bch2_btree_node_read_done+0x3acc/0x4b90
+[   61.139915][ T9404]  btree_node_read_work+0x670/0x1060
+[   61.140369][ T9404]  bch2_btree_node_read+0x855/0xc50
+[   61.140809][ T9404]  __bch2_btree_root_read+0x288/0x410
+[   61.141263][ T9404]  bch2_btree_root_read+0x54/0xa0
+[   61.141700][ T9404]  read_btree_roots+0x2ba/0x760
+[   61.142160][ T9404]  bch2_fs_recovery+0x1822/0x2fa0
+[   61.142813][ T9404]  bch2_fs_start+0x33d/0x690
+[   61.143370][ T9404]  bch2_fs_get_tree+0x105a/0x1470
+[   61.143900][ T9404]  vfs_get_tree+0x93/0x350
+[   61.144280][ T9404]  do_new_mount+0x368/0x730
+[   61.144771][ T9404]  path_mount+0x4a6/0x17f0
+[   61.145175][ T9404]  __x64_sys_mount+0x288/0x310
+[   61.145632][ T9404] 
+[   61.145832][ T9404] Memory state around the buggy address:
+[   61.146282][ T9404]  ffff88805037ff00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[   61.146922][ T9404]  ffff88805037ff80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[   61.147559][ T9404] >ffff888050380000: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+[   61.148189][ T9404]                    ^
+[   61.148525][ T9404]  ffff888050380080: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+[   61.149169][ T9404]  ffff888050380100: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+[   61.149833][ T9404] ==================================================================
+[   61.154063][ T9404] Kernel panic - not syncing: KASAN: panic_on_warn set ...
+[   61.154690][ T9404] CPU: 1 UID: 0 PID: 9404 Comm: syz-executor801 Not tainted 6.14.0-rc4 #1
+[   61.155479][ T9404] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   61.156514][ T9404] Call Trace:
+[   61.156860][ T9404]  <TASK>
+[   61.157126][ T9404]  dump_stack_lvl+0x3d/0x1b0
+[   61.157601][ T9404]  panic+0x6d5/0x790
+[   61.157946][ T9404]  ? __pfx_panic+0x10/0x10
+[   61.158412][ T9404]  ? irqentry_exit+0x3b/0xa0
+[   61.158878][ T9404]  ? lockdep_hardirqs_on+0x7c/0x120
+[   61.159387][ T9404]  ? preempt_schedule_thunk+0x1a/0x30
+[   61.159833][ T9404]  ? preempt_schedule_common+0x44/0xc0
+[   61.160321][ T9404]  ? crc32c_le_base+0xdb/0xf0
+[   61.160782][ T9404]  ? crc32c_le_base+0xdb/0xf0
+[   61.161233][ T9404]  check_panic_on_warn+0xb1/0xc0
+[   61.161656][ T9404]  ? crc32c_le_base+0xdb/0xf0
+[   61.162047][ T9404]  end_report+0x83/0xa0
+[   61.162407][ T9404]  kasan_report+0xcd/0x100
+[   61.162791][ T9404]  ? crc32c_le_base+0xdb/0xf0
+[   61.163198][ T9404]  crc32c_le_base+0xdb/0xf0
+[   61.163593][ T9404]  crc32c_le_arch+0x183/0x1d0
+[   61.164018][ T9404]  bch2_checksum_update+0x136/0x1a0
+[   61.164515][ T9404]  bch2_checksum+0x104/0x2c0
+[   61.164911][ T9404]  ? __pfx_bch2_checksum+0x10/0x10
+[   61.165352][ T9404]  ? trace_kfree+0x38/0xe0
+[   61.165738][ T9404]  ? kfree+0x38/0x420
+[   61.166089][ T9404]  ? __pfx_validate_bset_keys+0x10/0x10
+[   61.166569][ T9404]  ? __pfx_validate_bset+0x10/0x10
+[   61.167008][ T9404]  ? bch2_bpos_to_text+0x2c0/0x3c0
+[   61.167445][ T9404]  ? prt_str+0x13e/0x3b0
+[   61.167807][ T9404]  ? bch2_journal_seq_is_blacklisted+0x257/0x380
+[   61.168376][ T9404]  bch2_btree_node_read_done+0x28e7/0x4b90
+[   61.168860][ T9404]  ? bch2_bkey_pick_read_device+0x89b/0x1740
+[   61.169386][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   61.169793][ T9404]  ? __pfx_bch2_btree_node_read_done+0x10/0x10
+[   61.170319][ T9404]  ? bch2_bkey_pick_read_device+0x89b/0x1740
+[   61.170823][ T9404]  ? bch2_bkey_pick_read_device+0x8aa/0x1740
+[   61.171316][ T9404]  ? __pfx_bch2_bkey_pick_read_device+0x10/0x10
+[   61.171851][ T9404]  ? __lock_release+0x103/0x470
+[   61.172277][ T9404]  ? btree_node_read_work+0x62d/0x1060
+[   61.172750][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   61.173195][ T9404]  ? btree_node_read_work+0x670/0x1060
+[   61.173663][ T9404]  btree_node_read_work+0x670/0x1060
+[   61.174115][ T9404]  ? mark_lock+0x400/0x400
+[   61.174527][ T9404]  ? __pfx_btree_node_read_work+0x10/0x10
+[   61.175009][ T9404]  ? bch2_congested_acct+0x100/0x260
+[   61.175470][ T9404]  ? bch2_latency_acct+0x200/0x2a0
+[   61.175912][ T9404]  ? __pfx_bch2_latency_acct+0x10/0x10
+[   61.176395][ T9404]  ? bio_associate_blkg+0x139/0x290
+[   61.176988][ T9404]  bch2_btree_node_read+0x855/0xc50
+[   61.177496][ T9404]  ? __pfx_bch2_btree_node_read+0x10/0x10
+[   61.178047][ T9404]  ? __pfx___mutex_unlock_slowpath+0x10/0x10
+[   61.178810][ T9404]  ? bch2_trans_unlock+0x74/0x1a0
+[   61.179454][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   61.180059][ T9404]  ? bch2_trans_unlock+0x74/0x1a0
+[   61.180729][ T9404]  __bch2_btree_root_read+0x288/0x410
+[   61.181426][ T9404]  ? __pfx___bch2_btree_root_read+0x10/0x10
+[   61.182195][ T9404]  ? __mutex_unlock_slowpath+0x145/0x400
+[   61.182932][ T9404]  ? __bch2_trans_get+0x782/0xfa0
+[   61.183595][ T9404]  bch2_btree_root_read+0x54/0xa0
+[   61.184247][ T9404]  read_btree_roots+0x2ba/0x760
+[   61.184933][ T9404]  ? __pfx_read_btree_roots+0x10/0x10
+[   61.185450][ T9404]  ? journal_replay_entry_early+0x157/0x960
+[   61.185962][ T9404]  bch2_fs_recovery+0x1822/0x2fa0
+[   61.186408][ T9404]  ? __pfx_bch2_fs_recovery+0x10/0x10
+[   61.186850][ T9404]  ? find_held_lock+0x2d/0x120
+[   61.187260][ T9404]  ? bch2_get_next_online_dev+0x475/0x830
+[   61.187756][ T9404]  ? percpu_ref_put_many.constprop.0+0xc4/0x2a0
+[   61.188282][ T9404]  ? bch2_get_next_online_dev+0x475/0x830
+[   61.188757][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   61.189158][ T9404]  ? bch2_get_next_online_dev+0x475/0x830
+[   61.189633][ T9404]  ? bch2_get_next_online_dev+0x47f/0x830
+[   61.190118][ T9404]  ? llist_reverse_order+0x4d/0x70
+[   61.190547][ T9404]  ? __closure_wake_up+0x31/0x3f0
+[   61.190978][ T9404]  bch2_fs_start+0x33d/0x690
+[   61.191398][ T9404]  bch2_fs_get_tree+0x105a/0x1470
+[   61.191849][ T9404]  ? __pfx_bch2_fs_get_tree+0x10/0x10
+[   61.192314][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   61.192736][ T9404]  ? rcu_is_watching+0x12/0xd0
+[   61.193139][ T9404]  ? safesetid_security_capable+0xc4/0x1e0
+[   61.193641][ T9404]  ? bpf_lsm_capable+0x9/0x10
+[   61.194047][ T9404]  ? security_capable+0x210/0x260
+[   61.194484][ T9404]  vfs_get_tree+0x93/0x350
+[   61.194868][ T9404]  do_new_mount+0x368/0x730
+[   61.195266][ T9404]  ? __pfx_do_new_mount+0x10/0x10
+[   61.195702][ T9404]  ? safesetid_security_capable+0xc4/0x1e0
+[   61.196197][ T9404]  ? bpf_lsm_capable+0x9/0x10
+[   61.196601][ T9404]  ? security_capable+0x210/0x260
+[   61.197022][ T9404]  path_mount+0x4a6/0x17f0
+[   61.197406][ T9404]  ? strncpy_from_user+0x20e/0x2f0
+[   61.197833][ T9404]  ? putname+0x134/0x170
+[   61.198194][ T9404]  ? __pfx_path_mount+0x10/0x10
+[   61.198609][ T9404]  ? putname+0x134/0x170
+[   61.198972][ T9404]  __x64_sys_mount+0x288/0x310
+[   61.199379][ T9404]  ? __pfx___x64_sys_mount+0x10/0x10
+[   61.199823][ T9404]  do_syscall_64+0xcb/0x260
+[   61.200207][ T9404]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   61.200707][ T9404] RIP: 0033:0x7fd43c12352e
+[   61.201102][ T9404] Code: 48 c7 c0 ff ff ff ff eb aa e8 de 07 00 00 66 2e 0f 1f 84 00 00 00 00 00 0f 1f 40 00 f3 0f 1e fa 49 89 ca b8 a5 00 00 00 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 c7 c1 b8 ff ff ff f7 d8 64 89 01 48
+[   61.202664][ T9404] RSP: 002b:00007ffdd2c845d8 EFLAGS: 00000282 ORIG_RAX: 00000000000000a5
+[   61.203361][ T9404] RAX: ffffffffffffffda RBX: 000055558d764378 RCX: 00007fd43c12352e
+[   61.204001][ T9404] RDX: 0000400000000040 RSI: 0000400000005dc0 RDI: 00007ffdd2c84600
+[   61.204667][ T9404] RBP: 00007ffdd2c84600 R08: 00007ffdd2c84640 R09: 0000000000005d8e
+[   61.205295][ T9404] R10: 0000000000014002 R11: 0000000000000282 R12: 0000400000005dc0
+[   61.205951][ T9404] R13: 0000400000000040 R14: 00007ffdd2c84640 R15: 0000000000000004
+[   61.206592][ T9404]  </TASK>
+[   61.206961][ T9404] Kernel Offset: disabled
+[   61.207317][ T9404] Rebooting in 86400 seconds..
+
+VM DIAGNOSIS:
+02:57:09  Registers:
+info registers vcpu 0
+RAX=0000000000000000 RBX=1ffffffff1c00fc3 RCX=0000000000000000 RDX=0000000000000000
+RSI=0000000000000000 RDI=0000000000000000 RBP=0000000000000000 RSP=ffffffff8e007e08
+R8 =0000000000000000 R9 =0000000000000000 R10=0000000000000000 R11=0000000000000000
+R12=0000000000000000 R13=ffffffff8e097740 R14=dffffc0000000000 R15=0000000000013c10
+RIP=ffffffff8b63aafe RFL=00000246 [---Z-P-] CPL=0 II=0 A20=1 SMM=0 HLT=0
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 0000000000000000 ffffffff 00c00000
+GS =0000 ffff88802b600000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe0000003000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000001000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=000055c85980ffa8 CR3=0000000026a60000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=61636f6c6c615f6b 63656863203a7365 XMM01=657478655f6b6365 68632c736e6f6974
+XMM02=746e696f706b6361 625f6f745f73746e XMM03=7365646f6e695f6b 636568632c737265
+XMM04=2039303a37353a38 312032202072614d XMM05=0a73746e65726964 5f6b636568632c73
+XMM06=65646f6e695f6b63 6568632c73726574 XMM07=6e696f706b636162 5f6f745f73746e65
+XMM08=7478655f6b636568 632c736e6f697461 XMM09=ffff0000000000ff 000000000000ffff
+XMM10=0000000000000000 0000000000000000 XMM11=ffff000000000000 00000000000000ff
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000
+info registers vcpu 1
+RAX=0000000000000030 RBX=00000000000003f8 RCX=0000000000000000 RDX=00000000000003f8
+RSI=0000000000000000 RDI=ffffffff9b037a00 RBP=ffffffff9b0379c0 RSP=ffffc9000247e550
+R8 =0000000000000000 R9 =0000000000000000 R10=0000000000000000 R11=0000000000000000
+R12=0000000000000000 R13=0000000000000030 R14=ffffffff9b0379c0 R15=0000000000000000
+RIP=ffffffff8540d9bf RFL=00000002 [-------] CPL=0 II=0 A20=1 SMM=0 HLT=0
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 000055558d7643c0 ffffffff 00c00000
+GS =0000 ffff88807ee00000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe000004a000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000048000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=00007f557e247070 CR3=000000004cd3c000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=0000000000000000 0000000000000000 XMM01=0000000000000000 0000000000000000
+XMM02=0000000000000000 0000000000000000 XMM03=0000000000000000 0000000000000000
+XMM04=0000000000000000 0000000000ffffff XMM05=646f6e695f6b6365 68632c737265746e
+XMM06=696f706b6361625f 6f745f73746e6574 XMM07=78655f6b63656863 2c736e6f69746163
+XMM08=65707974202c726f 727265206d75736b XMM09=ffff0000000000ff 000000000000ffff
+XMM10=0000000000000000 0000000000000000 XMM11=ffff000000000000 00000000000000ff
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000
