@@ -1,0 +1,275 @@
+Warning: Permanently added '[localhost]:21819' (ED25519) to the list of known hosts.
+executing program
+syzkaller login: [   60.169093][ T9399] loop0: detected capacity change from 0 to 64
+[   60.175985][ T9399] hfs: unable to locate alternate MDB
+[   60.176560][ T9399] hfs: continuing without an alternate MDB
+[   60.182767][ T9399] ==================================================================
+[   60.183503][ T9399] BUG: KASAN: slab-out-of-bounds in hfs_bnode_read+0xc5/0x230
+[   60.184183][ T9399] Write of size 256 at addr ffff88804a39b200 by task syz-executor633/9399
+[   60.184950][ T9399] 
+[   60.185183][ T9399] CPU: 1 UID: 0 PID: 9399 Comm: syz-executor633 Not tainted 6.14.0-rc4 #1
+[   60.185198][ T9399] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   60.185206][ T9399] Call Trace:
+[   60.185211][ T9399]  <TASK>
+[   60.185226][ T9399]  dump_stack_lvl+0x116/0x1b0
+[   60.185252][ T9399]  print_address_description.constprop.0+0x2c/0x420
+[   60.185274][ T9399]  ? hfs_bnode_read+0xc5/0x230
+[   60.185291][ T9399]  print_report+0xaa/0x270
+[   60.185309][ T9399]  ? hfs_bnode_read+0xc5/0x230
+[   60.185326][ T9399]  ? kasan_addr_to_slab+0x27/0x80
+[   60.185342][ T9399]  ? hfs_bnode_read+0xc5/0x230
+[   60.185359][ T9399]  kasan_report+0xbd/0x100
+[   60.185377][ T9399]  ? hfs_bnode_read+0xc5/0x230
+[   60.185396][ T9399]  kasan_check_range+0x108/0x1e0
+[   60.185418][ T9399]  __asan_memcpy+0x3d/0x70
+[   60.185433][ T9399]  hfs_bnode_read+0xc5/0x230
+[   60.185452][ T9399]  hfs_bnode_read_key+0x149/0x1f0
+[   60.185470][ T9399]  ? __pfx_hfs_bnode_read_key+0x10/0x10
+[   60.185489][ T9399]  ? block_dirty_folio+0x128/0x1c0
+[   60.185505][ T9399]  hfs_brec_insert+0x822/0xbd0
+[   60.185527][ T9399]  ? __pfx_hfs_brec_insert+0x10/0x10
+[   60.185549][ T9399]  hfs_cat_create+0x6a5/0x840
+[   60.185570][ T9399]  ? __pfx_hfs_cat_create+0x10/0x10
+[   60.185589][ T9399]  ? __pfx___lock_release+0x10/0x10
+[   60.185609][ T9399]  ? mark_lock+0x38/0x400
+[   60.185626][ T9399]  ? clear_pending_if_disabled+0x92/0x200
+[   60.185645][ T9399]  ? rcu_is_watching+0x12/0xd0
+[   60.185668][ T9399]  ? hfs_new_inode+0x4af/0xcf0
+[   60.185681][ T9399]  ? __pfx_hfs_create+0x10/0x10
+[   60.185701][ T9399]  hfs_create+0x6b/0x100
+[   60.185721][ T9399]  lookup_open.isra.0+0x1145/0x1540
+[   60.185738][ T9399]  ? __pfx_lookup_open.isra.0+0x10/0x10
+[   60.185758][ T9399]  ? __pfx_down_write+0x10/0x10
+[   60.185778][ T9399]  ? mnt_get_write_access+0x216/0x310
+[   60.185794][ T9399]  open_last_lookups+0x82c/0x13b0
+[   60.185813][ T9399]  path_openat+0x182/0x6b0
+[   60.185830][ T9399]  ? __pfx_path_openat+0x10/0x10
+[   60.185848][ T9399]  ? __lock_acquire+0xb97/0x16a0
+[   60.185869][ T9399]  do_filp_open+0x1f8/0x460
+[   60.185887][ T9399]  ? __pfx_do_filp_open+0x10/0x10
+[   60.185905][ T9399]  ? find_held_lock+0x2d/0x120
+[   60.185920][ T9399]  ? alloc_fd+0x30c/0x5b0
+[   60.185940][ T9399]  ? alloc_fd+0x30c/0x5b0
+[   60.185957][ T9399]  ? rcu_is_watching+0x12/0xd0
+[   60.185978][ T9399]  ? _raw_spin_unlock+0x28/0x50
+[   60.185994][ T9399]  ? alloc_fd+0x30c/0x5b0
+[   60.186013][ T9399]  do_sys_openat2+0x16a/0x1d0
+[   60.186034][ T9399]  ? __pfx_do_sys_openat2+0x10/0x10
+[   60.186056][ T9399]  ? dput+0xd1/0x630
+[   60.186070][ T9399]  __x64_sys_openat+0x140/0x200
+[   60.186091][ T9399]  ? __pfx___x64_sys_openat+0x10/0x10
+[   60.186115][ T9399]  do_syscall_64+0xcb/0x260
+[   60.186135][ T9399]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   60.186155][ T9399] RIP: 0033:0x7facb2d6bc7d
+[   60.186166][ T9399] Code: c3 e8 d7 21 00 00 0f 1f 80 00 00 00 00 f3 0f 1e fa 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 c7 c1 b8 ff ff ff f7 d8 64 89 01 48
+[   60.186179][ T9399] RSP: 002b:00007ffc53741ce8 EFLAGS: 00000246 ORIG_RAX: 0000000000000101
+[   60.186193][ T9399] RAX: ffffffffffffffda RBX: 00007ffc53741f08 RCX: 00007facb2d6bc7d
+[   60.186202][ T9399] RDX: 0000000000141842 RSI: 0000400000000380 RDI: 00000000ffffff9c
+[   60.186210][ T9399] RBP: 0000000000000001 R08: 0000000000000260 R09: 0000000000000000
+[   60.186226][ T9399] R10: 0000000000000000 R11: 0000000000000246 R12: 00007facb2dbd077
+[   60.186235][ T9399] R13: 00007facb2dbd081 R14: 00007facb2dea530 R15: 0000000000000001
+[   60.186247][ T9399]  </TASK>
+[   60.186251][ T9399] 
+[   60.217659][ T9399] Allocated by task 9399:
+[   60.218040][ T9399]  kasan_save_stack+0x24/0x50
+[   60.218472][ T9399]  kasan_save_track+0x14/0x40
+[   60.218879][ T9399]  __kasan_kmalloc+0xba/0xc0
+[   60.219300][ T9399]  __kmalloc_noprof+0x212/0x580
+[   60.219725][ T9399]  hfs_find_init+0x95/0x260
+[   60.220125][ T9399]  hfs_cat_create+0x155/0x840
+[   60.220703][ T9399]  hfs_create+0x6b/0x100
+[   60.221093][ T9399]  lookup_open.isra.0+0x1145/0x1540
+[   60.221568][ T9399]  open_last_lookups+0x82c/0x13b0
+[   60.222156][ T9399]  path_openat+0x182/0x6b0
+[   60.222570][ T9399]  do_filp_open+0x1f8/0x460
+[   60.222982][ T9399]  do_sys_openat2+0x16a/0x1d0
+[   60.223409][ T9399]  __x64_sys_openat+0x140/0x200
+[   60.223851][ T9399]  do_syscall_64+0xcb/0x260
+[   60.224236][ T9399]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   60.224754][ T9399] 
+[   60.224965][ T9399] The buggy address belongs to the object at ffff88804a39b200
+[   60.224965][ T9399]  which belongs to the cache kmalloc-96 of size 96
+[   60.226111][ T9399] The buggy address is located 0 bytes inside of
+[   60.226111][ T9399]  allocated 78-byte region [ffff88804a39b200, ffff88804a39b24e)
+[   60.227444][ T9399] 
+[   60.227657][ T9399] The buggy address belongs to the physical page:
+[   60.228346][ T9399] page: refcount:0 mapcount:0 mapping:0000000000000000 index:0x0 pfn:0x4a39b
+[   60.229106][ T9399] flags: 0x4fff00000000000(node=1|zone=1|lastcpupid=0x7ff)
+[   60.229730][ T9399] page_type: f5(slab)
+[   60.230072][ T9399] raw: 04fff00000000000 ffff88801b441280 ffffea000124de40 dead000000000004
+[   60.230805][ T9399] raw: 0000000000000000 0000000080200020 00000000f5000000 0000000000000000
+[   60.231518][ T9399] page dumped because: kasan: bad access detected
+[   60.232059][ T9399] page_owner tracks the page as allocated
+[   60.232530][ T9399] page last allocated via order 0, migratetype Unmovable, gfp_mask 0x252800(GFP_NOWAIT|__GFP_NORETRY|__GFP_COMP|__GFP_THISNODE), pid 6777, tgid 6777 (udevadm), ts 27984838327, free_ts 24424729076
+[   60.234096][ T9399]  post_alloc_hook+0x1a3/0x1d0
+[   60.234553][ T9399]  get_page_from_freelist+0x8a5/0xfa0
+[   60.235042][ T9399]  __alloc_frozen_pages_noprof+0x1d8/0x3b0
+[   60.235563][ T9399]  allocate_slab+0x6a/0x310
+[   60.235968][ T9399]  ___slab_alloc+0x7f3/0x12b0
+[   60.236397][ T9399]  __slab_alloc.constprop.0+0x56/0xc0
+[   60.236872][ T9399]  __kmalloc_node_noprof+0x309/0x570
+[   60.237346][ T9399]  alloc_slab_obj_exts+0x47/0xd0
+[   60.237778][ T9399]  allocate_slab+0x26f/0x310
+[   60.238194][ T9399]  ___slab_alloc+0x7f3/0x12b0
+[   60.238610][ T9399]  __slab_alloc.constprop.0+0x56/0xc0
+[   60.239082][ T9399]  kmem_cache_alloc_lru_noprof+0x27a/0x410
+[   60.239606][ T9399]  alloc_inode+0x18a/0x250
+[   60.240001][ T9399]  iget_locked+0x2e3/0x880
+[   60.240402][ T9399]  kernfs_get_inode+0x46/0x470
+[   60.240821][ T9399]  kernfs_iop_lookup+0x1ec/0x330
+[   60.241258][ T9399] page last free pid 25 tgid 25 stack trace:
+[   60.241777][ T9399]  free_frozen_pages+0x71f/0xff0
+[   60.242196][ T9399]  vfree+0x172/0x850
+[   60.242572][ T9399]  delayed_vfree_work+0x57/0x70
+[   60.243103][ T9399]  process_one_work+0x109d/0x18c0
+[   60.243562][ T9399]  worker_thread+0x677/0xe90
+[   60.243973][ T9399]  kthread+0x3b3/0x760
+[   60.244353][ T9399]  ret_from_fork+0x48/0x80
+[   60.244759][ T9399]  ret_from_fork_asm+0x1a/0x30
+[   60.245190][ T9399] 
+[   60.245409][ T9399] Memory state around the buggy address:
+[   60.245880][ T9399]  ffff88804a39b100: fa fb fb fb fb fb fb fb fb fb fb fb fc fc fc fc
+[   60.246578][ T9399]  ffff88804a39b180: fa fb fb fb fb fb fb fb fb fb fb fb fc fc fc fc
+[   60.247279][ T9399] >ffff88804a39b200: 00 00 00 00 00 00 00 00 00 06 fc fc fc fc fc fc
+[   60.247961][ T9399]                                               ^
+[   60.248510][ T9399]  ffff88804a39b280: fa fb fb fb fb fb fb fb fb fb fb fb fc fc fc fc
+[   60.249175][ T9399]  ffff88804a39b300: fa fb fb fb fb fb fb fb fb fb fb fb fc fc fc fc
+[   60.249853][ T9399] ==================================================================
+[   60.261593][ T9399] Kernel panic - not syncing: KASAN: panic_on_warn set ...
+[   60.262264][ T9399] CPU: 1 UID: 0 PID: 9399 Comm: syz-executor633 Not tainted 6.14.0-rc4 #1
+[   60.262957][ T9399] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   60.263696][ T9399] Call Trace:
+[   60.263981][ T9399]  <TASK>
+[   60.264242][ T9399]  dump_stack_lvl+0x3d/0x1b0
+[   60.264642][ T9399]  panic+0x6d5/0x790
+[   60.265000][ T9399]  ? __pfx_panic+0x10/0x10
+[   60.265411][ T9399]  ? irqentry_exit+0x3b/0xa0
+[   60.265813][ T9399]  ? preempt_schedule_thunk+0x1a/0x30
+[   60.266298][ T9399]  ? preempt_schedule_common+0x44/0xc0
+[   60.266787][ T9399]  ? hfs_bnode_read+0xc5/0x230
+[   60.267244][ T9399]  ? hfs_bnode_read+0xc5/0x230
+[   60.267724][ T9399]  check_panic_on_warn+0xb1/0xc0
+[   60.268142][ T9399]  ? hfs_bnode_read+0xc5/0x230
+[   60.268549][ T9399]  end_report+0x83/0xa0
+[   60.268906][ T9399]  kasan_report+0xcd/0x100
+[   60.269315][ T9399]  ? hfs_bnode_read+0xc5/0x230
+[   60.269734][ T9399]  kasan_check_range+0x108/0x1e0
+[   60.270174][ T9399]  __asan_memcpy+0x3d/0x70
+[   60.270565][ T9399]  hfs_bnode_read+0xc5/0x230
+[   60.270955][ T9399]  hfs_bnode_read_key+0x149/0x1f0
+[   60.271425][ T9399]  ? __pfx_hfs_bnode_read_key+0x10/0x10
+[   60.271897][ T9399]  ? block_dirty_folio+0x128/0x1c0
+[   60.272361][ T9399]  hfs_brec_insert+0x822/0xbd0
+[   60.272795][ T9399]  ? __pfx_hfs_brec_insert+0x10/0x10
+[   60.273239][ T9399]  hfs_cat_create+0x6a5/0x840
+[   60.273662][ T9399]  ? __pfx_hfs_cat_create+0x10/0x10
+[   60.274119][ T9399]  ? __pfx___lock_release+0x10/0x10
+[   60.274576][ T9399]  ? mark_lock+0x38/0x400
+[   60.274967][ T9399]  ? clear_pending_if_disabled+0x92/0x200
+[   60.275463][ T9399]  ? rcu_is_watching+0x12/0xd0
+[   60.275899][ T9399]  ? hfs_new_inode+0x4af/0xcf0
+[   60.276318][ T9399]  ? __pfx_hfs_create+0x10/0x10
+[   60.276757][ T9399]  hfs_create+0x6b/0x100
+[   60.277142][ T9399]  lookup_open.isra.0+0x1145/0x1540
+[   60.277608][ T9399]  ? __pfx_lookup_open.isra.0+0x10/0x10
+[   60.278091][ T9399]  ? __pfx_down_write+0x10/0x10
+[   60.278523][ T9399]  ? mnt_get_write_access+0x216/0x310
+[   60.278987][ T9399]  open_last_lookups+0x82c/0x13b0
+[   60.279440][ T9399]  path_openat+0x182/0x6b0
+[   60.279833][ T9399]  ? __pfx_path_openat+0x10/0x10
+[   60.280265][ T9399]  ? __lock_acquire+0xb97/0x16a0
+[   60.280707][ T9399]  do_filp_open+0x1f8/0x460
+[   60.281118][ T9399]  ? __pfx_do_filp_open+0x10/0x10
+[   60.281541][ T9399]  ? find_held_lock+0x2d/0x120
+[   60.281960][ T9399]  ? alloc_fd+0x30c/0x5b0
+[   60.282351][ T9399]  ? alloc_fd+0x30c/0x5b0
+[   60.282716][ T9399]  ? rcu_is_watching+0x12/0xd0
+[   60.283136][ T9399]  ? _raw_spin_unlock+0x28/0x50
+[   60.283573][ T9399]  ? alloc_fd+0x30c/0x5b0
+[   60.283943][ T9399]  do_sys_openat2+0x16a/0x1d0
+[   60.284350][ T9399]  ? __pfx_do_sys_openat2+0x10/0x10
+[   60.284935][ T9399]  ? dput+0xd1/0x630
+[   60.285366][ T9399]  __x64_sys_openat+0x140/0x200
+[   60.285820][ T9399]  ? __pfx___x64_sys_openat+0x10/0x10
+[   60.286305][ T9399]  do_syscall_64+0xcb/0x260
+[   60.286717][ T9399]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   60.287236][ T9399] RIP: 0033:0x7facb2d6bc7d
+[   60.287629][ T9399] Code: c3 e8 d7 21 00 00 0f 1f 80 00 00 00 00 f3 0f 1e fa 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 c7 c1 b8 ff ff ff f7 d8 64 89 01 48
+[   60.289240][ T9399] RSP: 002b:00007ffc53741ce8 EFLAGS: 00000246 ORIG_RAX: 0000000000000101
+[   60.289954][ T9399] RAX: ffffffffffffffda RBX: 00007ffc53741f08 RCX: 00007facb2d6bc7d
+[   60.290634][ T9399] RDX: 0000000000141842 RSI: 0000400000000380 RDI: 00000000ffffff9c
+[   60.291309][ T9399] RBP: 0000000000000001 R08: 0000000000000260 R09: 0000000000000000
+[   60.291983][ T9399] R10: 0000000000000000 R11: 0000000000000246 R12: 00007facb2dbd077
+[   60.292642][ T9399] R13: 00007facb2dbd081 R14: 00007facb2dea530 R15: 0000000000000001
+[   60.293296][ T9399]  </TASK>
+[   60.293716][ T9399] Kernel Offset: disabled
+[   60.294092][ T9399] Rebooting in 86400 seconds..
+
+VM DIAGNOSIS:
+00:29:29  Registers:
+info registers vcpu 0
+RAX=000000000000000a RBX=0000000000002800 RCX=ffff888027a3e170 RDX=000000000000000b
+RSI=ffffffff8b63080b RDI=000000009964681a RBP=ffffc9000012fa68 RSP=ffffc9000012f9e0
+R8 =0000000000000000 R9 =0000000000000000 R10=ffff88807e0f0d00 R11=0000000000000000
+R12=00000000de24f0d0 R13=0000000000000001 R14=0000000000000000 R15=000000000000000b
+RIP=ffffffff84f369de RFL=00000206 [-----P-] CPL=0 II=0 A20=1 SMM=0 HLT=0
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 00007f2873364900 ffffffff 00c00000
+GS =0000 ffff88802b600000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe0000003000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000001000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=00005569fae16138 CR3=00000000226fa000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=0000000000000000 000000ff000000ff XMM01=2f2f2f2f2f2f2f2f 2f2f2f2f2f2f2f2f
+XMM02=0000000000000000 0000000000000000 XMM03=ffff0000000000ff 0000000000000000
+XMM04=ffff0000000000ff 0000000000000000 XMM05=0000000067bc9e41 000000000db8f764
+XMM06=0000000067bc9e41 000000000560bc64 XMM07=0000000000000000 000000000560bc64
+XMM08=0a333334313d6f6e 695f657069702c74 XMM09=00ffff0000000000 000000ffff000000
+XMM10=0000000000000000 0000000000000000 XMM11=00ff000000000000 00ff0000ff000000
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000
+info registers vcpu 1
+RAX=0000000000000063 RBX=00000000000003f8 RCX=0000000000000000 RDX=00000000000003f8
+RSI=0000000000000000 RDI=ffffffff9b037a00 RBP=ffffffff9b0379c0 RSP=ffffc90002e66ec8
+R8 =0000000000000000 R9 =0000000000000000 R10=0000000000000000 R11=0000000000000000
+R12=0000000000000000 R13=0000000000000063 R14=ffffffff9b0379c0 R15=0000000000000000
+RIP=ffffffff8540d9bf RFL=00000002 [-------] CPL=0 II=0 A20=1 SMM=0 HLT=0
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 000055558d0f93c0 ffffffff 00c00000
+GS =0000 ffff88807ee00000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe000004a000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000048000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=00007facaa807c00 CR3=000000004c344000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=2039323a39323a36 3120343220626546 XMM01=6c656e72656b2072 656c6c616b7a7973
+XMM02=5d3036353637312e 30362020205b203a XMM03=6f63203a73666820 5d3939333954205b
+XMM04=0a42444d20657461 6e7265746c61206e XMM05=612074756f687469 7720676e69756e69
+XMM06=746e6f63203a7366 68205d3939333954 XMM07=205b5d3036353637 312e30362020205b
+XMM08=3a656c696620766e 65206e65706f206f XMM09=ffff0000000000ff 000000000000ffff
+XMM10=0000000000000000 0000000000000000 XMM11=ffff000000000000 00000000000000ff
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000

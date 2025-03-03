@@ -1,0 +1,1993 @@
+last executing test programs:
+
+3.068093166s ago: executing program 0 (id=207):
+r0 = openat$uhid(0xffffffffffffff9c, &(0x7f0000000000), 0x2, 0x0)
+write$UHID_CREATE(r0, &(0x7f0000001040)={0x0, {'syz1\x00', 'syz1\x00', 'syz0\x00', 0x0, 0x0, 0x1, 0x98e, 0x0, 0x2, 0x798e}}, 0x120)
+
+3.010135229s ago: executing program 0 (id=209):
+r0 = bpf$PROG_LOAD(0x5, &(0x7f0000000200)={0x3, 0xe, &(0x7f0000002280)=ANY=[@ANYBLOB="b702000002000000bfa30000000000000703000000feffff7a0af0fff8bffffd79a4f0ff00000000b7060000ffffffff2d640500000000006504040001001f050404000001007d60b7030000000000006a0a00fefdff0000850000000d000000b7000000000000009500000000000000c74396c8bbbb35238097645178d0bae3ebbadc20e5a7ef8c9ac1465c3a1f59916ffc9bf0bd09f07fb2ea80e5cf8df265e1b40e4c8ae7a89cf8bd819b5c0c000000008da68076774bb4db2c769937000090af27db5b56024db96bcbbbd2cb2000ceff074673b4e8d54e7e357754508535766c80114604eab9b290a248a120c9c6e39f3052aae80677eeba68562eae0300000000274233106e2baf69b1c6190ce4099f366b89ab63ecf772de7b265040b6b1acbef92b2704550a4d1dd5c50b7420b58a93fe94c756008afcd0b2eb785632e0a85f02a55c960200000049070000000000001294fba0ed5020e6477cc921fee1f6d8ad6a2be6af7ec2d1ba000057f301000000000000000100000000100000aaf253886c0b7f004731d714ad72e5ad8430a6380ed2d29f47f96a576cd20cef7ed95157ab050000f0077e9d13d8b93eb0f2c6f8941e35e15d3d2369f5f12816a4eaeeb1a6628849eb709df5c6ba73cccdfa3c58bc5204339b0b487f0eeed581cb202994c40d322717c338033213c18a00d434ee0ca2cf61efb4b3797a642735d6d482ba98d252f36c54333aab3aa736369d92239820f5f1557b0bf7ccb0a5a13c714e0b1a5bc3f9caff3283076cda3d0b1a2905cf7bd04f2db530abcbe44bc40528ad807970727fb819afa14aad99f930f1f7d7dd51995edcf53b907228fa9e83434e71d5c57f33702f22b22417bfb38d04c8441ceec8bcaffbe800a041307bd8325a76f395bced3d3e9de82942a952e86bd67aff5bc2e3c1fcc00f61124dd06df4b8fd356cb365adc037e443820c05c5cae7bfcd55f8c81f5eb1f8d615ca27efb2193bb61665103b37f30c2efc9c3b5a4a5d95479f81a100000fbd0e502235174f3a3484124c5563cd3700000000001825b05a580ea8cb7f85b77b35a06a895b287b47efba220bc215aca4bb09b91adac57a98fc8fdda47b357170a65d7018a7f91c4228b35f71a70900000000000000870086d851ff8625e07bbec801b79afa477ebab255c7265820456fdc3f34f9d729315d856be7ec564613d5e28cf7c405d6e2b6aeb20000b8505a36a8067cb459fab87c8de10e117733d30f4fe049658a2c3e00000000000000000000000000000000000000000000000000b016e67b856ff3a221b173093dfe50f3c41c055d5ca639bca760f9fa029288de5ec30a"], &(0x7f0000000340)='syzkaller\x00', 0x0, 0x0, 0x0, 0x0, 0x0, '\x00', 0x0, @sched_cls, 0xffffffffffffffff, 0x8, &(0x7f0000000000), 0x8, 0x10, &(0x7f0000000000), 0x10, 0x0, 0xffffffffffffffff, 0x0, 0x0, 0x0, 0x10, 0x0, @void, @value}, 0x94)
+bpf$BPF_PROG_TEST_RUN(0xa, &(0x7f0000000080)={r0, 0x18000000000002a0, 0xe, 0x0, &(0x7f0000000040)="b90703600000f007049e0ff00800", 0x0, 0x0, 0xa000000, 0x0, 0x0, 0x0, 0x0}, 0x48)
+
+2.988788237s ago: executing program 0 (id=210):
+r0 = socket$nl_xfrm(0x10, 0x3, 0x6)
+sendmsg$nl_xfrm(r0, &(0x7f00000006c0)={0x0, 0x0, &(0x7f0000000680)={&(0x7f00000004c0)=@allocspi={0xf8, 0x16, 0x607, 0x0, 0x0, {{{@in, @in=@dev}, {@in6=@dev, 0x0, 0x33}, @in6=@ipv4}, 0x0, 0xc3b3}}, 0xf8}}, 0x0)
+
+2.857796785s ago: executing program 0 (id=211):
+r0 = bpf$PROG_LOAD(0x5, &(0x7f000000d000)={0xa, 0x3, &(0x7f0000008000)=@framed={{0xffffff85, 0x0, 0x0, 0x0, 0x22, 0x7}}, &(0x7f0000014ff5)='GPL\x00', 0x2, 0x1000, &(0x7f0000014000)=""/4096, 0x0, 0x0, '\x00', 0x0, @fallback, 0xffffffffffffffff, 0x8, 0x0, 0x0, 0x10, 0x0, 0x0, 0x0, 0xffffffffffffffff, 0x0, 0x0, 0x0, 0x10, 0x0, @void, @value}, 0x48)
+bpf$BPF_PROG_TEST_RUN(0xa, &(0x7f0000000100)={r0, 0x0, 0xe, 0x0, &(0x7f0000000180)="e460cdfbef24080000000a9386dd", 0x0, 0xe12, 0x0, 0x0, 0x0, 0x0}, 0x50)
+
+2.789794035s ago: executing program 0 (id=213):
+ioctl$VHOST_SET_VRING_BASE(0xffffffffffffffff, 0xaf01, 0x0)
+
+2.789202556s ago: executing program 0 (id=214):
+syz_usb_connect$uac1(0x0, 0x96, &(0x7f0000000180)=ANY=[], 0x0)
+syz_usb_connect(0x0, 0x2d, &(0x7f0000000180)=ANY=[@ANYBLOB="1201000079201010c2153900f380010203010902"], 0x0)
+
+2.123271813s ago: executing program 5 (id=217):
+r0 = socket$inet_udp(0x2, 0x2, 0x0)
+setsockopt$IPT_SO_SET_REPLACE(r0, 0xffffff0f00000000, 0x40, 0x0, 0x0)
+
+2.03231856s ago: executing program 5 (id=223):
+r0 = socket$nl_xfrm(0x10, 0x3, 0x6)
+sendmsg$nl_xfrm(r0, &(0x7f00000006c0)={0x0, 0x0, &(0x7f0000000680)={&(0x7f00000004c0)=@allocspi={0xf8, 0x16, 0x607, 0x0, 0x0, {{{@in, @in=@dev}, {@in6=@dev, 0x0, 0x33}, @in6=@ipv4}, 0x0, 0xc3b3}}, 0xf8}}, 0x0)
+
+1.896859655s ago: executing program 3 (id=226):
+r0 = bpf$PROG_LOAD(0x5, &(0x7f000000d000)={0xa, 0x3, &(0x7f0000008000)=@framed={{0xffffff85, 0x0, 0x0, 0x0, 0x22, 0x7}}, &(0x7f0000014ff5)='GPL\x00', 0x2, 0x1000, &(0x7f0000014000)=""/4096, 0x0, 0x0, '\x00', 0x0, @fallback, 0xffffffffffffffff, 0x8, 0x0, 0x0, 0x10, 0x0, 0x0, 0x0, 0xffffffffffffffff, 0x0, 0x0, 0x0, 0x10, 0x0, @void, @value}, 0x48)
+bpf$BPF_PROG_TEST_RUN(0xa, &(0x7f0000000100)={r0, 0x0, 0xe, 0x0, &(0x7f0000000180)="e460cdfbef24080000000a9386dd", 0x0, 0xe12, 0x0, 0x0, 0x0, &(0x7f0000000000), 0x0}, 0x50)
+
+1.895729375s ago: executing program 5 (id=228):
+syz_usb_connect(0x0, 0x36, &(0x7f0000000000)=ANY=[@ANYBLOB="13010000013b9808110f2020c9480000000109022400010000000009041c00029126c9000905121fb8f8ff000009058703a47ee06489"], 0x0)
+syz_open_dev$char_usb(0xc, 0xb4, 0x0)
+
+1.815697055s ago: executing program 3 (id=230):
+r0 = syz_usb_connect(0x3, 0xbb, &(0x7f00000011c0)={{0x12, 0x1, 0x0, 0x3, 0xea, 0xc3, 0x40, 0x13d3, 0x3335, 0xe96f, 0x0, 0x0, 0x0, 0x1, [{{0x9, 0x2, 0xa9, 0x1, 0x0, 0x0, 0x0, 0x0, [{{0x9, 0x4, 0x66, 0x81, 0x3, 0xe1, 0x85, 0x5b, 0x7, [@uac_control={{0xa, 0x24, 0x1, 0x100, 0xcb}, [@output_terminal={0x9, 0x24, 0x3, 0x5, 0x306, 0x3, 0x2, 0x9}, @extension_unit={0x7, 0x24, 0x8, 0x2, 0x3, 0x2}, @input_terminal={0xc, 0x24, 0x2, 0x1, 0x100, 0x4, 0xff, 0x20, 0x86, 0x88}, @extension_unit={0x7, 0x24, 0x8, 0x5, 0x80, 0x9}]}], [{{0x9, 0x5, 0x0, 0x0, 0x400, 0x0, 0x8, 0x1f, [@generic={0x2, 0x3}]}}, {{0x9, 0x5, 0xb, 0x0, 0x40, 0x5, 0xc1, 0x0, [@generic={0x4c, 0xd, "871b3fdeb5baca27ca84853ec4ccb73f0222590a341d9e93675c4101f4b1d996d39dc857c561021229f81db5d20a556120d07338902d6ca0fce77330845d3090eecb9279795c029de370"}]}}, {{0x9, 0x5, 0x2, 0x3, 0x3ff, 0xc1, 0x1, 0x0, [@generic={0x2, 0x9}]}}]}}]}}]}}, 0x0)
+syz_usb_control_io$hid(r0, 0x0, 0x0)
+
+1.815506481s ago: executing program 4 (id=231):
+r0 = openat$6lowpan_control(0xffffffffffffff9c, &(0x7f0000000640), 0x2, 0x0)
+write$6lowpan_control(r0, &(0x7f00000000c0)='connect aa:aa:aa:aa:aa:10 0', 0x1b)
+
+1.751187177s ago: executing program 4 (id=233):
+setsockopt$EBT_SO_SET_ENTRIES(0xffffffffffffffff, 0x0, 0x80, &(0x7f0000000240)=@broute={'broute\x00', 0x20, 0x1, 0x1f0, [0x0, 0x0, 0x0, 0x0, 0x0, 0x20000440], 0x0, &(0x7f0000000140), &(0x7f0000000440)=ANY=[@ANYBLOB="00000000000000000000000000000000000000000000000000000000000000000000000000000000feffffff0000000000000000000000000000000000000000000000000000000000000000120000000000000000000000fcffffff01000000030000000000000000006772653000000000000000000000000074756e6c30000000000000000000000065716c00000000000000000000000000677265746170300000000000000000000000000000000000000000000180c20000000000000000000000b000000000010000300100007374617469737469630000000000000000000000000000000000000000000000180000000000000000001c0000000000000000000000000000000000000000006c6f670000000000000000000000000000000000000000000000000000000000280000000000000000fd5164175c87113456d1e2b4dc810743b437ee958b8cff23a7dc98acf4c6000000000000000000434f4e4e5345434d41524b0000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000ffffffff0000000000000000000000000000000000000000000000000000000000000000000000000000000001000000feffffff00000000"]}, 0x268)
+
+1.698298444s ago: executing program 4 (id=234):
+flock(0xffffffffffffffff, 0x6)
+
+1.697680547s ago: executing program 4 (id=235):
+bpf$MAP_CREATE(0x0, &(0x7f0000000100)=@base={0x1, 0x2, 0x4, 0x9, 0x1, 0x1, 0x0, '\x00', 0x0, 0xffffffffffffffff, 0x0, 0x0, 0x0, 0x0, @void, @value, @void, @value}, 0x48)
+bpf$BPF_PROG_RAW_TRACEPOINT_LOAD(0x5, &(0x7f0000000080)={0x5, 0x5, 0x0, &(0x7f0000000a00)='syzkaller\x00', 0x0, 0x0, 0x0, 0x0, 0x0, '\x00', 0x0, 0x2, 0xffffffffffffffff, 0x8, 0x0, 0x0, 0x10, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x10, 0x0, @void, @value}, 0x94)
+
+1.610047403s ago: executing program 4 (id=236):
+syz_usb_connect(0x5, 0x11b, &(0x7f0000001880)={{0x12, 0x1, 0xb83299922064a45e, 0xb5, 0x4e, 0xbb, 0x10, 0x8ca, 0x22, 0x4bd6, 0x1, 0x2, 0x3, 0x1, [{{0x9, 0x2, 0x109, 0x2, 0x20, 0x60, 0x80, 0x0, [{{0x9, 0x4, 0x4a, 0x0, 0x2, 0x57, 0x2d, 0x23, 0x6, [@cdc_ncm={{0x5}, {0x5, 0x24, 0x0, 0x1ff}, {0xd, 0x24, 0xf, 0x1, 0x433e, 0x6, 0x8}, {0x6, 0x24, 0x1a, 0x3, 0xfb}, [@call_mgmt={0x5, 0x24, 0x1, 0x2, 0xf7}, @country_functional={0x10, 0x24, 0x7, 0x4, 0x7f, [0x5, 0xff, 0x6, 0x9, 0x81]}, @obex={0x5, 0x24, 0x15, 0x9}, @dmm={0x7, 0x24, 0x14, 0x7fff, 0xfffe}, @mbim={0xc, 0x24, 0x1b, 0x5, 0xf22e, 0x8, 0x3, 0x9, 0x1}, @mdlm_detail={0x4, 0x24, 0x13, 0x9}]}], [{{0x9, 0x5, 0xe, 0x3, 0x362, 0xff, 0x7f, 0x1, [@uac_iso={0x7, 0x25, 0x1, 0x0, 0x0, 0x7}, @generic={0x2, 0x11}]}}, {{0x9, 0x5, 0x6, 0x1, 0x395, 0x8, 0x1, 0x3f, [@uac_iso={0x7, 0x25, 0x1, 0x0, 0x1, 0x7}, @generic={0x2, 0x22}]}}]}}, {{0x9, 0x4, 0x45, 0x2, 0x0, 0x67, 0xaf, 0x5a, 0x3, [@cdc_ecm={{0x5}, {0x5, 0x24, 0x0, 0x9}, {0xd, 0x24, 0xf, 0x1, 0x8001, 0x2, 0x9, 0x3}, [@mbim={0xc, 0x24, 0x1b, 0x3ff, 0x6, 0xe4, 0x56, 0x1f, 0xd8}, @call_mgmt={0x5, 0x24, 0x1, 0x1, 0x1}, @ncm={0x6, 0x24, 0x1a, 0xf800, 0x5}, @mbim_extended={0x8, 0x24, 0x1c, 0x8, 0x8, 0x180}]}, @generic={0x46, 0x4, "a87c4456647d7d462c253fef1703b6194f6b3336535174574f73cc700b215a8fcd5199e833d37490102b2f7df5b142de9c1a38f4489bfe4c77041ecd0d65b6625fda914a"}]}}]}}]}}, &(0x7f0000001f80)={0x0, 0x0, 0x0, 0x0, 0x6, [{0x0, 0x0}, {0x0, 0x0}, {0x0, 0x0}, {0x0, 0x0}, {0x0, 0x0}, {0x0, 0x0}]})
+
+626.939881ms ago: executing program 3 (id=238):
+r0 = socket$inet_udp(0x2, 0x2, 0x0)
+setsockopt$IPT_SO_SET_REPLACE(r0, 0xffffff0f00000000, 0x40, &(0x7f0000000380)=@raw={'raw\x00', 0x2, 0x3, 0x390, 0x250, 0x250, 0x250, 0x250, 0x250, 0x320, 0x320, 0x320, 0x320, 0x320, 0x3, 0x0, {[{{@ip={@broadcast, @initdev={0xac, 0x1e, 0x0, 0x0}, 0x0, 0x0, 'ip6gretap0\x00'}, 0x0, 0x1c8, 0x228, 0x0, {}, [@common=@inet=@hashlimit3={{0x158}, {'team_slave_0\x00', {0x0, 0x401, 0x0, 0xe030000, 0x0, 0x4, 0x8}}}]}, @common=@SET={0x60, 'SET\x00', 0x0, {{}, {0x0, [0x0, 0x0, 0x0, 0x0, 0x0, 0x3]}}}}, {{@uncond, 0x0, 0x70, 0xd0}, @common=@SET={0x60}}], {{'\x00', 0x0, 0x70, 0x98}, {0x28}}}}, 0x3f0)
+
+622.517453ms ago: executing program 5 (id=239):
+r0 = socket$netlink(0x10, 0x3, 0x0)
+sendmsg$nl_generic(r0, &(0x7f0000000180)={0x0, 0x0, &(0x7f0000000100)={&(0x7f00000001c0)={0x14, 0x1e, 0x1, 0x0, 0x0, {0x7}}, 0x14}}, 0x0)
+
+519.979928ms ago: executing program 5 (id=242):
+r0 = bpf$PROG_LOAD(0x5, &(0x7f000000d000)={0xa, 0x3, &(0x7f0000008000)=@framed={{0xffffff85, 0x0, 0x0, 0x0, 0x22, 0x7}}, &(0x7f0000014ff5)='GPL\x00', 0x2, 0x1000, &(0x7f0000014000)=""/4096, 0x0, 0x0, '\x00', 0x0, @fallback, 0xffffffffffffffff, 0x8, 0x0, 0x0, 0x10, 0x0, 0x0, 0x0, 0xffffffffffffffff, 0x0, 0x0, 0x0, 0x10, 0x0, @void, @value}, 0x48)
+bpf$BPF_PROG_TEST_RUN(0xa, &(0x7f0000000100)={r0, 0x0, 0xe, 0x0, &(0x7f0000000180)="e460cdfbef24080000000a9386dd", 0x0, 0xe12, 0x0, 0x0, 0x0, &(0x7f0000000000), 0x0}, 0x50)
+
+519.543826ms ago: executing program 3 (id=243):
+r0 = syz_open_dev$video(&(0x7f0000000600), 0x3, 0x0)
+read(r0, &(0x7f0000000280)=""/135, 0x87)
+
+411.119618ms ago: executing program 3 (id=245):
+r0 = openat$ttyprintk(0xffffffffffffff9c, &(0x7f0000000080), 0x0, 0x0)
+ioctl$TCXONC(r0, 0x5437, 0x3)
+
+408.538527ms ago: executing program 4 (id=246):
+syz_usb_connect(0x3, 0x370, &(0x7f0000000840)={{0x12, 0x1, 0x0, 0x3e, 0x1, 0xb1, 0x40, 0xccd, 0x39, 0x8fd4, 0x1, 0x2, 0x3, 0x1, [{{0x9, 0x2, 0x35e, 0x4, 0x0, 0x0, 0x0, 0x0, [{{0x9, 0x4, 0x91, 0x0, 0xe, 0x24, 0x7b, 0x68, 0x1, [@cdc_ecm={{0x5}, {0x5, 0x24, 0x0, 0x9}, {0xd, 0x24, 0xf, 0x1, 0xd5a7, 0x7f, 0x6, 0x80}, [@acm={0x4}, @network_terminal={0x7, 0x24, 0xa, 0x1, 0x24, 0x8, 0x80}, @country_functional={0xe, 0x24, 0x7, 0x4, 0x9, [0x8, 0x0, 0x2, 0xcf2]}, @network_terminal={0x7, 0x24, 0xa, 0x40, 0x7, 0x1, 0x20}, @mdlm_detail={0x4, 0x24, 0x13, 0x6}, @acm={0x4, 0x24, 0x2, 0x4}]}], [{{0x9, 0x5, 0x4, 0x2, 0x8, 0xce, 0xf0, 0x8c, [@uac_iso={0x7, 0x25, 0x1, 0x2, 0xfe}]}}, {{0x9, 0x5, 0x8, 0x0, 0x400, 0x33, 0xc0, 0x1f}}, {{0x9, 0x5, 0xb, 0x0, 0x20, 0xb4, 0x9, 0x4, [@generic={0x2, 0x2}, @generic={0x2, 0x23}]}}, {{0x9, 0x5, 0xe, 0x2, 0x8, 0x7f, 0x80, 0xc5}}, {{0x9, 0x5, 0x5, 0x0, 0x40, 0x0, 0x7f, 0x7f, [@uac_iso={0x7, 0x25, 0x1, 0x82, 0x40, 0x401}]}}, {{0x9, 0x5, 0xc, 0x4, 0x40, 0x6, 0x4, 0x5}}, {{0x9, 0x5, 0x2, 0xc, 0x8, 0x86, 0xd6, 0x4, [@generic={0x2, 0x23}]}}, {{0x9, 0x5, 0x6, 0x0, 0x10, 0x5e, 0x0, 0x4, [@uac_iso={0x7, 0x25, 0x1, 0x80, 0x40, 0x6}]}}, {{0x9, 0x5, 0x0, 0x0, 0x0, 0x0, 0x2, 0x3, [@generic={0x2, 0x10}, @generic={0x2, 0x23}]}}, {{0x9, 0x5, 0xa, 0x10, 0x10, 0x1, 0x0, 0x7}}, {{0x9, 0x5, 0xa, 0x10, 0x40, 0x8, 0x6, 0x40, [@uac_iso={0x7, 0x25, 0x1, 0x2, 0x5c}, @uac_iso={0x7, 0x25, 0x1, 0x181}]}}, {{0x9, 0x5, 0xf, 0x0, 0x10, 0x20, 0x40, 0x6}}, {{0x9, 0x5, 0xc, 0x1, 0x10, 0x7, 0x3f, 0x1, [@generic={0x2, 0x22}, @uac_iso={0x7, 0x25, 0x1, 0x80, 0x6, 0x9}]}}, {{0x9, 0x5, 0xc, 0x0, 0x20, 0x20, 0xff, 0xff}}]}}, {{0x9, 0x4, 0xcd, 0x6, 0xd, 0x98, 0xf7, 0x26, 0x9, [@cdc_ecm={{0x5}, {0x5, 0x24, 0x0, 0x1}, {0xd, 0x24, 0xf, 0x1, 0x3ff, 0xa1, 0x3ff, 0x6}, [@obex={0x5, 0x24, 0x15, 0x6}, @country_functional={0x12, 0x24, 0x7, 0x8, 0x2, [0x401, 0x100, 0x1, 0xfc01, 0x549, 0x8]}, @call_mgmt={0x5, 0x24, 0x1, 0x2, 0x6a}]}, @hid_hid={0x9, 0x21, 0x3, 0xff, 0x1, {0x22, 0xe2}}], [{{0x9, 0x5, 0xf, 0x10, 0x40, 0x80, 0x4, 0x1, [@generic={0x2, 0xf}, @uac_iso={0x7, 0x25, 0x1, 0x80, 0x0, 0xa993}]}}, {{0x9, 0x5, 0x0, 0x0, 0x3ff, 0x5, 0x7, 0x0, [@uac_iso={0x7, 0x25, 0x1, 0x82, 0xd9, 0xa2}, @uac_iso={0x7, 0x25, 0x1, 0x80, 0x8, 0x6}]}}, {{0x9, 0x5, 0xa, 0x4, 0x200, 0x2, 0x7f, 0x20}}, {{0x9, 0x5, 0xa, 0x1, 0x3ff, 0x91, 0xe9, 0xf7, [@uac_iso={0x7, 0x25, 0x1, 0x3, 0x9, 0xfff}, @uac_iso={0x7, 0x25, 0x1, 0x2, 0x9, 0x6}]}}, {{0x9, 0x5, 0x4, 0x10, 0x40, 0x24, 0x2, 0x2, [@generic={0x2, 0xd}, @uac_iso={0x7, 0x25, 0x1, 0x0, 0x4, 0xc0d1}]}}, {{0x9, 0x5, 0xc, 0x0, 0x8, 0x2, 0x40, 0x5, [@uac_iso={0x7, 0x25, 0x1, 0x81, 0xf9, 0x400}]}}, {{0x9, 0x5, 0xa, 0x0, 0x400, 0x1, 0x8, 0x1f}}, {{0x9, 0x5, 0xd, 0x3, 0x200, 0x4, 0x3f, 0x33}}, {{0x9, 0x5, 0x5, 0x3, 0x8, 0x6, 0x8}}, {{0x9, 0x5, 0x9, 0x3, 0x400, 0x84, 0x1, 0x81, [@generic={0x2, 0x4}]}}, {{0x9, 0x5, 0xf, 0xc, 0x3ff, 0x9, 0x90, 0xff}}, {{0x9, 0x5, 0x7, 0x6, 0x400, 0x3, 0xfe, 0x7, [@uac_iso={0x7, 0x25, 0x1, 0x1, 0x40, 0x1}]}}, {{0x9, 0x5, 0x1, 0x0, 0x40, 0xff, 0x0, 0xb0, [@uac_iso={0x7, 0x25, 0x1, 0x3, 0x9, 0xfd}]}}]}}, {{0x9, 0x4, 0x4c, 0x0, 0x3, 0x1b, 0xe6, 0x5c, 0x3, [@generic={0x2, 0x8}, @cdc_ecm={{0x5}, {0x5, 0x24, 0x0, 0x2}, {0xd, 0x24, 0xf, 0x1, 0x3, 0x1ff, 0x8}, [@country_functional={0xe, 0x24, 0x7, 0x1, 0x8, [0x4, 0x5, 0x2221, 0x3]}]}], [{{0x9, 0x5, 0xc, 0x0, 0x10, 0x1, 0x91, 0x7, [@uac_iso={0x7, 0x25, 0x1, 0x80, 0x3, 0x25}]}}, {{0x9, 0x5, 0x5, 0x10, 0x40, 0x7f, 0x1f, 0x1f}}, {{0x9, 0x5, 0x80, 0x11, 0x40, 0x3, 0x4, 0x7f, [@generic={0x2, 0x5}, @uac_iso={0x7, 0x25, 0x1, 0x81, 0x7f, 0x649a}]}}]}}, {{0x9, 0x4, 0xce, 0xf9, 0xc, 0x82, 0x33, 0x3d, 0x51, [@cdc_ncm={{0x5}, {0x5, 0x24, 0x0, 0x8001}, {0xd, 0x24, 0xf, 0x1, 0x8, 0x20, 0x0, 0x9}, {0x6, 0x24, 0x1a, 0xcf49}, [@dmm={0x7, 0x24, 0x14, 0x6, 0x57d1}, @mbim={0xc, 0x24, 0x1b, 0x5f, 0x7, 0xff, 0x3c, 0x6000, 0x3}, @call_mgmt={0x5, 0x24, 0x1, 0x0, 0x8}, @mdlm={0x15, 0x24, 0x12, 0x8}, @network_terminal={0x7, 0x24, 0xa, 0x7, 0x6, 0x3f, 0x8}, @mdlm_detail={0x4, 0x24, 0x13, 0x8}]}], [{{0x9, 0x5, 0x2, 0x8, 0x0, 0x7, 0x9, 0x9}}, {{0x9, 0x5, 0xd, 0x12, 0x20, 0x2, 0xb7, 0x1}}, {{0x9, 0x5, 0xa, 0x8, 0x0, 0x9, 0x78, 0x5, [@generic={0x2, 0x24}]}}, {{0x9, 0x5, 0x3, 0x3, 0x200, 0x22, 0x9, 0x57, [@uac_iso={0x7, 0x25, 0x1, 0x81, 0xf8, 0x2}, @generic={0x2}]}}, {{0x9, 0x5, 0x7, 0x3, 0x40, 0x2, 0xd3, 0x2, [@generic={0x2, 0x6}]}}, {{0x9, 0x5, 0x9, 0x10, 0x40, 0x1, 0x7f, 0x8, [@generic={0x2, 0x11}, @uac_iso={0x7, 0x25, 0x1, 0x2, 0x7f, 0x8}]}}, {{0x9, 0x5, 0x3, 0x8, 0x8, 0x4, 0x0, 0x80, [@generic={0x2, 0x10}, @uac_iso={0x7, 0x25, 0x1, 0x2, 0x0, 0xe8a}]}}, {{0x9, 0x5, 0x0, 0x50514792889ff898, 0x20, 0x1, 0x1, 0x4, [@generic={0x2, 0x23}, @generic={0x2, 0x21}]}}, {{0x9, 0x5, 0x9, 0x0, 0x8, 0x7f, 0x57, 0x5}}, {{0x9, 0x5, 0xa, 0x4, 0x20, 0x0, 0xa9, 0x4, [@uac_iso={0x7, 0x25, 0x1, 0x2, 0x1f, 0x3}]}}, {{0x9, 0x5, 0x2, 0x10, 0x3ff, 0x6, 0x8, 0x7f, [@uac_iso={0x7, 0x25, 0x1, 0x83, 0x9, 0x8}, @generic={0x2, 0x5}]}}, {{0x9, 0x5, 0x7, 0x1, 0x10, 0x3f, 0x5, 0xff, [@generic={0x2, 0x4}]}}]}}]}}]}}, 0x0)
+
+402.74999ms ago: executing program 5 (id=247):
+r0 = syz_usb_connect_ath9k(0x3, 0x5a, &(0x7f0000000000)={{0x12, 0x1, 0x200, 0xff, 0xff, 0xff, 0x40, 0xcf3, 0x9271, 0x108, 0x1, 0x2, 0x3, 0x1, [{{0x9, 0x2, 0xffffff9a}}]}}, 0x0)
+syz_usb_ep_write$ath9k_ep2(r0, 0x83, 0x12, &(0x7f0000000140)=@conn_svc_rsp={0x0, 0x0, 0xa, "155de326", {0x3, 0x0, 0x0, 0xb3, 0x5, 0x3, 0x3}})
+
+336.281098ms ago: executing program 1 (id=248):
+bpf$MAP_CREATE(0x0, &(0x7f0000000100)=@base={0x1, 0x2, 0x4, 0x9, 0x1, 0x1, 0x0, '\x00', 0x0, 0xffffffffffffffff, 0x0, 0x0, 0x0, 0x0, @void, @value, @void, @value}, 0x48)
+bpf$BPF_PROG_RAW_TRACEPOINT_LOAD(0x5, &(0x7f0000000080)={0x5, 0x5, 0x0, &(0x7f0000000a00)='syzkaller\x00', 0x0, 0x0, 0x0, 0x0, 0x0, '\x00', 0x0, 0x2, 0xffffffffffffffff, 0x8, 0x0, 0x0, 0x10, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x10, 0x0, @void, @value}, 0x94)
+
+335.893009ms ago: executing program 2 (id=249):
+r0 = openat$sysfs(0xffffffffffffff9c, 0x0, 0x88042, 0x0)
+copy_file_range(r0, 0x0, r0, &(0x7f0000000040)=0xb591, 0x8, 0x0)
+
+251.380694ms ago: executing program 1 (id=250):
+ioctl$FITRIM(0xffffffffffffffff, 0x40305839, &(0x7f0000000240)={0x0, 0x0, 0x2be20000})
+
+251.244715ms ago: executing program 3 (id=251):
+r0 = syz_usb_connect(0x3, 0x8f, &(0x7f00000011c0)={{0x12, 0x1, 0x0, 0x3, 0xea, 0xc3, 0x40, 0x13d3, 0x3335, 0xe96f, 0x0, 0x0, 0x0, 0x1, [{{0x9, 0x2, 0x7d, 0x1, 0x0, 0x0, 0x0, 0x0, [{{0x9, 0x4, 0x66, 0x81, 0x3, 0xe1, 0x85, 0x5b, 0x7, [], [{{0x9, 0x5, 0x0, 0x0, 0x400, 0x0, 0x8, 0x1f, [@generic={0x2, 0x3}]}}, {{0x9, 0x5, 0xb, 0x0, 0x40, 0x5, 0xc1, 0x0, [@generic={0x4c, 0xd, "871b3fdeb5baca27ca84853ec4ccb73f0222590a341d9e93675c4101f4b1d996d39dc857c561021229f81db5d20a556120d07338902d6ca0fce77330845d3090eecb9279795c029de370"}]}}, {{0x9, 0x5, 0x2, 0x3, 0x3ff, 0xc1, 0x1, 0x0, [@generic={0x2, 0x9}]}}]}}]}}]}}, 0x0)
+syz_usb_control_io$hid(r0, 0x0, 0x0)
+
+251.133464ms ago: executing program 2 (id=252):
+r0 = socket$nl_rdma(0x10, 0x3, 0x14)
+sendmsg$RDMA_NLDEV_CMD_NEWLINK(r0, 0x0, 0x0)
+
+251.068009ms ago: executing program 1 (id=253):
+syz_mount_image$vfat(&(0x7f0000000000), &(0x7f0000000580)='./file0\x00', 0x0, 0x0, 0x0, 0x0, &(0x7f0000000040))
+mount$overlay(0x0, &(0x7f0000000080)='./file0\x00', 0x0, 0x0, &(0x7f0000000100)={[{@upperdir={'upperdir', 0x3d, './file0'}}, {@lowerdir={'lowerdir', 0x3d, './file0'}}, {@workdir={'workdir', 0x3d, './file0'}, 0x5c}]})
+
+180.170552ms ago: executing program 2 (id=254):
+r0 = socket$nl_generic(0x10, 0x3, 0x10)
+sendmsg$nl_generic(r0, &(0x7f0000000000)={0x0, 0x0, &(0x7f0000000100)={&(0x7f0000000040)=ANY=[@ANYBLOB], 0x1c}}, 0x0)
+
+179.847652ms ago: executing program 2 (id=255):
+r0 = socket$nl_netfilter(0x10, 0x3, 0xc)
+sendmsg$IPSET_CMD_CREATE(r0, &(0x7f00000002c0)={0x0, 0x0, &(0x7f0000000040)={0x0}}, 0x0)
+
+90.476986ms ago: executing program 1 (id=256):
+r0 = socket(0x2000000000000a, 0x2, 0x0)
+setsockopt$EBT_SO_SET_ENTRIES(r0, 0x0, 0x80, &(0x7f0000000340)=@nat={'nat\x00', 0x19, 0x2, 0x290, [0x20000080, 0x0, 0x0, 0x20000190, 0x200001c0], 0x0, 0x0, &(0x7f0000000080)=ANY=[@ANYBLOB="00000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffff0100000009000000010000002aff627071300000000000000000000000006970646470300000000000000000000065727370616e3000000000000000000062637368300000000000000000000000aaaaaaaaaaaaff0000ff00ff0000000000000000ffffff00000070000000a8000000e00000006172707265706c790000000000000000000000000000000000000000000000001000000000000000aaaaaaaaaabb0000ffffffff000000006172707265706c790000000000000000000000000000000000000000000000001000000000000000aaaaaaaaaa120000fcffffff0000000000000000000000000000000000000000000000000000000000000000000000000000000001000000ffffffff0000000000000000000000000000000000000000000000000000000000000000000000000000000001000000ffffffff010000001100000028000000001a69703667726574617030000000000000677265746170300000000000000000007465716c30000000000000000000000069705f767469300000000000000000000180c200000100ffffffffffc802646ff6c900ffffffffff0000e8000000e8000000200100006d6163000000000000000000000000000000000000000000000000000000000010000000000000000180c2000002000000000000000000006d61726b5f6d000000000000000000000000000000000000000000000000000018000000400000000100000000000000001000000000000003030000000000006172707265706c7900000000000000"]}, 0x2df)
+
+90.17643ms ago: executing program 2 (id=257):
+r0 = openat$adsp1(0xffffffffffffff9c, &(0x7f00000000c0), 0xc2002, 0x0)
+write$dsp(r0, 0x0, 0x0)
+
+89.68416ms ago: executing program 1 (id=258):
+r0 = bpf$PROG_LOAD(0x5, &(0x7f0000000200)={0x3, 0xe, &(0x7f0000002280)=ANY=[@ANYBLOB="b702000002000000bfa30000000000000703000000feffff7a0af0fff8bffffd79a4f0ff00000000b7060000ffffffff2d640500000000006504040001001f050404000001007d60b7030000000000006a0a00fefdff0000850000000d000000b7000000000000009500000000000000c74396c8bbbb35238097645178d0bae3ebbadc20e5a7ef8c9ac1465c3a1f59916ffc9bf0bd09f07fb2ea80e5cf8df265e1b40e4c8ae7a89cf8bd819b5c0c000000008da68076774bb4db2c769937000090af27db5b56024db96bcbbbd2cb2000ceff074673b4e8d54e7e357754508535766c80114604eab9b290a248a120c9c6e39f3052aae80677eeba68562eae0300000000274233106e2baf69b1c6190ce4099f366b89ab63ecf772de7b265040b6b1acbef92b2704550a4d1dd5c50b7420b58a93fe94c756008afcd0b2eb785632e0a85f02a55c960200000049070000000000001294fba0ed5020e6477cc921fee1f6d8ad6a2be6af7ec2d1ba000057f301000000000000000100000000100000aaf253886c0b7f004731d714ad72e5ad8430a6380ed2d29f47f96a576cd20cef7ed95157ab050000f0077e9d13d8b93eb0f2c6f8941e35e15d3d2369f5f12816a4eaeeb1a6628849eb709df5c6ba73cccdfa3c58bc5204339b0b487f0eeed581cb202994c40d322717c338033213c18a00d434ee0ca2cf61efb4b3797a642735d6d482ba98d252f36c54333aab3aa736369d92239820f5f1557b0bf7ccb0a5a13c714e0b1a5bc3f9caff3283076cda3d0b1a2905cf7bd04f2db530abcbe44bc40528ad807970727fb819afa14aad99f930f1f7d7dd51995edcf53b907228fa9e83434e71d5c57f33702f22b22417bfb38d04c8441ceec8bcaffbe800a041307bd8325a76f395bced3d3e9de82942a952e86bd67aff5bc2e3c1fcc00f61124dd06df4b8fd356cb365adc037e443820c05c5cae7bfcd55f8c81f5eb1f8d615ca27efb2193bb61665103b37f30c2efc9c3b5a4a5d95479f81a100000fbd0e502235174f3a3484124c5563cd3700000000001825b05a580ea8cb7f85b77b35a06a895b287b47efba220bc215aca4bb09b91adac57a98fc8fdda47b357170a65d7018a7f91c4228b35f71a70900000000000000870086d851ff8625e07bbec801b79afa477ebab255c7265820456fdc3f34f9d729315d856be7ec564613d5e28cf7c405d6e2b6aeb20000b8505a36a8067cb459fab87c8de10e117733d30f4fe049658a2c3e00000000000000000000000000000000000000000000000000b016e67b856ff3a221b173093dfe50f3c41c055d5ca639bca760f9fa029288de5ec30aeecec011ace929de0000000a8501194d4fbce236faefd8ac479e19fd6ac3a4a6d719020ae48601b4dd74f76769f6fc190b32de66c49f3700b0ab910e746eaa0b4ecae2928d78e33387f2f0ea69599f11c177d5d9cb12db7479715131b026ad1bdc7bd1fee36db9906edd9d99595c1844d0b1b85d97cd3039a819da4cbe9829ec0fe1b664fbd178d4dbfa00000085933317019ef33acc50ef833db6263371bc6d"], &(0x7f0000000340)='syzkaller\x00', 0x0, 0x0, 0x0, 0x0, 0x0, '\x00', 0x0, @sched_cls, 0xffffffffffffffff, 0x8, &(0x7f0000000000), 0x8, 0x10, &(0x7f0000000000), 0x10, 0x0, 0xffffffffffffffff, 0x0, 0x0, 0x0, 0x10, 0x0, @void, @value}, 0x94)
+bpf$BPF_PROG_TEST_RUN(0xa, &(0x7f0000000080)={r0, 0x18000000000002a0, 0xe, 0x0, &(0x7f0000000040)="b90703600000f007049e0ff00800", 0x0, 0x0, 0xa000000, 0x0, 0x0, 0x0, 0x0}, 0x48)
+
+113.913¬µs ago: executing program 1 (id=259):
+syz_mount_image$hfs(&(0x7f00000000c0), &(0x7f0000000100)='./bus\x00', 0x4080, &(0x7f0000000640)=ANY=[@ANYRES64=0x0, @ANYRESHEX, @ANYRES32, @ANYBLOB="a24ed317cb4e0ad844542b7e77c8d26d39380e1e59e69354ae34cb24b8d4cb6ef4bba41cb139a672934c164b8a72f1c0c5592a76d78c9655aaa256cdd0f49e4d7d9b0c7dc98f156f96f0fb7f5389ec785801bc2320c6a62c248278e1aa065a905c2c196797df61d2502c2d34a7bb1c003be29383aa043ad2c27c385a78fe0b62792f72a4c13e7bbd9405b2b9f019a2871a45439239fa99936a8c097352d96de288e156ae16bade83bd9da8d24c2f4acbbc6011f4de819629d7274969b4ae2ef8c62f4751be894c8365c236d7849e0010cccb86fe81bb121bb48581e9956b0d21e5005cc20f431ad3424b1dfafbdd259339d475c421dea7b748aff395d171ac01019376c0ab533aeda589510ce646469414698fcb6fa038b3f6c72500dd7d486377cce22217665b7e065aff16af367d2ebf80f72c7a94cbfb29c133e5a2b5accaed04deced8ce5e789807b857034de9b1bf29c3068f1e098983a7812d", @ANYRESOCT, @ANYRESHEX, @ANYRESOCT, @ANYRESOCT, @ANYBLOB="b5486cd908d947a6a9e539acf6c53a49e4d1e13487d10861133340d3f2b28f8d7b7a3e55f1d5780f06d2a1a144bf68bfa156c3adac7a2f6a8eb37700e60cddca0bc36e08971c119ce08d8b78aa2958df16ec049bb719fb02b0cfef09982414aae0ae91abcd80870e518fffc0f353c69b67671e2c7b2af2314c322113a8432894c8bace6666078ae166f5fdeeda090622830aa2f62efe405fdce25313009e151a2517a1d53768969753fc3e236c493149cf0c920b71ecbdb3404eb5d4bec7452f155a23dfbc208cbd142eef1fb542453be7e67f17a0ccb218ca68e898eded7a4ddd78f0ba73c3c9ec1139933a287f01278d2a7648d346835b6fb4ecd40cf7808afc0dc761bb431903710b2dc9707adec9121e4eaf9d8a6f41404509b110e94a6de97db5c726cf62b379c8b2a62c8158cac216bec8e19b47b59667bd904fdc954adba85c6426e41a79a0ce636cb83ba6096d49eab46a4ef404b3f11c2b35d356f5f1f250567aab8b05fd301959ba421ef12ee1948593144c2f093d864166348d2535227bb0fedfa6d377391f2ff8622d9b81f0bc2b34ac8d790fd871867d337063a416604f38659010a1982eef993084b4a759af609dbaec25a1202161289d0b98c5655200"/466, @ANYRESHEX], 0x2, 0x266, &(0x7f00000003c0)="$eJzs3cFqE0Ecx/HfbGKbaqmrrQjiqVrwJG29iBdF8hCeRG0ilIYKtoLtxehZfADvvoIP4Ul8gXry5APktjKzk2ST7mZDSDNt/H4gYU3mP/MfZzc7/0CJAPy3ntZPvj34Yx9Gqqgi6ZEUSapJVUk3dLP2bv9w97DVbIzqqOIi7MMojTSn2uzsN/NCbZyLsJ5Isf1XVcu913BmakmS/A6dBIJzV39PkvrgPgkW/dXp3q8FzHGa2qETCMx01NF7rYTOAwAQlr//R/4+v+z371Ekbfjb/lzd/zuhEwgsc/+vSidKjF3fq+6tfr3nSji794u6VeIkYy0oPbMqAwmUVZUul2jp9W6reX/nTasR6ZMee5lma+65kZ66XdlsP57uej2nNh1h8rlfcXO4ZOewXZD/6nRHLGd+mJ/muYn1VY3e/q+aGLtMbqXioZVK898s7tHNMk5bFczymhvklh/BK5llbTCNrAXf58AXBHFZni7q+lBUOrutkqjV3Kjtkqi14aj+2VwcedbMF/PMrOuvvque2f9H9n97Q+NcmbaNa+nPjJHzqbqWcfal9u3cltkLWEtjzwcT+axXeqiVg6PjvZetVvPtwdFxu3uwx8F8H3RPgvOSDwelB4t2uUob2/35lAYN+/GE2egveuhMEIjdd5nE2INMvbLpSiT7FI/YpydlnWd63MqrDRK3I5d0ubiCy+22sIIbt+a6c0+6O/6Isc9zTpi6fukF3/8DAAAAAAAAAAAAAAAAAABcNLP404XQcwQAAAAAAAAAAAAAAAAAAAAA4KIzOme//yt+/xeYlX8BAAD//0wEhKM=")
+openat(0xffffffffffffff9c, &(0x7f0000000380)='./file1\x00', 0x141842, 0x0)
+
+0s ago: executing program 2 (id=260):
+r0 = bpf$PROG_LOAD(0x5, &(0x7f0000000200)={0xc, 0xe, &(0x7f0000001e40)=ANY=[@ANYBLOB="b702000005000000bfa300000000000007030000007effff7a0af0fff8ffffff79a4f0ff00000000b7060000ffffffff2d6405000000000065060400010000050404000001007d60b7030000000000006a0a00fe00000000850000000d000000b7000000000000009500000000000000496cf27fb6d2c643db7e2d5fb4b0936cdf827fb43a431ca711fcd0cdfa146ed3d09a6175037958e27106e225b7937f02008b5e5a076d83923dd29c034055b67dafe6c8dc525d78c07f34e4d5b3185b310efcfa89147a09000000f110026e6d2ef831ab7ea0c24f17e3ad6eecbb622003b538dfd8e012e79578e51bc53099e90f4580d760551b5b0a341a2d7cbdb9cd38bdb2ca8e050000003a14817ac61e4dd11183a13477bf7e060e3670ef0e789f65f1328d6704902cbe7bc04b82d2789cb132b8667c214733a18c8b6619f28d9961b626c57c2691208173656d60a17e3c184b751c51160fbcbbdb5b1e7be6148ba532e60a0ac346dfebd71a08060000000200000000000000334d83239dd27080e71113610e10d858e8327ef01fb6c86acac12233f9a1fb9c2aec61ce63a38d2fd50117b89a9ab359b4eea0c6e957bc73ddc4eabba08ab1e1ad828267d4eadd3964663e88535c133f7130856f756436303767d2e24f29e5dad9796edb697a6ea0182babc190ae2ebf8aad34732181feb215139f15ea7e8cb0bae7c34d5ac5e7c805210600000000000000c3dec04b25dfc17975238345d4f70700f781c0a99bd50499ccc421ace5e845885efb5b9964e4beba7da8223fe5308e4e65ee93e107000000f8ddebf70132a4d0175b989b8eccf707882042e716df9b57b290c661d4e85031086197bcc5cb0e221a0c34323c129102b6ff0100002e88a1940b3c02ed9c92d6f64b1282dc51bb0015982730711c599e1c72ffa11ed8be1a6830d7507005154c46bd3ca96318c570f0721fc7aa2a5836ba99fe1f86468694f22cdf550ef091a78098534f0d973059594119d06d5ea9a8d0857382ec6e2a071474cfc12346e47ad97f4ead7cf70a9d1cdac944779dc08a705414888700a30e2366c6a06b3367a389ca39059787790017b0689a173db9c24db65c1e00015c1d093dab18fd0699fe3304000000323e9c7080397bc49d70c060d57bc88fbe3bbaa058b040362ab926150363fb099408885afc2bf9a46a076b7babf8c35030669ea69f5e4be1b8e0d6697e97186f9ae97d5670dba6623279f73db9dec75070cd9ab0fda6b069ef6d2857ca3e4effcf7462710d133d541da86e0477e4a6cc999dc21c3ef408e6b178e7c9f274d7fafc8d757d33dfa35aa2000034837d365e63845f3c1092f8dde8af3904ea0f4b82649b83ed4fa0f873339c4cadecc13219ba7518aa4f7db34ead13484742067ab743c1d82a5687f2ed690000000000000000000000000000000000000000000099d4fa0000000000003f0ecdc7c82e72919c91d2039afe17e95edeeeba72205beff7771bcb293747b88486cacee403000000a2919a4bff2ed893f2c814679fa79fc7e0cf761f918725704a01c56009a9f748e5aaf30a10bd8c409b1870c1f75e26b45264e3d3f8e0048e55ae289ce2ad779ce71d4dc30cbb2cc4289d2f884d66cddc76eb7f601110ff39053c262279f4ef00fbdb8c328615a9ec84f27a9f3938ae736138b8c1ec220c1540bf3d162dc1c27fa30f0dc60b9f257db5d1c7ed2e152cb2cf06f8edb30177fead735a952ffce676a93110904d5ee2abdab2ef3ff84c4d61443f73552195c7ccfbf9f03c44432eaa3b7501d4239354da8de21eada75d3a3afb2c76ff0700007981699b6c0f0e946766f57544ff52cef0dd811bec4e3c0a30f2d7d19d26d2503a3ea376721b8eded3bc475958dd"], &(0x7f0000000340)='syzkaller\x00', 0x0, 0x0, 0x0, 0x0, 0x0, '\x00', 0x0, @fallback, 0xffffffffffffffff, 0x8, &(0x7f0000000000), 0x8, 0x10, &(0x7f0000000000), 0x10, 0x0, 0xffffffffffffffff, 0x0, 0x0, 0x0, 0x10, 0x0, @void, @value}, 0x94)
+bpf$BPF_PROG_TEST_RUN(0xa, &(0x7f0000000900)={r0, 0x18000000000002a0, 0xf, 0x0, &(0x7f0000000040)="76389e147583ddd0569ba56a88a855", 0x0, 0x0, 0x60000000, 0x0, 0x0, 0x0, 0x0}, 0x48)
+
+kernel console output (not intermixed with test programs):
+
+atadv0: Not using interface batadv_slave_1 (retrying later): interface not active
+[   70.753148][ T9400] netdevsim netdevsim4 netdevsim0: renamed from eth0
+[   70.801431][ T9454] hsr_slave_0: entered promiscuous mode
+[   70.802759][ T9454] hsr_slave_1: entered promiscuous mode
+[   70.803547][ T9454] debugfs: Directory 'hsr0' with parent 'hsr' already present!
+[   70.804184][ T9454] Cannot create hsr debugfs directory
+[   70.815199][ T9400] netdevsim netdevsim4 netdevsim1: renamed from eth1
+[   70.842623][ T9462] hsr_slave_0: entered promiscuous mode
+[   70.843582][ T9462] hsr_slave_1: entered promiscuous mode
+[   70.844363][ T9462] debugfs: Directory 'hsr0' with parent 'hsr' already present!
+[   70.844995][ T9462] Cannot create hsr debugfs directory
+[   70.845558][ T9400] netdevsim netdevsim4 netdevsim2: renamed from eth2
+[   70.851205][ T9400] netdevsim netdevsim4 netdevsim3: renamed from eth3
+[   70.889190][ T9418] hsr_slave_0: entered promiscuous mode
+[   70.890107][ T9418] hsr_slave_1: entered promiscuous mode
+[   70.890835][ T9418] debugfs: Directory 'hsr0' with parent 'hsr' already present!
+[   70.891451][ T9418] Cannot create hsr debugfs directory
+[   71.068982][ T9401] netdevsim netdevsim1 netdevsim0: renamed from eth0
+[   71.071651][ T9401] netdevsim netdevsim1 netdevsim1: renamed from eth1
+[   71.119846][ T9401] netdevsim netdevsim1 netdevsim2: renamed from eth2
+[   71.123122][ T9401] netdevsim netdevsim1 netdevsim3: renamed from eth3
+[   71.258039][ T9416] netdevsim netdevsim5 netdevsim0: renamed from eth0
+[   71.263823][ T9416] netdevsim netdevsim5 netdevsim1: renamed from eth1
+[   71.273027][ T9416] netdevsim netdevsim5 netdevsim2: renamed from eth2
+[   71.346132][ T9416] netdevsim netdevsim5 netdevsim3: renamed from eth3
+[   71.434491][ T9454] netdevsim netdevsim3 netdevsim0: renamed from eth0
+[   71.442143][ T9454] netdevsim netdevsim3 netdevsim1: renamed from eth1
+[   71.448798][ T9454] netdevsim netdevsim3 netdevsim2: renamed from eth2
+[   71.460851][ T9454] netdevsim netdevsim3 netdevsim3: renamed from eth3
+[   71.500507][ T9400] 8021q: adding VLAN 0 to HW filter on device bond0
+[   71.513661][ T9418] netdevsim netdevsim2 netdevsim0: renamed from eth0
+[   71.517311][ T9418] netdevsim netdevsim2 netdevsim1: renamed from eth1
+[   71.527355][ T9400] 8021q: adding VLAN 0 to HW filter on device team0
+[   71.534909][ T9418] netdevsim netdevsim2 netdevsim2: renamed from eth2
+[   71.537827][ T9418] netdevsim netdevsim2 netdevsim3: renamed from eth3
+[   71.541388][   T65] bridge0: port 1(bridge_slave_0) entered blocking state
+[   71.542193][   T65] bridge0: port 1(bridge_slave_0) entered forwarding state
+[   71.583709][   T54] bridge0: port 2(bridge_slave_1) entered blocking state
+[   71.584462][   T54] bridge0: port 2(bridge_slave_1) entered forwarding state
+[   71.602047][ T9462] netdevsim netdevsim0 netdevsim0: renamed from eth0
+[   71.619171][ T9462] netdevsim netdevsim0 netdevsim1: renamed from eth1
+[   71.636843][ T9462] netdevsim netdevsim0 netdevsim2: renamed from eth2
+[   71.645373][ T9416] 8021q: adding VLAN 0 to HW filter on device bond0
+[   71.650617][ T9462] netdevsim netdevsim0 netdevsim3: renamed from eth3
+[   71.667432][ T9416] 8021q: adding VLAN 0 to HW filter on device team0
+[   71.694098][ T9155] bridge0: port 1(bridge_slave_0) entered blocking state
+[   71.694736][ T9155] bridge0: port 1(bridge_slave_0) entered forwarding state
+[   71.714542][ T9401] 8021q: adding VLAN 0 to HW filter on device bond0
+[   71.719922][ T9155] bridge0: port 2(bridge_slave_1) entered blocking state
+[   71.720579][ T9155] bridge0: port 2(bridge_slave_1) entered forwarding state
+[   71.778147][ T9454] 8021q: adding VLAN 0 to HW filter on device bond0
+[   71.781888][ T9401] 8021q: adding VLAN 0 to HW filter on device team0
+[   71.802945][   T54] bridge0: port 1(bridge_slave_0) entered blocking state
+[   71.803631][   T54] bridge0: port 1(bridge_slave_0) entered forwarding state
+[   71.805523][   T54] bridge0: port 2(bridge_slave_1) entered blocking state
+[   71.806197][   T54] bridge0: port 2(bridge_slave_1) entered forwarding state
+[   71.844612][ T9454] 8021q: adding VLAN 0 to HW filter on device team0
+[   71.886225][   T54] bridge0: port 1(bridge_slave_0) entered blocking state
+[   71.886890][   T54] bridge0: port 1(bridge_slave_0) entered forwarding state
+[   71.889414][   T54] bridge0: port 2(bridge_slave_1) entered blocking state
+[   71.890106][   T54] bridge0: port 2(bridge_slave_1) entered forwarding state
+[   71.985278][ T9418] 8021q: adding VLAN 0 to HW filter on device bond0
+[   71.992039][ T9400] 8021q: adding VLAN 0 to HW filter on device batadv0
+[   72.015408][ T9462] 8021q: adding VLAN 0 to HW filter on device bond0
+[   72.049000][ T9416] 8021q: adding VLAN 0 to HW filter on device batadv0
+[   72.076041][ T9462] 8021q: adding VLAN 0 to HW filter on device team0
+[   72.085267][   T54] bridge0: port 1(bridge_slave_0) entered blocking state
+[   72.085936][   T54] bridge0: port 1(bridge_slave_0) entered forwarding state
+[   72.091773][   T54] bridge0: port 2(bridge_slave_1) entered blocking state
+[   72.092496][   T54] bridge0: port 2(bridge_slave_1) entered forwarding state
+[   72.145836][ T9418] 8021q: adding VLAN 0 to HW filter on device team0
+[   72.178642][ T9406] Bluetooth: hci0: command tx timeout
+[   72.202228][   T71] bridge0: port 1(bridge_slave_0) entered blocking state
+[   72.202874][   T71] bridge0: port 1(bridge_slave_0) entered forwarding state
+[   72.225847][ T9462] hsr0: Slave A (hsr_slave_0) is not up; please bring it up to get a fully working HSR network
+[   72.226934][ T9462] hsr0: Slave B (hsr_slave_1) is not up; please bring it up to get a fully working HSR network
+[   72.235396][   T27] bridge0: port 2(bridge_slave_1) entered blocking state
+[   72.236055][   T27] bridge0: port 2(bridge_slave_1) entered forwarding state
+[   72.252591][ T9406] Bluetooth: hci1: command tx timeout
+[   72.253136][ T9406] Bluetooth: hci2: command tx timeout
+[   72.301474][ T9401] 8021q: adding VLAN 0 to HW filter on device batadv0
+[   72.333241][   T56] Bluetooth: hci3: command tx timeout
+[   72.362383][ T9401] veth0_vlan: entered promiscuous mode
+[   72.444056][ T9401] veth1_vlan: entered promiscuous mode
+[   72.454024][ T9454] 8021q: adding VLAN 0 to HW filter on device batadv0
+[   72.492726][ T9406] Bluetooth: hci4: command tx timeout
+[   72.493280][   T56] Bluetooth: hci5: command tx timeout
+[   72.510177][ T9401] veth0_macvtap: entered promiscuous mode
+[   72.521633][ T9454] veth0_vlan: entered promiscuous mode
+[   72.553764][ T9401] veth1_macvtap: entered promiscuous mode
+[   72.560684][ T9401] batman_adv: batadv0: Interface activated: batadv_slave_0
+[   72.581928][ T9454] veth1_vlan: entered promiscuous mode
+[   72.585172][ T9462] 8021q: adding VLAN 0 to HW filter on device batadv0
+[   72.597706][ T9416] veth0_vlan: entered promiscuous mode
+[   72.602027][ T9416] veth1_vlan: entered promiscuous mode
+[   72.664639][ T9401] batman_adv: batadv0: Interface activated: batadv_slave_1
+[   72.667204][ T9401] netdevsim netdevsim1 netdevsim0: set [1, 0] type 2 family 0 port 6081 - 0
+[   72.668086][ T9401] netdevsim netdevsim1 netdevsim1: set [1, 0] type 2 family 0 port 6081 - 0
+[   72.668835][ T9401] netdevsim netdevsim1 netdevsim2: set [1, 0] type 2 family 0 port 6081 - 0
+[   72.669532][ T9401] netdevsim netdevsim1 netdevsim3: set [1, 0] type 2 family 0 port 6081 - 0
+[   72.701844][ T9416] veth0_macvtap: entered promiscuous mode
+[   72.721045][ T9400] veth0_vlan: entered promiscuous mode
+[   72.725471][ T9416] veth1_macvtap: entered promiscuous mode
+[   72.764849][ T9416] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[   72.765907][ T9416] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   72.776628][ T9416] batman_adv: batadv0: Interface activated: batadv_slave_0
+[   72.783306][ T9418] 8021q: adding VLAN 0 to HW filter on device batadv0
+[   72.805493][ T9416] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[   72.807082][ T9416] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   72.808754][ T9416] batman_adv: batadv0: Interface activated: batadv_slave_1
+[   72.825187][ T9400] veth1_vlan: entered promiscuous mode
+[   72.847687][ T9462] veth0_vlan: entered promiscuous mode
+[   72.851394][ T9418] veth0_vlan: entered promiscuous mode
+[   72.852228][ T9462] veth1_vlan: entered promiscuous mode
+[   72.858134][ T9454] veth0_macvtap: entered promiscuous mode
+[   72.881601][ T9416] netdevsim netdevsim5 netdevsim0: set [1, 0] type 2 family 0 port 6081 - 0
+[   72.884084][ T9416] netdevsim netdevsim5 netdevsim1: set [1, 0] type 2 family 0 port 6081 - 0
+[   72.884905][ T9416] netdevsim netdevsim5 netdevsim2: set [1, 0] type 2 family 0 port 6081 - 0
+[   72.885709][ T9416] netdevsim netdevsim5 netdevsim3: set [1, 0] type 2 family 0 port 6081 - 0
+[   72.938864][ T9462] veth0_macvtap: entered promiscuous mode
+[   72.941294][ T9462] veth1_macvtap: entered promiscuous mode
+[   72.958119][ T9454] veth1_macvtap: entered promiscuous mode
+[   72.961745][ T9418] veth1_vlan: entered promiscuous mode
+[   72.975988][   T28] wlan0: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[   72.976788][   T28] wlan0: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[   73.016728][ T3718] wlan1: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[   73.017664][ T3718] wlan1: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[   73.026804][ T9462] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[   73.027741][ T9462] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.029280][ T9462] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[   73.030210][ T9462] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.031726][ T9462] batman_adv: batadv0: Interface activated: batadv_slave_0
+[   73.035209][ T9400] veth0_macvtap: entered promiscuous mode
+[   73.038736][ T9400] veth1_macvtap: entered promiscuous mode
+[   73.051100][ T9454] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[   73.051948][ T9454] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.061934][ T9454] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[   73.067019][ T9454] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.067885][ T9454] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[   73.068766][ T9454] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.071443][ T9454] batman_adv: batadv0: Interface activated: batadv_slave_0
+[   73.108779][ T9454] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[   73.109701][ T9454] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.110479][ T9454] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[   73.111368][ T9454] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.114834][ T9454] batman_adv: batadv0: Interface activated: batadv_slave_1
+[   73.117348][ T9454] netdevsim netdevsim3 netdevsim0: set [1, 0] type 2 family 0 port 6081 - 0
+[   73.118470][ T9454] netdevsim netdevsim3 netdevsim1: set [1, 0] type 2 family 0 port 6081 - 0
+[   73.119662][ T9454] netdevsim netdevsim3 netdevsim2: set [1, 0] type 2 family 0 port 6081 - 0
+[   73.120419][ T9454] netdevsim netdevsim3 netdevsim3: set [1, 0] type 2 family 0 port 6081 - 0
+[   73.122879][ T9462] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[   73.123756][ T9462] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.124587][ T9462] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[   73.125461][ T9462] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.126252][ T9462] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[   73.127099][ T9462] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.128597][ T9462] batman_adv: batadv0: Interface activated: batadv_slave_1
+[   73.160596][ T9400] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[   73.161517][ T9400] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.187812][ T9400] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[   73.188933][ T9400] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.189990][ T9400] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[   73.190958][ T9400] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.191968][ T9400] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[   73.194167][ T9400] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.196682][ T9400] batman_adv: batadv0: Interface activated: batadv_slave_0
+[   73.207431][ T9462] netdevsim netdevsim0 netdevsim0: set [1, 0] type 2 family 0 port 6081 - 0
+[   73.208323][ T9462] netdevsim netdevsim0 netdevsim1: set [1, 0] type 2 family 0 port 6081 - 0
+[   73.209194][ T9462] netdevsim netdevsim0 netdevsim2: set [1, 0] type 2 family 0 port 6081 - 0
+[   73.210045][ T9462] netdevsim netdevsim0 netdevsim3: set [1, 0] type 2 family 0 port 6081 - 0
+[   73.235741][ T9418] veth0_macvtap: entered promiscuous mode
+[   73.238005][ T9418] veth1_macvtap: entered promiscuous mode
+[   73.263128][   T71] wlan0: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[   73.263812][   T71] wlan0: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[   73.303831][ T9418] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[   73.304709][ T9418] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.305494][ T9418] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[   73.306351][ T9418] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.307139][ T9418] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[   73.307982][ T9418] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.308814][ T9418] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[   73.309683][ T9418] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.310458][ T9418] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3e) already exists on: batadv_slave_0
+[   73.311314][ T9418] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.343278][ T9418] batman_adv: batadv0: Interface activated: batadv_slave_0
+[   73.440520][ T9400] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[   73.441443][ T9400] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.442258][ T9400] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[   73.446318][ T9400] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.447166][ T9400] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[   73.449660][ T9400] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.450473][ T9400] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[   73.451340][ T9400] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.454397][ T9400] batman_adv: batadv0: Interface activated: batadv_slave_1
+[   73.485713][ T9418] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[   73.486589][ T9418] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.487397][ T9418] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[   73.488276][ T9418] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.489084][ T9418] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[   73.489945][ T9418] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.490764][ T9418] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[   73.491636][ T9418] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.518895][ T9418] batman_adv: The newly added mac address (aa:aa:aa:aa:aa:3f) already exists on: batadv_slave_1
+[   73.519798][ T9418] batman_adv: It is strongly recommended to keep mac addresses unique to avoid problems!
+[   73.521876][ T9418] batman_adv: batadv0: Interface activated: batadv_slave_1
+[   73.527120][   T28] wlan1: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[   73.527775][   T28] wlan1: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[   73.559261][ T9400] netdevsim netdevsim4 netdevsim0: set [1, 0] type 2 family 0 port 6081 - 0
+[   73.560005][ T9400] netdevsim netdevsim4 netdevsim1: set [1, 0] type 2 family 0 port 6081 - 0
+[   73.560698][ T9400] netdevsim netdevsim4 netdevsim2: set [1, 0] type 2 family 0 port 6081 - 0
+[   73.561447][ T9400] netdevsim netdevsim4 netdevsim3: set [1, 0] type 2 family 0 port 6081 - 0
+[   73.586329][ T9418] netdevsim netdevsim2 netdevsim0: set [1, 0] type 2 family 0 port 6081 - 0
+[   73.587221][ T9418] netdevsim netdevsim2 netdevsim1: set [1, 0] type 2 family 0 port 6081 - 0
+[   73.588019][ T9418] netdevsim netdevsim2 netdevsim2: set [1, 0] type 2 family 0 port 6081 - 0
+[   73.588847][ T9418] netdevsim netdevsim2 netdevsim3: set [1, 0] type 2 family 0 port 6081 - 0
+[   73.768629][ T3718] wlan0: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[   73.769319][ T3718] wlan0: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[   73.924384][   T28] wlan1: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[   73.925229][   T28] wlan1: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[   74.042800][ T3530] wlan0: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[   74.043559][ T3530] wlan0: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[   74.074891][ T3530] wlan0: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[   74.075633][ T3530] wlan0: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[   74.148567][ T3718] wlan0: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[   74.149265][ T3718] wlan0: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[   74.151549][ T3530] wlan1: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[   74.152245][ T3530] wlan1: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[   74.207685][   T27] wlan1: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[   74.208529][   T27] wlan1: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[   74.257540][   T56] Bluetooth: hci0: command tx timeout
+[   74.285384][   T28] wlan1: Created IBSS using preconfigured BSSID 50:50:50:50:50:50
+[   74.286074][   T28] wlan1: Creating new IBSS network, BSSID 50:50:50:50:50:50
+[   74.342469][   T56] Bluetooth: hci2: command tx timeout
+[   74.343020][   T56] Bluetooth: hci1: command tx timeout
+[   74.412779][ T9406] Bluetooth: hci3: command tx timeout
+[   74.438602][T11515] iwpm_register_pid: Unable to send a nlmsg (client = 2)
+[   74.458954][T11515] infiniband syz1: RDMA CMA: cma_listen_on_dev, error -98
+[   74.552699][T11522] Zero length message leads to an empty skb
+[   74.572981][ T9406] Bluetooth: hci5: command tx timeout
+[   74.573026][   T56] Bluetooth: hci4: command tx timeout
+[   74.714496][T11535] kernel profiling enabled (shift: 0)
+[   75.022971][T11470] usb 2-1: new high-speed USB device number 2 using dummy_hcd
+[   75.175284][T11470] usb 2-1: config 0 has no interfaces?
+[   75.175902][T11470] usb 2-1: New USB device found, idVendor=0681, idProduct=0005, bcdDevice=90.07
+[   75.176676][T11470] usb 2-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   75.181285][T11470] usb 2-1: config 0 descriptor??
+[   75.212834][T11380] usb 4-1: new high-speed USB device number 2 using dummy_hcd
+[   75.334349][T11340] usb 5-1: new full-speed USB device number 2 using dummy_hcd
+[   75.362461][T11380] usb 4-1: Using ep0 maxpacket: 8
+[   75.368748][T11380] usb 4-1: config 0 has an invalid interface number: 235 but max is 0
+[   75.369430][T11380] usb 4-1: config 0 has no interface number 0
+[   75.369953][T11380] usb 4-1: New USB device found, idVendor=1618, idProduct=9113, bcdDevice=19.d3
+[   75.370766][T11380] usb 4-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   75.374236][ T1228] usb 3-1: new high-speed USB device number 2 using dummy_hcd
+[   75.376679][T11380] usb 4-1: config 0 descriptor??
+[   75.417244][   T25] usb 2-1: USB disconnect, device number 2
+[   75.454566][ T1319] ieee802154 phy0 wpan0: encryption failed: -22
+[   75.455245][ T1319] ieee802154 phy1 wpan1: encryption failed: -22
+[   75.484764][T11340] usb 5-1: not running at top speed; connect to a high speed hub
+[   75.486299][T11340] usb 5-1: config 0 has an invalid interface number: 173 but max is 0
+[   75.487017][T11340] usb 5-1: config 0 has 2 interfaces, different from the descriptor's value: 1
+[   75.487777][T11340] usb 5-1: config 0 has no interface number 1
+[   75.492734][T11340] usb 5-1: config 0 interface 0 altsetting 0 endpoint 0x1 has invalid maxpacket 1024, setting to 64
+[   75.493710][T11340] usb 5-1: config 0 interface 0 altsetting 0 has an invalid descriptor for endpoint zero, skipping
+[   75.494650][T11340] usb 5-1: config 0 interface 173 altsetting 100 has 0 endpoint descriptors, different from the interface descriptor's value: 26
+[   75.495793][T11340] usb 5-1: config 0 interface 173 has no altsetting 0
+[   75.499931][T11340] usb 5-1: New USB device found, idVendor=10cf, idProduct=8068, bcdDevice=43.bc
+[   75.500771][T11340] usb 5-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   75.501522][T11340] usb 5-1: Product: syz
+[   75.501920][T11340] usb 5-1: Manufacturer: Âû™Êã©Îã¥„à¨”¥ÏÆ∫Ìà≠„ÇÄËµßÈç∞ÈêíÍ¶ù‡ß¨ÔÆ¥ÍíîÈòî„πºÓùï‰ãë‚¢ïÌè´–Å‚ÖßÂ©áÁÖÑ‚ü±‡´≤ÊñÜ‡∏µÂÜ≥ÓÆ∫‡§†·®üÁÅõÍôâÍßëÈ∂é‡øú‰®•„©ôÊ¶•·®öÁÆªÍ≥ëÏΩáÈàßË∑µ
+[   75.508789][T11340] usb 5-1: SerialNumber: syz
+[   75.522662][ T1228] usb 3-1: Using ep0 maxpacket: 16
+[   75.524278][ T1228] usb 3-1: config 0 has an invalid interface number: 133 but max is 1
+[   75.525026][ T1228] usb 3-1: config 0 has an invalid interface number: 229 but max is 1
+[   75.525740][ T1228] usb 3-1: config 0 has no interface number 0
+[   75.526256][ T1228] usb 3-1: config 0 has no interface number 1
+[   75.526790][ T1228] usb 3-1: config 0 interface 133 altsetting 7 endpoint 0xE has invalid maxpacket 512, setting to 64
+[   75.527686][ T1228] usb 3-1: config 0 interface 133 altsetting 7 has a duplicate endpoint with address 0xE, skipping
+[   75.528598][ T1228] usb 3-1: config 0 interface 133 altsetting 7 has a duplicate endpoint with address 0xE, skipping
+[   75.530039][ T1228] usb 3-1: config 0 interface 229 altsetting 3 endpoint 0x5 has invalid maxpacket 1024, setting to 64
+[   75.532131][ T1228] usb 3-1: config 0 interface 229 altsetting 3 endpoint 0x6 has invalid maxpacket 1024, setting to 64
+[   75.534482][ T1228] usb 3-1: config 0 interface 229 altsetting 3 endpoint 0x9 has invalid maxpacket 1024, setting to 64
+[   75.535449][ T1228] usb 3-1: config 0 interface 229 altsetting 3 has a duplicate endpoint with address 0xE, skipping
+[   75.536388][ T1228] usb 3-1: config 0 interface 229 altsetting 3 endpoint 0x3 has an invalid bInterval 149, changing to 7
+[   75.537369][ T1228] usb 3-1: config 0 interface 229 altsetting 3 bulk endpoint 0x1 has invalid maxpacket 64
+[   75.538216][ T1228] usb 3-1: config 0 interface 229 altsetting 3 has a duplicate endpoint with address 0x9, skipping
+[   75.539108][ T1228] usb 3-1: config 0 interface 133 has no altsetting 0
+[   75.548920][ T1228] usb 3-1: config 0 interface 229 has no altsetting 0
+[   75.553656][T11340] usb 5-1: config 0 descriptor??
+[   75.554844][ T1228] usb 3-1: New USB device found, idVendor=0fe9, idProduct=db01, bcdDevice=c4.ec
+[   75.557456][ T1228] usb 3-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   75.559338][ T1228] usb 3-1: Product: syz
+[   75.559757][ T1228] usb 3-1: Manufacturer: syz
+[   75.561359][ T1228] usb 3-1: SerialNumber: syz
+[   75.586195][ T1228] usb 3-1: config 0 descriptor??
+[   75.782017][T11340] vmk80xx 5-1:0.0: driver 'vmk80xx' failed to auto-configure device.
+[   75.794916][ T1228] dvb-usb: found a 'DViCO FusionHDTV DVB-T USB (LGZ201)' in warm state.
+[   75.802245][ T1228] dvb-usb: bulk message failed: -71 (2/0)
+[   75.807807][T11340] vmk80xx 5-1:0.173: driver 'vmk80xx' failed to auto-configure device.
+[   75.821358][ T1228] dvb-usb: will pass the complete MPEG2 transport stream to the software demuxer.
+[   75.825991][T11340] usb 5-1: USB disconnect, device number 2
+[   75.829894][ T1228] dvbdev: DVB: registering new adapter (DViCO FusionHDTV DVB-T USB (LGZ201))
+[   75.831106][ T1228] usb 3-1: media controller created
+[   75.849844][ T1228] dvbdev: dvb_create_media_entity: media entity 'dvb-demux' registered.
+[   75.874898][ T1228] cxusb: set interface failed
+[   75.876127][ T1228] dvb-usb: bulk message failed: -71 (1/0)
+[   75.968730][ T1228] DVB: Unable to find symbol mt352_attach()
+[   75.969314][ T1228] dvb-usb: no frontend was attached by 'DViCO FusionHDTV DVB-T USB (LGZ201)'
+[   76.052426][ T1228] rc_core: IR keymap rc-dvico-portable not found
+[   76.053044][ T1228] Registered IR keymap rc-empty
+[   76.058490][ T1228] rc rc0: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.2/usb3/3-1/rc/rc0
+[   76.060221][ T1228] input: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.2/usb3/3-1/rc/rc0/input4
+[   76.077411][ T1228] dvb-usb: schedule remote query interval to 100 msecs.
+[   76.078039][ T1228] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully initialized and connected.
+[   76.097268][ T1228] dvb-usb: found a 'DViCO FusionHDTV DVB-T USB (LGZ201)' in warm state.
+[   76.098950][ T1228] dvb-usb: bulk message failed: -71 (2/0)
+[   76.105197][ T1228] dvb-usb: will pass the complete MPEG2 transport stream to the software demuxer.
+[   76.108632][ T1228] dvbdev: DVB: registering new adapter (DViCO FusionHDTV DVB-T USB (LGZ201))
+[   76.109404][ T1228] usb 3-1: media controller created
+[   76.147336][ T1228] dvbdev: dvb_create_media_entity: media entity 'dvb-demux' registered.
+[   76.183826][ T9261] dvb-usb: bulk message failed: -71 (1/0)
+[   76.184902][ T1228] cxusb: set interface failed
+[   76.188150][ T1228] dvb-usb: bulk message failed: -71 (1/0)
+[   76.249204][ T1228] DVB: Unable to find symbol mt352_attach()
+[   76.249728][ T1228] dvb-usb: no frontend was attached by 'DViCO FusionHDTV DVB-T USB (LGZ201)'
+[   76.312191][T11349] dvb-usb: bulk message failed: -71 (1/0)
+[   76.337035][   T56] Bluetooth: hci0: command tx timeout
+[   76.384734][ T1228] rc_core: IR keymap rc-dvico-portable not found
+[   76.385287][ T1228] Registered IR keymap rc-empty
+[   76.415050][ T9406] Bluetooth: hci2: command tx timeout
+[   76.415556][   T56] Bluetooth: hci1: command tx timeout
+[   76.416735][ T1228] rc rc1: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.2/usb3/3-1/rc/rc1
+[   76.424782][T11374] dvb-usb: bulk message failed: -71 (1/0)
+[   76.427594][ T1228] input: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.2/usb3/3-1/rc/rc1/input5
+[   76.450703][ T1228] dvb-usb: schedule remote query interval to 100 msecs.
+[   76.451345][ T1228] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully initialized and connected.
+[   76.488479][ T1228] usb 3-1: USB disconnect, device number 2
+[   76.492615][   T56] Bluetooth: hci3: command tx timeout
+[   76.522429][ T9261] usb 2-1: new high-speed USB device number 3 using dummy_hcd
+[   76.553280][T11374] dvb-usb: bulk message failed: -19 (1/0)
+[   76.652662][   T56] Bluetooth: hci5: command tx timeout
+[   76.654769][ T9406] Bluetooth: hci4: command tx timeout
+[   76.662537][T11374] dvb-usb: bulk message failed: -19 (1/0)
+[   76.665193][ T1228] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully deinitialized and disconnected.
+[   76.672486][ T9261] usb 2-1: Using ep0 maxpacket: 32
+[   76.676446][ T9261] usb 2-1: config 1 has too many interfaces: 163, using maximum allowed: 32
+[   76.677231][ T9261] usb 2-1: config 1 has an invalid descriptor of length 7, skipping remainder of the config
+[   76.678057][ T9261] usb 2-1: config 1 has 3 interfaces, different from the descriptor's value: 163
+[   76.689751][ T9261] usb 2-1: config 1 interface 1 altsetting 1 endpoint 0x1 has an invalid bInterval 0, changing to 7
+[   76.690681][ T9261] usb 2-1: config 1 interface 1 altsetting 1 endpoint 0x1 has invalid wMaxPacketSize 0
+[   76.699411][ T9261] usb 2-1: too many endpoints for config 1 interface 2 altsetting 0: 128, using maximum allowed: 30
+[   76.700299][ T9261] usb 2-1: config 1 interface 2 altsetting 0 has 0 endpoint descriptors, different from the interface descriptor's value: 128
+[   76.711408][ T9261] usb 2-1: config 1 interface 2 altsetting 1 endpoint 0x82 has an invalid bInterval 62, changing to 7
+[   76.721678][ T9261] usb 2-1: config 1 interface 2 altsetting 1 endpoint 0x82 has invalid maxpacket 41992, setting to 1024
+[   76.735033][ T9261] usb 2-1: New USB device found, idVendor=1d6b, idProduct=0101, bcdDevice= 0.40
+[   76.735850][ T9261] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=19
+[   76.737696][ T9261] usb 2-1: Product: syz
+[   76.738048][ T9261] usb 2-1: Manufacturer: syz
+[   76.740478][ T9261] usb 2-1: SerialNumber: syz
+[   76.808057][ T1228] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully deinitialized and disconnected.
+[   76.969085][T11720] loop5: detected capacity change from 0 to 512
+[   76.971298][T11648] UDC core: USB Raw Gadget: couldn't find an available UDC or it's busy
+[   76.976444][T11648] misc raw-gadget: fail, usb_gadget_register_driver returned -16
+[   76.981879][ T9261] usb 2-1: 2:1 : UAC_AS_GENERAL descriptor not found
+[   76.984112][T11720] EXT4-fs (loop5): Invalid default hash set in the superblock
+[   77.033144][ T9261] usb 2-1: USB disconnect, device number 3
+[   77.063340][   T25] usb 5-1: new high-speed USB device number 3 using dummy_hcd
+[   77.103616][ T1228] usb 3-1: new high-speed USB device number 3 using dummy_hcd
+[   77.222740][   T25] usb 5-1: Using ep0 maxpacket: 32
+[   77.227331][   T25] usb 5-1: config 0 has an invalid interface number: 139 but max is 0
+[   77.228024][   T25] usb 5-1: config 0 has an invalid descriptor of length 0, skipping remainder of the config
+[   77.228813][   T25] usb 5-1: config 0 has no interface number 0
+[   77.229349][   T25] usb 5-1: config 0 interface 139 altsetting 0 bulk endpoint 0x82 has invalid maxpacket 32
+[   77.230181][   T25] usb 5-1: config 0 interface 139 altsetting 0 endpoint 0xC has invalid wMaxPacketSize 0
+[   77.230994][   T25] usb 5-1: config 0 interface 139 altsetting 0 bulk endpoint 0xC has invalid maxpacket 0
+[   77.231945][   T25] usb 5-1: config 0 interface 139 altsetting 0 has 2 endpoint descriptors, different from the interface descriptor's value: 16
+[   77.235479][   T25] usb 5-1: New USB device found, idVendor=04b8, idProduct=0601, bcdDevice= 1.00
+[   77.236276][   T25] usb 5-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   77.237081][   T25] usb 5-1: Product: syz
+[   77.237445][   T25] usb 5-1: Manufacturer: syz
+[   77.237848][   T25] usb 5-1: SerialNumber: syz
+[   77.239453][   T25] usb 5-1: config 0 descriptor??
+[   77.240342][T11705] raw-gadget.3 gadget.4: fail, usb_ep_enable returned -22
+[   77.242040][   T25] usb-storage 5-1:0.139: USB Mass Storage device detected
+[   77.250284][   T25] usb-storage 5-1:0.139: Quirks match for vid 04b8 pid 0601: 8
+[   77.254504][T11765] xt_hashlimit: size too large, truncated to 1048576
+[   77.255367][   T25] scsi host2: usb-storage 5-1:0.139
+[   77.263905][ T1228] usb 3-1: New USB device found, idVendor=0cf3, idProduct=9374, bcdDevice=bc.3b
+[   77.264669][ T1228] usb 3-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   77.266439][ T1228] usb 3-1: config 0 descriptor??
+[   77.322471][T11765] xt_CT: You must specify a L4 protocol and not use inversions on it
+[   77.703222][ T1228] ath6kl: Failed to submit usb control message: -71
+[   77.703803][ T1228] ath6kl: unable to send the bmi data to the device: -71
+[   77.704410][ T1228] ath6kl: Unable to send get target info: -71
+[   77.707773][ T1228] ath6kl: Failed to init ath6kl core: -71
+[   77.721982][ T1228] ath6kl_usb 3-1:0.0: probe with driver ath6kl_usb failed with error -71
+[   77.732853][ T1228] usb 3-1: USB disconnect, device number 3
+[   77.884581][   T85] usb 2-1: new high-speed USB device number 4 using dummy_hcd
+[   77.968969][T11380] usb 4-1: USB disconnect, device number 2
+[   78.045029][   T85] usb 2-1: Using ep0 maxpacket: 16
+[   78.047074][   T85] usb 2-1: unable to get BOS descriptor or descriptor too short
+[   78.048551][   T85] usb 2-1: config 7 has an invalid interface number: 112 but max is 2
+[   78.049285][   T85] usb 2-1: config 7 has an invalid interface number: 208 but max is 2
+[   78.049960][   T85] usb 2-1: config 7 has an invalid interface number: 86 but max is 2
+[   78.055976][   T85] usb 2-1: config 7 has no interface number 0
+[   78.056711][   T85] usb 2-1: config 7 has no interface number 1
+[   78.058689][   T85] usb 2-1: config 7 has no interface number 2
+[   78.059206][   T85] usb 2-1: config 7 interface 86 altsetting 169 has an invalid descriptor for endpoint zero, skipping
+[   78.066813][ T5208] usb 1-1: new high-speed USB device number 2 using dummy_hcd
+[   78.067610][   T85] usb 2-1: config 7 interface 112 has no altsetting 0
+[   78.068777][   T85] usb 2-1: config 7 interface 208 has no altsetting 0
+[   78.071543][   T85] usb 2-1: config 7 interface 86 has no altsetting 0
+[   78.085637][   T85] usb 2-1: string descriptor 0 read error: -22
+[   78.086225][   T85] usb 2-1: New USB device found, idVendor=077d, idProduct=627a, bcdDevice= 0.10
+[   78.086943][   T85] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   78.101804][   T85] radioshark2 2-1:7.112: Invalid radioSHARK2 device
+[   78.110271][   T85] radioshark2 2-1:7.112: probe with driver radioshark2 failed with error -22
+[   78.111127][   T85] usbhid 2-1:7.112: couldn't find an input interrupt endpoint
+[   78.214652][ T5208] usb 1-1: config 0 interface 0 altsetting 0 endpoint 0x81 has an invalid bInterval 0, changing to 7
+[   78.215556][ T5208] usb 1-1: config 0 interface 0 altsetting 0 endpoint 0x81 has invalid wMaxPacketSize 0
+[   78.216324][ T5208] usb 1-1: config 0 interface 0 altsetting 0 endpoint 0xE has an invalid bInterval 170, changing to 11
+[   78.217202][ T5208] usb 1-1: config 0 interface 0 altsetting 0 endpoint 0xE has invalid maxpacket 25794, setting to 1024
+[   78.218079][ T5208] usb 1-1: New USB device found, idVendor=06f8, idProduct=a302, bcdDevice=dc.46
+[   78.218851][ T5208] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   78.233214][ T5208] usb 1-1: config 0 descriptor??
+[   78.234989][T11807] raw-gadget.2 gadget.0: fail, usb_ep_enable returned -22
+[   78.242522][   T25] usb 6-1: new high-speed USB device number 2 using dummy_hcd
+[   78.315421][ T9261] usb 2-1: USB disconnect, device number 4
+[   78.331638][T11853] xt_hashlimit: size too large, truncated to 1048576
+[   78.345501][ T1051] scsi 2:0:0:0: Direct-Access     Epson    875DC Storage    0100 PQ: 0 ANSI: 2
+[   78.347355][ T1051] scsi 2:0:0:1: Direct-Access     Epson    875DC Storage    0100 PQ: 0 ANSI: 2
+[   78.348596][ T1051] scsi 2:0:0:2: Direct-Access     Epson    875DC Storage    0100 PQ: 0 ANSI: 2
+[   78.376317][ T1051] scsi 2:0:0:3: Direct-Access     Epson    875DC Storage    0100 PQ: 0 ANSI: 2
+[   78.377784][ T1051] scsi 2:0:0:4: Direct-Access     Epson    875DC Storage    0100 PQ: 0 ANSI: 2
+[   78.378999][ T1051] scsi 2:0:0:5: Direct-Access     Epson    875DC Storage    0100 PQ: 0 ANSI: 2
+[   78.380137][ T1051] scsi 2:0:0:6: Direct-Access     Epson    875DC Storage    0100 PQ: 0 ANSI: 2
+[   78.381246][ T1051] scsi 2:0:0:7: Direct-Access     Epson    875DC Storage    0100 PQ: 0 ANSI: 2
+[   78.395508][   T25] usb 6-1: Using ep0 maxpacket: 8
+[   78.400081][ T1051] sd 2:0:0:0: Attached scsi generic sg2 type 0
+[   78.401047][   T25] usb 6-1: config 0 has an invalid descriptor of length 0, skipping remainder of the config
+[   78.401892][   T25] usb 6-1: too many endpoints for config 0 interface 0 altsetting 0: 89, using maximum allowed: 30
+[   78.403898][   T25] usb 6-1: config 0 interface 0 altsetting 0 has 0 endpoint descriptors, different from the interface descriptor's value: 89
+[   78.406937][   T25] usb 6-1: New USB device found, idVendor=077d, idProduct=04aa, bcdDevice=5b.d8
+[   78.407721][   T25] usb 6-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   78.408396][   T25] usb 6-1: Product: syz
+[   78.408770][   T25] usb 6-1: Manufacturer: syz
+[   78.409174][   T25] usb 6-1: SerialNumber: syz
+[   78.425531][   T25] usb 6-1: config 0 descriptor??
+[   78.427635][ T1051] sd 2:0:0:1: Attached scsi generic sg3 type 0
+[   78.432164][   T25] powermate 6-1:0.0: probe with driver powermate failed with error -22
+[   78.433721][T11853] Cannot find add_set index 0 as target
+[   78.438278][ T1051] sd 2:0:0:2: Attached scsi generic sg4 type 0
+[   78.453489][ T1051] sd 2:0:0:3: Attached scsi generic sg5 type 0
+[   78.464952][ T1051] scsi 2:0:0:4: Attached scsi generic sg6 type 0
+[   78.477921][ T1051] sd 2:0:0:5: Attached scsi generic sg7 type 0
+[   78.489066][ T1051] sd 2:0:0:6: Attached scsi generic sg8 type 0
+[   78.498956][ T1051] sd 2:0:0:7: Attached scsi generic sg9 type 0
+[   78.631635][ T1228] usb 6-1: USB disconnect, device number 2
+[   78.654717][ T5208] iforce 1-1:0.0: usb_submit_urb failed: -71
+[   78.655277][ T5208] input input6: Device does not respond to id packet M
+[   78.657598][ T5208] iforce 1-1:0.0: usb_submit_urb failed: -71
+[   78.658127][ T5208] input input6: Device does not respond to id packet P
+[   78.662522][ T5208] iforce 1-1:0.0: usb_submit_urb failed: -71
+[   78.663028][ T5208] input input6: Device does not respond to id packet B
+[   78.663957][ T5208] iforce 1-1:0.0: usb_submit_urb failed: -71
+[   78.664519][ T5208] input input6: Device does not respond to id packet N
+[   78.667707][ T5208] iforce 1-1:0.0: usb_submit_urb failed: -71
+[   78.670895][ T5208] iforce 1-1:0.0: usb_submit_urb failed: -71
+[   78.674177][ T5208] iforce 1-1:0.0: usb_submit_urb failed: -71
+[   78.676604][ T5208] iforce 1-1:0.0: usb_submit_urb failed: -71
+[   78.680026][ T5208] input: Unknown I-Force Device [%04x:%04x] as /devices/platform/dummy_hcd.0/usb1/1-1/1-1:0.0/input/input6
+[   78.711656][ T5208] usb 1-1: USB disconnect, device number 2
+[   78.972687][   T25] usb 4-1: new high-speed USB device number 3 using dummy_hcd
+[   79.149471][   T25] usb 4-1: Using ep0 maxpacket: 16
+[   79.162741][   T25] usb 4-1: config 0 has an invalid descriptor of length 0, skipping remainder of the config
+[   79.163707][   T25] usb 4-1: config 0 has no interfaces?
+[   79.166185][   T25] usb 4-1: New USB device found, idVendor=15c2, idProduct=0040, bcdDevice= 7.f3
+[   79.166953][   T25] usb 4-1: New USB device strings: Mfr=1, Product=130, SerialNumber=3
+[   79.167643][   T25] usb 4-1: Product: syz
+[   79.168004][   T25] usb 4-1: Manufacturer: syz
+[   79.168392][   T25] usb 4-1: SerialNumber: syz
+[   79.180627][T11380] usb 3-1: new high-speed USB device number 4 using dummy_hcd
+[   79.189279][   T25] usb 4-1: config 0 descriptor??
+[   79.336732][   T85] usb 2-1: new high-speed USB device number 5 using dummy_hcd
+[   79.360720][T11380] usb 3-1: New USB device found, idVendor=0cf3, idProduct=9271, bcdDevice= 1.08
+[   79.361466][T11380] usb 3-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   79.362114][T11380] usb 3-1: Product: syz
+[   79.362608][T11380] usb 3-1: Manufacturer: syz
+[   79.362994][T11380] usb 3-1: SerialNumber: syz
+[   79.370982][T11380] usb 3-1: ath9k_htc: Firmware ath9k_htc/htc_9271-1.4.0.fw requested
+[   79.389185][ T9261] usb 5-1: USB disconnect, device number 3
+[   79.414775][   T25] usb 4-1: USB disconnect, device number 3
+[   79.427766][   T71] sd 2:0:0:2: [sdd] Test Unit Ready failed: Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[   79.432827][   T71] sd 2:0:0:2: [sdd] Read Capacity(10) failed: Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[   79.433749][   T71] sd 2:0:0:2: [sdd] Sense not available.
+[   79.445446][   T71] sd 2:0:0:2: [sdd] 0 512-byte logical blocks: (0 B/0 B)
+[   79.445757][ T1066] sd 2:0:0:3: [sde] Test Unit Ready failed: Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[   79.446026][   T71] sd 2:0:0:2: [sdd] 0-byte physical blocks
+[   79.447168][ T1066] sd 2:0:0:3: [sde] Read Capacity(10) failed: Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[   79.448156][ T1066] sd 2:0:0:3: [sde] Sense not available.
+[   79.452268][   T71] sd 2:0:0:2: [sdd] Test WP failed, assume Write Enabled
+[   79.452760][ T1066] sd 2:0:0:3: [sde] 0 512-byte logical blocks: (0 B/0 B)
+[   79.453285][   T71] sd 2:0:0:2: [sdd] Asking for cache data failed
+[   79.453928][   T28] sd 2:0:0:4: [sdg] Test Unit Ready failed: Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[   79.454302][   T71] sd 2:0:0:2: [sdd] Assuming drive cache: write through
+[   79.455357][ T1066] sd 2:0:0:3: [sde] 0-byte physical blocks
+[   79.456488][ T9155] sd 2:0:0:1: [sdc] Test Unit Ready failed: Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[   79.457684][   T32] sd 2:0:0:5: [sdf] Test Unit Ready failed: Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[   79.459132][   T32] sd 2:0:0:5: [sdf] Read Capacity(10) failed: Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[   79.460061][   T32] sd 2:0:0:5: [sdf] Sense not available.
+[   79.467994][ T1066] sd 2:0:0:3: [sde] Test WP failed, assume Write Enabled
+[   79.468810][ T9363] sd 2:0:0:6: [sdh] Test Unit Ready failed: Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[   79.469803][ T1066] sd 2:0:0:3: [sde] Asking for cache data failed
+[   79.470379][ T1066] sd 2:0:0:3: [sde] Assuming drive cache: write through
+[   79.472270][   T32] sd 2:0:0:5: [sdf] 0 512-byte logical blocks: (0 B/0 B)
+[   79.473680][   T32] sd 2:0:0:5: [sdf] 0-byte physical blocks
+[   79.474303][ T9363] sd 2:0:0:6: [sdh] Read Capacity(10) failed: Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[   79.474940][T12007] sg_write: data in/out 429306/20 bytes for SCSI command 0x67-- guessing data in;
+[   79.474940][T12007]    program syz.0.83 not setting count and/or reply_len properly
+[   79.475224][ T9363] sd 2:0:0:6: [sdh] Sense not available.
+[   79.481016][   T32] sd 2:0:0:5: [sdf] Test WP failed, assume Write Enabled
+[   79.481888][   T32] sd 2:0:0:5: [sdf] Asking for cache data failed
+[   79.482499][T11890] sd 2:0:0:7: [sdi] Test Unit Ready failed: Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[   79.483506][   T85] usb 2-1: Using ep0 maxpacket: 16
+[   79.484852][T11890] sd 2:0:0:7: [sdi] Read Capacity(10) failed: Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[   79.485196][   T28] sd 2:0:0:4: [sdg] Read Capacity(10) failed: Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[   79.485800][T11890] sd 2:0:0:7: [sdi] Sense not available.
+[   79.486719][   T28] sd 2:0:0:4: [sdg] Sense not available.
+[   79.489307][ T5208] usb 3-1: ath9k_htc: Transferred FW: ath9k_htc/htc_9271-1.4.0.fw, size: 51008
+[   79.492899][   T85] usb 2-1: config 0 has an invalid interface number: 133 but max is 1
+[   79.493669][   T85] usb 2-1: config 0 has an invalid interface number: 229 but max is 1
+[   79.494396][   T85] usb 2-1: config 0 has no interface number 0
+[   79.494945][   T85] usb 2-1: config 0 has no interface number 1
+[   79.495519][   T85] usb 2-1: config 0 interface 133 altsetting 7 endpoint 0xE has invalid maxpacket 512, setting to 64
+[   79.496489][   T85] usb 2-1: config 0 interface 133 altsetting 7 has a duplicate endpoint with address 0xE, skipping
+[   79.497360][   T85] usb 2-1: config 0 interface 133 altsetting 7 has a duplicate endpoint with address 0xE, skipping
+[   79.498240][   T85] usb 2-1: config 0 interface 229 altsetting 3 endpoint 0x5 has invalid maxpacket 1024, setting to 64
+[   79.499127][   T85] usb 2-1: config 0 interface 229 altsetting 3 endpoint 0x6 has invalid maxpacket 1024, setting to 64
+[   79.500016][   T85] usb 2-1: config 0 interface 229 altsetting 3 has a duplicate endpoint with address 0xE, skipping
+[   79.500894][   T85] usb 2-1: config 0 interface 229 altsetting 3 endpoint 0x3 has an invalid bInterval 149, changing to 7
+[   79.501968][   T32] sd 2:0:0:5: [sdf] Assuming drive cache: write through
+[   79.502746][T11890] sd 2:0:0:7: [sdi] 0 512-byte logical blocks: (0 B/0 B)
+[   79.503372][T11890] sd 2:0:0:7: [sdi] 0-byte physical blocks
+[   79.518629][ T1066] sd 2:0:0:3: [sde] Attached SCSI removable disk
+[   79.519424][T11890] sd 2:0:0:7: [sdi] Test WP failed, assume Write Enabled
+[   79.519522][ T9364] sd 2:0:0:0: [sdb] Read Capacity(10) failed: Result: hostbyte=DID_ERROR driverbyte=DRIVER_OK
+[   79.521001][ T9364] sd 2:0:0:0: [sdb] Sense not available.
+[   79.522342][   T28] sd 2:0:0:4: [sdg] 0 512-byte logical blocks: (0 B/0 B)
+[   79.522682][T11890] sd 2:0:0:7: [sdi] Asking for cache data failed
+[   79.522994][   T28] sd 2:0:0:4: [sdg] 0-byte physical blocks
+[   79.523537][T11890] sd 2:0:0:7: [sdi] Assuming drive cache: write through
+[   79.525586][ T9155] sd 2:0:0:1: [sdc] Read Capacity(10) failed: Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[   79.526527][ T9155] sd 2:0:0:1: [sdc] Sense not available.
+[   79.527903][ T9364] sd 2:0:0:0: [sdb] 0 512-byte logical blocks: (0 B/0 B)
+[   79.528557][ T9364] sd 2:0:0:0: [sdb] 0-byte physical blocks
+[   79.529783][ T9155] sd 2:0:0:1: [sdc] 0 512-byte logical blocks: (0 B/0 B)
+[   79.530596][ T9155] sd 2:0:0:1: [sdc] 0-byte physical blocks
+[   79.531451][ T9363] sd 2:0:0:6: [sdh] 0 512-byte logical blocks: (0 B/0 B)
+[   79.531520][   T71] sd 2:0:0:2: [sdd] Attached SCSI removable disk
+[   79.532090][ T9363] sd 2:0:0:6: [sdh] 0-byte physical blocks
+[   79.540736][ T9155] sd 2:0:0:1: [sdc] Test WP failed, assume Write Enabled
+[   79.546587][   T32] sd 2:0:0:5: [sdf] Attached SCSI removable disk
+[   79.547606][ T9155] sd 2:0:0:1: [sdc] Asking for cache data failed
+[   79.548164][ T9155] sd 2:0:0:1: [sdc] Assuming drive cache: write through
+[   79.551210][ T9363] sd 2:0:0:6: [sdh] Test WP failed, assume Write Enabled
+[   79.552236][ T9363] sd 2:0:0:6: [sdh] Asking for cache data failed
+[   79.552963][ T9364] sd 2:0:0:0: [sdb] Write Protect is off
+[   79.553547][ T9364] sd 2:0:0:0: [sdb] Asking for cache data failed
+[   79.554100][ T9364] sd 2:0:0:0: [sdb] Assuming drive cache: write through
+[   79.556125][   T28] sd 2:0:0:4: [sdg] Test WP failed, assume Write Enabled
+[   79.556861][ T9363] sd 2:0:0:6: [sdh] Assuming drive cache: write through
+[   79.558405][   T28] sd 2:0:0:4: [sdg] Asking for cache data failed
+[   79.559011][   T28] sd 2:0:0:4: [sdg] Assuming drive cache: write through
+[   79.560150][   T85] usb 2-1: config 0 interface 229 altsetting 3 bulk endpoint 0x1 has invalid maxpacket 64
+[   79.561054][   T85] usb 2-1: config 0 interface 133 has no altsetting 0
+[   79.561686][   T85] usb 2-1: config 0 interface 229 has no altsetting 0
+[   79.563024][T11890] sd 2:0:0:7: [sdi] Attached SCSI removable disk
+[   79.584657][   T85] usb 2-1: New USB device found, idVendor=0fe9, idProduct=db01, bcdDevice=c4.ec
+[   79.585456][   T85] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   79.586171][   T85] usb 2-1: Product: syz
+[   79.586577][   T85] usb 2-1: Manufacturer: syz
+[   79.587012][   T85] usb 2-1: SerialNumber: syz
+[   79.600730][   T85] usb 2-1: config 0 descriptor??
+[   79.616870][ T9155] sd 2:0:0:1: [sdc] Attached SCSI removable disk
+[   79.619868][ T9363] sd 2:0:0:6: [sdh] Attached SCSI removable disk
+[   79.628123][ T9364] sd 2:0:0:0: [sdb] Attached SCSI removable disk
+[   79.632426][   T28] sd 2:0:0:4: [sdg] Attached SCSI removable disk
+[   79.717201][ T1228] usb 3-1: USB disconnect, device number 4
+[   79.859720][   T85] dvb-usb: found a 'DViCO FusionHDTV DVB-T USB (LGZ201)' in warm state.
+[   79.879730][   T85] dvb-usb: bulk message failed: -71 (2/0)
+[   79.905739][   T85] dvb-usb: will pass the complete MPEG2 transport stream to the software demuxer.
+[   79.910991][   T85] dvbdev: DVB: registering new adapter (DViCO FusionHDTV DVB-T USB (LGZ201))
+[   79.911745][   T85] usb 2-1: media controller created
+[   79.958922][   T85] dvbdev: dvb_create_media_entity: media entity 'dvb-demux' registered.
+[   80.008818][   T85] cxusb: set interface failed
+[   80.009452][   T85] dvb-usb: bulk message failed: -71 (1/0)
+[   80.065429][   T85] DVB: Unable to find symbol mt352_attach()
+[   80.065970][   T85] dvb-usb: no frontend was attached by 'DViCO FusionHDTV DVB-T USB (LGZ201)'
+[   80.152879][   T85] rc_core: IR keymap rc-dvico-portable not found
+[   80.153472][   T85] Registered IR keymap rc-empty
+[   80.163708][   T85] rc rc0: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.1/usb2/2-1/rc/rc0
+[   80.175797][   T85] input: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.1/usb2/2-1/rc/rc0/input7
+[   80.180362][   T85] dvb-usb: schedule remote query interval to 100 msecs.
+[   80.180948][   T85] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully initialized and connected.
+[   80.194032][   T85] dvb-usb: found a 'DViCO FusionHDTV DVB-T USB (LGZ201)' in warm state.
+[   80.195508][   T85] dvb-usb: bulk message failed: -71 (2/0)
+[   80.198943][   T85] dvb-usb: will pass the complete MPEG2 transport stream to the software demuxer.
+[   80.200029][   T85] dvbdev: DVB: registering new adapter (DViCO FusionHDTV DVB-T USB (LGZ201))
+[   80.200801][   T85] usb 2-1: media controller created
+[   80.216858][   T85] dvbdev: dvb_create_media_entity: media entity 'dvb-demux' registered.
+[   80.248462][   T85] cxusb: set interface failed
+[   80.249133][   T85] dvb-usb: bulk message failed: -71 (1/0)
+[   80.282873][T11380] dvb-usb: bulk message failed: -71 (1/0)
+[   80.310421][   T85] DVB: Unable to find symbol mt352_attach()
+[   80.310935][   T85] dvb-usb: no frontend was attached by 'DViCO FusionHDTV DVB-T USB (LGZ201)'
+[   80.355852][   T25] usb 4-1: new high-speed USB device number 4 using dummy_hcd
+[   80.393084][T11470] dvb-usb: bulk message failed: -71 (1/0)
+[   80.435980][   T85] rc_core: IR keymap rc-dvico-portable not found
+[   80.436540][   T85] Registered IR keymap rc-empty
+[   80.456523][   T85] rc rc1: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.1/usb2/2-1/rc/rc1
+[   80.457989][   T85] input: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.1/usb2/2-1/rc/rc1/input8
+[   80.460011][   T85] dvb-usb: schedule remote query interval to 100 msecs.
+[   80.460581][   T85] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully initialized and connected.
+[   80.472448][T11380] usb 1-1: new high-speed USB device number 3 using dummy_hcd
+[   80.474155][   T85] usb 2-1: USB disconnect, device number 5
+[   80.522683][   T85] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully deinitialized and disconnected.
+[   80.562869][   T25] usb 4-1: Using ep0 maxpacket: 32
+[   80.564795][   T85] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully deinitialized and disconnected.
+[   80.566891][   T25] usb 4-1: unable to get BOS descriptor or descriptor too short
+[   80.570148][   T25] usb 4-1: config 5 has an invalid interface number: 241 but max is 1
+[   80.570850][   T25] usb 4-1: config 5 has an invalid interface number: 201 but max is 1
+[   80.571529][   T25] usb 4-1: config 5 has an invalid interface association descriptor of length 2, skipping
+[   80.572505][ T5208] ath9k_htc 3-1:1.0: ath9k_htc: Target is unresponsive
+[   80.573954][ T5208] ath9k_htc: Failed to initialize the device
+[   80.575530][ T1228] usb 3-1: ath9k_htc: USB layer deinitialized
+[   80.576024][   T25] usb 4-1: config 5 has an invalid interface association descriptor of length 2, skipping
+[   80.577078][   T25] usb 4-1: config 5 has no interface number 0
+[   80.580830][   T25] usb 4-1: config 5 has no interface number 1
+[   80.581358][   T25] usb 4-1: config 5 interface 241 altsetting 0 has a duplicate endpoint with address 0x5, skipping
+[   80.582237][   T25] usb 4-1: config 5 interface 241 altsetting 0 endpoint 0x9 has an invalid bInterval 162, changing to 11
+[   80.591545][   T25] usb 4-1: config 5 interface 241 altsetting 0 has an invalid descriptor for endpoint zero, skipping
+[   80.592519][   T25] usb 4-1: config 5 interface 201 altsetting 1 has a duplicate endpoint with address 0xC, skipping
+[   80.593396][   T25] usb 4-1: config 5 interface 201 altsetting 1 bulk endpoint 0xA has invalid maxpacket 528
+[   80.594226][   T25] usb 4-1: config 5 interface 201 altsetting 1 endpoint 0xD has invalid maxpacket 1023, setting to 64
+[   80.595107][   T25] usb 4-1: config 5 interface 201 altsetting 1 endpoint 0x7 has an invalid bInterval 200, changing to 7
+[   80.596022][   T25] usb 4-1: config 5 interface 201 altsetting 1 has a duplicate endpoint with address 0x7, skipping
+[   80.602642][   T25] usb 4-1: config 5 interface 201 altsetting 1 endpoint 0x4 has invalid maxpacket 512, setting to 64
+[   80.603579][   T25] usb 4-1: config 5 interface 201 altsetting 1 has a duplicate endpoint with address 0xA, skipping
+[   80.604488][   T25] usb 4-1: config 5 interface 201 altsetting 1 endpoint 0x8 has an invalid bInterval 63, changing to 9
+[   80.605429][   T25] usb 4-1: config 5 interface 201 has no altsetting 0
+[   80.616674][   T25] usb 4-1: string descriptor 0 read error: -22
+[   80.617282][   T25] usb 4-1: New USB device found, idVendor=5032, idProduct=0fa1, bcdDevice=1e.5a
+[   80.618071][   T25] usb 4-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   80.625266][   T25] dvb-usb: found a 'Grandtec USB1.1 DVB-T' in warm state.
+[   80.633968][   T25] dvb-usb: bulk message failed: -8 (3/0)
+[   80.634639][T11380] usb 1-1: Using ep0 maxpacket: 8
+[   80.636622][T11380] usb 1-1: unable to get BOS descriptor or descriptor too short
+[   80.637945][T11380] usb 1-1: config 63 has an invalid interface number: 58 but max is 2
+[   80.638641][T11380] usb 1-1: config 63 has an invalid interface number: 39 but max is 2
+[   80.639342][T11380] usb 1-1: config 63 has an invalid interface number: 67 but max is 2
+[   80.639997][T11380] usb 1-1: config 63 has an invalid interface number: 3 but max is 2
+[   80.640674][T11380] usb 1-1: config 63 has an invalid descriptor of length 0, skipping remainder of the config
+[   80.641474][T11380] usb 1-1: config 63 has 4 interfaces, different from the descriptor's value: 3
+[   80.642236][T11380] usb 1-1: config 63 has no interface number 0
+[   80.643446][T11380] usb 1-1: config 63 has no interface number 1
+[   80.643978][T11380] usb 1-1: config 63 has no interface number 2
+[   80.644540][T11380] usb 1-1: config 63 interface 58 altsetting 9 has an invalid descriptor for endpoint zero, skipping
+[   80.645458][T11380] usb 1-1: config 63 interface 58 altsetting 9 endpoint 0x7 has an invalid bInterval 129, changing to 7
+[   80.646377][T11380] usb 1-1: config 63 interface 58 altsetting 9 has a duplicate endpoint with address 0x7, skipping
+[   80.647292][T11380] usb 1-1: config 63 interface 58 altsetting 9 endpoint 0x1 has invalid maxpacket 1023, setting to 64
+[   80.648215][T11380] usb 1-1: config 63 interface 39 altsetting 3 has a duplicate endpoint with address 0xA, skipping
+[   80.649128][T11380] usb 1-1: config 63 interface 39 altsetting 3 endpoint 0xE has invalid maxpacket 512, setting to 64
+[   80.649994][T11380] usb 1-1: config 63 interface 39 altsetting 3 has an invalid endpoint descriptor of length 2, skipping
+[   80.650871][T11380] usb 1-1: config 63 interface 39 altsetting 3 has a duplicate endpoint with address 0xA, skipping
+[   80.673588][   T25] dvb-usb: will pass the complete MPEG2 transport stream to the software demuxer.
+[   80.675289][   T25] dvbdev: DVB: registering new adapter (Grandtec USB1.1 DVB-T)
+[   80.675957][   T25] usb 4-1: media controller created
+[   80.682375][T11380] usb 1-1: config 63 interface 39 altsetting 3 has a duplicate endpoint with address 0xB, skipping
+[   80.683309][T11380] usb 1-1: config 63 interface 39 altsetting 3 has 6 endpoint descriptors, different from the interface descriptor's value: 5
+[   80.684381][T11380] usb 1-1: config 63 interface 67 altsetting 2 has 0 endpoint descriptors, different from the interface descriptor's value: 14
+[   80.685402][T11380] usb 1-1: config 63 interface 3 altsetting 255 has 0 endpoint descriptors, different from the interface descriptor's value: 5
+[   80.686419][T11380] usb 1-1: config 63 interface 58 has no altsetting 0
+[   80.686959][T11380] usb 1-1: config 63 interface 39 has no altsetting 0
+[   80.687498][T11380] usb 1-1: config 63 interface 67 has no altsetting 0
+[   80.688037][T11380] usb 1-1: config 63 interface 3 has no altsetting 0
+[   80.694362][   T25] dvbdev: dvb_create_media_entity: media entity 'dvb-demux' registered.
+[   80.706598][T11380] usb 1-1: string descriptor 0 read error: -22
+[   80.707199][T11380] usb 1-1: New USB device found, idVendor=1df7, idProduct=2500, bcdDevice=35.d1
+[   80.707990][T11380] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   80.719590][   T25] dvb-usb: bulk message failed: -8 (6/0)
+[   80.720264][   T25] dvb-usb: no frontend was attached by 'Grandtec USB1.1 DVB-T'
+[   80.731451][   T25] input: IR-receiver inside an USB DVB receiver as /devices/platform/dummy_hcd.3/usb4/4-1/input/input9
+[   80.738977][   T25] dvb-usb: schedule remote query interval to 150 msecs.
+[   80.739658][   T25] dvb-usb: bulk message failed: -8 (3/0)
+[   80.752719][   T25] dvb-usb: Grandtec USB1.1 DVB-T successfully initialized and connected.
+[   80.755803][   T25] dvb-usb: found a 'Grandtec USB1.1 DVB-T' in warm state.
+[   80.756423][   T25] dvb-usb: bulk message failed: -8 (3/0)
+[   80.774368][T11470] usb 6-1: new high-speed USB device number 3 using dummy_hcd
+[   80.782501][   T25] dvb-usb: will pass the complete MPEG2 transport stream to the software demuxer.
+[   80.783574][   T25] dvbdev: DVB: registering new adapter (Grandtec USB1.1 DVB-T)
+[   80.799733][   T25] usb 4-1: media controller created
+[   80.814128][T11380] msi2500 1-1:63.58: Registered as swradio24
+[   80.814679][T11380] msi2500 1-1:63.58: SDR API is still slightly experimental and functionality changes may follow
+[   80.820898][   T25] dvbdev: dvb_create_media_entity: media entity 'dvb-demux' registered.
+[   80.831421][T12239] netlink: 24 bytes leftover after parsing attributes in process `syz.1.102'.
+[   80.843584][   T25] dvb-usb: bulk message failed: -8 (6/0)
+[   80.844113][   T25] dvb-usb: no frontend was attached by 'Grandtec USB1.1 DVB-T'
+[   80.871041][   T25] input: IR-receiver inside an USB DVB receiver as /devices/platform/dummy_hcd.3/usb4/4-1/input/input10
+[   80.877845][   T25] dvb-usb: schedule remote query interval to 150 msecs.
+[   80.878500][   T25] dvb-usb: bulk message failed: -8 (3/0)
+[   80.883462][ T1228] usb 3-1: new high-speed USB device number 5 using dummy_hcd
+[   80.903474][   T85] dvb-usb: bulk message failed: -8 (1/0)
+[   80.904082][   T85] dvb-usb: error while querying for an remote control event.
+[   80.905392][   T25] dvb-usb: Grandtec USB1.1 DVB-T successfully initialized and connected.
+[   80.922821][T11470] usb 6-1: Using ep0 maxpacket: 16
+[   80.925680][T11470] usb 6-1: config 0 has no interfaces?
+[   80.926759][T11380] videodev: could not get a free minor
+[   80.927316][T11380] msi2500 1-1:63.39: Failed to register as video device (-23)
+[   80.932428][T11470] usb 6-1: New USB device found, idVendor=15c2, idProduct=0039, bcdDevice=80.f3
+[   80.933209][T11470] usb 6-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   80.933874][T11470] usb 6-1: Product: syz
+[   80.934232][T11470] usb 6-1: Manufacturer: syz
+[   80.934625][T11470] usb 6-1: SerialNumber: syz
+[   80.955721][T11470] usb 6-1: config 0 descriptor??
+[   80.969518][T11380] msi2500 1-1:63.39: probe with driver msi2500 failed with error -23
+[   80.983041][   T25] usb 4-1: USB disconnect, device number 4
+[   81.013795][ T9261] usb 5-1: new high-speed USB device number 4 using dummy_hcd
+[   81.032378][ T1228] usb 3-1: Using ep0 maxpacket: 8
+[   81.036263][ T1228] usb 3-1: config 0 has an invalid descriptor of length 0, skipping remainder of the config
+[   81.037074][ T1228] usb 3-1: too many endpoints for config 0 interface 0 altsetting 0: 89, using maximum allowed: 30
+[   81.038017][ T1228] usb 3-1: config 0 interface 0 altsetting 0 has 0 endpoint descriptors, different from the interface descriptor's value: 89
+[   81.038881][T11470] dvb-usb: bulk message failed: -19 (1/0)
+[   81.039527][T11470] dvb-usb: error while querying for an remote control event.
+[   81.041428][ T1228] usb 3-1: New USB device found, idVendor=077d, idProduct=04aa, bcdDevice=5b.d8
+[   81.042174][ T1228] usb 3-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   81.046606][ T1228] usb 3-1: Product: syz
+[   81.047013][ T1228] usb 3-1: Manufacturer: syz
+[   81.047479][ T1228] usb 3-1: SerialNumber: syz
+[   81.051554][ T1228] usb 3-1: config 0 descriptor??
+[   81.057268][ T1228] powermate 3-1:0.0: probe with driver powermate failed with error -22
+[   81.066759][   T25] dvb-usb: Grandtec USB1.1 DVB-T successfully deinitialized and disconnected.
+[   81.095271][T11380] videodev: could not get a free minor
+[   81.095767][T11380] msi2500 1-1:63.67: Failed to register as video device (-23)
+[   81.107903][T11380] msi2500 1-1:63.67: probe with driver msi2500 failed with error -23
+[   81.119696][   T25] dvb-usb: Grandtec USB1.1 DVB-T successfully deinitialized and disconnected.
+[   81.160144][T11380] videodev: could not get a free minor
+[   81.160244][ T1228] usb 6-1: USB disconnect, device number 3
+[   81.160640][T11380] msi2500 1-1:63.3: Failed to register as video device (-23)
+[   81.167295][ T9261] usb 5-1: New USB device found, idVendor=0cf3, idProduct=9271, bcdDevice= 1.08
+[   81.168154][ T9261] usb 5-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   81.168932][ T9261] usb 5-1: Product: syz
+[   81.169312][ T9261] usb 5-1: Manufacturer: syz
+[   81.169729][ T9261] usb 5-1: SerialNumber: syz
+[   81.170752][T11380] msi2500 1-1:63.3: probe with driver msi2500 failed with error -23
+[   81.173850][T11380] usb 1-1: USB disconnect, device number 3
+[   81.173930][ T9261] usb 5-1: ath9k_htc: Firmware ath9k_htc/htc_9271-1.4.0.fw requested
+[   81.182894][T11349] usb 5-1: ath9k_htc: Transferred FW: ath9k_htc/htc_9271-1.4.0.fw, size: 51008
+[   81.260765][   T85] usb 3-1: USB disconnect, device number 5
+[   81.282647][T11470] usb 2-1: new high-speed USB device number 6 using dummy_hcd
+[   81.443514][T11470] usb 2-1: Using ep0 maxpacket: 16
+[   81.445180][T11470] usb 2-1: config 0 has an invalid descriptor of length 0, skipping remainder of the config
+[   81.446056][T11470] usb 2-1: config 0 interface 0 altsetting 0 has 0 endpoint descriptors, different from the interface descriptor's value: 1
+[   81.450738][T11470] usb 2-1: New USB device found, idVendor=15c2, idProduct=0040, bcdDevice= 7.f3
+[   81.451522][T11470] usb 2-1: New USB device strings: Mfr=1, Product=130, SerialNumber=3
+[   81.452219][T11470] usb 2-1: Product: syz
+[   81.457293][T11470] usb 2-1: Manufacturer: syz
+[   81.457719][T11470] usb 2-1: SerialNumber: syz
+[   81.461690][T11470] usb 2-1: config 0 descriptor??
+[   81.478093][T11470] imon:imon_find_endpoints: no valid input (IR) endpoint found
+[   81.478916][T11470] imon 2-1:0.0: unable to initialize intf0, err -19
+[   81.482954][T11470] imon:imon_probe: failed to initialize context!
+[   81.483517][T11470] imon 2-1:0.0: unable to register, err -19
+[   81.673014][ T9261] usb 5-1: USB disconnect, device number 4
+[   81.682208][T11380] usb 2-1: USB disconnect, device number 6
+[   81.950048][T12363] loop0: detected capacity change from 0 to 32768
+[   81.951041][T12363] =======================================================
+[   81.951041][T12363] WARNING: The mand mount option has been deprecated and
+[   81.951041][T12363]          and is ignored by this kernel. Remove the mand
+[   81.951041][T12363]          option from the mount to silence this warning.
+[   81.951041][T12363] =======================================================
+[   81.993466][ T1228] usb 6-1: new high-speed USB device number 4 using dummy_hcd
+[   82.009760][T12383] ksmbd: Unknown IPC event: 4, ignore.
+[   82.147196][ T1228] usb 6-1: New USB device found, idVendor=0cf3, idProduct=9271, bcdDevice= 1.08
+[   82.148040][ T1228] usb 6-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   82.148708][ T1228] usb 6-1: Product: syz
+[   82.149059][ T1228] usb 6-1: Manufacturer: syz
+[   82.151646][ T1228] usb 6-1: SerialNumber: syz
+[   82.158924][ T1228] usb 6-1: ath9k_htc: Firmware ath9k_htc/htc_9271-1.4.0.fw requested
+[   82.173393][ T1228] usb 6-1: ath9k_htc: Transferred FW: ath9k_htc/htc_9271-1.4.0.fw, size: 51008
+[   82.222172][T12392] loop0: detected capacity change from 0 to 4096
+[   82.229001][T12392] ntfs3(loop0): Different NTFS sector size (4096) and media sector size (512).
+[   82.249482][T12392] ntfs3(loop0): Mark volume as dirty due to NTFS errors
+[   82.253222][T11349] ath9k_htc 5-1:1.0: ath9k_htc: Target is unresponsive
+[   82.253959][T11349] ath9k_htc: Failed to initialize the device
+[   82.255125][ T9261] usb 5-1: ath9k_htc: USB layer deinitialized
+[   82.257763][T12392] ntfs3(loop0): Failed to load $Extend (-22).
+[   82.258436][T12392] ntfs3(loop0): Failed to initialize $Extend.
+[   82.269025][   T33] audit: type=1107 audit(1740405572.367:4): pid=12406 uid=0 auid=0 ses=3 subj=_ msg='–πwÔqı˚Å®Xà£ß*˙ÃFƒáO…ƒljß‘\2|Ÿ2EﬁøÅÍ∂`π∞ÜÌâ‘‡õ¶ÁE}x@ﬂÍ∑Mjòä@p∑‘'
+[   82.392776][T11380] usb 3-1: new high-speed USB device number 6 using dummy_hcd
+[   82.556783][T11380] usb 3-1: Using ep0 maxpacket: 8
+[   82.560581][T11380] usb 3-1: New USB device found, idVendor=1618, idProduct=9116, bcdDevice=c6.a9
+[   82.561400][T11380] usb 3-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   82.568542][T11380] usb 3-1: config 0 descriptor??
+[   82.610511][T11374] usb 6-1: USB disconnect, device number 4
+[   82.662592][T11470] usb 4-1: new high-speed USB device number 5 using dummy_hcd
+[   82.782488][   T85] usb 1-1: new high-speed USB device number 4 using dummy_hcd
+[   82.825006][T11470] usb 4-1: New USB device found, idVendor=0cf3, idProduct=9374, bcdDevice=bc.3b
+[   82.825792][T11470] usb 4-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   82.827569][T11470] usb 4-1: config 0 descriptor??
+[   82.945374][   T85] usb 1-1: Using ep0 maxpacket: 8
+[   82.954865][   T85] usb 1-1: unable to get BOS descriptor or descriptor too short
+[   82.969464][   T85] usb 1-1: config 63 has an invalid interface number: 58 but max is 2
+[   82.970232][   T85] usb 1-1: config 63 has an invalid interface number: 39 but max is 2
+[   82.970975][   T85] usb 1-1: config 63 has an invalid interface number: 67 but max is 2
+[   82.971702][   T85] usb 1-1: config 63 has an invalid interface number: 3 but max is 2
+[   82.982334][   T85] usb 1-1: config 63 has an invalid descriptor of length 0, skipping remainder of the config
+[   82.983246][   T85] usb 1-1: config 63 has 4 interfaces, different from the descriptor's value: 3
+[   82.984022][   T85] usb 1-1: config 63 has no interface number 0
+[   82.984571][   T85] usb 1-1: config 63 has no interface number 1
+[   82.985096][   T85] usb 1-1: config 63 has no interface number 2
+[   82.985664][   T85] usb 1-1: config 63 interface 58 altsetting 9 has an invalid descriptor for endpoint zero, skipping
+[   83.001551][   T85] usb 1-1: config 63 interface 58 altsetting 9 endpoint 0x7 has an invalid bInterval 129, changing to 7
+[   83.001724][T12465] sg_write: data in/out 429306/22 bytes for SCSI command 0x67-- guessing data in;
+[   83.001724][T12465]    program syz.1.123 not setting count and/or reply_len properly
+[   83.002519][   T85] usb 1-1: config 63 interface 58 altsetting 9 has a duplicate endpoint with address 0x7, skipping
+[   83.002540][   T85] usb 1-1: config 63 interface 58 altsetting 9 endpoint 0x1 has invalid maxpacket 1023, setting to 64
+[   83.002566][   T85] usb 1-1: config 63 interface 39 altsetting 3 has a duplicate endpoint with address 0xA, skipping
+[   83.002581][   T85] usb 1-1: config 63 interface 39 altsetting 3 endpoint 0xE has invalid maxpacket 512, setting to 64
+[   83.002597][   T85] usb 1-1: config 63 interface 39 altsetting 3 has an invalid endpoint descriptor of length 2, skipping
+[   83.002612][   T85] usb 1-1: config 63 interface 39 altsetting 3 has a duplicate endpoint with address 0xA, skipping
+[   83.037849][T11470] ath6kl: Failed to submit usb control message: -71
+[   83.038460][T11470] ath6kl: unable to send the bmi data to the device: -71
+[   83.039050][T11470] ath6kl: Unable to send get target info: -71
+[   83.049049][T11470] ath6kl: Failed to init ath6kl core: -71
+[   83.049920][T11470] ath6kl_usb 4-1:0.0: probe with driver ath6kl_usb failed with error -71
+[   83.059158][   T85] usb 1-1: config 63 interface 39 altsetting 3 has a duplicate endpoint with address 0xB, skipping
+[   83.060070][   T85] usb 1-1: config 63 interface 39 altsetting 3 has 6 endpoint descriptors, different from the interface descriptor's value: 5
+[   83.061126][   T85] usb 1-1: config 63 interface 67 altsetting 2 has 0 endpoint descriptors, different from the interface descriptor's value: 13
+[   83.062172][   T85] usb 1-1: config 63 interface 3 altsetting 255 has 0 endpoint descriptors, different from the interface descriptor's value: 5
+[   83.063460][   T85] usb 1-1: config 63 interface 58 has no altsetting 0
+[   83.064036][   T85] usb 1-1: config 63 interface 39 has no altsetting 0
+[   83.064590][   T85] usb 1-1: config 63 interface 67 has no altsetting 0
+[   83.065160][   T85] usb 1-1: config 63 interface 3 has no altsetting 0
+[   83.076476][   T85] usb 1-1: string descriptor 0 read error: -22
+[   83.078161][   T85] usb 1-1: New USB device found, idVendor=1df7, idProduct=2500, bcdDevice=35.d1
+[   83.078928][   T85] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   83.099386][T11470] usb 4-1: USB disconnect, device number 5
+[   83.183198][   T85] msi2500 1-1:63.58: Registered as swradio24
+[   83.185191][   T85] msi2500 1-1:63.58: SDR API is still slightly experimental and functionality changes may follow
+[   83.217871][ T1228] ath9k_htc 6-1:1.0: ath9k_htc: Target is unresponsive
+[   83.218570][ T1228] ath9k_htc: Failed to initialize the device
+[   83.219374][T11374] usb 6-1: ath9k_htc: USB layer deinitialized
+[   83.234754][   T85] videodev: could not get a free minor
+[   83.235258][   T85] msi2500 1-1:63.39: Failed to register as video device (-23)
+[   83.262631][   T85] msi2500 1-1:63.39: probe with driver msi2500 failed with error -23
+[   83.350056][   T85] videodev: could not get a free minor
+[   83.350973][   T85] msi2500 1-1:63.67: Failed to register as video device (-23)
+[   83.354839][   T85] msi2500 1-1:63.67: probe with driver msi2500 failed with error -23
+[   83.408743][   T85] videodev: could not get a free minor
+[   83.409319][   T85] msi2500 1-1:63.3: Failed to register as video device (-23)
+[   83.411945][   T85] msi2500 1-1:63.3: probe with driver msi2500 failed with error -23
+[   83.416945][   T85] usb 1-1: USB disconnect, device number 4
+[   83.532524][T11374] usb 6-1: new high-speed USB device number 5 using dummy_hcd
+[   83.562388][T11575] usb 2-1: new high-speed USB device number 7 using dummy_hcd
+[   83.670154][   T33] audit: type=1107 audit(1740405573.747:5): pid=12548 uid=0 auid=0 ses=3 subj=_ msg='–πwÔqı˚Å®Xà£ß*˙ÃFƒáO…ƒljß‘\2|Ÿ2EﬁøÅÍ∂`π∞ÜÌâ‘‡õ¶ÁE}x@ﬂÍ∑Mjòä@p∑‘'
+[   83.716622][T11575] usb 2-1: Using ep0 maxpacket: 16
+[   83.718418][T11575] usb 2-1: config 0 has an invalid descriptor of length 0, skipping remainder of the config
+[   83.719327][T11575] usb 2-1: config 0 interface 0 altsetting 0 has 0 endpoint descriptors, different from the interface descriptor's value: 1
+[   83.722783][T11575] usb 2-1: New USB device found, idVendor=15c2, idProduct=0040, bcdDevice= 7.f3
+[   83.724109][T11575] usb 2-1: New USB device strings: Mfr=1, Product=130, SerialNumber=3
+[   83.725608][T11575] usb 2-1: Product: syz
+[   83.725987][T11575] usb 2-1: Manufacturer: syz
+[   83.728612][T11575] usb 2-1: SerialNumber: syz
+[   83.731992][T11575] usb 2-1: config 0 descriptor??
+[   83.732528][T11374] usb 6-1: New USB device found, idVendor=0cf3, idProduct=9271, bcdDevice= 1.08
+[   83.733322][T11374] usb 6-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   83.734010][T11374] usb 6-1: Product: syz
+[   83.734412][T11374] usb 6-1: Manufacturer: syz
+[   83.734816][T11374] usb 6-1: SerialNumber: syz
+[   83.735692][T11575] imon:imon_find_endpoints: no valid input (IR) endpoint found
+[   83.741151][T11374] usb 6-1: ath9k_htc: Firmware ath9k_htc/htc_9271-1.4.0.fw requested
+[   83.742666][T11575] imon 2-1:0.0: unable to initialize intf0, err -19
+[   83.743276][T11575] imon:imon_probe: failed to initialize context!
+[   83.743828][T11575] imon 2-1:0.0: unable to register, err -19
+[   83.757227][T11349] usb 6-1: ath9k_htc: Transferred FW: ath9k_htc/htc_9271-1.4.0.fw, size: 51008
+[   83.942643][T11380] usb 5-1: new high-speed USB device number 5 using dummy_hcd
+[   83.943791][T11575] usb 2-1: USB disconnect, device number 7
+[   84.093467][T11380] usb 5-1: Using ep0 maxpacket: 8
+[   84.096096][T11380] usb 5-1: config 0 has an invalid interface number: 2 but max is 0
+[   84.097936][T11380] usb 5-1: config 0 has an invalid descriptor of length 0, skipping remainder of the config
+[   84.098800][T11380] usb 5-1: config 0 has no interface number 0
+[   84.101825][T11380] usb 5-1: New USB device found, idVendor=086a, idProduct=0003, bcdDevice=67.c5
+[   84.106029][T11380] usb 5-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   84.126876][T11380] usb 5-1: config 0 descriptor??
+[   84.159737][T11380] usb 5-1: Quirk or no altset; falling back to MIDI 1.0
+[   84.203656][ T1228] usb 6-1: USB disconnect, device number 5
+[   84.274433][T11380] snd-usb-audio 5-1:0.2: probe with driver snd-usb-audio failed with error -2
+[   84.285595][T12605] overlayfs: workdir and upperdir must be separate subtrees
+[   84.342407][T11380] usb 5-1: USB disconnect, device number 5
+[   84.652657][T11374] usb 1-1: new high-speed USB device number 5 using dummy_hcd
+[   84.803249][T11374] usb 1-1: Using ep0 maxpacket: 16
+[   84.804934][T11374] usb 1-1: config 0 has an invalid interface number: 133 but max is 1
+[   84.805636][T11374] usb 1-1: config 0 has an invalid interface number: 229 but max is 1
+[   84.806326][T11374] usb 1-1: config 0 has no interface number 0
+[   84.806847][T11374] usb 1-1: config 0 has no interface number 1
+[   84.807395][T11374] usb 1-1: config 0 interface 133 altsetting 7 endpoint 0xE has invalid maxpacket 512, setting to 64
+[   84.808287][T11374] usb 1-1: config 0 interface 133 altsetting 7 has a duplicate endpoint with address 0xE, skipping
+[   84.809178][T11374] usb 1-1: config 0 interface 133 altsetting 7 has a duplicate endpoint with address 0xE, skipping
+[   84.810089][T11374] usb 1-1: config 0 interface 229 altsetting 3 endpoint 0x5 has invalid maxpacket 1024, setting to 64
+[   84.810992][T11374] usb 1-1: config 0 interface 229 altsetting 3 endpoint 0x6 has invalid maxpacket 1024, setting to 64
+[   84.811907][T11374] usb 1-1: config 0 interface 229 altsetting 3 has a duplicate endpoint with address 0xE, skipping
+[   84.812971][T11349] ath9k_htc 6-1:1.0: ath9k_htc: Target is unresponsive
+[   84.813625][T11349] ath9k_htc: Failed to initialize the device
+[   84.819033][ T1228] usb 6-1: ath9k_htc: USB layer deinitialized
+[   84.824430][T11374] usb 1-1: config 0 interface 229 altsetting 3 endpoint 0x3 has an invalid bInterval 149, changing to 7
+[   84.833890][T11374] usb 1-1: config 0 interface 229 altsetting 3 bulk endpoint 0x1 has invalid maxpacket 64
+[   84.834739][T11374] usb 1-1: config 0 interface 133 has no altsetting 0
+[   84.835325][T11374] usb 1-1: config 0 interface 229 has no altsetting 0
+[   84.838151][T11374] usb 1-1: New USB device found, idVendor=0fe9, idProduct=db01, bcdDevice=c4.ec
+[   84.838899][T11374] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   84.839590][T11374] usb 1-1: Product: syz
+[   84.839938][T11374] usb 1-1: Manufacturer: syz
+[   84.840341][T11374] usb 1-1: SerialNumber: syz
+[   84.842821][T11374] usb 1-1: config 0 descriptor??
+[   85.043717][T12656] loop4: detected capacity change from 0 to 2048
+[   85.080171][T12665] NILFS (loop4): segctord starting. Construction interval = 5 seconds, CP frequency < 30 seconds
+[   85.083039][T11374] dvb-usb: found a 'DViCO FusionHDTV DVB-T USB (LGZ201)' in warm state.
+[   85.083972][T11374] dvb-usb: bulk message failed: -71 (2/0)
+[   85.092998][T11374] dvb-usb: will pass the complete MPEG2 transport stream to the software demuxer.
+[   85.094425][T11374] dvbdev: DVB: registering new adapter (DViCO FusionHDTV DVB-T USB (LGZ201))
+[   85.095186][T11374] usb 1-1: media controller created
+[   85.100050][   T33] audit: type=1800 audit(1740405575.197:6): pid=12656 uid=0 auid=0 ses=3 subj=_ op=collect_data cause=failed(directio) comm="syz.4.150" name="bus" dev="loop4" ino=18 res=0 errno=0
+[   85.137128][T11374] dvbdev: dvb_create_media_entity: media entity 'dvb-demux' registered.
+[   85.150503][T12665] NILFS error (device loop4): nilfs_sufile_mark_dirty: active segment 4 is erroneous
+[   85.153376][T11374] cxusb: set interface failed
+[   85.157725][T11374] dvb-usb: bulk message failed: -71 (1/0)
+[   85.163685][T12665] Remounting filesystem read-only
+[   85.182689][ T9400] NILFS (loop4): disposed unprocessed dirty file(s) when stopping log writer
+[   85.195728][T11380] usb 3-1: USB disconnect, device number 6
+[   85.202711][T11575] usb 4-1: new high-speed USB device number 6 using dummy_hcd
+[   85.207073][T11374] DVB: Unable to find symbol mt352_attach()
+[   85.207590][T11374] dvb-usb: no frontend was attached by 'DViCO FusionHDTV DVB-T USB (LGZ201)'
+[   85.253640][T12687] netlink: 'syz.1.153': attribute type 3 has an invalid length.
+[   85.254484][T12687] netlink: 'syz.1.153': attribute type 3 has an invalid length.
+[   85.255138][T12687] netlink: 184 bytes leftover after parsing attributes in process `syz.1.153'.
+[   85.303208][T11374] rc_core: IR keymap rc-dvico-portable not found
+[   85.303772][T11374] Registered IR keymap rc-empty
+[   85.304949][T11374] rc rc0: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.0/usb1/1-1/rc/rc0
+[   85.306865][T11374] input: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.0/usb1/1-1/rc/rc0/input11
+[   85.311448][T11374] dvb-usb: schedule remote query interval to 100 msecs.
+[   85.312075][T11374] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully initialized and connected.
+[   85.323720][T11374] dvb-usb: found a 'DViCO FusionHDTV DVB-T USB (LGZ201)' in warm state.
+[   85.325400][T11374] dvb-usb: bulk message failed: -71 (2/0)
+[   85.328797][T11374] dvb-usb: will pass the complete MPEG2 transport stream to the software demuxer.
+[   85.329852][T11374] dvbdev: DVB: registering new adapter (DViCO FusionHDTV DVB-T USB (LGZ201))
+[   85.330628][T11374] usb 1-1: media controller created
+[   85.342816][T11575] usb 4-1: device descriptor read/64, error -71
+[   85.343486][   T85] usb 6-1: new high-speed USB device number 6 using dummy_hcd
+[   85.345103][T11374] dvbdev: dvb_create_media_entity: media entity 'dvb-demux' registered.
+[   85.350304][T11374] cxusb: set interface failed
+[   85.350979][T11374] dvb-usb: bulk message failed: -71 (1/0)
+[   85.377155][T11374] DVB: Unable to find symbol mt352_attach()
+[   85.377714][T11374] dvb-usb: no frontend was attached by 'DViCO FusionHDTV DVB-T USB (LGZ201)'
+[   85.414012][T11349] dvb-usb: bulk message failed: -71 (1/0)
+[   85.422404][T11374] rc_core: IR keymap rc-dvico-portable not found
+[   85.422961][T11374] Registered IR keymap rc-empty
+[   85.424101][T11374] rc rc1: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.0/usb1/1-1/rc/rc1
+[   85.425933][T11374] input: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.0/usb1/1-1/rc/rc1/input12
+[   85.428812][T11374] dvb-usb: schedule remote query interval to 100 msecs.
+[   85.429448][T11374] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully initialized and connected.
+[   85.445633][T11374] usb 1-1: USB disconnect, device number 5
+[   85.446786][T12717] sg_write: data in/out 429306/23 bytes for SCSI command 0x67-- guessing data in;
+[   85.446786][T12717]    program syz.1.157 not setting count and/or reply_len properly
+[   85.468324][T11374] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully deinitialized and disconnected.
+[   85.500907][T11374] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully deinitialized and disconnected.
+[   85.506059][   T85] usb 6-1: config 0 has an invalid interface number: 203 but max is 0
+[   85.506821][   T85] usb 6-1: config 0 has no interface number 0
+[   85.507366][   T85] usb 6-1: config 0 interface 203 altsetting 0 endpoint 0x2 has invalid maxpacket 1024, setting to 64
+[   85.508296][   T85] usb 6-1: New USB device found, idVendor=11ba, idProduct=1001, bcdDevice=24.09
+[   85.509077][   T85] usb 6-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   85.515418][   T85] usb 6-1: config 0 descriptor??
+[   85.519419][   T85] pvrusb2: Hardware description: OnAir USB2 Hybrid USB tuner
+[   85.614873][T11380] usb 3-1: new high-speed USB device number 7 using dummy_hcd
+[   85.615663][T11575] usb 4-1: new high-speed USB device number 7 using dummy_hcd
+[   85.669801][T12754] sg_write: data in/out 393243/23 bytes for SCSI command 0xbb-- guessing data in;
+[   85.669801][T12754]    program syz.1.161 not setting count and/or reply_len properly
+[   85.719592][ T2350] pvrusb2: Invalid write control endpoint
+[   85.737377][   T85] usb 6-1: USB disconnect, device number 6
+[   85.752531][T11380] usb 3-1: device descriptor read/64, error -71
+[   85.753199][T11575] usb 4-1: device descriptor read/64, error -71
+[   85.784565][ T2350] pvrusb2: Invalid write control endpoint
+[   85.785181][ T2350] pvrusb2: Invalid write control endpoint
+[   85.785861][ T2350] pvrusb2: Invalid write control endpoint
+[   85.788557][ T2350] pvrusb2: Invalid write control endpoint
+[   85.789078][ T2350] pvrusb2: Invalid write control endpoint
+[   85.789572][ T2350] pvrusb2: Invalid write control endpoint
+[   85.790043][ T2350] pvrusb2: Invalid write control endpoint
+[   85.790590][ T2350] pvrusb2: Invalid write control endpoint
+[   85.791062][ T2350] pvrusb2: Invalid write control endpoint
+[   85.791553][ T2350] pvrusb2: Invalid write control endpoint
+[   85.801194][ T2350] pvrusb2: Invalid write control endpoint
+[   85.801685][ T2350] pvrusb2: Invalid write control endpoint
+[   85.802186][ T2350] pvrusb2: Invalid write control endpoint
+[   85.802738][ T2350] pvrusb2: Invalid write control endpoint
+[   85.803196][ T2350] pvrusb2: Invalid write control endpoint
+[   85.803690][ T2350] pvrusb2: Invalid write control endpoint
+[   85.804148][ T2350] pvrusb2: Invalid write control endpoint
+[   85.804617][ T2350] pvrusb2: Invalid write control endpoint
+[   85.805103][ T2350] pvrusb2: Invalid write control endpoint
+[   85.805603][ T2350] pvrusb2: Invalid write control endpoint
+[   85.806065][ T2350] pvrusb2: Invalid write control endpoint
+[   85.806528][ T2350] pvrusb2: Invalid write control endpoint
+[   85.806997][ T2350] pvrusb2: Invalid write control endpoint
+[   85.807487][ T2350] pvrusb2: Invalid write control endpoint
+[   85.807974][ T2350] pvrusb2: Invalid write control endpoint
+[   85.808482][ T2350] pvrusb2: Invalid write control endpoint
+[   85.808965][ T2350] pvrusb2: Invalid write control endpoint
+[   85.809468][ T2350] pvrusb2: Invalid write control endpoint
+[   85.809949][ T2350] pvrusb2: Invalid write control endpoint
+[   85.810439][ T2350] pvrusb2: Invalid write control endpoint
+[   85.810920][ T2350] pvrusb2: Invalid write control endpoint
+[   85.811429][ T2350] pvrusb2: Invalid write control endpoint
+[   85.816504][   T33] audit: type=1107 audit(1740405575.917:7): pid=12772 uid=0 auid=0 ses=3 subj=_ msg='–πwÔqı˚Å®Xà£ß*˙ÃFƒáO…ƒljß‘\2|Ÿ2EﬁøÅÍ∂`π∞ÜÌâ‘‡õ¶ÁE}x@ﬂÍ∑Mjòä@p∑‘Û4ë…˝N¨≈∏‚&"πxnáã≥d_"ªc™så?û"J›8Â'
+[   85.824788][ T2350] pvrusb2: Module ID 3 (saa7115) for device OnAir USB2 Hybrid USB tuner failed to load.  Possible missing sub-device kernel module or initialization failure within module.
+[   85.859073][ T2350] cs53l32a 1-0011: chip found @ 0x22 (pvrusb2_a)
+[   85.859917][ T2350] pvrusb2: Invalid write control endpoint
+[   85.860425][ T2350] pvrusb2: Invalid write control endpoint
+[   85.860915][ T2350] pvrusb2: Invalid write control endpoint
+[   85.861412][ T2350] pvrusb2: Invalid write control endpoint
+[   85.861884][ T2350] pvrusb2: Invalid write control endpoint
+[   85.864974][T11575] usb usb4-port1: attempt power cycle
+[   85.867666][ T2350] pvrusb2: Invalid write control endpoint
+[   85.868164][ T2350] pvrusb2: Invalid write control endpoint
+[   85.869775][ T2350] pvrusb2: Invalid write control endpoint
+[   85.870279][ T2350] pvrusb2: Invalid write control endpoint
+[   85.870787][ T2350] pvrusb2: Invalid write control endpoint
+[   85.871275][ T2350] pvrusb2: Invalid write control endpoint
+[   85.871774][ T2350] pvrusb2: Invalid write control endpoint
+[   85.872259][ T2350] pvrusb2: Invalid write control endpoint
+[   85.877127][ T2350] pvrusb2: Invalid write control endpoint
+[   85.877624][ T2350] pvrusb2: Invalid write control endpoint
+[   85.878105][ T2350] pvrusb2: Invalid write control endpoint
+[   85.878593][ T2350] pvrusb2: Invalid write control endpoint
+[   85.879110][ T2350] pvrusb2: Invalid write control endpoint
+[   85.879577][ T2350] pvrusb2: Invalid write control endpoint
+[   85.880036][ T2350] pvrusb2: Invalid write control endpoint
+[   85.880499][ T2350] pvrusb2: Invalid write control endpoint
+[   85.884803][ T2350] pvrusb2: Attached sub-driver cs53l32a
+[   85.907708][ T2350] pvrusb2: Invalid write control endpoint
+[   85.908441][ T2350] pvrusb2: Invalid write control endpoint
+[   85.908921][ T2350] pvrusb2: Invalid write control endpoint
+[   85.922497][ T2350] pvrusb2: Invalid write control endpoint
+[   85.923019][ T2350] pvrusb2: Module ID 4 (tuner) for device OnAir USB2 Hybrid USB tuner failed to load.  Possible missing sub-device kernel module or initialization failure within module.
+[   85.924384][ T2350] pvrusb2: Device being rendered inoperable
+[   85.924890][ T2350] pvrusb2: ***WARNING*** pvrusb2 driver initialization failed due to the failure of one or more sub-device kernel modules.
+[   85.927262][ T2350] pvrusb2: You need to resolve the failing condition before this driver can function.  There should be some earlier messages giving more information about the problem.
+[   85.942459][T11349] usb 2-1: new high-speed USB device number 8 using dummy_hcd
+[   85.962426][T11374] usb 1-1: new high-speed USB device number 6 using dummy_hcd
+[   86.003529][T11380] usb 3-1: new high-speed USB device number 8 using dummy_hcd
+[   86.092468][T11349] usb 2-1: Using ep0 maxpacket: 32
+[   86.094874][T11349] usb 2-1: New USB device found, idVendor=0af0, idProduct=d257, bcdDevice=4e.87
+[   86.096141][T11349] usb 2-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   86.098849][T11349] usb 2-1: config 0 descriptor??
+[   86.112464][T11374] usb 1-1: Using ep0 maxpacket: 32
+[   86.116950][T11374] usb 1-1: config 64 has an invalid interface number: 245 but max is 2
+[   86.117984][T11374] usb 1-1: config 64 has an invalid interface number: 155 but max is 2
+[   86.119348][T11374] usb 1-1: config 64 contains an unexpected descriptor of type 0x2, skipping
+[   86.120288][T11374] usb 1-1: config 64 has an invalid interface number: 243 but max is 2
+[   86.121659][T11374] usb 1-1: config 64 has no interface number 0
+[   86.122750][T11374] usb 1-1: config 64 has no interface number 1
+[   86.123603][T11374] usb 1-1: config 64 has no interface number 2
+[   86.124292][T11374] usb 1-1: config 64 interface 245 altsetting 7 endpoint 0x8 has invalid maxpacket 1024, setting to 64
+[   86.125442][T11374] usb 1-1: config 64 interface 245 altsetting 7 endpoint 0x3 has invalid maxpacket 1023, setting to 64
+[   86.126974][T11374] usb 1-1: config 64 interface 245 altsetting 7 has an invalid endpoint descriptor of length 2, skipping
+[   86.128217][T11374] usb 1-1: config 64 interface 245 altsetting 7 has 5 endpoint descriptors, different from the interface descriptor's value: 4
+[   86.129462][T11374] usb 1-1: config 64 interface 155 altsetting 1 endpoint 0x9 has invalid maxpacket 512, setting to 64
+[   86.130488][T11374] usb 1-1: config 64 interface 155 altsetting 1 has an invalid descriptor for endpoint zero, skipping
+[   86.131523][T11374] usb 1-1: config 64 interface 155 altsetting 1 endpoint 0xA has invalid maxpacket 72, setting to 64
+[   86.133688][T11374] usb 1-1: config 64 interface 155 altsetting 1 endpoint 0x81 has an invalid bInterval 139, changing to 11
+[   86.134911][T11374] usb 1-1: config 64 interface 155 altsetting 1 endpoint 0x81 has invalid maxpacket 18251, setting to 1024
+[   86.136049][T11374] usb 1-1: config 64 interface 155 altsetting 1 has a duplicate endpoint with address 0xA, skipping
+[   86.137299][T11374] usb 1-1: config 64 interface 155 altsetting 1 has an invalid descriptor for endpoint zero, skipping
+[   86.138446][T11374] usb 1-1: config 64 interface 155 altsetting 1 has 7 endpoint descriptors, different from the interface descriptor's value: 6
+[   86.142818][T11374] usb 1-1: config 64 interface 243 altsetting 31 endpoint 0xF has invalid maxpacket 512, setting to 64
+[   86.144199][T11374] usb 1-1: config 64 interface 245 has no altsetting 0
+[   86.145017][T11374] usb 1-1: config 64 interface 155 has no altsetting 0
+[   86.145286][T11380] usb 3-1: device descriptor read/64, error -71
+[   86.145875][T11374] usb 1-1: config 64 interface 243 has no altsetting 0
+[   86.156844][T11374] usb 1-1: New USB device found, idVendor=083a, idProduct=4506, bcdDevice=6d.7d
+[   86.157714][T11374] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   86.162431][T11374] usb 1-1: Product: syz
+[   86.162837][T11374] usb 1-1: Manufacturer: syz
+[   86.163253][T11374] usb 1-1: SerialNumber: syz
+[   86.202649][T11575] usb 4-1: new high-speed USB device number 8 using dummy_hcd
+[   86.227416][T11575] usb 4-1: device descriptor read/8, error -71
+[   86.243607][T11470] usb 5-1: new high-speed USB device number 6 using dummy_hcd
+[   86.253140][T11380] usb usb3-port1: attempt power cycle
+[   86.318848][T11349] hso 2-1:0.0: Failed to find BULK IN ep
+[   86.375141][T11374] usb 1-1: Could not find all expected endpoints
+[   86.405492][T11374] usb 1-1: Could not find all expected endpoints
+[   86.416060][T11374] usb 1-1: Could not find all expected endpoints
+[   86.420060][T11470] usb 5-1: config 0 has an invalid interface number: 145 but max is 3
+[   86.420774][T11470] usb 5-1: config 0 contains an unexpected descriptor of type 0x2, skipping
+[   86.421508][T11470] usb 5-1: config 0 has an invalid interface number: 205 but max is 3
+[   86.422174][T11470] usb 5-1: config 0 has an invalid interface descriptor of length 2, skipping
+[   86.424091][T11470] usb 5-1: config 0 has an invalid interface number: 76 but max is 3
+[   86.425107][T11470] usb 5-1: config 0 has an invalid interface number: 206 but max is 3
+[   86.425791][T11470] usb 5-1: config 0 has no interface number 0
+[   86.426298][T11470] usb 5-1: config 0 has no interface number 1
+[   86.426830][T11470] usb 5-1: config 0 has no interface number 2
+[   86.428673][T11374] usb 1-1: USB disconnect, device number 6
+[   86.430550][T11470] usb 5-1: config 0 has no interface number 3
+[   86.431189][T11470] usb 5-1: config 0 interface 145 altsetting 0 bulk endpoint 0x4 has invalid maxpacket 8
+[   86.432041][T11470] usb 5-1: config 0 interface 145 altsetting 0 endpoint 0x8 has invalid maxpacket 1024, setting to 64
+[   86.434476][T11470] usb 5-1: config 0 interface 145 altsetting 0 bulk endpoint 0xE has invalid maxpacket 8
+[   86.435261][T11470] usb 5-1: config 0 interface 145 altsetting 0 has an invalid descriptor for endpoint zero, skipping
+[   86.436544][T11470] usb 5-1: config 0 interface 145 altsetting 0 has a duplicate endpoint with address 0xA, skipping
+[   86.437427][T11470] usb 5-1: config 0 interface 145 altsetting 0 has a duplicate endpoint with address 0xC, skipping
+[   86.438311][T11470] usb 5-1: config 0 interface 145 altsetting 0 has a duplicate endpoint with address 0xC, skipping
+[   86.439149][T11470] usb 5-1: config 0 interface 205 altsetting 6 has a duplicate endpoint with address 0xF, skipping
+[   86.440326][T11470] usb 5-1: config 0 interface 205 altsetting 6 has an invalid descriptor for endpoint zero, skipping
+[   86.441571][T11470] usb 5-1: config 0 interface 205 altsetting 6 has a duplicate endpoint with address 0xA, skipping
+[   86.445146][T11470] usb 5-1: config 0 interface 205 altsetting 6 has a duplicate endpoint with address 0xA, skipping
+[   86.450269][T11470] usb 5-1: config 0 interface 205 altsetting 6 has a duplicate endpoint with address 0x4, skipping
+[   86.451183][T11470] usb 5-1: config 0 interface 205 altsetting 6 has a duplicate endpoint with address 0xC, skipping
+[   86.452121][T11470] usb 5-1: config 0 interface 205 altsetting 6 has a duplicate endpoint with address 0xA, skipping
+[   86.454179][T11470] usb 5-1: config 0 interface 205 altsetting 6 has a duplicate endpoint with address 0x5, skipping
+[   86.455065][T11470] usb 5-1: config 0 interface 205 altsetting 6 endpoint 0x9 has an invalid bInterval 132, changing to 11
+[   86.455996][T11470] usb 5-1: config 0 interface 205 altsetting 6 has 10 endpoint descriptors, different from the interface descriptor's value: 13
+[   86.457101][T11470] usb 5-1: config 0 interface 76 altsetting 0 has a duplicate endpoint with address 0xC, skipping
+[   86.457986][T11470] usb 5-1: config 0 interface 76 altsetting 0 has a duplicate endpoint with address 0x5, skipping
+[   86.458863][T11470] usb 5-1: config 0 interface 76 altsetting 0 has an invalid descriptor for endpoint zero, skipping
+[   86.459775][T11470] usb 5-1: config 0 interface 76 altsetting 0 has an invalid endpoint descriptor of length 2, skipping
+[   86.462209][T11470] usb 5-1: config 0 interface 76 altsetting 0 has 4 endpoint descriptors, different from the interface descriptor's value: 3
+[   86.465979][T11470] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0x2, skipping
+[   86.466881][T11470] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0xD, skipping
+[   86.467745][T11470] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0xA, skipping
+[   86.468622][T11470] usb 5-1: config 0 interface 206 altsetting 249 endpoint 0x3 has an invalid bInterval 34, changing to 9
+[   86.469587][T11470] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0x9, skipping
+[   86.472665][T11470] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0x3, skipping
+[   86.473557][T11470] usb 5-1: config 0 interface 206 altsetting 249 has an invalid descriptor for endpoint zero, skipping
+[   86.474448][T11470] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0x9, skipping
+[   86.479699][T11470] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0xA, skipping
+[   86.480589][T11470] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0x2, skipping
+[   86.481504][T11470] usb 5-1: config 0 interface 206 altsetting 249 has an invalid endpoint descriptor of length 2, skipping
+[   86.491932][T11575] usb 4-1: new high-speed USB device number 9 using dummy_hcd
+[   86.501172][T11470] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0x2, skipping
+[   86.502181][T11470] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0x7, skipping
+[   86.503195][T11470] usb 5-1: config 0 interface 206 altsetting 249 has 14 endpoint descriptors, different from the interface descriptor's value: 13
+[   86.504301][T11470] usb 5-1: config 0 interface 205 has no altsetting 0
+[   86.504933][T11470] usb 5-1: config 0 interface 206 has no altsetting 0
+[   86.510409][T11470] usb 5-1: New USB device found, idVendor=0ccd, idProduct=0039, bcdDevice=8f.d4
+[   86.511179][T11470] usb 5-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   86.511851][T11470] usb 5-1: Product: syz
+[   86.512258][T11470] usb 5-1: Manufacturer: syz
+[   86.512792][T11470] usb 5-1: SerialNumber: syz
+[   86.514027][T11575] usb 4-1: device descriptor read/8, error -71
+[   86.528661][T11349] usb 2-1: USB disconnect, device number 8
+[   86.533499][T11470] usb 5-1: config 0 descriptor??
+[   86.543774][T12796] raw-gadget.0 gadget.4: fail, usb_ep_enable returned -22
+[   86.622804][T11575] usb usb4-port1: unable to enumerate USB device
+[   86.623961][T11380] usb 3-1: new high-speed USB device number 9 using dummy_hcd
+[   86.661500][T11380] usb 3-1: device descriptor read/8, error -71
+[   86.743188][    T8] usb 6-1: new high-speed USB device number 7 using dummy_hcd
+[   86.749118][T11470] pvrusb2: Hardware description: Terratec Grabster AV400
+[   86.749997][T11470] pvrusb2: **********
+[   86.750364][T11470] pvrusb2: ***WARNING*** Support for this device (Terratec Grabster AV400) is experimental.
+[   86.751213][T11470] pvrusb2: Important functionality might not be entirely working.
+[   86.751874][T11470] pvrusb2: Please consider contacting the driver author to help with further stabilization of the driver.
+[   86.761162][T11470] pvrusb2: **********
+[   86.762789][ T2350] pvrusb2: Invalid write control endpoint
+[   86.804004][T11470] pvrusb2: Hardware description: Terratec Grabster AV400
+[   86.804618][T11470] pvrusb2: **********
+[   86.804975][T11470] pvrusb2: ***WARNING*** Support for this device (Terratec Grabster AV400) is experimental.
+[   86.805834][T11470] pvrusb2: Important functionality might not be entirely working.
+[   86.806501][T11470] pvrusb2: Please consider contacting the driver author to help with further stabilization of the driver.
+[   86.807446][T11470] pvrusb2: **********
+[   86.809182][T11470] usb 5-1: selecting invalid altsetting 0
+[   86.820521][T11470] pvrusb2: Hardware description: Terratec Grabster AV400
+[   86.821115][T11470] pvrusb2: **********
+[   86.821458][T11470] pvrusb2: ***WARNING*** Support for this device (Terratec Grabster AV400) is experimental.
+[   86.825647][ T2350] pvrusb2: Invalid write control endpoint
+[   86.826161][ T2350] pvrusb2: ***WARNING*** Detected a wedged cx25840 chip; the device will not work.
+[   86.827059][ T2350] pvrusb2: ***WARNING*** Try power cycling the pvrusb2 device.
+[   86.827718][ T2350] pvrusb2: ***WARNING*** Disabling further access to the device to prevent other foul-ups.
+[   86.829108][T11470] pvrusb2: Important functionality might not be entirely working.
+[   86.829803][T11470] pvrusb2: Please consider contacting the driver author to help with further stabilization of the driver.
+[   86.831096][T11470] pvrusb2: **********
+[   86.831991][ T2350] pvrusb2: Device being rendered inoperable
+[   86.833752][ T2350] cx25840 1-0044: Unable to detect h/w, assuming cx23887
+[   86.834401][ T2350] cx25840 1-0044: cx23887 A/V decoder found @ 0x88 (pvrusb2_b)
+[   86.839622][T11470] pvrusb2: Hardware description: Terratec Grabster AV400
+[   86.840261][T11470] pvrusb2: **********
+[   86.842999][T11470] pvrusb2: ***WARNING*** Support for this device (Terratec Grabster AV400) is experimental.
+[   86.843829][T11470] pvrusb2: Important functionality might not be entirely working.
+[   86.844455][T11470] pvrusb2: Please consider contacting the driver author to help with further stabilization of the driver.
+[   86.845511][ T2350] pvrusb2: Attached sub-driver cx25840
+[   86.845963][ T2350] pvrusb2: ***WARNING*** pvrusb2 device hardware appears to be jammed and I can't clear it.
+[   86.846759][ T2350] pvrusb2: You might need to power cycle the pvrusb2 device in order to recover.
+[   86.849325][ T2350] pvrusb2: Invalid write control endpoint
+[   86.850564][T11470] pvrusb2: **********
+[   86.857386][T11470] usb 5-1: selecting invalid altsetting 0
+[   86.866465][T11470] usb 5-1: USB disconnect, device number 6
+[   86.893773][    T8] usb 6-1: Using ep0 maxpacket: 32
+[   86.900977][    T8] usb 6-1: New USB device found, idVendor=0af0, idProduct=d257, bcdDevice=4e.87
+[   86.901762][    T8] usb 6-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   86.903916][    T8] usb 6-1: config 0 descriptor??
+[   86.909655][ T2350] pvrusb2: Invalid write control endpoint
+[   86.910439][ T2350] pvrusb2: ***WARNING*** Detected a wedged cx25840 chip; the device will not work.
+[   86.911610][ T2350] pvrusb2: ***WARNING*** Try power cycling the pvrusb2 device.
+[   86.918444][T11380] usb 3-1: new high-speed USB device number 10 using dummy_hcd
+[   86.923931][ T2350] pvrusb2: ***WARNING*** Disabling further access to the device to prevent other foul-ups.
+[   86.925252][ T2350] pvrusb2: Device being rendered inoperable
+[   86.927149][ T2350] cx25840 2-0044: Unable to detect h/w, assuming cx23887
+[   86.928681][ T2350] cx25840 2-0044: cx23887 A/V decoder found @ 0x88 (pvrusb2_c)
+[   86.934422][ T2350] pvrusb2: Attached sub-driver cx25840
+[   86.934922][ T2350] pvrusb2: ***WARNING*** pvrusb2 device hardware appears to be jammed and I can't clear it.
+[   86.935779][ T2350] pvrusb2: You might need to power cycle the pvrusb2 device in order to recover.
+[   86.944739][T11380] usb 3-1: device descriptor read/8, error -71
+[   86.948141][ T2350] pvrusb2: Invalid write control endpoint
+[   87.009437][ T2350] pvrusb2: Invalid write control endpoint
+[   87.009966][ T2350] pvrusb2: ***WARNING*** Detected a wedged cx25840 chip; the device will not work.
+[   87.010777][ T2350] pvrusb2: ***WARNING*** Try power cycling the pvrusb2 device.
+[   87.011426][ T2350] pvrusb2: ***WARNING*** Disabling further access to the device to prevent other foul-ups.
+[   87.012259][ T2350] pvrusb2: Device being rendered inoperable
+[   87.013012][ T2350] cx25840 1-0044: Unable to detect h/w, assuming cx23887
+[   87.013639][ T2350] cx25840 1-0044: cx23887 A/V decoder found @ 0x88 (pvrusb2_d)
+[   87.015690][ T2350] pvrusb2: Attached sub-driver cx25840
+[   87.016186][ T2350] pvrusb2: ***WARNING*** pvrusb2 device hardware appears to be jammed and I can't clear it.
+[   87.017053][ T2350] pvrusb2: You might need to power cycle the pvrusb2 device in order to recover.
+[   87.020675][T11470] pvrusb2: Device being rendered inoperable
+[   87.054764][T11380] usb usb3-port1: unable to enumerate USB device
+[   87.122128][    T8] usb 6-1: USB disconnect, device number 7
+[   87.592458][    T8] usb 5-1: new high-speed USB device number 7 using dummy_hcd
+[   87.743838][    T8] usb 5-1: config 0 interface 0 altsetting 0 endpoint 0x81 has an invalid bInterval 0, changing to 7
+[   87.745145][    T8] usb 5-1: config 0 interface 0 altsetting 0 endpoint 0x81 has invalid wMaxPacketSize 0
+[   87.749306][    T8] usb 5-1: config 0 interface 0 altsetting 0 endpoint 0xE has an invalid bInterval 170, changing to 11
+[   87.750594][    T8] usb 5-1: config 0 interface 0 altsetting 0 endpoint 0xE has invalid maxpacket 25794, setting to 1024
+[   87.751808][    T8] usb 5-1: New USB device found, idVendor=06f8, idProduct=a302, bcdDevice=dc.46
+[   87.755935][T12946] netlink: 'syz.5.186': attribute type 3 has an invalid length.
+[   87.756089][    T8] usb 5-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   87.756589][T12946] netlink: 'syz.5.186': attribute type 3 has an invalid length.
+[   87.758062][T12946] netlink: 184 bytes leftover after parsing attributes in process `syz.5.186'.
+[   87.759179][    T8] usb 5-1: config 0 descriptor??
+[   87.765641][T12921] raw-gadget.0 gadget.4: fail, usb_ep_enable returned -22
+[   88.173558][    T8] iforce 5-1:0.0: usb_submit_urb failed: -71
+[   88.174114][    T8] input input13: Device does not respond to id packet M
+[   88.174987][    T8] iforce 5-1:0.0: usb_submit_urb failed: -71
+[   88.175558][    T8] input input13: Device does not respond to id packet P
+[   88.178846][    T8] iforce 5-1:0.0: usb_submit_urb failed: -71
+[   88.179390][    T8] input input13: Device does not respond to id packet B
+[   88.182833][    T8] iforce 5-1:0.0: usb_submit_urb failed: -71
+[   88.183428][    T8] input input13: Device does not respond to id packet N
+[   88.185084][    T8] iforce 5-1:0.0: usb_submit_urb failed: -71
+[   88.192438][    T8] iforce 5-1:0.0: usb_submit_urb failed: -71
+[   88.194087][    T8] iforce 5-1:0.0: usb_submit_urb failed: -71
+[   88.195211][    T8] iforce 5-1:0.0: usb_submit_urb failed: -71
+[   88.196524][    T8] input: Unknown I-Force Device [%04x:%04x] as /devices/platform/dummy_hcd.4/usb5/5-1/5-1:0.0/input/input13
+[   88.253456][    T8] usb 5-1: USB disconnect, device number 7
+[   88.441534][T13027] netlink: 'syz.1.203': attribute type 3 has an invalid length.
+[   88.442227][T13027] netlink: 'syz.1.203': attribute type 3 has an invalid length.
+[   88.456519][T13027] netlink: 184 bytes leftover after parsing attributes in process `syz.1.203'.
+[   88.562716][T11349] usb 4-1: new high-speed USB device number 10 using dummy_hcd
+[   88.692737][T11374] usb 3-1: new high-speed USB device number 11 using dummy_hcd
+[   88.712385][T11349] usb 4-1: Using ep0 maxpacket: 16
+[   88.715125][T11349] usb 4-1: config 0 has an invalid interface number: 133 but max is 1
+[   88.715866][T11349] usb 4-1: config 0 has an invalid interface number: 229 but max is 1
+[   88.716605][T11349] usb 4-1: config 0 has no interface number 0
+[   88.717306][T11349] usb 4-1: config 0 has no interface number 1
+[   88.717871][T11349] usb 4-1: config 0 interface 133 altsetting 7 endpoint 0xE has invalid maxpacket 512, setting to 64
+[   88.719473][T11349] usb 4-1: config 0 interface 133 altsetting 7 has a duplicate endpoint with address 0xE, skipping
+[   88.722130][T11349] usb 4-1: config 0 interface 133 altsetting 7 has a duplicate endpoint with address 0xE, skipping
+[   88.726465][T11349] usb 4-1: config 0 interface 229 altsetting 3 endpoint 0x5 has invalid maxpacket 1024, setting to 64
+[   88.728345][T11349] usb 4-1: config 0 interface 229 altsetting 3 endpoint 0x9 has invalid maxpacket 1024, setting to 64
+[   88.731539][T11349] usb 4-1: config 0 interface 229 altsetting 3 has a duplicate endpoint with address 0xE, skipping
+[   88.734799][T11349] usb 4-1: config 0 interface 229 altsetting 3 endpoint 0x3 has an invalid bInterval 149, changing to 7
+[   88.735753][T11349] usb 4-1: config 0 interface 229 altsetting 3 bulk endpoint 0x1 has invalid maxpacket 64
+[   88.739922][T11349] usb 4-1: config 0 interface 229 altsetting 3 has a duplicate endpoint with address 0x9, skipping
+[   88.744480][T11349] usb 4-1: config 0 interface 133 has no altsetting 0
+[   88.748090][T11349] usb 4-1: config 0 interface 229 has no altsetting 0
+[   88.750818][T11349] usb 4-1: New USB device found, idVendor=0fe9, idProduct=db01, bcdDevice=c4.ec
+[   88.751680][T11349] usb 4-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   88.753845][T11349] usb 4-1: Product: syz
+[   88.754235][T11349] usb 4-1: Manufacturer: syz
+[   88.756023][T11349] usb 4-1: SerialNumber: syz
+[   88.760722][T11349] usb 4-1: config 0 descriptor??
+[   88.844919][T11374] usb 3-1: Using ep0 maxpacket: 16
+[   88.847056][T11374] usb 3-1: unable to get BOS descriptor or descriptor too short
+[   88.848464][T11374] usb 3-1: config 32 has an invalid interface number: 74 but max is 1
+[   88.849236][T11374] usb 3-1: config 32 has an invalid interface number: 69 but max is 1
+[   88.849943][T11374] usb 3-1: config 32 has an invalid interface number: 168 but max is 1
+[   88.850903][T11374] usb 3-1: config 32 has 3 interfaces, different from the descriptor's value: 2
+[   88.853273][T11374] usb 3-1: config 32 has no interface number 0
+[   88.853813][T11374] usb 3-1: config 32 has no interface number 1
+[   88.855452][T11374] usb 3-1: config 32 has no interface number 2
+[   88.856563][T11374] usb 3-1: config 32 interface 74 altsetting 0 endpoint 0xE has an invalid bInterval 255, changing to 11
+[   88.857446][T11374] usb 3-1: too many endpoints for config 32 interface 168 altsetting 124: 68, using maximum allowed: 30
+[   88.859365][T11374] usb 3-1: config 32 interface 168 altsetting 124 has 0 endpoint descriptors, different from the interface descriptor's value: 68
+[   88.860672][T11374] usb 3-1: config 32 interface 69 has no altsetting 0
+[   88.861226][T11374] usb 3-1: config 32 interface 168 has no altsetting 0
+[   88.865904][T11374] usb 3-1: string descriptor 0 read error: -22
+[   88.866618][T11374] usb 3-1: New USB device found, idVendor=08ca, idProduct=0022, bcdDevice=4b.d6
+[   88.867447][T11374] usb 3-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   88.894008][T11374] aiptek 3-1:32.74: interface has no int in endpoints, but must have minimum 1
+[   88.901287][T11374] aiptek 3-1:32.69: interface has no int in endpoints, but must have minimum 1
+[   88.905773][T11374] aiptek 3-1:32.168: interface has no int in endpoints, but must have minimum 1
+[   88.967281][T11349] dvb-usb: found a 'DViCO FusionHDTV DVB-T USB (LGZ201)' in warm state.
+[   88.968603][T11349] dvb-usb: bulk message failed: -71 (2/0)
+[   88.970725][T11349] dvb-usb: will pass the complete MPEG2 transport stream to the software demuxer.
+[   88.971840][T11349] dvbdev: DVB: registering new adapter (DViCO FusionHDTV DVB-T USB (LGZ201))
+[   88.972848][T11349] usb 4-1: media controller created
+[   88.985740][T11349] dvbdev: dvb_create_media_entity: media entity 'dvb-demux' registered.
+[   88.995588][T11349] cxusb: set interface failed
+[   88.996645][T11349] dvb-usb: bulk message failed: -71 (1/0)
+[   89.018728][T11349] DVB: Unable to find symbol mt352_attach()
+[   89.019411][T11349] dvb-usb: no frontend was attached by 'DViCO FusionHDTV DVB-T USB (LGZ201)'
+[   89.034944][T12984] Bluetooth: hci0: Opcode 0x0c1a failed: -4
+[   89.035651][T12984] Bluetooth: hci0: Error when powering off device on rfkill (-4)
+[   89.051440][T12984] Bluetooth: hci1: Opcode 0x0c1a failed: -4
+[   89.054625][T12984] Bluetooth: hci1: Error when powering off device on rfkill (-4)
+[   89.068216][T12984] Bluetooth: hci2: Opcode 0x0c1a failed: -4
+[   89.070308][T12984] Bluetooth: hci2: Error when powering off device on rfkill (-4)
+[   89.077312][T12984] Bluetooth: hci3: Opcode 0x0c1a failed: -4
+[   89.077858][T12984] Bluetooth: hci3: Error when powering off device on rfkill (-4)
+[   89.082367][T11349] rc_core: IR keymap rc-dvico-portable not found
+[   89.083006][T11349] Registered IR keymap rc-empty
+[   89.086162][T11349] rc rc0: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.3/usb4/4-1/rc/rc0
+[   89.089627][T11470] usb 3-1: USB disconnect, device number 11
+[   89.094909][T11349] input: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.3/usb4/4-1/rc/rc0/input17
+[   89.097453][T12984] Bluetooth: hci4: Opcode 0x0c1a failed: -4
+[   89.097990][T12984] Bluetooth: hci4: Error when powering off device on rfkill (-4)
+[   89.099474][T11349] dvb-usb: schedule remote query interval to 100 msecs.
+[   89.100519][T11349] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully initialized and connected.
+[   89.107909][T11349] dvb-usb: found a 'DViCO FusionHDTV DVB-T USB (LGZ201)' in warm state.
+[   89.111373][T11349] dvb-usb: bulk message failed: -71 (2/0)
+[   89.113747][T12984] Bluetooth: hci5: Opcode 0x0c1a failed: -4
+[   89.114276][T12984] Bluetooth: hci5: Error when powering off device on rfkill (-4)
+[   89.117607][T11349] dvb-usb: will pass the complete MPEG2 transport stream to the software demuxer.
+[   89.122470][T11349] dvbdev: DVB: registering new adapter (DViCO FusionHDTV DVB-T USB (LGZ201))
+[   89.124561][T11349] usb 4-1: media controller created
+[   89.140656][T11349] dvbdev: dvb_create_media_entity: media entity 'dvb-demux' registered.
+[   89.152157][T11349] cxusb: set interface failed
+[   89.153449][T11349] dvb-usb: bulk message failed: -71 (1/0)
+[   89.190959][T11349] DVB: Unable to find symbol mt352_attach()
+[   89.191511][T11349] dvb-usb: no frontend was attached by 'DViCO FusionHDTV DVB-T USB (LGZ201)'
+[   89.203153][    T8] dvb-usb: bulk message failed: -71 (1/0)
+[   89.242405][T11349] rc_core: IR keymap rc-dvico-portable not found
+[   89.243007][T11349] Registered IR keymap rc-empty
+[   89.243813][T11349] rc rc1: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.3/usb4/4-1/rc/rc1
+[   89.249816][T11349] input: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.3/usb4/4-1/rc/rc1/input18
+[   89.255028][T11349] dvb-usb: schedule remote query interval to 100 msecs.
+[   89.255658][T11349] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully initialized and connected.
+[   89.272816][T11349] usb 4-1: USB disconnect, device number 10
+[   89.348516][T11349] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully deinitialized and disconnected.
+[   89.402873][T11349] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully deinitialized and disconnected.
+[   89.622387][T11470] usb 1-1: new high-speed USB device number 7 using dummy_hcd
+[   89.752890][T11470] usb 1-1: device descriptor read/64, error -71
+[   89.932554][    T8] usb 2-1: new high-speed USB device number 9 using dummy_hcd
+[   90.002496][T11470] usb 1-1: new high-speed USB device number 8 using dummy_hcd
+[   90.003352][ T1228] usb 6-1: new high-speed USB device number 8 using dummy_hcd
+[   90.052798][T11349] usb 4-1: new high-speed USB device number 11 using dummy_hcd
+[   90.085469][    T8] usb 2-1: Using ep0 maxpacket: 32
+[   90.087468][    T8] usb 2-1: config 64 has an invalid interface number: 245 but max is 2
+[   90.088152][    T8] usb 2-1: config 64 has an invalid interface number: 155 but max is 2
+[   90.088843][    T8] usb 2-1: config 64 contains an unexpected descriptor of type 0x2, skipping
+[   90.089603][    T8] usb 2-1: config 64 has an invalid interface number: 243 but max is 2
+[   90.090310][    T8] usb 2-1: config 64 has no interface number 0
+[   90.090867][    T8] usb 2-1: config 64 has no interface number 1
+[   90.093911][    T8] usb 2-1: config 64 has no interface number 2
+[   90.094502][    T8] usb 2-1: config 64 interface 245 altsetting 7 endpoint 0x8 has invalid maxpacket 1024, setting to 64
+[   90.095442][    T8] usb 2-1: config 64 interface 245 altsetting 7 endpoint 0x3 has invalid maxpacket 1023, setting to 64
+[   90.096377][    T8] usb 2-1: config 64 interface 245 altsetting 7 has an invalid endpoint descriptor of length 2, skipping
+[   90.100049][    T8] usb 2-1: config 64 interface 245 altsetting 7 has 5 endpoint descriptors, different from the interface descriptor's value: 4
+[   90.102825][   T85] usb 3-1: new high-speed USB device number 12 using dummy_hcd
+[   90.102934][    T8] usb 2-1: config 64 interface 155 altsetting 1 endpoint 0x9 has invalid maxpacket 512, setting to 64
+[   90.104525][    T8] usb 2-1: config 64 interface 155 altsetting 1 has an invalid descriptor for endpoint zero, skipping
+[   90.105435][    T8] usb 2-1: config 64 interface 155 altsetting 1 endpoint 0xA has invalid maxpacket 72, setting to 64
+[   90.106374][    T8] usb 2-1: config 64 interface 155 altsetting 1 endpoint 0x81 has an invalid bInterval 139, changing to 11
+[   90.107357][    T8] usb 2-1: config 64 interface 155 altsetting 1 endpoint 0x81 has invalid maxpacket 18251, setting to 1024
+[   90.132394][T11470] usb 1-1: device descriptor read/64, error -71
+[   90.140285][    T8] usb 2-1: config 64 interface 155 altsetting 1 has a duplicate endpoint with address 0xA, skipping
+[   90.141390][    T8] usb 2-1: config 64 interface 155 altsetting 1 has an invalid descriptor for endpoint zero, skipping
+[   90.146182][    T8] usb 2-1: config 64 interface 155 altsetting 1 has 7 endpoint descriptors, different from the interface descriptor's value: 6
+[   90.147841][    T8] usb 2-1: config 64 interface 243 altsetting 31 endpoint 0xF has invalid maxpacket 512, setting to 64
+[   90.148769][    T8] usb 2-1: config 64 interface 245 has no altsetting 0
+[   90.149327][    T8] usb 2-1: config 64 interface 155 has no altsetting 0
+[   90.149910][    T8] usb 2-1: config 64 interface 243 has no altsetting 0
+[   90.152064][    T8] usb 2-1: New USB device found, idVendor=083a, idProduct=4506, bcdDevice=6d.7d
+[   90.154460][ T1228] usb 6-1: Using ep0 maxpacket: 8
+[   90.160250][    T8] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   90.161325][    T8] usb 2-1: Product: syz
+[   90.161800][    T8] usb 2-1: Manufacturer: syz
+[   90.162252][ T1228] usb 6-1: config 0 has an invalid interface number: 28 but max is 0
+[   90.163035][ T1228] usb 6-1: config 0 has no interface number 0
+[   90.163560][ T1228] usb 6-1: config 0 interface 28 altsetting 0 has an endpoint descriptor with address 0x12, changing to 0x2
+[   90.164517][ T1228] usb 6-1: config 0 interface 28 altsetting 0 endpoint 0x2 has an invalid bInterval 255, changing to 11
+[   90.165443][ T1228] usb 6-1: config 0 interface 28 altsetting 0 endpoint 0x2 has invalid maxpacket 57528, setting to 1024
+[   90.166363][ T1228] usb 6-1: config 0 interface 28 altsetting 0 endpoint 0x87 has an invalid bInterval 224, changing to 11
+[   90.167296][ T1228] usb 6-1: config 0 interface 28 altsetting 0 endpoint 0x87 has invalid maxpacket 26276, setting to 1024
+[   90.168235][ T1228] usb 6-1: New USB device found, idVendor=0f11, idProduct=2020, bcdDevice=48.c9
+[   90.168980][ T1228] usb 6-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   90.173745][ T1228] usb 6-1: config 0 descriptor??
+[   90.181366][ T1228] ldusb 6-1:0.28: LD USB Device #0 now attached to major 180 minor 0
+[   90.184601][    T8] usb 2-1: SerialNumber: syz
+[   90.213969][T11349] usb 4-1: config 0 has an invalid interface number: 102 but max is 0
+[   90.214793][T11349] usb 4-1: config 0 has an invalid descriptor of length 0, skipping remainder of the config
+[   90.215834][T11349] usb 4-1: config 0 has no interface number 0
+[   90.216589][T11349] usb 4-1: config 0 interface 102 altsetting 129 has 0 endpoint descriptors, different from the interface descriptor's value: 3
+[   90.217781][T11349] usb 4-1: config 0 interface 102 has no altsetting 0
+[   90.218469][T11349] usb 4-1: New USB device found, idVendor=13d3, idProduct=3335, bcdDevice=e9.6f
+[   90.219412][T11349] usb 4-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   90.221785][T11349] usb 4-1: config 0 descriptor??
+[   90.232487][T11575] usb 5-1: new high-speed USB device number 8 using dummy_hcd
+[   90.243055][T11470] usb usb1-port1: attempt power cycle
+[   90.252456][   T85] usb 3-1: Using ep0 maxpacket: 16
+[   90.254816][   T85] usb 3-1: config 0 has an invalid interface number: 133 but max is 1
+[   90.255564][   T85] usb 3-1: config 0 has an invalid interface number: 229 but max is 1
+[   90.256306][   T85] usb 3-1: config 0 has no interface number 0
+[   90.256865][   T85] usb 3-1: config 0 has no interface number 1
+[   90.257407][   T85] usb 3-1: config 0 interface 133 altsetting 7 endpoint 0xE has invalid maxpacket 512, setting to 64
+[   90.258313][   T85] usb 3-1: config 0 interface 133 altsetting 7 has a duplicate endpoint with address 0xE, skipping
+[   90.259258][   T85] usb 3-1: config 0 interface 133 altsetting 7 has a duplicate endpoint with address 0xE, skipping
+[   90.263280][   T85] usb 3-1: config 0 interface 229 altsetting 3 endpoint 0x5 has invalid maxpacket 1024, setting to 64
+[   90.264287][   T85] usb 3-1: config 0 interface 229 altsetting 3 endpoint 0x9 has invalid maxpacket 1024, setting to 64
+[   90.265196][   T85] usb 3-1: config 0 interface 229 altsetting 3 has a duplicate endpoint with address 0xE, skipping
+[   90.266128][   T85] usb 3-1: config 0 interface 229 altsetting 3 endpoint 0x3 has an invalid bInterval 149, changing to 7
+[   90.267142][   T85] usb 3-1: config 0 interface 229 altsetting 3 bulk endpoint 0x1 has invalid maxpacket 64
+[   90.268004][   T85] usb 3-1: config 0 interface 229 altsetting 3 has a duplicate endpoint with address 0x9, skipping
+[   90.268945][   T85] usb 3-1: config 0 interface 133 has no altsetting 0
+[   90.269538][   T85] usb 3-1: config 0 interface 229 has no altsetting 0
+[   90.271628][   T85] usb 3-1: New USB device found, idVendor=0fe9, idProduct=db01, bcdDevice=c4.ec
+[   90.275303][   T85] usb 3-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   90.276017][   T85] usb 3-1: Product: syz
+[   90.276492][   T85] usb 3-1: Manufacturer: syz
+[   90.276914][   T85] usb 3-1: SerialNumber: syz
+[   90.282118][   T85] usb 3-1: config 0 descriptor??
+[   90.392387][T11575] usb 5-1: Using ep0 maxpacket: 16
+[   90.393202][    T8] usb 2-1: Could not find all expected endpoints
+[   90.400181][T11575] usb 5-1: unable to get BOS descriptor or descriptor too short
+[   90.401781][T11575] usb 5-1: config 32 has an invalid interface number: 74 but max is 1
+[   90.402552][T11575] usb 5-1: config 32 has an invalid interface number: 69 but max is 1
+[   90.402730][    T8] usb 2-1: Could not find all expected endpoints
+[   90.403243][T11575] usb 5-1: config 32 has an invalid interface number: 168 but max is 1
+[   90.404578][T11575] usb 5-1: config 32 has 3 interfaces, different from the descriptor's value: 2
+[   90.405361][T11575] usb 5-1: config 32 has no interface number 0
+[   90.411774][    T8] usb 2-1: Could not find all expected endpoints
+[   90.415439][T11575] usb 5-1: config 32 has no interface number 1
+[   90.416048][T11575] usb 5-1: config 32 has no interface number 2
+[   90.416610][T11575] usb 5-1: config 32 interface 74 altsetting 0 endpoint 0xE has an invalid bInterval 255, changing to 11
+[   90.419512][    T8] usb 2-1: USB disconnect, device number 9
+[   90.419861][T11575] usb 5-1: too many endpoints for config 32 interface 168 altsetting 124: 68, using maximum allowed: 30
+[   90.421060][T11575] usb 5-1: config 32 interface 168 altsetting 124 has 0 endpoint descriptors, different from the interface descriptor's value: 68
+[   90.427121][T11575] usb 5-1: config 32 interface 69 has no altsetting 0
+[   90.428307][T11575] usb 5-1: config 32 interface 168 has no altsetting 0
+[   90.429684][T11380] usb 6-1: USB disconnect, device number 8
+[   90.432051][T11575] usb 5-1: string descriptor 0 read error: -22
+[   90.432137][    C0] raw-gadget.3 gadget.3: ignoring, device is not running
+[   90.432672][T11575] usb 5-1: New USB device found, idVendor=08ca, idProduct=0022, bcdDevice=4b.d6
+[   90.433520][    C0] raw-gadget.3 gadget.3: ignoring, device is not running
+[   90.433959][T11575] usb 5-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   90.435464][    C0] raw-gadget.3 gadget.3: ignoring, device is not running
+[   90.436311][T11349] usb 4-1: string descriptor 0 read error: -71
+[   90.437360][T11380] ldusb 6-1:0.28: LD USB Device #0 now disconnected
+[   90.452122][T11575] aiptek 5-1:32.74: interface has no int in endpoints, but must have minimum 1
+[   90.460278][T11575] aiptek 5-1:32.69: interface has no int in endpoints, but must have minimum 1
+[   90.469059][T11575] aiptek 5-1:32.168: interface has no int in endpoints, but must have minimum 1
+[   90.481171][T11349] usb 4-1: USB disconnect, device number 11
+[   90.493392][   T85] dvb-usb: found a 'DViCO FusionHDTV DVB-T USB (LGZ201)' in warm state.
+[   90.497634][   T85] dvb-usb: bulk message failed: -71 (2/0)
+[   90.499136][   T85] dvb-usb: will pass the complete MPEG2 transport stream to the software demuxer.
+[   90.500746][   T85] dvbdev: DVB: registering new adapter (DViCO FusionHDTV DVB-T USB (LGZ201))
+[   90.501538][   T85] usb 3-1: media controller created
+[   90.510129][   T85] dvbdev: dvb_create_media_entity: media entity 'dvb-demux' registered.
+[   90.526169][   T85] cxusb: set interface failed
+[   90.526797][   T85] dvb-usb: bulk message failed: -71 (1/0)
+[   90.546709][   T85] DVB: Unable to find symbol mt352_attach()
+[   90.547239][   T85] dvb-usb: no frontend was attached by 'DViCO FusionHDTV DVB-T USB (LGZ201)'
+[   90.602770][T11470] usb 1-1: new high-speed USB device number 9 using dummy_hcd
+[   90.603632][   T85] rc_core: IR keymap rc-dvico-portable not found
+[   90.604316][   T85] Registered IR keymap rc-empty
+[   90.605855][   T85] rc rc0: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.2/usb3/3-1/rc/rc0
+[   90.608046][   T85] input: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.2/usb3/3-1/rc/rc0/input22
+[   90.610124][   T85] dvb-usb: schedule remote query interval to 100 msecs.
+[   90.610829][   T85] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully initialized and connected.
+[   90.615805][   T85] dvb-usb: found a 'DViCO FusionHDTV DVB-T USB (LGZ201)' in warm state.
+[   90.617369][   T85] dvb-usb: bulk message failed: -71 (2/0)
+[   90.620815][   T85] dvb-usb: will pass the complete MPEG2 transport stream to the software demuxer.
+[   90.625666][   T85] dvbdev: DVB: registering new adapter (DViCO FusionHDTV DVB-T USB (LGZ201))
+[   90.626604][   T85] usb 3-1: media controller created
+[   90.627194][T11470] usb 1-1: device descriptor read/8, error -71
+[   90.637560][   T85] dvbdev: dvb_create_media_entity: media entity 'dvb-demux' registered.
+[   90.647097][   T85] cxusb: set interface failed
+[   90.648555][   T85] dvb-usb: bulk message failed: -71 (1/0)
+[   90.659285][T11349] usb 5-1: USB disconnect, device number 8
+[   90.675309][   T85] DVB: Unable to find symbol mt352_attach()
+[   90.675854][   T85] dvb-usb: no frontend was attached by 'DViCO FusionHDTV DVB-T USB (LGZ201)'
+[   90.723000][   T25] dvb-usb: bulk message failed: -71 (1/0)
+[   90.742672][   T85] rc_core: IR keymap rc-dvico-portable not found
+[   90.743269][   T85] Registered IR keymap rc-empty
+[   90.744064][   T85] rc rc1: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.2/usb3/3-1/rc/rc1
+[   90.746011][   T85] input: DViCO FusionHDTV DVB-T USB (LGZ201) as /devices/platform/dummy_hcd.2/usb3/3-1/rc/rc1/input23
+[   90.747502][   T85] dvb-usb: schedule remote query interval to 100 msecs.
+[   90.748213][   T85] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully initialized and connected.
+[   90.754247][   T85] usb 3-1: USB disconnect, device number 12
+[   90.771197][   T85] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully deinitialized and disconnected.
+[   90.785008][   T85] dvb-usb: DViCO FusionHDTV DVB-T USB (LGZ201) successfully deinitialized and disconnected.
+[   90.875683][T11470] usb 1-1: new high-speed USB device number 10 using dummy_hcd
+[   90.893425][T11470] usb 1-1: device descriptor read/8, error -71
+[   91.013766][T11470] usb usb1-port1: unable to enumerate USB device
+[   91.152913][    T8] IPVS: starting estimator thread 0...
+[   91.283216][T13341] IPVS: using max 40 ests per chain, 96000 per kthread
+[   91.472941][    T8] usb 5-1: new high-speed USB device number 9 using dummy_hcd
+[   91.533841][   T25] usb 6-1: new high-speed USB device number 9 using dummy_hcd
+[   91.603435][T11470] usb 4-1: new high-speed USB device number 12 using dummy_hcd
+[   91.624114][    T8] usb 5-1: config 0 has an invalid interface number: 145 but max is 3
+[   91.625164][    T8] usb 5-1: config 0 contains an unexpected descriptor of type 0x2, skipping
+[   91.626025][    T8] usb 5-1: config 0 has an invalid interface number: 205 but max is 3
+[   91.626710][    T8] usb 5-1: config 0 has an invalid interface descriptor of length 2, skipping
+[   91.627518][    T8] usb 5-1: config 0 has an invalid interface number: 76 but max is 3
+[   91.628193][    T8] usb 5-1: config 0 has an invalid interface number: 206 but max is 3
+[   91.628866][    T8] usb 5-1: config 0 has an invalid interface descriptor of length 2, skipping
+[   91.629587][    T8] usb 5-1: config 0 has no interface number 0
+[   91.630101][    T8] usb 5-1: config 0 has no interface number 1
+[   91.631956][T13400] loop1: detected capacity change from 0 to 64
+[   91.641991][    T8] usb 5-1: config 0 has no interface number 2
+[   91.643261][    T8] usb 5-1: config 0 has no interface number 3
+[   91.643802][    T8] usb 5-1: config 0 interface 145 altsetting 0 bulk endpoint 0x4 has invalid maxpacket 8
+[   91.644244][T13400] hfs: unable to locate alternate MDB
+[   91.644591][    T8] usb 5-1: config 0 interface 145 altsetting 0 endpoint 0x8 has invalid maxpacket 1024, setting to 64
+[   91.645145][T13400] hfs: continuing without an alternate MDB
+[   91.646011][    T8] usb 5-1: config 0 interface 145 altsetting 0 bulk endpoint 0xE has invalid maxpacket 8
+[   91.647385][    T8] usb 5-1: config 0 interface 145 altsetting 0 has an invalid descriptor for endpoint zero, skipping
+[   91.648235][    T8] usb 5-1: config 0 interface 145 altsetting 0 has a duplicate endpoint with address 0xA, skipping
+[   91.649108][    T8] usb 5-1: config 0 interface 145 altsetting 0 has a duplicate endpoint with address 0xC, skipping
+[   91.649994][    T8] usb 5-1: config 0 interface 145 altsetting 0 has a duplicate endpoint with address 0xC, skipping
+[   91.650855][    T8] usb 5-1: config 0 interface 205 altsetting 6 has a duplicate endpoint with address 0xF, skipping
+[   91.660664][T13400] ==================================================================
+[   91.661385][T13400] BUG: KASAN: slab-out-of-bounds in hfs_bnode_read+0xc5/0x230
+[   91.662057][T13400] Write of size 256 at addr ffff88804e3ca700 by task syz.1.259/13400
+[   91.662784][T13400] 
+[   91.662992][T13400] CPU: 1 UID: 0 PID: 13400 Comm: syz.1.259 Not tainted 6.14.0-rc4 #1
+[   91.663007][T13400] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   91.663014][T13400] Call Trace:
+[   91.663019][T13400]  <TASK>
+[   91.663024][T13400]  dump_stack_lvl+0x116/0x1b0
+[   91.663048][T13400]  print_address_description.constprop.0+0x2c/0x420
+[   91.663068][T13400]  ? hfs_bnode_read+0xc5/0x230
+[   91.663084][T13400]  print_report+0xaa/0x270
+[   91.663100][T13400]  ? hfs_bnode_read+0xc5/0x230
+[   91.663115][T13400]  ? kasan_addr_to_slab+0x27/0x80
+[   91.663130][T13400]  ? hfs_bnode_read+0xc5/0x230
+[   91.663146][T13400]  kasan_report+0xbd/0x100
+[   91.663164][T13400]  ? hfs_bnode_read+0xc5/0x230
+[   91.663181][T13400]  kasan_check_range+0x108/0x1e0
+[   91.663200][T13400]  __asan_memcpy+0x3d/0x70
+[   91.663213][T13400]  hfs_bnode_read+0xc5/0x230
+[   91.663230][T13400]  hfs_bnode_read_key+0x149/0x1f0
+[   91.663246][T13400]  ? __pfx_hfs_bnode_read_key+0x10/0x10
+[   91.663262][T13400]  ? block_dirty_folio+0x128/0x1c0
+[   91.663276][T13400]  hfs_brec_insert+0x822/0xbd0
+[   91.663296][T13400]  ? __pfx_hfs_brec_insert+0x10/0x10
+[   91.663316][T13400]  hfs_cat_create+0x6a5/0x840
+[   91.663334][T13400]  ? __pfx_hfs_cat_create+0x10/0x10
+[   91.663351][T13400]  ? __pfx___lock_release+0x10/0x10
+[   91.663370][T13400]  ? mark_lock+0x38/0x400
+[   91.663385][T13400]  ? clear_pending_if_disabled+0x92/0x200
+[   91.663402][T13400]  ? rcu_is_watching+0x12/0xd0
+[   91.663423][T13400]  ? hfs_new_inode+0x4af/0xcf0
+[   91.663443][T13400]  ? __pfx_hfs_create+0x10/0x10
+[   91.663462][T13400]  hfs_create+0x6b/0x100
+[   91.663479][T13400]  lookup_open.isra.0+0x1145/0x1540
+[   91.663495][T13400]  ? __pfx_lookup_open.isra.0+0x10/0x10
+[   91.663512][T13400]  ? __pfx_down_write+0x10/0x10
+[   91.663530][T13400]  ? mnt_get_write_access+0x216/0x310
+[   91.663546][T13400]  open_last_lookups+0x82c/0x13b0
+[   91.663564][T13400]  path_openat+0x182/0x6b0
+[   91.663581][T13400]  ? __pfx_path_openat+0x10/0x10
+[   91.663596][T13400]  ? __lock_acquire+0xb97/0x16a0
+[   91.663614][T13400]  do_filp_open+0x1f8/0x460
+[   91.663630][T13400]  ? __pfx_do_filp_open+0x10/0x10
+[   91.663645][T13400]  ? find_held_lock+0x2d/0x120
+[   91.663658][T13400]  ? alloc_fd+0x30c/0x5b0
+[   91.663675][T13400]  ? alloc_fd+0x30c/0x5b0
+[   91.663690][T13400]  ? rcu_is_watching+0x12/0xd0
+[   91.663708][T13400]  ? _raw_spin_unlock+0x28/0x50
+[   91.663722][T13400]  ? alloc_fd+0x30c/0x5b0
+[   91.663739][T13400]  do_sys_openat2+0x16a/0x1d0
+[   91.663759][T13400]  ? __pfx_do_sys_openat2+0x10/0x10
+[   91.663779][T13400]  __x64_sys_openat+0x140/0x200
+[   91.663797][T13400]  ? __pfx___x64_sys_openat+0x10/0x10
+[   91.663819][T13400]  do_syscall_64+0xcb/0x260
+[   91.663837][T13400]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   91.663856][T13400] RIP: 0033:0x7f94d7fb85ad
+[   91.663866][T13400] Code: 02 b8 ff ff ff ff c3 66 0f 1f 44 00 00 f3 0f 1e fa 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 c7 c1 a8 ff ff ff f7 d8 64 89 01 48
+[   91.663878][T13400] RSP: 002b:00007f94d8ec1f98 EFLAGS: 00000246 ORIG_RAX: 0000000000000101
+[   91.663891][T13400] RAX: ffffffffffffffda RBX: 00007f94d8245fa0 RCX: 00007f94d7fb85ad
+[   91.663899][T13400] RDX: 0000000000141842 RSI: 0000400000000380 RDI: ffffffffffffff9c
+[   91.663906][T13400] RBP: 00007f94d806a8d6 R08: 0000000000000000 R09: 0000000000000000
+[   91.663914][T13400] R10: 0000000000000000 R11: 0000000000000246 R12: 0000000000000000
+[   91.663921][T13400] R13: 0000000000000000 R14: 00007f94d8245fa0 R15: 00007f94d8ea2000
+[   91.663932][T13400]  </TASK>
+[   91.663937][T13400] 
+[   91.693074][T13400] Allocated by task 13400:
+[   91.693443][T13400]  kasan_save_stack+0x24/0x50
+[   91.693858][T13400]  kasan_save_track+0x14/0x40
+[   91.694282][T13400]  __kasan_kmalloc+0xba/0xc0
+[   91.694675][T13400]  __kmalloc_noprof+0x212/0x580
+[   91.695108][T13400]  hfs_find_init+0x95/0x260
+[   91.695512][T13400]  hfs_cat_create+0x155/0x840
+[   91.695947][T13400]  hfs_create+0x6b/0x100
+[   91.696322][T13400]  lookup_open.isra.0+0x1145/0x1540
+[   91.696769][T13400]  open_last_lookups+0x82c/0x13b0
+[   91.697208][T13400]  path_openat+0x182/0x6b0
+[   91.697605][T13400]  do_filp_open+0x1f8/0x460
+[   91.698008][T13400]  do_sys_openat2+0x16a/0x1d0
+[   91.698436][T13400]  __x64_sys_openat+0x140/0x200
+[   91.698856][T13400]  do_syscall_64+0xcb/0x260
+[   91.699255][T13400]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   91.699769][T13400] 
+[   91.699985][T13400] The buggy address belongs to the object at ffff88804e3ca700
+[   91.699985][T13400]  which belongs to the cache kmalloc-96 of size 96
+[   91.701142][T13400] The buggy address is located 0 bytes inside of
+[   91.701142][T13400]  allocated 78-byte region [ffff88804e3ca700, ffff88804e3ca74e)
+[   91.702296][T13400] 
+[   91.702533][T13400] The buggy address belongs to the physical page:
+[   91.703073][T13400] page: refcount:0 mapcount:0 mapping:0000000000000000 index:0x0 pfn:0x4e3ca
+[   91.703827][T13400] flags: 0x4fff00000000000(node=1|zone=1|lastcpupid=0x7ff)
+[   91.704466][T13400] page_type: f5(slab)
+[   91.704824][T13400] raw: 04fff00000000000 ffff88801b441280 ffffea0001a69e80 dead000000000002
+[   91.705561][T13400] raw: 0000000000000000 0000000080200020 00000000f5000000 0000000000000000
+[   91.706300][T13400] page dumped because: kasan: bad access detected
+[   91.706864][T13400] page_owner tracks the page as allocated
+[   91.707345][T13400] page last allocated via order 0, migratetype Unmovable, gfp_mask 0x52820(GFP_ATOMIC|__GFP_NOWARN|__GFP_NORETRY|__GFP_COMP), pid 785, tgid 785 (kworker/1:2), ts 72454161781, free_ts 72453345320
+[   91.708900][T13400]  post_alloc_hook+0x1a3/0x1d0
+[   91.709332][T13400]  get_page_from_freelist+0x8a5/0xfa0
+[   91.709800][T13400]  __alloc_frozen_pages_noprof+0x1d8/0x3b0
+[   91.710314][T13400]  alloc_pages_mpol+0x1f2/0x550
+[   91.710737][T13400]  allocate_slab+0x229/0x310
+[   91.711148][T13400]  ___slab_alloc+0x7f3/0x12b0
+[   91.711554][T13400]  __slab_alloc.constprop.0+0x56/0xc0
+[   91.712016][T13400]  __kmalloc_cache_noprof+0x280/0x450
+[   91.712482][T13400]  dst_cow_metrics_generic+0x4c/0x1e0
+[   91.712939][T13400]  icmp6_dst_alloc+0x38f/0x4c0
+[   91.713370][T13400]  mld_sendpack+0x597/0xd40
+[   91.713783][T13400]  mld_send_cr+0x6f1/0x960
+[   91.714181][T13400]  mld_ifc_work+0x34/0x2b0
+[   91.714589][T13400]  process_one_work+0x109d/0x18c0
+[   91.715028][T13400]  worker_thread+0x677/0xe90
+[   91.715436][T13400]  kthread+0x3b3/0x760
+[   91.715795][T13400] page last free pid 24 tgid 24 stack trace:
+[   91.716416][T13400]  free_frozen_pages+0x71f/0xff0
+[   91.716884][T13400]  rcu_do_batch+0x31f/0xcf0
+[   91.717295][T13400]  rcu_core+0x274/0x4c0
+[   91.717663][T13400]  handle_softirqs+0x229/0x640
+[   91.718074][T13400]  run_ksoftirqd+0x42/0x70
+[   91.718465][T13400]  smpboot_thread_fn+0x63f/0xa10
+[   91.718878][T13400]  kthread+0x3b3/0x760
+[   91.719233][T13400]  ret_from_fork+0x48/0x80
+[   91.719636][T13400]  ret_from_fork_asm+0x1a/0x30
+[   91.720035][T13400] 
+[   91.720238][T13400] Memory state around the buggy address:
+[   91.720722][T13400]  ffff88804e3ca600: 00 00 00 00 00 00 00 00 00 fc fc fc fc fc fc fc
+[   91.721396][T13400]  ffff88804e3ca680: 00 00 00 00 00 00 00 00 00 00 fc fc fc fc fc fc
+[   91.722070][T13400] >ffff88804e3ca700: 00 00 00 00 00 00 00 00 00 06 fc fc fc fc fc fc
+[   91.722756][T13400]                                               ^
+[   91.723302][T13400]  ffff88804e3ca780: fa fb fb fb fb fb fb fb fb fb fb fb fc fc fc fc
+[   91.723996][T13400]  ffff88804e3ca800: 00 00 00 00 00 00 00 00 00 00 00 fc fc fc fc fc
+[   91.724669][T13400] ==================================================================
+[   91.727221][    T8] usb 5-1: config 0 interface 205 altsetting 6 has an invalid descriptor for endpoint zero, skipping
+[   91.728150][    T8] usb 5-1: config 0 interface 205 altsetting 6 has a duplicate endpoint with address 0xA, skipping
+[   91.729036][    T8] usb 5-1: config 0 interface 205 altsetting 6 has a duplicate endpoint with address 0xA, skipping
+[   91.729984][    T8] usb 5-1: config 0 interface 205 altsetting 6 has a duplicate endpoint with address 0x4, skipping
+[   91.730894][    T8] usb 5-1: config 0 interface 205 altsetting 6 has a duplicate endpoint with address 0xC, skipping
+[   91.731780][    T8] usb 5-1: config 0 interface 205 altsetting 6 has a duplicate endpoint with address 0xA, skipping
+SYZFAIL: failed to recv rpc
+fd=3 want=4 recv=0 n=0 (errno 9: Bad file descriptor)
+[   91.732774][    T8] usb 5-1: config 0 interface 205 altsetting 6 has a duplicate endpoint with address 0x5, skipping
+[   91.733789][    T8] usb 5-1: config 0 interface 205 altsetting 6 endpoint 0x9 has an invalid bInterval 132, changing to 11
+[   91.734727][    T8] usb 5-1: config 0 interface 205 altsetting 6 has 10 endpoint descriptors, different from the interface descriptor's value: 13
+[   91.735874][    T8] usb 5-1: config 0 interface 76 altsetting 0 has a duplicate endpoint with address 0xC, skipping
+[   91.736762][    T8] usb 5-1: config 0 interface 76 altsetting 0 has a duplicate endpoint with address 0x5, skipping
+[   91.737658][    T8] usb 5-1: config 0 interface 76 altsetting 0 has an invalid descriptor for endpoint zero, skipping
+[   91.738563][    T8] usb 5-1: config 0 interface 76 altsetting 0 has an invalid endpoint descriptor of length 2, skipping
+[   91.739476][    T8] usb 5-1: config 0 interface 76 altsetting 0 has 4 endpoint descriptors, different from the interface descriptor's value: 3
+[   91.740567][    T8] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0x2, skipping
+[   91.741487][    T8] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0xD, skipping
+[   91.742414][    T8] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0xA, skipping
+[   91.743333][    T8] usb 5-1: config 0 interface 206 altsetting 249 endpoint 0x3 has an invalid bInterval 34, changing to 9
+[   91.744286][    T8] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0x9, skipping
+[   91.745203][    T8] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0x3, skipping
+[   91.746108][    T8] usb 5-1: config 0 interface 206 altsetting 249 has an invalid descriptor for endpoint zero, skipping
+[   91.747039][    T8] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0x9, skipping
+[   91.747940][    T8] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0xA, skipping
+[   91.748860][    T8] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0x2, skipping
+[   91.749751][    T8] usb 5-1: config 0 interface 206 altsetting 249 has an invalid endpoint descriptor of length 2, skipping
+[   91.750724][    T8] usb 5-1: config 0 interface 206 altsetting 249 has a duplicate endpoint with address 0x7, skipping
+[   91.751640][    T8] usb 5-1: config 0 interface 206 altsetting 249 has 13 endpoint descriptors, different from the interface descriptor's value: 12
+[   91.753176][    T8] usb 5-1: config 0 interface 205 has no altsetting 0
+[   91.753769][    T8] usb 5-1: config 0 interface 206 has no altsetting 0
+[   91.755898][    T8] usb 5-1: New USB device found, idVendor=0ccd, idProduct=0039, bcdDevice=8f.d4
+[   91.756670][    T8] usb 5-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   91.757349][    T8] usb 5-1: Product: syz
+[   91.757724][    T8] usb 5-1: Manufacturer: syz
+[   91.758126][    T8] usb 5-1: SerialNumber: syz
+[   91.767694][   T25] usb 6-1: config index 0 descriptor too short (expected 65434, got 72)
+[   91.768179][    T8] usb 5-1: config 0 descriptor??
+[   91.769335][T13348] raw-gadget.1 gadget.4: fail, usb_ep_enable returned -22
+[   91.774556][   T25] usb 6-1: New USB device found, idVendor=0cf3, idProduct=9271, bcdDevice= 1.08
+[   91.775352][   T25] usb 6-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   91.776084][   T25] usb 6-1: Product: syz
+[   91.776465][   T25] usb 6-1: Manufacturer: syz
+[   91.776869][   T25] usb 6-1: SerialNumber: syz
+[   91.780497][   T25] usb 6-1: ath9k_htc: Firmware ath9k_htc/htc_9271-1.4.0.fw requested
+[   91.794042][T11380] usb 6-1: ath9k_htc: Transferred FW: ath9k_htc/htc_9271-1.4.0.fw, size: 51008
+[   91.800469][T13400] Kernel panic - not syncing: KASAN: panic_on_warn set ...
+[   91.801103][T13400] CPU: 1 UID: 0 PID: 13400 Comm: syz.1.259 Not tainted 6.14.0-rc4 #1
+[   91.801803][T13400] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   91.802606][T13400] Call Trace:
+[   91.802902][T13400]  <TASK>
+[   91.803167][T13400]  dump_stack_lvl+0x3d/0x1b0
+[   91.803635][T13400]  panic+0x6d5/0x790
+[   91.804004][T13400]  ? __pfx_panic+0x10/0x10
+[   91.804400][T13400]  ? irqentry_exit+0x3b/0xa0
+[   91.804821][T13400]  ? preempt_schedule_thunk+0x1a/0x30
+[   91.805270][T13400]  ? preempt_schedule_common+0x44/0xc0
+[   91.805743][T13400]  ? hfs_bnode_read+0xc5/0x230
+[   91.806174][T13400]  ? hfs_bnode_read+0xc5/0x230
+[   91.806595][T13400]  check_panic_on_warn+0xb1/0xc0
+[   91.807037][T13400]  ? hfs_bnode_read+0xc5/0x230
+[   91.807459][T13400]  end_report+0x83/0xa0
+[   91.807836][T13400]  kasan_report+0xcd/0x100
+[   91.808234][T13400]  ? hfs_bnode_read+0xc5/0x230
+[   91.808662][T13400]  kasan_check_range+0x108/0x1e0
+[   91.809114][T13400]  __asan_memcpy+0x3d/0x70
+[   91.809528][T13400]  hfs_bnode_read+0xc5/0x230
+[   91.809945][T13400]  hfs_bnode_read_key+0x149/0x1f0
+[   91.810387][T13400]  ? __pfx_hfs_bnode_read_key+0x10/0x10
+[   91.810873][T13400]  ? block_dirty_folio+0x128/0x1c0
+[   91.811321][T13400]  hfs_brec_insert+0x822/0xbd0
+[   91.811757][T13400]  ? __pfx_hfs_brec_insert+0x10/0x10
+[   91.812231][T13400]  hfs_cat_create+0x6a5/0x840
+[   91.812661][T13400]  ? __pfx_hfs_cat_create+0x10/0x10
+[   91.813122][T13400]  ? __pfx___lock_release+0x10/0x10
+[   91.813589][T13400]  ? mark_lock+0x38/0x400
+[   91.813980][T13400]  ? clear_pending_if_disabled+0x92/0x200
+[   91.814489][T13400]  ? rcu_is_watching+0x12/0xd0
+[   91.814910][T13400]  ? hfs_new_inode+0x4af/0xcf0
+[   91.815327][T13400]  ? __pfx_hfs_create+0x10/0x10
+[   91.815775][T13400]  hfs_create+0x6b/0x100
+[   91.816210][T13400]  lookup_open.isra.0+0x1145/0x1540
+[   91.816688][T13400]  ? __pfx_lookup_open.isra.0+0x10/0x10
+[   91.817173][T13400]  ? __pfx_down_write+0x10/0x10
+[   91.817620][T13400]  ? mnt_get_write_access+0x216/0x310
+[   91.818105][T13400]  open_last_lookups+0x82c/0x13b0
+[   91.818566][T13400]  path_openat+0x182/0x6b0
+[   91.818966][T13400]  ? __pfx_path_openat+0x10/0x10
+[   91.819412][T13400]  ? __lock_acquire+0xb97/0x16a0
+[   91.819852][T13400]  do_filp_open+0x1f8/0x460
+[   91.820267][T13400]  ? __pfx_do_filp_open+0x10/0x10
+[   91.820727][T13400]  ? find_held_lock+0x2d/0x120
+[   91.821150][T13400]  ? alloc_fd+0x30c/0x5b0
+[   91.821549][T13400]  ? alloc_fd+0x30c/0x5b0
+[   91.821945][T13400]  ? rcu_is_watching+0x12/0xd0
+[   91.822374][T13400]  ? _raw_spin_unlock+0x28/0x50
+[   91.822807][T13400]  ? alloc_fd+0x30c/0x5b0
+[   91.823188][T13400]  do_sys_openat2+0x16a/0x1d0
+[   91.823614][T13400]  ? __pfx_do_sys_openat2+0x10/0x10
+[   91.824079][T13400]  __x64_sys_openat+0x140/0x200
+[   91.824518][T13400]  ? __pfx___x64_sys_openat+0x10/0x10
+[   91.824995][T13400]  do_syscall_64+0xcb/0x260
+[   91.825396][T13400]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   91.825908][T13400] RIP: 0033:0x7f94d7fb85ad
+[   91.826299][T13400] Code: 02 b8 ff ff ff ff c3 66 0f 1f 44 00 00 f3 0f 1e fa 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 c7 c1 a8 ff ff ff f7 d8 64 89 01 48
+[   91.827911][T13400] RSP: 002b:00007f94d8ec1f98 EFLAGS: 00000246 ORIG_RAX: 0000000000000101
+[   91.828633][T13400] RAX: ffffffffffffffda RBX: 00007f94d8245fa0 RCX: 00007f94d7fb85ad
+[   91.829297][T13400] RDX: 0000000000141842 RSI: 0000400000000380 RDI: ffffffffffffff9c
+[   91.829978][T13400] RBP: 00007f94d806a8d6 R08: 0000000000000000 R09: 0000000000000000
+[   91.830653][T13400] R10: 0000000000000000 R11: 0000000000000246 R12: 0000000000000000
+[   91.831328][T13400] R13: 0000000000000000 R14: 00007f94d8245fa0 R15: 00007f94d8ea2000
+[   91.832007][T13400]  </TASK>
+[   91.832398][T13400] Kernel Offset: disabled
+[   91.832785][T13400] Rebooting in 86400 seconds..
+
+VM DIAGNOSIS:
+21:59:41  Registers:
+info registers vcpu 0
+RAX=0000000000000000 RBX=0000000000000001 RCX=0000000000000000 RDX=0000000000000000
+RSI=0000000000000000 RDI=0000000000000000 RBP=ffff88807ee44a40 RSP=ffffc900004ef938
+R8 =0000000000000000 R9 =0000000000000000 R10=0000000000000000 R11=0000000000000000
+R12=0000000000000003 R13=ffffed100fdc8949 R14=0000000000000001 R15=dffffc0000000000
+RIP=ffffffff81b1f44e RFL=00000246 [---Z-P-] CPL=0 II=0 A20=1 SMM=0 HLT=0
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 0000000000000000 ffffffff 00c00000
+GS =0000 ffff88802b600000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe0000003000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000001000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=00007f323756dae0 CR3=000000000e180000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=0000000000989680 0000000000000000 XMM01=0000000000000000 0000000000989680
+XMM02=00007f992817d660 00007f992817d660 XMM03=0000000000000000 0000000000000000
+XMM04=00000000000000ff 0000000000000000 XMM05=0000000000000000 0000000000000000
+XMM06=0000000000000000 000000524f525245 XMM07=0000000000000000 0000000000000000
+XMM08=0000000000000000 00524f5252450040 XMM09=0000000000000000 0000000000000000
+XMM10=0000000000000000 0000000000000000 XMM11=0000000000000000 0000000000000000
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000
+info registers vcpu 1
+RAX=0000000000000031 RBX=00000000000003f8 RCX=0000000000000000 RDX=00000000000003f8
+RSI=0000000000000000 RDI=ffffffff9b037a00 RBP=ffffffff9b0379c0 RSP=ffffc90006feeec8
+R8 =0000000000000000 R9 =0000000000000000 R10=0000000000000000 R11=0000000000000000
+R12=0000000000000000 R13=0000000000000031 R14=ffffffff9b0379c0 R15=0000000000000000
+RIP=ffffffff8540d9bf RFL=00000002 [-------] CPL=0 II=0 A20=1 SMM=0 HLT=0
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 00007f94d8ec2640 ffffffff 00c00000
+GS =0000 ffff88807ee00000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe000004a000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000048000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=00007f94d8198df0 CR3=000000006e2b6000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=0000000000000000 0000000000000000 XMM01=0000000000000000 0000000000000000
+XMM02=00007f94d7fbbf75 000000000001659f XMM03=00007ffe91156aa8 0000003000000030
+XMM04=00007ffe91156d70 0000000000000032 XMM05=00007f94d7fbbea1 000000000001659f
+XMM06=00007ffe91156a70 0000003000000028 XMM07=ce9ae48eba513900 00007ffe911569b0
+XMM08=a384044cffff0000 017f959817ff7e2b XMM09=0000000000000000 0000000000000000
+XMM10=0000000000000000 0000000000000000 XMM11=0000000000000000 0000000000000000
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000

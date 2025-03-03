@@ -1,0 +1,330 @@
+Extracting prog: 58.904363849s
+Minimizing prog: 4m21.298233315s
+Simplifying prog options: 0s
+Extracting C: 52.972222235s
+Simplifying C: 5m51.28255394s
+
+
+extracting reproducer from 36 programs
+first checking the prog from the crash report
+single: executing 1 programs separately with timeout 30s
+testing program (duration=30s, {Threaded:true Repeat:true RepeatTimes:0 Procs:6 Slowdown:1 Sandbox:none SandboxArg:0 Leak:false NetInjection:true NetDevices:true NetReset:true Cgroups:true BinfmtMisc:true CloseFDs:true KCSAN:false DevlinkPCI:false NicVF:false USB:true VhciInjection:true Wifi:true IEEE802154:true Sysctl:true Swap:true UseTmpDir:true HandleSegv:true Trace:false LegacyOptions:{Collide:false Fault:false FaultCall:0 FaultNth:0}}): syz_mount_image$hfs-openat
+detailed listing:
+executing program 0:
+syz_mount_image$hfs(&(0x7f00000000c0), &(0x7f0000000100)='./bus\x00', 0x4080, &(0x7f0000000640)=ANY=[@ANYRES64=0x0, @ANYRESHEX, @ANYRES32, @ANYBLOB="a24ed317cb4e0ad844542b7e77c8d26d39380e1e59e69354ae34cb24b8d4cb6ef4bba41cb139a672934c164b8a72f1c0c5592a76d78c9655aaa256cdd0f49e4d7d9b0c7dc98f156f96f0fb7f5389ec785801bc2320c6a62c248278e1aa065a905c2c196797df61d2502c2d34a7bb1c003be29383aa043ad2c27c385a78fe0b62792f72a4c13e7bbd9405b2b9f019a2871a45439239fa99936a8c097352d96de288e156ae16bade83bd9da8d24c2f4acbbc6011f4de819629d7274969b4ae2ef8c62f4751be894c8365c236d7849e0010cccb86fe81bb121bb48581e9956b0d21e5005cc20f431ad3424b1dfafbdd259339d475c421dea7b748aff395d171ac01019376c0ab533aeda589510ce646469414698fcb6fa038b3f6c72500dd7d486377cce22217665b7e065aff16af367d2ebf80f72c7a94cbfb29c133e5a2b5accaed04deced8ce5e789807b857034de9b1bf29c3068f1e098983a7812d", @ANYRESOCT, @ANYRESHEX, @ANYRESOCT, @ANYRESOCT, @ANYBLOB="b5486cd908d947a6a9e539acf6c53a49e4d1e13487d10861133340d3f2b28f8d7b7a3e55f1d5780f06d2a1a144bf68bfa156c3adac7a2f6a8eb37700e60cddca0bc36e08971c119ce08d8b78aa2958df16ec049bb719fb02b0cfef09982414aae0ae91abcd80870e518fffc0f353c69b67671e2c7b2af2314c322113a8432894c8bace6666078ae166f5fdeeda090622830aa2f62efe405fdce25313009e151a2517a1d53768969753fc3e236c493149cf0c920b71ecbdb3404eb5d4bec7452f155a23dfbc208cbd142eef1fb542453be7e67f17a0ccb218ca68e898eded7a4ddd78f0ba73c3c9ec1139933a287f01278d2a7648d346835b6fb4ecd40cf7808afc0dc761bb431903710b2dc9707adec9121e4eaf9d8a6f41404509b110e94a6de97db5c726cf62b379c8b2a62c8158cac216bec8e19b47b59667bd904fdc954adba85c6426e41a79a0ce636cb83ba6096d49eab46a4ef404b3f11c2b35d356f5f1f250567aab8b05fd301959ba421ef12ee1948593144c2f093d864166348d2535227bb0fedfa6d377391f2ff8622d9b81f0bc2b34ac8d790fd871867d337063a416604f38659010a1982eef993084b4a759af609dbaec25a1202161289d0b98c5655200"/466, @ANYRESHEX], 0x2, 0x266, &(0x7f00000003c0)="$eJzs3cFqE0Ecx/HfbGKbaqmrrQjiqVrwJG29iBdF8hCeRG0ilIYKtoLtxehZfADvvoIP4Ul8gXry5APktjKzk2ST7mZDSDNt/H4gYU3mP/MfZzc7/0CJAPy3ntZPvj34Yx9Gqqgi6ZEUSapJVUk3dLP2bv9w97DVbIzqqOIi7MMojTSn2uzsN/NCbZyLsJ5Isf1XVcu913BmakmS/A6dBIJzV39PkvrgPgkW/dXp3q8FzHGa2qETCMx01NF7rYTOAwAQlr//R/4+v+z371Ekbfjb/lzd/zuhEwgsc/+vSidKjF3fq+6tfr3nSji794u6VeIkYy0oPbMqAwmUVZUul2jp9W6reX/nTasR6ZMee5lma+65kZ66XdlsP57uej2nNh1h8rlfcXO4ZOewXZD/6nRHLGd+mJ/muYn1VY3e/q+aGLtMbqXioZVK898s7tHNMk5bFczymhvklh/BK5llbTCNrAXf58AXBHFZni7q+lBUOrutkqjV3Kjtkqi14aj+2VwcedbMF/PMrOuvvque2f9H9n97Q+NcmbaNa+nPjJHzqbqWcfal9u3cltkLWEtjzwcT+axXeqiVg6PjvZetVvPtwdFxu3uwx8F8H3RPgvOSDwelB4t2uUob2/35lAYN+/GE2egveuhMEIjdd5nE2INMvbLpSiT7FI/YpydlnWd63MqrDRK3I5d0ubiCy+22sIIbt+a6c0+6O/6Isc9zTpi6fukF3/8DAAAAAAAAAAAAAAAAAABcNLP404XQcwQAAAAAAAAAAAAAAAAAAAAA4KIzOme//yt+/xeYlX8BAAD//0wEhKM=")
+openat(0xffffffffffffff9c, &(0x7f0000000380)='./file1\x00', 0x141842, 0x0)
+
+program crashed: KASAN: slab-out-of-bounds Write in hfs_bnode_read
+single: successfully extracted reproducer
+found reproducer with 2 syscalls
+minimizing guilty program
+testing program (duration=48.282130665s, {Threaded:true Repeat:true RepeatTimes:0 Procs:6 Slowdown:1 Sandbox:none SandboxArg:0 Leak:false NetInjection:true NetDevices:true NetReset:true Cgroups:true BinfmtMisc:true CloseFDs:true KCSAN:false DevlinkPCI:false NicVF:false USB:true VhciInjection:true Wifi:true IEEE802154:true Sysctl:true Swap:true UseTmpDir:true HandleSegv:true Trace:false LegacyOptions:{Collide:false Fault:false FaultCall:0 FaultNth:0}}): syz_mount_image$hfs
+detailed listing:
+executing program 0:
+syz_mount_image$hfs(&(0x7f00000000c0), &(0x7f0000000100)='./bus\x00', 0x4080, &(0x7f0000000640)=ANY=[@ANYRES64=0x0, @ANYRESHEX, @ANYRES32, @ANYBLOB="a24ed317cb4e0ad844542b7e77c8d26d39380e1e59e69354ae34cb24b8d4cb6ef4bba41cb139a672934c164b8a72f1c0c5592a76d78c9655aaa256cdd0f49e4d7d9b0c7dc98f156f96f0fb7f5389ec785801bc2320c6a62c248278e1aa065a905c2c196797df61d2502c2d34a7bb1c003be29383aa043ad2c27c385a78fe0b62792f72a4c13e7bbd9405b2b9f019a2871a45439239fa99936a8c097352d96de288e156ae16bade83bd9da8d24c2f4acbbc6011f4de819629d7274969b4ae2ef8c62f4751be894c8365c236d7849e0010cccb86fe81bb121bb48581e9956b0d21e5005cc20f431ad3424b1dfafbdd259339d475c421dea7b748aff395d171ac01019376c0ab533aeda589510ce646469414698fcb6fa038b3f6c72500dd7d486377cce22217665b7e065aff16af367d2ebf80f72c7a94cbfb29c133e5a2b5accaed04deced8ce5e789807b857034de9b1bf29c3068f1e098983a7812d", @ANYRESOCT, @ANYRESHEX, @ANYRESOCT, @ANYRESOCT, @ANYBLOB="b5486cd908d947a6a9e539acf6c53a49e4d1e13487d10861133340d3f2b28f8d7b7a3e55f1d5780f06d2a1a144bf68bfa156c3adac7a2f6a8eb37700e60cddca0bc36e08971c119ce08d8b78aa2958df16ec049bb719fb02b0cfef09982414aae0ae91abcd80870e518fffc0f353c69b67671e2c7b2af2314c322113a8432894c8bace6666078ae166f5fdeeda090622830aa2f62efe405fdce25313009e151a2517a1d53768969753fc3e236c493149cf0c920b71ecbdb3404eb5d4bec7452f155a23dfbc208cbd142eef1fb542453be7e67f17a0ccb218ca68e898eded7a4ddd78f0ba73c3c9ec1139933a287f01278d2a7648d346835b6fb4ecd40cf7808afc0dc761bb431903710b2dc9707adec9121e4eaf9d8a6f41404509b110e94a6de97db5c726cf62b379c8b2a62c8158cac216bec8e19b47b59667bd904fdc954adba85c6426e41a79a0ce636cb83ba6096d49eab46a4ef404b3f11c2b35d356f5f1f250567aab8b05fd301959ba421ef12ee1948593144c2f093d864166348d2535227bb0fedfa6d377391f2ff8622d9b81f0bc2b34ac8d790fd871867d337063a416604f38659010a1982eef993084b4a759af609dbaec25a1202161289d0b98c5655200"/466, @ANYRESHEX], 0x2, 0x266, &(0x7f00000003c0)="$eJzs3cFqE0Ecx/HfbGKbaqmrrQjiqVrwJG29iBdF8hCeRG0ilIYKtoLtxehZfADvvoIP4Ul8gXry5APktjKzk2ST7mZDSDNt/H4gYU3mP/MfZzc7/0CJAPy3ntZPvj34Yx9Gqqgi6ZEUSapJVUk3dLP2bv9w97DVbIzqqOIi7MMojTSn2uzsN/NCbZyLsJ5Isf1XVcu913BmakmS/A6dBIJzV39PkvrgPgkW/dXp3q8FzHGa2qETCMx01NF7rYTOAwAQlr//R/4+v+z371Ekbfjb/lzd/zuhEwgsc/+vSidKjF3fq+6tfr3nSji794u6VeIkYy0oPbMqAwmUVZUul2jp9W6reX/nTasR6ZMee5lma+65kZ66XdlsP57uej2nNh1h8rlfcXO4ZOewXZD/6nRHLGd+mJ/muYn1VY3e/q+aGLtMbqXioZVK898s7tHNMk5bFczymhvklh/BK5llbTCNrAXf58AXBHFZni7q+lBUOrutkqjV3Kjtkqi14aj+2VwcedbMF/PMrOuvvque2f9H9n97Q+NcmbaNa+nPjJHzqbqWcfal9u3cltkLWEtjzwcT+axXeqiVg6PjvZetVvPtwdFxu3uwx8F8H3RPgvOSDwelB4t2uUob2/35lAYN+/GE2egveuhMEIjdd5nE2INMvbLpSiT7FI/YpydlnWd63MqrDRK3I5d0ubiCy+22sIIbt+a6c0+6O/6Isc9zTpi6fukF3/8DAAAAAAAAAAAAAAAAAABcNLP404XQcwQAAAAAAAAAAAAAAAAAAAAA4KIzOme//yt+/xeYlX8BAAD//0wEhKM=")
+
+program did not crash
+testing program (duration=48.282130665s, {Threaded:true Repeat:true RepeatTimes:0 Procs:6 Slowdown:1 Sandbox:none SandboxArg:0 Leak:false NetInjection:true NetDevices:true NetReset:true Cgroups:true BinfmtMisc:true CloseFDs:true KCSAN:false DevlinkPCI:false NicVF:false USB:true VhciInjection:true Wifi:true IEEE802154:true Sysctl:true Swap:true UseTmpDir:true HandleSegv:true Trace:false LegacyOptions:{Collide:false Fault:false FaultCall:0 FaultNth:0}}): openat
+detailed listing:
+executing program 0:
+openat(0xffffffffffffff9c, &(0x7f0000000380)='./file1\x00', 0x141842, 0x0)
+
+program did not crash
+testing program (duration=48.282130665s, {Threaded:true Repeat:true RepeatTimes:0 Procs:6 Slowdown:1 Sandbox:none SandboxArg:0 Leak:false NetInjection:true NetDevices:true NetReset:true Cgroups:true BinfmtMisc:true CloseFDs:true KCSAN:false DevlinkPCI:false NicVF:false USB:true VhciInjection:true Wifi:true IEEE802154:true Sysctl:true Swap:true UseTmpDir:true HandleSegv:true Trace:false LegacyOptions:{Collide:false Fault:false FaultCall:0 FaultNth:0}}): syz_mount_image$hfs-openat
+detailed listing:
+executing program 0:
+syz_mount_image$hfs(&(0x7f00000000c0), &(0x7f0000000100)='./bus\x00', 0x4080, &(0x7f0000000640)=ANY=[@ANYRES64=0x0, @ANYRESHEX, @ANYRES32, @ANYBLOB="a24ed317cb4e0ad844542b7e77c8d26d39380e1e59e69354ae34cb24b8d4cb6ef4bba41cb139a672934c164b8a72f1c0c5592a76d78c9655aaa256cdd0f49e4d7d9b0c7dc98f156f96f0fb7f5389ec785801bc2320c6a62c248278e1aa065a905c2c196797df61d2502c2d34a7bb1c003be29383aa043ad2c27c385a78fe0b62792f72a4c13e7bbd9405b2b9f019a2871a45439239fa99936a8c097352d96de288e156ae16bade83bd9da8d24c2f4acbbc6011f4de819629d7274969b4ae2ef8c62f4751be894c8365c236d7849e0010cccb86fe81bb121bb48581e9956b0d21e5005cc20f431ad3424b1dfafbdd259339d475c421dea7b748aff395d171ac01019376c0ab533aeda589510ce646469414698fcb6fa038b3f6c72500dd7d486377cce22217665b7e065aff16af367d2ebf80f72c7a94cbfb29c133e5a2b5accaed04deced8ce5e789807b857034de9b1bf29c3068f1e098983a7812d", @ANYRESOCT, @ANYRESHEX, @ANYRESOCT, @ANYRESOCT, @ANYBLOB="b5486cd908d947a6a9e539acf6c53a49e4d1e13487d10861133340d3f2b28f8d7b7a3e55f1d5780f06d2a1a144bf68bfa156c3adac7a2f6a8eb37700e60cddca0bc36e08971c119ce08d8b78aa2958df16ec049bb719fb02b0cfef09982414aae0ae91abcd80870e518fffc0f353c69b67671e2c7b2af2314c322113a8432894c8bace6666078ae166f5fdeeda090622830aa2f62efe405fdce25313009e151a2517a1d53768969753fc3e236c493149cf0c920b71ecbdb3404eb5d4bec7452f155a23dfbc208cbd142eef1fb542453be7e67f17a0ccb218ca68e898eded7a4ddd78f0ba73c3c9ec1139933a287f01278d2a7648d346835b6fb4ecd40cf7808afc0dc761bb431903710b2dc9707adec9121e4eaf9d8a6f41404509b110e94a6de97db5c726cf62b379c8b2a62c8158cac216bec8e19b47b59667bd904fdc954adba85c6426e41a79a0ce636cb83ba6096d49eab46a4ef404b3f11c2b35d356f5f1f250567aab8b05fd301959ba421ef12ee1948593144c2f093d864166348d2535227bb0fedfa6d377391f2ff8622d9b81f0bc2b34ac8d790fd871867d337063a416604f38659010a1982eef993084b4a759af609dbaec25a1202161289d0b98c5655200"/466, @ANYRESHEX], 0x2, 0x266, &(0x7f00000003c0)="$eJzs3cFqE0Ecx/HfbGKbaqmrrQjiqVrwJG29iBdF8hCeRG0ilIYKtoLtxehZfADvvoIP4Ul8gXry5APktjKzk2ST7mZDSDNt/H4gYU3mP/MfZzc7/0CJAPy3ntZPvj34Yx9Gqqgi6ZEUSapJVUk3dLP2bv9w97DVbIzqqOIi7MMojTSn2uzsN/NCbZyLsJ5Isf1XVcu913BmakmS/A6dBIJzV39PkvrgPgkW/dXp3q8FzHGa2qETCMx01NF7rYTOAwAQlr//R/4+v+z371Ekbfjb/lzd/zuhEwgsc/+vSidKjF3fq+6tfr3nSji794u6VeIkYy0oPbMqAwmUVZUul2jp9W6reX/nTasR6ZMee5lma+65kZ66XdlsP57uej2nNh1h8rlfcXO4ZOewXZD/6nRHLGd+mJ/muYn1VY3e/q+aGLtMbqXioZVK898s7tHNMk5bFczymhvklh/BK5llbTCNrAXf58AXBHFZni7q+lBUOrutkqjV3Kjtkqi14aj+2VwcedbMF/PMrOuvvque2f9H9n97Q+NcmbaNa+nPjJHzqbqWcfal9u3cltkLWEtjzwcT+axXeqiVg6PjvZetVvPtwdFxu3uwx8F8H3RPgvOSDwelB4t2uUob2/35lAYN+/GE2egveuhMEIjdd5nE2INMvbLpSiT7FI/YpydlnWd63MqrDRK3I5d0ubiCy+22sIIbt+a6c0+6O/6Isc9zTpi6fukF3/8DAAAAAAAAAAAAAAAAAABcNLP404XQcwQAAAAAAAAAAAAAAAAAAAAA4KIzOme//yt+/xeYlX8BAAD//0wEhKM=")
+openat(0xffffffffffffff9c, 0x0, 0x141842, 0x0)
+
+program did not crash
+extracting C reproducer
+testing compiled C program (duration=48.282130665s, {Threaded:true Repeat:true RepeatTimes:0 Procs:6 Slowdown:1 Sandbox:none SandboxArg:0 Leak:false NetInjection:true NetDevices:true NetReset:true Cgroups:true BinfmtMisc:true CloseFDs:true KCSAN:false DevlinkPCI:false NicVF:false USB:true VhciInjection:true Wifi:true IEEE802154:true Sysctl:true Swap:true UseTmpDir:true HandleSegv:true Trace:false LegacyOptions:{Collide:false Fault:false FaultCall:0 FaultNth:0}}): syz_mount_image$hfs-openat
+program crashed: KASAN: slab-out-of-bounds Write in hfs_bnode_read
+simplifying C reproducer
+testing compiled C program (duration=48.282130665s, {Threaded:false Repeat:true RepeatTimes:0 Procs:6 Slowdown:1 Sandbox:none SandboxArg:0 Leak:false NetInjection:true NetDevices:true NetReset:true Cgroups:true BinfmtMisc:true CloseFDs:true KCSAN:false DevlinkPCI:false NicVF:false USB:true VhciInjection:true Wifi:true IEEE802154:true Sysctl:true Swap:true UseTmpDir:true HandleSegv:true Trace:false LegacyOptions:{Collide:false Fault:false FaultCall:0 FaultNth:0}}): syz_mount_image$hfs-openat
+program crashed: KASAN: slab-out-of-bounds Write in hfs_bnode_read
+testing compiled C program (duration=48.282130665s, {Threaded:false Repeat:false RepeatTimes:0 Procs:1 Slowdown:1 Sandbox:none SandboxArg:0 Leak:false NetInjection:true NetDevices:true NetReset:false Cgroups:false BinfmtMisc:true CloseFDs:true KCSAN:false DevlinkPCI:false NicVF:false USB:true VhciInjection:true Wifi:true IEEE802154:true Sysctl:true Swap:true UseTmpDir:true HandleSegv:true Trace:false LegacyOptions:{Collide:false Fault:false FaultCall:0 FaultNth:0}}): syz_mount_image$hfs-openat
+program crashed: KASAN: slab-out-of-bounds Write in hfs_bnode_read
+testing compiled C program (duration=48.282130665s, {Threaded:false Repeat:false RepeatTimes:0 Procs:1 Slowdown:1 Sandbox: SandboxArg:0 Leak:false NetInjection:false NetDevices:false NetReset:false Cgroups:false BinfmtMisc:false CloseFDs:false KCSAN:false DevlinkPCI:false NicVF:false USB:false VhciInjection:false Wifi:false IEEE802154:true Sysctl:true Swap:false UseTmpDir:true HandleSegv:true Trace:false LegacyOptions:{Collide:false Fault:false FaultCall:0 FaultNth:0}}): syz_mount_image$hfs-openat
+program crashed: KASAN: slab-out-of-bounds Write in hfs_bnode_read
+testing compiled C program (duration=48.282130665s, {Threaded:false Repeat:false RepeatTimes:0 Procs:1 Slowdown:1 Sandbox: SandboxArg:0 Leak:false NetInjection:false NetDevices:false NetReset:false Cgroups:false BinfmtMisc:false CloseFDs:false KCSAN:false DevlinkPCI:false NicVF:false USB:false VhciInjection:false Wifi:false IEEE802154:false Sysctl:true Swap:false UseTmpDir:true HandleSegv:true Trace:false LegacyOptions:{Collide:false Fault:false FaultCall:0 FaultNth:0}}): syz_mount_image$hfs-openat
+program crashed: KASAN: slab-out-of-bounds Write in hfs_bnode_read
+testing compiled C program (duration=48.282130665s, {Threaded:false Repeat:false RepeatTimes:0 Procs:1 Slowdown:1 Sandbox: SandboxArg:0 Leak:false NetInjection:false NetDevices:false NetReset:false Cgroups:false BinfmtMisc:false CloseFDs:false KCSAN:false DevlinkPCI:false NicVF:false USB:false VhciInjection:false Wifi:false IEEE802154:false Sysctl:true Swap:false UseTmpDir:false HandleSegv:true Trace:false LegacyOptions:{Collide:false Fault:false FaultCall:0 FaultNth:0}}): syz_mount_image$hfs-openat
+program crashed: KASAN: slab-out-of-bounds Write in hfs_bnode_read
+testing compiled C program (duration=48.282130665s, {Threaded:false Repeat:false RepeatTimes:0 Procs:1 Slowdown:1 Sandbox: SandboxArg:0 Leak:false NetInjection:false NetDevices:false NetReset:false Cgroups:false BinfmtMisc:false CloseFDs:false KCSAN:false DevlinkPCI:false NicVF:false USB:false VhciInjection:false Wifi:false IEEE802154:false Sysctl:true Swap:false UseTmpDir:false HandleSegv:false Trace:false LegacyOptions:{Collide:false Fault:false FaultCall:0 FaultNth:0}}): syz_mount_image$hfs-openat
+program crashed: KASAN: slab-out-of-bounds Write in hfs_bnode_read
+testing compiled C program (duration=48.282130665s, {Threaded:false Repeat:false RepeatTimes:0 Procs:1 Slowdown:1 Sandbox: SandboxArg:0 Leak:false NetInjection:false NetDevices:false NetReset:false Cgroups:false BinfmtMisc:false CloseFDs:false KCSAN:false DevlinkPCI:false NicVF:false USB:false VhciInjection:false Wifi:false IEEE802154:false Sysctl:false Swap:false UseTmpDir:false HandleSegv:false Trace:false LegacyOptions:{Collide:false Fault:false FaultCall:0 FaultNth:0}}): syz_mount_image$hfs-openat
+program crashed: KASAN: slab-out-of-bounds Write in hfs_bnode_read
+reproducing took 12m4.457417087s
+repro crashed as (corrupted=false):
+loop0: detected capacity change from 0 to 64
+hfs: unable to locate alternate MDB
+hfs: continuing without an alternate MDB
+==================================================================
+BUG: KASAN: slab-out-of-bounds in memcpy_from_page include/linux/highmem.h:423 [inline]
+BUG: KASAN: slab-out-of-bounds in hfs_bnode_read+0xc5/0x230 fs/hfs/bnode.c:35
+Write of size 256 at addr ffff88804a39b200 by task syz-executor633/9399
+
+CPU: 1 UID: 0 PID: 9399 Comm: syz-executor633 Not tainted 6.14.0-rc4 #1
+Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+Call Trace:
+ <TASK>
+ __dump_stack lib/dump_stack.c:94 [inline]
+ dump_stack_lvl+0x116/0x1b0 lib/dump_stack.c:120
+ print_address_description.constprop.0+0x2c/0x420 mm/kasan/report.c:408
+ print_report+0xaa/0x270 mm/kasan/report.c:521
+ kasan_report+0xbd/0x100 mm/kasan/report.c:634
+ check_region_inline mm/kasan/generic.c:183 [inline]
+ kasan_check_range+0x108/0x1e0 mm/kasan/generic.c:189
+ __asan_memcpy+0x3d/0x70 mm/kasan/shadow.c:106
+ memcpy_from_page include/linux/highmem.h:423 [inline]
+ hfs_bnode_read+0xc5/0x230 fs/hfs/bnode.c:35
+ hfs_bnode_read_key+0x149/0x1f0 fs/hfs/bnode.c:70
+ hfs_brec_insert+0x822/0xbd0 fs/hfs/brec.c:141
+ hfs_cat_create+0x6a5/0x840 fs/hfs/catalog.c:131
+ hfs_create+0x6b/0x100 fs/hfs/dir.c:202
+ lookup_open.isra.0+0x1145/0x1540 fs/namei.c:3651
+ open_last_lookups+0x82c/0x13b0 fs/namei.c:3750
+ path_openat+0x182/0x6b0 fs/namei.c:3986
+ do_filp_open+0x1f8/0x460 fs/namei.c:4016
+ do_sys_openat2+0x16a/0x1d0 fs/open.c:1428
+ do_sys_open fs/open.c:1443 [inline]
+ __do_sys_openat fs/open.c:1459 [inline]
+ __se_sys_openat fs/open.c:1454 [inline]
+ __x64_sys_openat+0x140/0x200 fs/open.c:1454
+ do_syscall_x64 arch/x86/entry/common.c:52 [inline]
+ do_syscall_64+0xcb/0x260 arch/x86/entry/common.c:83
+ entry_SYSCALL_64_after_hwframe+0x77/0x7f
+RIP: 0033:0x7facb2d6bc7d
+Code: c3 e8 d7 21 00 00 0f 1f 80 00 00 00 00 f3 0f 1e fa 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 c7 c1 b8 ff ff ff f7 d8 64 89 01 48
+RSP: 002b:00007ffc53741ce8 EFLAGS: 00000246 ORIG_RAX: 0000000000000101
+RAX: ffffffffffffffda RBX: 00007ffc53741f08 RCX: 00007facb2d6bc7d
+RDX: 0000000000141842 RSI: 0000400000000380 RDI: 00000000ffffff9c
+RBP: 0000000000000001 R08: 0000000000000260 R09: 0000000000000000
+R10: 0000000000000000 R11: 0000000000000246 R12: 00007facb2dbd077
+R13: 00007facb2dbd081 R14: 00007facb2dea530 R15: 0000000000000001
+ </TASK>
+
+Allocated by task 9399:
+ kasan_save_stack+0x24/0x50 mm/kasan/common.c:47
+ kasan_save_track+0x14/0x40 mm/kasan/common.c:68
+ poison_kmalloc_redzone mm/kasan/common.c:377 [inline]
+ __kasan_kmalloc+0xba/0xc0 mm/kasan/common.c:394
+ kasan_kmalloc include/linux/kasan.h:260 [inline]
+ __do_kmalloc_node mm/slub.c:4294 [inline]
+ __kmalloc_noprof+0x212/0x580 mm/slub.c:4306
+ kmalloc_noprof include/linux/slab.h:905 [inline]
+ hfs_find_init+0x95/0x260 fs/hfs/bfind.c:21
+ hfs_cat_create+0x155/0x840 fs/hfs/catalog.c:96
+ hfs_create+0x6b/0x100 fs/hfs/dir.c:202
+ lookup_open.isra.0+0x1145/0x1540 fs/namei.c:3651
+ open_last_lookups+0x82c/0x13b0 fs/namei.c:3750
+ path_openat+0x182/0x6b0 fs/namei.c:3986
+ do_filp_open+0x1f8/0x460 fs/namei.c:4016
+ do_sys_openat2+0x16a/0x1d0 fs/open.c:1428
+ do_sys_open fs/open.c:1443 [inline]
+ __do_sys_openat fs/open.c:1459 [inline]
+ __se_sys_openat fs/open.c:1454 [inline]
+ __x64_sys_openat+0x140/0x200 fs/open.c:1454
+ do_syscall_x64 arch/x86/entry/common.c:52 [inline]
+ do_syscall_64+0xcb/0x260 arch/x86/entry/common.c:83
+ entry_SYSCALL_64_after_hwframe+0x77/0x7f
+
+The buggy address belongs to the object at ffff88804a39b200
+ which belongs to the cache kmalloc-96 of size 96
+The buggy address is located 0 bytes inside of
+ allocated 78-byte region [ffff88804a39b200, ffff88804a39b24e)
+
+The buggy address belongs to the physical page:
+page: refcount:0 mapcount:0 mapping:0000000000000000 index:0x0 pfn:0x4a39b
+flags: 0x4fff00000000000(node=1|zone=1|lastcpupid=0x7ff)
+page_type: f5(slab)
+raw: 04fff00000000000 ffff88801b441280 ffffea000124de40 dead000000000004
+raw: 0000000000000000 0000000080200020 00000000f5000000 0000000000000000
+page dumped because: kasan: bad access detected
+page_owner tracks the page as allocated
+page last allocated via order 0, migratetype Unmovable, gfp_mask 0x252800(GFP_NOWAIT|__GFP_NORETRY|__GFP_COMP|__GFP_THISNODE), pid 6777, tgid 6777 (udevadm), ts 27984838327, free_ts 24424729076
+ set_page_owner include/linux/page_owner.h:32 [inline]
+ post_alloc_hook+0x1a3/0x1d0 mm/page_alloc.c:1551
+ prep_new_page mm/page_alloc.c:1559 [inline]
+ get_page_from_freelist+0x8a5/0xfa0 mm/page_alloc.c:3477
+ __alloc_frozen_pages_noprof+0x1d8/0x3b0 mm/page_alloc.c:4739
+ alloc_slab_page mm/slub.c:2425 [inline]
+ allocate_slab+0x6a/0x310 mm/slub.c:2587
+ ___slab_alloc+0x7f3/0x12b0 mm/slub.c:3826
+ __slab_alloc.constprop.0+0x56/0xc0 mm/slub.c:3916
+ __slab_alloc_node mm/slub.c:3991 [inline]
+ slab_alloc_node mm/slub.c:4152 [inline]
+ __do_kmalloc_node mm/slub.c:4293 [inline]
+ __kmalloc_node_noprof+0x309/0x570 mm/slub.c:4300
+ kmalloc_array_node_noprof include/linux/slab.h:1018 [inline]
+ alloc_slab_obj_exts+0x47/0xd0 mm/slub.c:1964
+ account_slab mm/slub.c:2550 [inline]
+ allocate_slab+0x26f/0x310 mm/slub.c:2605
+ ___slab_alloc+0x7f3/0x12b0 mm/slub.c:3826
+ __slab_alloc.constprop.0+0x56/0xc0 mm/slub.c:3916
+ __slab_alloc_node mm/slub.c:3991 [inline]
+ slab_alloc_node mm/slub.c:4152 [inline]
+ kmem_cache_alloc_lru_noprof+0x27a/0x410 mm/slub.c:4183
+ alloc_inode+0x18a/0x250 fs/inode.c:338
+ iget_locked+0x2e3/0x880 fs/inode.c:1487
+ kernfs_get_inode+0x46/0x470 fs/kernfs/inode.c:251
+ kernfs_iop_lookup+0x1ec/0x330 fs/kernfs/dir.c:1215
+page last free pid 25 tgid 25 stack trace:
+ reset_page_owner include/linux/page_owner.h:25 [inline]
+ free_pages_prepare mm/page_alloc.c:1127 [inline]
+ free_frozen_pages+0x71f/0xff0 mm/page_alloc.c:2660
+ vfree+0x172/0x850 mm/vmalloc.c:3383
+ delayed_vfree_work+0x57/0x70 mm/vmalloc.c:3303
+ process_one_work+0x109d/0x18c0 kernel/workqueue.c:3236
+ process_scheduled_works kernel/workqueue.c:3317 [inline]
+ worker_thread+0x677/0xe90 kernel/workqueue.c:3398
+ kthread+0x3b3/0x760 kernel/kthread.c:464
+ ret_from_fork+0x48/0x80 arch/x86/kernel/process.c:148
+ ret_from_fork_asm+0x1a/0x30 arch/x86/entry/entry_64.S:244
+
+Memory state around the buggy address:
+ ffff88804a39b100: fa fb fb fb fb fb fb fb fb fb fb fb fc fc fc fc
+ ffff88804a39b180: fa fb fb fb fb fb fb fb fb fb fb fb fc fc fc fc
+>ffff88804a39b200: 00 00 00 00 00 00 00 00 00 06 fc fc fc fc fc fc
+                                              ^
+ ffff88804a39b280: fa fb fb fb fb fb fb fb fb fb fb fb fc fc fc fc
+ ffff88804a39b300: fa fb fb fb fb fb fb fb fb fb fb fb fc fc fc fc
+==================================================================
+
+final repro crashed as (corrupted=false):
+loop0: detected capacity change from 0 to 64
+hfs: unable to locate alternate MDB
+hfs: continuing without an alternate MDB
+==================================================================
+BUG: KASAN: slab-out-of-bounds in memcpy_from_page include/linux/highmem.h:423 [inline]
+BUG: KASAN: slab-out-of-bounds in hfs_bnode_read+0xc5/0x230 fs/hfs/bnode.c:35
+Write of size 256 at addr ffff88804a39b200 by task syz-executor633/9399
+
+CPU: 1 UID: 0 PID: 9399 Comm: syz-executor633 Not tainted 6.14.0-rc4 #1
+Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+Call Trace:
+ <TASK>
+ __dump_stack lib/dump_stack.c:94 [inline]
+ dump_stack_lvl+0x116/0x1b0 lib/dump_stack.c:120
+ print_address_description.constprop.0+0x2c/0x420 mm/kasan/report.c:408
+ print_report+0xaa/0x270 mm/kasan/report.c:521
+ kasan_report+0xbd/0x100 mm/kasan/report.c:634
+ check_region_inline mm/kasan/generic.c:183 [inline]
+ kasan_check_range+0x108/0x1e0 mm/kasan/generic.c:189
+ __asan_memcpy+0x3d/0x70 mm/kasan/shadow.c:106
+ memcpy_from_page include/linux/highmem.h:423 [inline]
+ hfs_bnode_read+0xc5/0x230 fs/hfs/bnode.c:35
+ hfs_bnode_read_key+0x149/0x1f0 fs/hfs/bnode.c:70
+ hfs_brec_insert+0x822/0xbd0 fs/hfs/brec.c:141
+ hfs_cat_create+0x6a5/0x840 fs/hfs/catalog.c:131
+ hfs_create+0x6b/0x100 fs/hfs/dir.c:202
+ lookup_open.isra.0+0x1145/0x1540 fs/namei.c:3651
+ open_last_lookups+0x82c/0x13b0 fs/namei.c:3750
+ path_openat+0x182/0x6b0 fs/namei.c:3986
+ do_filp_open+0x1f8/0x460 fs/namei.c:4016
+ do_sys_openat2+0x16a/0x1d0 fs/open.c:1428
+ do_sys_open fs/open.c:1443 [inline]
+ __do_sys_openat fs/open.c:1459 [inline]
+ __se_sys_openat fs/open.c:1454 [inline]
+ __x64_sys_openat+0x140/0x200 fs/open.c:1454
+ do_syscall_x64 arch/x86/entry/common.c:52 [inline]
+ do_syscall_64+0xcb/0x260 arch/x86/entry/common.c:83
+ entry_SYSCALL_64_after_hwframe+0x77/0x7f
+RIP: 0033:0x7facb2d6bc7d
+Code: c3 e8 d7 21 00 00 0f 1f 80 00 00 00 00 f3 0f 1e fa 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 c7 c1 b8 ff ff ff f7 d8 64 89 01 48
+RSP: 002b:00007ffc53741ce8 EFLAGS: 00000246 ORIG_RAX: 0000000000000101
+RAX: ffffffffffffffda RBX: 00007ffc53741f08 RCX: 00007facb2d6bc7d
+RDX: 0000000000141842 RSI: 0000400000000380 RDI: 00000000ffffff9c
+RBP: 0000000000000001 R08: 0000000000000260 R09: 0000000000000000
+R10: 0000000000000000 R11: 0000000000000246 R12: 00007facb2dbd077
+R13: 00007facb2dbd081 R14: 00007facb2dea530 R15: 0000000000000001
+ </TASK>
+
+Allocated by task 9399:
+ kasan_save_stack+0x24/0x50 mm/kasan/common.c:47
+ kasan_save_track+0x14/0x40 mm/kasan/common.c:68
+ poison_kmalloc_redzone mm/kasan/common.c:377 [inline]
+ __kasan_kmalloc+0xba/0xc0 mm/kasan/common.c:394
+ kasan_kmalloc include/linux/kasan.h:260 [inline]
+ __do_kmalloc_node mm/slub.c:4294 [inline]
+ __kmalloc_noprof+0x212/0x580 mm/slub.c:4306
+ kmalloc_noprof include/linux/slab.h:905 [inline]
+ hfs_find_init+0x95/0x260 fs/hfs/bfind.c:21
+ hfs_cat_create+0x155/0x840 fs/hfs/catalog.c:96
+ hfs_create+0x6b/0x100 fs/hfs/dir.c:202
+ lookup_open.isra.0+0x1145/0x1540 fs/namei.c:3651
+ open_last_lookups+0x82c/0x13b0 fs/namei.c:3750
+ path_openat+0x182/0x6b0 fs/namei.c:3986
+ do_filp_open+0x1f8/0x460 fs/namei.c:4016
+ do_sys_openat2+0x16a/0x1d0 fs/open.c:1428
+ do_sys_open fs/open.c:1443 [inline]
+ __do_sys_openat fs/open.c:1459 [inline]
+ __se_sys_openat fs/open.c:1454 [inline]
+ __x64_sys_openat+0x140/0x200 fs/open.c:1454
+ do_syscall_x64 arch/x86/entry/common.c:52 [inline]
+ do_syscall_64+0xcb/0x260 arch/x86/entry/common.c:83
+ entry_SYSCALL_64_after_hwframe+0x77/0x7f
+
+The buggy address belongs to the object at ffff88804a39b200
+ which belongs to the cache kmalloc-96 of size 96
+The buggy address is located 0 bytes inside of
+ allocated 78-byte region [ffff88804a39b200, ffff88804a39b24e)
+
+The buggy address belongs to the physical page:
+page: refcount:0 mapcount:0 mapping:0000000000000000 index:0x0 pfn:0x4a39b
+flags: 0x4fff00000000000(node=1|zone=1|lastcpupid=0x7ff)
+page_type: f5(slab)
+raw: 04fff00000000000 ffff88801b441280 ffffea000124de40 dead000000000004
+raw: 0000000000000000 0000000080200020 00000000f5000000 0000000000000000
+page dumped because: kasan: bad access detected
+page_owner tracks the page as allocated
+page last allocated via order 0, migratetype Unmovable, gfp_mask 0x252800(GFP_NOWAIT|__GFP_NORETRY|__GFP_COMP|__GFP_THISNODE), pid 6777, tgid 6777 (udevadm), ts 27984838327, free_ts 24424729076
+ set_page_owner include/linux/page_owner.h:32 [inline]
+ post_alloc_hook+0x1a3/0x1d0 mm/page_alloc.c:1551
+ prep_new_page mm/page_alloc.c:1559 [inline]
+ get_page_from_freelist+0x8a5/0xfa0 mm/page_alloc.c:3477
+ __alloc_frozen_pages_noprof+0x1d8/0x3b0 mm/page_alloc.c:4739
+ alloc_slab_page mm/slub.c:2425 [inline]
+ allocate_slab+0x6a/0x310 mm/slub.c:2587
+ ___slab_alloc+0x7f3/0x12b0 mm/slub.c:3826
+ __slab_alloc.constprop.0+0x56/0xc0 mm/slub.c:3916
+ __slab_alloc_node mm/slub.c:3991 [inline]
+ slab_alloc_node mm/slub.c:4152 [inline]
+ __do_kmalloc_node mm/slub.c:4293 [inline]
+ __kmalloc_node_noprof+0x309/0x570 mm/slub.c:4300
+ kmalloc_array_node_noprof include/linux/slab.h:1018 [inline]
+ alloc_slab_obj_exts+0x47/0xd0 mm/slub.c:1964
+ account_slab mm/slub.c:2550 [inline]
+ allocate_slab+0x26f/0x310 mm/slub.c:2605
+ ___slab_alloc+0x7f3/0x12b0 mm/slub.c:3826
+ __slab_alloc.constprop.0+0x56/0xc0 mm/slub.c:3916
+ __slab_alloc_node mm/slub.c:3991 [inline]
+ slab_alloc_node mm/slub.c:4152 [inline]
+ kmem_cache_alloc_lru_noprof+0x27a/0x410 mm/slub.c:4183
+ alloc_inode+0x18a/0x250 fs/inode.c:338
+ iget_locked+0x2e3/0x880 fs/inode.c:1487
+ kernfs_get_inode+0x46/0x470 fs/kernfs/inode.c:251
+ kernfs_iop_lookup+0x1ec/0x330 fs/kernfs/dir.c:1215
+page last free pid 25 tgid 25 stack trace:
+ reset_page_owner include/linux/page_owner.h:25 [inline]
+ free_pages_prepare mm/page_alloc.c:1127 [inline]
+ free_frozen_pages+0x71f/0xff0 mm/page_alloc.c:2660
+ vfree+0x172/0x850 mm/vmalloc.c:3383
+ delayed_vfree_work+0x57/0x70 mm/vmalloc.c:3303
+ process_one_work+0x109d/0x18c0 kernel/workqueue.c:3236
+ process_scheduled_works kernel/workqueue.c:3317 [inline]
+ worker_thread+0x677/0xe90 kernel/workqueue.c:3398
+ kthread+0x3b3/0x760 kernel/kthread.c:464
+ ret_from_fork+0x48/0x80 arch/x86/kernel/process.c:148
+ ret_from_fork_asm+0x1a/0x30 arch/x86/entry/entry_64.S:244
+
+Memory state around the buggy address:
+ ffff88804a39b100: fa fb fb fb fb fb fb fb fb fb fb fb fc fc fc fc
+ ffff88804a39b180: fa fb fb fb fb fb fb fb fb fb fb fb fc fc fc fc
+>ffff88804a39b200: 00 00 00 00 00 00 00 00 00 06 fc fc fc fc fc fc
+                                              ^
+ ffff88804a39b280: fa fb fb fb fb fb fb fb fb fb fb fb fc fc fc fc
+ ffff88804a39b300: fa fb fb fb fb fb fb fb fb fb fb fb fc fc fc fc
+==================================================================
+

@@ -1,0 +1,2013 @@
+last executing test programs:
+
+6.368800691s ago: executing program 1 (id=2):
+r0 = socket$pppl2tp(0x18, 0x1, 0x1)
+ioctl$sock_SIOCGIFVLAN_ADD_VLAN_CMD(r0, 0x8982, &(0x7f0000000380)={0x0, 'dummy0\x00', {0x2}, 0xfff})
+
+6.185093269s ago: executing program 1 (id=7):
+r0 = openat$6lowpan_enable(0xffffffffffffff9c, &(0x7f00000003c0), 0x2, 0x0)
+write$6lowpan_enable(r0, &(0x7f0000000140)='1', 0x1)
+
+6.054187687s ago: executing program 1 (id=8):
+r0 = socket$kcm(0x10, 0x4000000002, 0x10)
+sendmsg$kcm(r0, &(0x7f00000000c0)={0x0, 0x0, &(0x7f0000000100)=[{&(0x7f0000000280)="2e0000002b00812de45ae087185082cf0124b0d057e74400094100000000001883b2e6dc02e7dc8e5c8ef10b80a66819c641baa1470ec61389e5f92899da189f6263a5fe37d00e8b647d4ab1d198d9fa9e7593d2433b5d750e0c7684cde7877a7993af7090e7a873", 0x68}], 0x1}, 0x0)
+
+5.66638708s ago: executing program 1 (id=10):
+r0 = openat$uhid(0xffffffffffffff9c, &(0x7f0000000040), 0x802, 0x0)
+write$UHID_CREATE(r0, &(0x7f0000000080)={0x0, {'syz1\x00', 'syz1\x00', 'syz0\x00', &(0x7f0000000740)=""/4096, 0x1000}}, 0x120)
+
+5.641508462s ago: executing program 0 (id=11):
+r0 = syz_usb_connect_ath9k(0x3, 0x5a, &(0x7f0000000000)={{0x12, 0x1, 0x200, 0xff, 0xff, 0xff, 0x40, 0xcf3, 0x9271, 0x108, 0x1, 0x2, 0x3, 0x1, [{{0x9, 0x2, 0x48}}]}}, 0x0)
+syz_usb_ep_write$ath9k_ep2(r0, 0x2, 0x10, &(0x7f0000000080)=@ready={0x0, 0x0, 0x8, "3af2b76f", {0x1, 0x9, 0x1, 0x82, 0xc}})
+
+4.085787214s ago: executing program 0 (id=18):
+r0 = openat$smackfs_syslog(0xffffffffffffff9c, &(0x7f0000000040), 0x2, 0x0)
+write$binfmt_script(r0, &(0x7f00000000c0)={'#! ', './file0'}, 0x200000cb)
+
+3.831296781s ago: executing program 0 (id=22):
+openat$ubi_ctrl(0xffffffffffffff9c, &(0x7f0000000080), 0x0, 0x0)
+openat$ubi_ctrl(0xffffffffffffff9c, &(0x7f0000000080), 0x0, 0x0)
+
+3.748206163s ago: executing program 0 (id=25):
+r0 = socket(0x10, 0x3, 0x6)
+sendmsg$nl_xfrm(r0, &(0x7f0000000580)={0x0, 0x0, &(0x7f0000000180)={&(0x7f00000001c0)=ANY=[@ANYBLOB="d0010000160001002cbd7000fedbdf25e0000002000000000000000000000000ac1414bb0000000000000000000000004e2300084e2300040200a02000000000", @ANYRES32=0x0, @ANYRES32=0x0, @ANYBLOB="fe880000000000000000000000000001000004d33300000000000000000000000000ffffac1414bb2e0600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c00000000000001000100000000000002000000000000ff7f0000000000000800000000000000ff07000000000000ff00ffffff7f0500000025bd7000023500000a0000a72000e800000000000100000004000000ac0007006401010200", @ANYRES32=0x0, @ANYRES32=0xee01, @ANYBLOB], 0x1d0}}, 0x0)
+
+3.554769984s ago: executing program 0 (id=27):
+syz_mount_image$hfs(&(0x7f0000000180), &(0x7f0000000040)='./file0\x00', 0x0, &(0x7f0000000240)={[{@codepage={'codepage', 0x3d, 'cp862'}}, {@gid}, {@iocharset={'iocharset', 0x3d, 'cp950'}}, {@file_umask={'file_umask', 0x3d, 0x1ff}}, {@file_umask={'file_umask', 0x3d, 0x200}}, {@gid}]}, 0x1, 0x2ce, &(0x7f0000000300)="$eJzs3c1u00oYxvFnnLRNP9Tjfhwd6WxAhUqwQRQ2iE0QypY9KwQ0qVQRFVGKBGyoEEvEBbDnFrgINiBuAFasuIDujGYyiZ1k4iS0jVP4/6SG8XjG81r22PNGQhGAv9bt2rcP13/YPyOVFEm6KfdPRSpL+lf/VZ7tHeweNBv1vAOVXA/7Z9TqafrabO81Ql1tP9fDi+1WWUvZuoxwLX5LkiS3vhcdBArnZn9AJM35Gef2VyYc14k57Ns8V1Qo08Ac6UjPtVx0HACAYvn3f+Tf80uuyiiKpE3/2j/b7/8eR0UHcOqS3L2Z979b3SXGXt9/3K4033MpnN0ftbPEUUae6dmeVevO6lpgmmFZpYslmt/ZLevK9uNmPdJrVb1Ms3X3WW/dum1Dot0I5KY58o52Z6F1Nn0LTCkNaWe32ZizhUD8a+OOeFzmk/li7plY71XvrP/KibGXyV2puOdKRTM2/quBQ/mHwaLrZVvJp/3VajXqarniBvnfj+ANOctKOCNR+45aSb8KOOxEEIwz22u15wuE1tlthdqbtNdaqFfc2Row1npXr5K/E9zdPDjK02bembtmQz/1UbXM+j+y8W1qlJlp27iW/s5onc9suGXZtYz73hzpdDnficCbS4cZb6JidG/1UDe0/PTFy0elZrOxbwsPAoUnS/vG18y8kYJtCi7oMK1JrFdJMmr35DQDu3yiB7TPj06NnT6hxnaWTcVFGaPQfjJMSzzDC7XP0hSEcfxCkkgDdhX8fMJEpBfdV8wXHBAmza67TCv/cyt5v6pzKy/7Eees0/OTTHUdcauTwXUvBVfd58JYGdzi4IVhZsRrA3JGl3NduCRdzFQa5Y4Y+zj/EKamr7rP9/8AAAAAAAAAAAAAAAAAAABnzST+p0HR5wgAAAAAAAAAAAAAAAAAAAAAwFnX8/u/peP9/m88id//BXBCfgUAAP//BDx31g==")
+openat$cgroup_ro(0xffffffffffffff9c, &(0x7f0000006ac0)='cpuacct.stat\x00', 0x275a, 0x0)
+
+3.373883357s ago: executing program 0 (id=29):
+semget$private(0x0, 0x4007, 0x0)
+
+2.577953717s ago: executing program 5 (id=35):
+r0 = syz_usb_connect_ath9k(0x3, 0x5a, &(0x7f0000000200)={{0x12, 0x1, 0x200, 0xff, 0xff, 0xff, 0x40, 0xcf3, 0x9271, 0x108, 0x1, 0x2, 0x3, 0x1, [{{0x9, 0x2, 0x48}}]}}, 0x0)
+syz_usb_ep_write$ath9k_ep1(r0, 0x82, 0x0, 0x0)
+
+2.127197408s ago: executing program 3 (id=37):
+r0 = socket(0x10, 0x2, 0x0)
+sendmsg$nl_route(r0, &(0x7f0000000080)={0x0, 0x0, &(0x7f0000000000)={&(0x7f0000000140)=@newlink={0x3c, 0x10, 0x705, 0x6000000, 0x0, {}, [@IFLA_LINKINFO={0x1c, 0x12, 0x0, 0x1, @bond={{0x9}, {0xc, 0x2, 0x0, 0x1, [@IFLA_BOND_MODE={0x5, 0x1, 0x4}]}}}]}, 0x3c}}, 0x0)
+
+1.998698474s ago: executing program 2 (id=39):
+r0 = openat$nci(0xffffffffffffff9c, &(0x7f0000001a40), 0x2, 0x0)
+ioctl$BTRFS_IOC_SNAP_DESTROY_V2(r0, 0x541b, 0x0)
+
+1.822822906s ago: executing program 2 (id=40):
+mkdir(&(0x7f0000000000)='./file0\x00', 0x0)
+mount$bpf(0x20000000, &(0x7f00000000c0)='./file0\x00', 0x0, 0x2801001, 0x0)
+
+1.675871284s ago: executing program 2 (id=41):
+r0 = syz_open_dev$dri(&(0x7f0000000000), 0x2, 0x0)
+ioctl$DRM_IOCTL_SYNCOBJ_WAIT(r0, 0xc02064c3, &(0x7f0000000080)={0x0})
+
+1.513777028s ago: executing program 2 (id=42):
+r0 = openat$adsp1(0xffffffffffffff9c, &(0x7f0000000180), 0xaa002, 0x0)
+write$binfmt_elf32(r0, &(0x7f00000002c0)={{0x7f, 0x45, 0x4c, 0x46, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x38, 0x0, 0x0, 0x0, 0x20, 0x1}, [{}]}, 0x58)
+
+1.357793193s ago: executing program 4 (id=43):
+r0 = socket$nl_route(0x10, 0x3, 0x0)
+sendmsg$nl_route(r0, &(0x7f0000000280)={0x0, 0x0, &(0x7f0000001140)={0x0}}, 0x0)
+
+1.132385016s ago: executing program 4 (id=44):
+creat(&(0x7f0000000400)='./bus\x00', 0x0)
+lsetxattr$security_ima(&(0x7f0000000000)='./bus\x00', &(0x7f00000000c0), &(0x7f0000000140)=ANY=[@ANYBLOB="0302de"], 0xa, 0x0)
+
+1.129776695s ago: executing program 3 (id=45):
+r0 = openat$ppp(0xffffffffffffff9c, 0x0, 0x0, 0x0)
+ioctl$PPPIOCNEWUNIT(r0, 0xc004743e, &(0x7f0000000240)=0xfffffffffffffffd)
+
+1.03940751s ago: executing program 4 (id=46):
+syz_mount_image$hfsplus(&(0x7f0000000000), &(0x7f0000000080)='./file0\x00', 0x80000c, &(0x7f0000000a80)=ANY=[@ANYBLOB="706172743d3078303030303030303030303030303030362c6e6c733d69736f383835392d31342c73657373696f6e3d3078666666666666666666666666666637662c626172726965722c63726561746f723dddf2bd6c2c6e6f6465636f6d706f73652c7569643d", @ANYRESHEX=0x0, @ANYBLOB="2c747970653d639ec48c2c706172743d3078300080000000000000303030306666662c626172726965722c63726561746f723d65fe04c22c626172726965722c6465636f6d706f73652c626172726965722c6769643d", @ANYRESHEX=0x0, @ANYBLOB=',nls=cp737,barrier,uid=', @ANYRESHEX=0x0, @ANYBLOB=',\x00'], 0x1, 0x6e7, &(0x7f0000000bc0)="$eJzs3UtoHOcdAPD/7K5Wuyo4cuJHWgJZYkhLRW3JQmnVS91Sig6hhPTQ82LLsfBaDpJSZNM2Sh/3HnLqKT3oFnoo6d3QnhsCJVcdA4VectJNZWZnVivtU7Isye7vZ2bmm/me85+dmZ0VZgL4v7U0E5UnkcTSzNub6frO9nyrvD0/mWe3IqIaEaWISnsRyWpkubfyKb6ZbszLJ4P6+Xhl8d0vv975qr1WyaesfGlYvT6qvZu28ikaEVHOl70mBrT42eHuD7R3e2B740o6e5gG7FoRuPjzU7UKT22vx1Yn79N/Z/Nh1Y9y3gLnVNK+b/aYjpiKiFpE+66fXx1Kpzu6k7d11gMAAACAo6ofvcpLu7Ebm3HhWQwHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXlT5+/+TfCoV6UYkxfv/q/m2yNPn0OgXIX4x2V4+efaDAQAAAAAAAIBn7vXd2I3NuFCs7yVRit8cKPKN+CDWYznW4npsRjM2YiPWYi4iprtKVTebGxtrc/FGtnZpSM2b8XmfmjcHj/HWie0tAAAAAAAAADwXaiPy70/0bvtdLO3//R8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM6DJKLcXmTTpSI9HaVKRNQiopqW24r4vEg/J5J+G5+c/jgAAADgqdQOria1Meq89GHsxmZcKNb3kuyZ/0r2vFyLD2I1NmIlNqIVy3Enf4ZOn/pLO9vzrZ3t+Qfp1Nvuj/97pKFnLUb7t4f+Pb+alajH3VjJtlyP25HEXqaUt/LqzvZ8unzQf1wfpWNKfpQbMppyV/pOOrv6WZb+08FfESpH2sVjKg3Mmc5yJzoRmc3Hlta4WESgfyRGHp3K0J7motT55efS8J76x/yj4b1PHSrV95ebM3E4Ejej1DlCV4ZHIuLbf//0l/daq/fv3V2fOT+71NeHI0scjsR8VySuvkCRGG02i8TlzvpS/Cx+ETMxma//KpqxEcuNIr+Zf57T+fTwSH0x1b32zqiRpOdko3P96jemRrwTa7FSjCka8dMs1Yw3smN6IVYiiYcRsRxvZf9uxlznarB/hC+PcdaXxrjSdrn2nWzRCVPUB5f963hNnpQ0rhe74tp9zZ3O8rq37Efp5b5RKu5149+PulS+lSfSFn4/9P5w2g5HYq4rEq8M+ry0Q/qXvXS+3lq9v3av+f6Y/b2ZL9Pz6I/Hv0tMHq/aMOkRfjlq+c5dzOZJdk7NZnmvdO6wB+NVzf/i0lbqybvcqdc+U38eD+POgTP1+7EQC7GYlb6SlZ7ouWOleVc7LR28hqd56TetSucPO93ftx5Gq/19CIDzbeq7U9X6f+r/qn9S/0P9Xv3t2k8mfzD5WjUm/jnxw8ps+c3Sa8nf4pP47f7zPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcHzrjx7fb7Zay2v9E6X+WcnwWs3WXvEisSFlDiSS/FU5YxRO1h893hvZ4PBE8fKfY1Y/yUTxtsbRhRsn3Hu56+gkW4ePV230sSje8jRGX0lPwNPKxx580fP+lolzcCgPJxon12Dxge3KGuvTW46uLfV+x6scEf2qj7hwlE/i6gOcpRsbD96/sf7o8fdWHjTfW35veXViYWFxdnHhrfkbd1day7PteVeFU3n5LXAaur9OdFQj4vXRdYe8qBUAAAAAAAAAAAB4hk7j/0Kc9T4CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAz7elmag8iSTmZq/Ppus72/OtdCrS+yUrEVGKiOTXEck/Im5Fe4rpruaSQf18vLL47pdf73yVpieztipF+VLE1sB649nKp2hERDlfnlR7t0e3V91PTvbJTjqRSQN2rQgcnLX/BQAA//91IOk5")
+listxattr(&(0x7f0000000100)='./file0\x00', 0x0, 0x0)
+
+1.039189804s ago: executing program 3 (id=47):
+r0 = socket$nl_xfrm(0x10, 0x3, 0x6)
+sendmsg$nl_xfrm(r0, &(0x7f0000000180)={0x0, 0x0, &(0x7f0000000340)={&(0x7f0000001740)=ANY=[@ANYBLOB="44010000100013070000000000000000fe8000000000000000000000000000bbac1e000100"/60, @ANYRES32=0x0, @ANYRES32=0x0, @ANYBLOB="00000000000000000000ffff00000000000000003200000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000048000200656362286369706865725f6e756c6c29000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c001c000f"], 0x144}}, 0x0)
+
+975.18496ms ago: executing program 5 (id=48):
+r0 = syz_open_dev$sg(&(0x7f0000000040), 0x0, 0x8002)
+write(r0, &(0x7f00000003c0)="b63db85e1e8d06006d00051d003ef0011dcc606a010000807018cebc9b97ae21b14d872c678ce22c9b160096aa1fae1a", 0x58)
+
+864.265815ms ago: executing program 3 (id=49):
+r0 = socket$inet(0x2b, 0x801, 0x0)
+setsockopt$inet_tcp_int(r0, 0x6, 0x17, &(0x7f0000000040)=0x10001, 0x4)
+
+831.205229ms ago: executing program 5 (id=50):
+r0 = syz_io_uring_setup(0x6aec, &(0x7f00000005c0)={0x0, 0x76ac, 0x2, 0x0, 0x252}, &(0x7f0000ff9000), &(0x7f0000ff9000))
+vmsplice(r0, 0x0, 0x0, 0x0)
+
+727.863199ms ago: executing program 2 (id=51):
+r0 = socket$packet(0x11, 0x3, 0x300)
+recvmmsg(r0, &(0x7f0000001500)=[{{0x0, 0x0, &(0x7f0000001480)=[{&(0x7f00000001c0)=""/213, 0xd5}, {0x0}, {0x0}, {0x0}, {0x0}, {0x0}], 0x6}, 0x7fffffff}], 0x1, 0x0, 0x0)
+
+726.002169ms ago: executing program 4 (id=52):
+r0 = syz_init_net_socket$802154_raw(0x24, 0x3, 0x0)
+sendmsg$802154_raw(r0, &(0x7f0000000180)={0x0, 0x0, &(0x7f0000000140)={0x0}}, 0x0)
+
+723.909737ms ago: executing program 3 (id=53):
+r0 = socket$inet_tcp(0x2, 0x1, 0x0)
+setsockopt$IPT_SO_SET_REPLACE(r0, 0x4000000000000, 0x40, &(0x7f0000000000)=@raw={'raw\x00', 0x2, 0x3, 0x380, 0x0, 0x230, 0x4c00, 0x230, 0x230, 0x2e8, 0x2e8, 0x2e8, 0x2e8, 0x2e8, 0x3, 0x0, {[{{@ip={@rand_addr, @remote, 0x0, 0x0, 'veth0_to_batadv\x00', 'veth0_to_hsr\x00'}, 0x0, 0x1c8, 0x230, 0x0, {}, [@common=@inet=@hashlimit3={{0x158}, {'bridge_slave_1\x00', {0x1, 0x0, 0x41, 0xfffffff, 0x0, 0x5, 0x80000040, 0x20000003}}}]}, @unspec=@CT1={0x68, 'CT\x00', 0x1, {0x0, 0x0, 0x0, 0x0, 'netbios-ns\x00', 'syz1\x00'}}}, {{@uncond, 0x0, 0x98, 0xb8, 0x0, {}, [@inet=@rpfilter={{0x28}}]}, @unspec=@TRACE={0x20}}], {{'\x00', 0x0, 0x70, 0x98}, {0x28, '\x00', 0x4}}}}, 0x3e0)
+
+561.028442ms ago: executing program 5 (id=54):
+syz_mount_image$hfs(&(0x7f0000000040), &(0x7f0000000280)='./file1\x00', 0x321c4d8, &(0x7f0000000080)={[{@iocharset={'iocharset', 0x3d, 'cp775'}}, {@file_umask={'file_umask', 0x3d, 0x1fbc}}]}, 0x4, 0x25a, &(0x7f0000000580)="$eJzs3c9qE1EUx/HfnaQm2lKnf6TgslpwJW1dKG4EyUO4EFGbCMVQQVtQV+JafAD37lyLz+BKfAFdufIBshu5Z6bJNMlkUjW5bfP9QIZp5p6Zczt3MvcEwgjAzLrb+PHxxi//6r51W4ok1aWqpEtaqx/s7e/ut1vNUTuqWIR/OaWRbqDNzl5rWKiPs4hM7P+qaiH/HiYjSZLkZ+gkEJyzK3hQJNWyq9O216ee2WS8CZ1AYK6jjl5qMXQeAICwsvt/lN3nF7L5exRJG9lt/0zd/zuhEwgsd/+3Kitx/vxetE29es9KOL89GqgSj+Gc0pF1ZILpyqpKyyU6/2S33bq+86zdjPRWdzK5Zqu2bKZD95BlmxRmuz6kNh3h7/s+b32Y833YLsh/xZY3D/7TEcu5r+6be+BifVCzO/+rJs6fJjtTcd+ZSvPfLN6j9TJOWxX0cskOcjk7gr58Unkv68MrEh2OqCUd/YIgLsvTopb7otLebZVErQyN2i6JWu2P6o7mgB+j7r2759b1W5/VyM3/I//f3tA4V6ZvYy2zkeGvzsKWVWsZj5FYdKxu4N+802Pd0uKLV6+fPmq3W89ZmfmVuWxonJR8WBmxUlFNEz1E4M8nTEXvpGvtfuhkEIKfd7m0/svVK5tWIvlFPGKenvhFbcTOc3vcKqgNlm15YUgFV1wbzBdXcOPWXFeuSVfHP2Kc5XlGuIa+6yHf/wMAAAAAAAAAAAAAAAAAAJw20/jFQug+AgAAAAAAAAAAAAAAAAAAAABw2vWe/2tPAKvw/F9gdvwJAAD//2WIf2g=")
+mount(&(0x7f0000000100), &(0x7f00000000c0)='./file0\x00', 0x0, 0x269415, 0x0)
+
+560.805836ms ago: executing program 4 (id=55):
+r0 = socket$inet_udp(0x2, 0x2, 0x0)
+ioctl$sock_inet_SIOCSARP(r0, 0x8955, 0x0)
+
+497.973096ms ago: executing program 5 (id=56):
+syz_mount_image$nilfs2(&(0x7f00000000c0), &(0x7f00000001c0)='./bus\x00', 0x808, &(0x7f0000000200)=ANY=[@ANYBLOB="00db16829f6f223801fbf346fbcb361a39ddaf9d9f3c0af9a8ab94c7941e0e3c9475e63359aed78788f36d3a46db8aec833c27bd3e04b336aad4e94458eaff0f0000746f778aef571c4196000005000000a2a5d06be49880db3e328d0ed6fe222fcfd1fc4111df0263d4e1e05f9b2b796994e13ef489a9a69a569945d65d013681ca1edbb19a3ab3d79e2c96a3f281528a5f87018ff44d3446025929889bf379606d3cf3e50000000000000000000000007f3dd0c8e01c91244d054cddd790eea2f6714eba57910555eea84c0516a8e0b01d76f1fbc57484429c9f884d0200c95f3f0c2da8d75675d94f391939728fd37ad1a183a8906b1cb20bc7adfd1a563309a14772bc28a04eaaeb2975c8665df9d78165158170eef9b268c259fe12c43c970496535266b997c20a4e75f01df7b72fa7f27c1ac5aefcc163b6b13aa1aa3d027af71d35ec2c55000000000000000cc29d041d2511fc5c9ef862ce97493abf6adfcd06c4800d6a1a287c96a228e129e77cec5ea5f6cd7403d6e20100000000000000eb8d1b376b460300000000000000dcfc79b3d31cf6ba07cf00bfbfaf033cba704a191d867d4dc6d9a22c8675894b7452356fa8f600eb1b31b2bd471a5f43a27462d2d65777fa3cab7c0930f09cc4714d081efd3067d135f258fc02ed63ebcc485f16f88c3801030c70565a197e6e14c9c98dcd9ec50309ad000000"], 0x1, 0xa25, &(0x7f0000000e40)="$eJzs3U2MW0cdAPCxd735LHFKQpc0tAmFtnx0t9ks4SOCpmouRE3FrVLFJUrTEpEGRCpBq0okOXGjVRWufIhTLxUgJHpBUU9cKtFIXHoqHDgQBakSB1pIFu3ujNf+x+bZyWa9Xv9+0ux43ow987zPz8/vvZlJwNiqL/2dn5+upXTprdeP/uPBv29ZXPJYq0Rz6e9kW6qRUqrl9GR4vfcnluPrH7xysltcS3NLf0s6PXWt9dxtKaXzaV+6nJppz6Urr70z9+TxC8cu7n/3jcNX78zaAwDAePnW5cPzu//653t3fvTmfUfSptbycnzezOnt+bj/SD7wL8f/9dSZrrWFdlOh3GQO9VBuoku59noaodxkj/qnwus2epTbVFH/RNuybusNo6xsx81Uq890pOv1mZnl3+Rp6Xf9VG3m7Okzz50bUkOBVfev+1NK+wRBGMewsGPYeyCAZfF64U3OxzMLt6f1apP91X/t8Xr358MqWOvtX/2jVf+vL9jjsHo26tZU1qt8jrbndLyOEO9fGvTzX14vXo9o9NnOXtcRRuX6Qq92TqxxO25Vr/bH7WKj+nqOy/vwjZDf/vmJ/9NR+R8D3f3b+X9BWM3w4TpoQ99hYdg7IGDdivfNLWQlP97XF/M3VeRvrsjfUpG/tSJ/W0U+jLPfvfjT9Gpt5Xd+/E0/6Pmwcp7trhx/bMD2xPORg9Yf7/sd1O3WH+8nhvXsDyeePvWVZ5+5snz/f621/d/I2/u+nG7mz9blXKCcL4zn1Vv3/jc766n3KHd3aM9dXcovPd7VWa62a+V1Utt+5qZ2THc+b0evcns7yzVDuS05bA7tjccnW8PzyvFH2a+W92syrG8jv0RZj6nQjrJf2Znj2A64FWV77HX/f9k+p1Oj9tzpM6cezemynf5porFpcfmBNW43cPv67f8znTr7/2xvLW/U2/cLO1aW19r3C82wfK7H8oM5Xb7nvjOxZWn5zMnvnXl2tVcexty5l17+7okzZ079wAMPPPCg9WDYeybgTpt98YXvz5576eVHTr9w4vlTz586e/DQoYNzc4e+enB+dum4frb96B7YSFa+9KtK/nhtGgQAAAAAAAAAAABU+uGxo1f+8vaX31vu/7/S/6/0/y93/pb+/z8J/f9jP/nSD770A9zZJX+pTBhgdSqUa+Tw8dDeXaGe3eF5n8hxax6/3P+/VBfHdS3tuScsXxm/d6KjXBhO4KbxUqbCGCRxvsBP5/hijn+VYIhqW7ovznHV+NZlWy/jUxiXYjSV/1vZGso4JqX/d69xncr+f+catJHVtxbdCYe9jkB3/zT+tyCMbVhYMIsHsD4Me/7Pct6zxGf/+M3Ni6EUu/Z45/4yjl8Kt2O9zz859PrT+eHWv8Hm/2zNf9fX/m/qpvmP4zjP/frw51ffa6s27el3/xvXv4wDvWuw+j/K9Ze1eSj1V//CL0P98YJQn/4T6t/aXv9ibf2u/95bq/+/uf7ytj38QFv9//f9X25xrd7ZjnjeuFz/i+eNi+th/cvYngP//29xosYbuX4YZ6Myz+ygRmX+317ifRhfyumyIyz3OcT5TgZtf7m/onwP7A6vX6v4fjP/72j7Wo6rPg9l/t+yPTa7pOtt6UaX93Zho042DiPqfdf/BGFsw8LCcL+VHRIM17Df/2H/Thh2/cN+/6vE+X/jMX2c/zfmx/l/Y36c/zfmx/n1Yn6c/ze+n3H+35h/T3jdWuqcH3g65Mf5gz9Zkb+nIv/eivy9FfmfqsjfX5F/X0X+/RX5d1fkP1CR/5mK/M9W5D9Ykf9wRf7nKvI3utIfZVzXH8ZZ7J/n8w/jo1z/6fX531WRD4yun7154Ilnfvvt5nL//6nW+ZByHe9ITjfyb+cf5XS87p3a0ot5b+f030L+ej/fAeMkjp8Rv98fqsgHRle5z8vnG8ZQrfuIPf2OW9XrOJ/R8vkcfyHHX8zxIzmeyfFsjg/keG6N2sed8cRvfn/41drK7/0dIb/f+8ljf6A4TtTBPtsTzw8Mej97HMdvULdb/y12BwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABia+tLf+fnpWkqX3nr96NPHT88uLnmsVaK59HeyLdVoPS+lR3M8keNf5AfXP3jlZHt8I8e1NJdqqdZanp661qppW0rpfNqXLqdm2nPpymvvzD15/MKxi/vffePw1Tv3DgAAAMDG978AAAD//xnDDSk=")
+open(&(0x7f00000000c0)='./bus\x00', 0x14da42, 0x0)
+
+159.739754ms ago: executing program 2 (id=57):
+r0 = perf_event_open(&(0x7f000001d000)={0x1, 0x80, 0x0, 0x0, 0x0, 0x0, 0x0, 0x7, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1, 0x0, @perf_config_ext, 0x0, 0x0, 0x0, 0x0, 0x0, 0xfffffffe}, 0x0, 0xffffffffffffffff, 0xffffffffffffffff, 0x0)
+mmap(&(0x7f0000ffc000/0x3000)=nil, 0x3000, 0x0, 0x11, r0, 0x0)
+
+150.417423ms ago: executing program 4 (id=58):
+r0 = socket$kcm(0x10, 0x2, 0x10)
+sendmsg$kcm(r0, &(0x7f00000000c0)={0x0, 0x0, &(0x7f0000000080)=[{&(0x7f0000000040)="2e00000023000511d25a8064000000000a24fc60100009400a0003000200000037153e370a00018040000000", 0x2c}], 0x1}, 0x0)
+
+76.074636ms ago: executing program 5 (id=59):
+syz_mount_image$hfs(&(0x7f00000000c0), &(0x7f0000000100)='./bus\x00', 0x4080, &(0x7f0000000640)=ANY=[@ANYRES64=0x0, @ANYRESHEX, @ANYRES32, @ANYBLOB="a24ed317cb4e0ad844542b7e77c8d26d39380e1e59e69354ae34cb24b8d4cb6ef4bba41cb139a672934c164b8a72f1c0c5592a76d78c9655aaa256cdd0f49e4d7d9b0c7dc98f156f96f0fb7f5389ec785801bc2320c6a62c248278e1aa065a905c2c196797df61d2502c2d34a7bb1c003be29383aa043ad2c27c385a78fe0b62792f72a4c13e7bbd9405b2b9f019a2871a45439239fa99936a8c097352d96de288e156ae16bade83bd9da8d24c2f4acbbc6011f4de819629d7274969b4ae2ef8c62f4751be894c8365c236d7849e0010cccb86fe81bb121bb48581e9956b0d21e5005cc20f431ad3424b1dfafbdd259339d475c421dea7b748aff395d171ac01019376c0ab533aeda589510ce646469414698fcb6fa038b3f6c72500dd7d486377cce22217665b7e065aff16af367d2ebf80f72c7a94cbfb29c133e5a2b5accaed04deced8ce5e789807b857034de9b1bf29c3068f1e098983a7812d", @ANYRESOCT, @ANYRESHEX, @ANYRESOCT, @ANYRESOCT, @ANYBLOB="b5486cd908d947a6a9e539acf6c53a49e4d1e13487d10861133340d3f2b28f8d7b7a3e55f1d5780f06d2a1a144bf68bfa156c3adac7a2f6a8eb37700e60cddca0bc36e08971c119ce08d8b78aa2958df16ec049bb719fb02b0cfef09982414aae0ae91abcd80870e518fffc0f353c69b67671e2c7b2af2314c322113a8432894c8bace6666078ae166f5fdeeda090622830aa2f62efe405fdce25313009e151a2517a1d53768969753fc3e236c493149cf0c920b71ecbdb3404eb5d4bec7452f155a23dfbc208cbd142eef1fb542453be7e67f17a0ccb218ca68e898eded7a4ddd78f0ba73c3c9ec1139933a287f01278d2a7648d346835b6fb4ecd40cf7808afc0dc761bb431903710b2dc9707adec9121e4eaf9d8a6f41404509b110e94a6de97db5c726cf62b379c8b2a62c8158cac216bec8e19b47b59667bd904fdc954adba85c6426e41a79a0ce636cb83ba6096d49eab46a4ef404b3f11c2b35d356f5f1f250567aab8b05fd301959ba421ef12ee1948593144c2f093d864166348d2535227bb0fedfa6d377391f2ff8622d9b81f0bc2b34ac8d790fd871867d337063a416604f38659010a1982eef993084b4a759af609dbaec25a1202161289d0b98c5655200"/466, @ANYRESHEX], 0x2, 0x266, &(0x7f00000003c0)="$eJzs3cFqE0Ecx/HfbGKbaqmrrQjiqVrwJG29iBdF8hCeRG0ilIYKtoLtxehZfADvvoIP4Ul8gXry5APktjKzk2ST7mZDSDNt/H4gYU3mP/MfZzc7/0CJAPy3ntZPvj34Yx9Gqqgi6ZEUSapJVUk3dLP2bv9w97DVbIzqqOIi7MMojTSn2uzsN/NCbZyLsJ5Isf1XVcu913BmakmS/A6dBIJzV39PkvrgPgkW/dXp3q8FzHGa2qETCMx01NF7rYTOAwAQlr//R/4+v+z371Ekbfjb/lzd/zuhEwgsc/+vSidKjF3fq+6tfr3nSji794u6VeIkYy0oPbMqAwmUVZUul2jp9W6reX/nTasR6ZMee5lma+65kZ66XdlsP57uej2nNh1h8rlfcXO4ZOewXZD/6nRHLGd+mJ/muYn1VY3e/q+aGLtMbqXioZVK898s7tHNMk5bFczymhvklh/BK5llbTCNrAXf58AXBHFZni7q+lBUOrutkqjV3Kjtkqi14aj+2VwcedbMF/PMrOuvvque2f9H9n97Q+NcmbaNa+nPjJHzqbqWcfal9u3cltkLWEtjzwcT+axXeqiVg6PjvZetVvPtwdFxu3uwx8F8H3RPgvOSDwelB4t2uUob2/35lAYN+/GE2egveuhMEIjdd5nE2INMvbLpSiT7FI/YpydlnWd63MqrDRK3I5d0ubiCy+22sIIbt+a6c0+6O/6Isc9zTpi6fukF3/8DAAAAAAAAAAAAAAAAAABcNLP404XQcwQAAAAAAAAAAAAAAAAAAAAA4KIzOme//yt+/xeYlX8BAAD//0wEhKM=")
+openat(0xffffffffffffff9c, &(0x7f0000000380)='./file1\x00', 0x141842, 0x0)
+
+0s ago: executing program 3 (id=60):
+r0 = openat$ppp(0xffffffffffffff9c, 0x0, 0x0, 0x0)
+ioctl$PPPIOCNEWUNIT(r0, 0xc004743e, &(0x7f0000000240)=0xfffffffffffffffd)
+
+kernel console output (not intermixed with test programs):
+
+n main item tag 0x0
+[   72.416009][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.416653][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.417335][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.417985][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.418664][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.419298][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.419989][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.420687][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.421356][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.422034][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.426018][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.426717][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.427403][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.428041][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.428725][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.429369][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.430078][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.430713][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.431434][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.432123][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.434026][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.434682][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.435374][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.436029][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.436714][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.437353][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.438036][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.438683][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.439368][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.440011][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.440708][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.441394][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.442079][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.446919][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.447636][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.448286][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.448979][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.449619][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.450302][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.450948][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.451679][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.452313][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.455092][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.455743][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.456435][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.457079][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.457772][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.458412][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.459099][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.459752][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.460434][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.461078][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.461788][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.462416][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.468023][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.468679][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.470431][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.471077][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.486849][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.487559][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.489326][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.489984][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.493994][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.494670][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.497095][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.497770][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.500630][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.501277][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.505958][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.506634][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.512068][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.513487][   T50] usb 5-1: Using ep0 maxpacket: 8
+[   72.514177][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.515650][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.516380][   T50] usb 5-1: New USB device found, idVendor=0b95, idProduct=172a, bcdDevice=78.22
+[   72.517165][   T50] usb 5-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   72.519386][   T50] usb 5-1: config 0 descriptor??
+[   72.525074][   T50] asix 5-1:0.0: probe with driver asix failed with error -22
+[   72.528310][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.529032][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.531946][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.539152][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.539825][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.540457][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.541094][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.541734][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.542372][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.559354][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.560153][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.560805][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.561444][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.562075][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.572743][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.573439][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.574071][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.576805][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.577443][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.578063][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.578691][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.579309][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.586241][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.586958][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.587604][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.588184][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.588761][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.589330][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.589903][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.600728][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.601387][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.602030][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.606189][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.606837][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.607554][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.608190][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.608836][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.609469][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.610115][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.617681][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.618335][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.618973][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.619621][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.620263][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.626154][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.626828][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.627448][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.631124][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.631781][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.632427][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.634396][ T9449] ath9k_htc 1-1:1.0: ath9k_htc: Target is unresponsive
+[   72.635366][ T9449] ath9k_htc: Failed to initialize the device
+[   72.642571][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.643234][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.643883][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.648346][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.649004][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.649664][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.650314][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.650822][    T9] usb 1-1: ath9k_htc: USB layer deinitialized
+[   72.652200][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.658251][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.662307][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.663207][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.663853][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.664499][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.665137][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.665785][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.666415][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.667046][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.667688][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.679185][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.679841][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.680479][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.681096][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.681734][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.682372][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.693345][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.694413][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.695058][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.695717][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.696346][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.699538][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.700205][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.700854][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.709634][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.710303][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.710959][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.711607][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.712251][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.743394][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.744087][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.744742][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.745388][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.746034][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.746674][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.747312][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.750723][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.753897][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.754557][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.755184][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.755831][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.756471][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.757109][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.757767][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.770470][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.771098][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.771701][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.772314][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.777669][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.778263][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.778900][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.779521][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.780141][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.788884][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.790940][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.791582][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.792192][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.805862][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.806549][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.807202][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.807858][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.808508][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.809152][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.822670][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.823337][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.823984][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.824639][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.825275][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.825918][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.829793][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.830529][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.831165][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.831802][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.832448][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.841618][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.842295][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.855393][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.856058][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.856689][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.857307][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.857931][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.858575][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.859219][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.859841][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.860479][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.861115][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.871984][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.876752][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.877399][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.878022][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.878648][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.878882][T11600] kernel profiling enabled (shift: 0)
+[   72.879266][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.879282][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.881076][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.881714][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.896708][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.897368][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.897999][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.898652][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.899242][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.899881][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.900516][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.901143][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.901779][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.902410][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.913328][T11602] netlink: 208 bytes leftover after parsing attributes in process `syz.0.25'.
+[   72.915588][T11602] unsupported nla_type 356
+[   72.917220][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.917895][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.918530][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.919161][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.919789][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.920408][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.921039][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.921673][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.922302][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.937245][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.937923][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.938557][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.939195][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.939844][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.940481][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.941111][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.941733][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.942356][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.958436][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.959123][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.959775][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.960414][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.961060][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.961700][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.962340][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.975234][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.975874][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.976474][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.977103][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.991104][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.991773][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.992407][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.993115][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.993757][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.994384][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.995019][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.995649][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.996287][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.996921][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   72.997570][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.013790][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.014445][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.015084][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.015720][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.016339][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.017029][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.017729][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.018354][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.028575][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.029179][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.029784][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.030368][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.030978][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.031588][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.032226][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.047062][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.047755][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.048407][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.052738][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.053396][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.054054][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.054687][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.055333][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.055973][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.056628][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.057264][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.057917][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.058563][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.064650][T11609] loop0: detected capacity change from 0 to 64
+[   73.069355][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.069977][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.070601][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.071267][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.071998][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.088005][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.088775][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.091882][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.096238][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.096891][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.102007][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.107005][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.109899][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.111833][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.126749][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.131982][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.139485][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.141650][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.142281][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.150316][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.151033][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.151655][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.156870][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.157503][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.161494][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.162133][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.175234][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.175911][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.182539][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.184376][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.189351][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.190292][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.208413][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.211623][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.212434][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.225115][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.227406][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.234355][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.236430][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.239729][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.241719][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.249081][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.250908][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.255425][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.258800][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.264608][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.265281][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.268382][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.269371][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.275343][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.278277][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.280730][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.285864][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.286846][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.291521][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.298375][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.299332][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.306001][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.306670][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.310258][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.310938][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.314917][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.315591][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.319562][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.320208][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.323249][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.323926][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.327920][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.330326][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.332752][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.333399][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.337737][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.340174][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.344602][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.345363][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.363806][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.364442][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.369509][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.370256][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.379722][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.392709][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.393394][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.405152][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.407675][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.413104][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.423350][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.426496][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.438061][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.438915][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.444123][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.444916][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.457245][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.457991][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.464522][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.475071][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.477613][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.481718][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.482371][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.492698][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.495564][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.499956][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.502189][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.502764][ T9461] Bluetooth: hci0: command tx timeout
+[   73.503510][ T9461] Bluetooth: hci3: command tx timeout
+[   73.523287][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.523958][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.524611][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.525229][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.525853][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.548986][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.549620][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.550202][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.550792][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.561702][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.562406][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.576544][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.577229][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.577900][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.582698][ T9461] Bluetooth: hci5: command tx timeout
+[   73.583298][ T9420] Bluetooth: hci2: command tx timeout
+[   73.590338][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.591021][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.591672][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.592317][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.602892][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.603551][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.604138][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.604795][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.605397][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.605999][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.606638][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.622790][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.623462][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.624085][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.624731][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.625373][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.625977][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.626568][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.627167][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.650256][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.650926][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.651564][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.652208][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.664605][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.665278][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.665946][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.666591][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.667242][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.667877][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.668523][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.672536][ T9420] Bluetooth: hci4: command tx timeout
+[   73.677763][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.678431][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.679091][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.690679][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.696722][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.697398][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.698066][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.698720][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.699368][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.700025][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.731083][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.731794][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.732439][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.741180][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.741871][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.742780][ T9420] Bluetooth: hci1: command tx timeout
+[   73.746680][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.747337][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.748010][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.748660][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.749311][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.749952][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.750599][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.751240][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.751888][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.773067][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.773748][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.774387][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.781880][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.782590][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.783235][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.784623][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.792862][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.793521][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.794155][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.794789][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.795428][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.796066][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.796712][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.812877][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.813529][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.814153][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.814778][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.815404][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.816035][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.816666][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.817288][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.838661][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.839313][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.839916][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.840526][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.841129][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.841744][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.842344][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.852567][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.853225][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.853863][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.854513][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.855134][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.855750][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.856385][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.870324][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.870977][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.871681][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.872328][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.878068][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.878736][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.880401][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.885214][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.885874][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.890783][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.891400][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.895830][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.896506][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.901127][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.901819][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.908937][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.909603][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.917202][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.917874][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.920815][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.928607][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.929271][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.929971][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.930657][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.937478][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.939399][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.940064][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.947420][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.948063][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.951033][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.951661][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.958915][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.959605][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.962686][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.965504][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.967280][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.967937][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.972761][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.973424][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.976616][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.980078][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.980727][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.985690][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.988092][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.996387][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.997046][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.997686][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.998349][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.999017][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   73.999692][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.000348][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.001011][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.001661][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.002313][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.029579][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.030216][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.030858][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.031473][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.032111][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.039618][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.040248][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.040857][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.041452][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.042036][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.053022][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.053679][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.054313][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.054949][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.055582][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.056223][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.056859][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.057514][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.058153][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.058791][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.059433][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.080653][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.081317][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.082034][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.091869][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.092586][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.093413][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.094032][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.094690][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.095335][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.095983][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.096632][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.097275][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.097940][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.098575][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.099204][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.099853][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.100500][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.101135][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.122401][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.123454][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.124097][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.124740][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.125377][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.126047][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.126716][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.127358][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.127998][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.128642][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.129298][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.129939][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.130577][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.131199][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.131838][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.162610][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.163283][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.163917][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.164566][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.165200][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.165846][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.166462][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.167099][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.167748][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.168382][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.169032][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.169672][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.170308][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.170959][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.171610][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.172247][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.192933][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.195279][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.195943][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.196589][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.197226][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.197878][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.198522][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.199163][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.199810][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.200458][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.201108][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.201748][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.202380][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.223311][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.223997][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.224650][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.225294][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.225930][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.226573][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.227217][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.227876][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.228516][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.229160][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.229815][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.230456][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.231103][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.231730][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.232367][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.262761][    T8] usb 6-1: new high-speed USB device number 2 using dummy_hcd
+[   74.262768][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.262790][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.265662][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.266331][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.266985][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.267647][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.268292][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.268939][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.269591][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.270231][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.270861][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.271483][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.272079][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.283450][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.284071][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.284675][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.285276][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.285884][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.286487][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.287085][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.287707][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.288322][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.288947][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.289587][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.290214][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.290854][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.291484][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.292141][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.302751][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.303422][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.304066][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.304688][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.305305][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.305932][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.306605][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.307234][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.307883][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.308544][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.309202][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.309808][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.310386][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.310989][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.311597][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.312228][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.345562][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.346231][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.346875][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.347491][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.348134][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.348787][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.349433][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.350094][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.350745][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.351391][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.352047][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.353287][T11637] netlink: 12 bytes leftover after parsing attributes in process `syz.2.36'.
+[   74.371095][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.371764][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.372387][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.373642][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.374290][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.374927][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.375572][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.376213][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.376863][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.377485][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.378805][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.379587][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.380222][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.380871][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.381518][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.382147][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.400172][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.400812][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.403328][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.406540][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.407214][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.411855][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.415259][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.415924][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.417319][    T8] usb 6-1: New USB device found, idVendor=0cf3, idProduct=9271, bcdDevice= 1.08
+[   74.418935][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.419435][    T8] usb 6-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   74.419573][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.420240][    T8] usb 6-1: Product: syz
+[   74.420251][    T8] usb 6-1: Manufacturer: syz
+[   74.420262][    T8] usb 6-1: SerialNumber: syz
+[   74.424268][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.424920][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.429178][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.442264][    T8] usb 6-1: ath9k_htc: Firmware ath9k_htc/htc_9271-1.4.0.fw requested
+[   74.442780][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.443904][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.444549][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.445162][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.445755][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.446341][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.446951][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.447566][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.448168][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.448775][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.462998][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.463638][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.464256][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.464890][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.465519][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.466138][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.466778][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.467399][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.468033][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.468667][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.469307][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.469949][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.489472][    T8] usb 6-1: ath9k_htc: Transferred FW: ath9k_htc/htc_9271-1.4.0.fw, size: 51008
+[   74.496524][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.497196][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.497828][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.498454][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.499056][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.499652][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.500242][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.512557][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.513181][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.513805][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.514397][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.517912][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.518520][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.519130][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.519759][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.520378][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.521004][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.521628][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.522259][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.523749][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.524405][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.525058][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.525704][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.526349][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.526999][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.527639][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.528291][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.528952][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.529589][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.530230][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.530877][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.531530][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.532177][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.558338][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.558988][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.559583][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.560218][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.560842][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.561430][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.562024][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.563249][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.563856][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.564473][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.565116][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.565748][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.566365][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.566999][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.567609][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.568195][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.568821][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.569473][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.570079][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.570715][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.571345][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.571980][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.584669][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.585346][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.586002][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.588746][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.589397][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.590055][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.596766][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.597416][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.598051][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.598656][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.599258][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.599889][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.600541][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.607385][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.608036][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.608663][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.609290][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.609898][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.610548][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.611170][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.617288][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.656544][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.657213][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.657859][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.658936][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.659567][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.660277][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.660928][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.661620][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.662265][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.680409][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.681064][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.685006][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.685656][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.689257][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.691674][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.692360][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.697794][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.698451][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.704627][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.709794][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.710439][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.714360][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.715003][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.720039][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.720660][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.723562][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.724190][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.731361][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.731972][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.735068][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.735720][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.739590][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.740263][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.740889][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.745010][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.745629][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.749539][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.750174][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.754141][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.754789][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.759849][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.760524][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.764611][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.765240][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.768126][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.768772][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.771096][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.773794][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.775807][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.776408][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.780307][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.780917][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.785380][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.787438][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.788083][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.789580][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.790261][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.790914][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.791602][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.792239][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.793495][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.794125][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.795622][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.796273][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.796903][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.797779][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.798417][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.799111][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.799755][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.800437][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.801073][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.801735][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.802357][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.804476][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.805288][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.806093][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.806775][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.807400][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.809200][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.809968][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.810658][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.811289][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.812182][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.814136][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.814767][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.815546][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.816324][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.817149][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.817790][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.818462][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.819098][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.819777][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.820413][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.821089][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.821728][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.822364][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.824089][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.824754][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.825600][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.826236][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.826942][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.827580][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.828251][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.828889][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.829562][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.830373][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.831209][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.831859][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.844695][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.845372][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.847230][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.847895][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.852622][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.854414][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.855063][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.859022][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.859669][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.861417][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.862056][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.881814][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.882466][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.891087][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.891782][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.893724][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.894460][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.899563][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.901777][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.911151][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.911801][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.914658][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.921097][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.921818][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.922447][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.926504][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.931932][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.932631][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.935222][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.949244][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.949925][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.950622][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.951281][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.957489][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.958167][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.962088][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.982603][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.983290][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.983964][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.984610][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.985264][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.985913][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.986565][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.987199][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.995279][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.995938][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.996635][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   74.997260][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.000092][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.000737][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.006705][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.007400][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.023396][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.026626][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.027270][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.032273][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.039503][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.040174][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.047379][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.048070][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.051001][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.051673][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.058469][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.060299][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.060972][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.070395][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.071088][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.074445][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.075127][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.081252][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.084268][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.088584][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.089249][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.096608][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.097243][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.101151][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.101792][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.110659][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.111337][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.114199][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.122303][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.128638][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.129284][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.140268][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.140941][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.157146][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.157840][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.158457][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.159108][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.159712][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.160314][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.160911][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.161512][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.191684][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.192344][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.198266][ T9449] usb 5-1: USB disconnect, device number 2
+[   75.210469][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.211106][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.211726][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.212337][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.218246][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.218932][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.219586][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.220230][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.231086][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.231715][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.232315][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.251432][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.252108][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.253502][    T9] usb 6-1: USB disconnect, device number 2
+[   75.254261][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.254914][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.255553][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.256200][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.256845][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.257493][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.258144][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.258794][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.259446][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.260086][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.260743][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.261393][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.310094][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.311091][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.312050][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.319303][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.329165][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.330194][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.331151][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.332391][T11679] Zero length message leads to an empty skb
+[   75.342541][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.343254][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.362369][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.363084][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.363716][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.366197][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.366839][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.368865][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.369508][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.370132][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.370759][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.371356][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.371977][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.382944][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.383620][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.384255][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.384887][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.385561][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.386210][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.396662][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.397349][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.397973][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.398604][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.399231][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.399868][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.400513][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.401146][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.401777][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.402393][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.411611][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.412221][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.415526][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.416157][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.416817][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.417447][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.418610][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.419243][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.419879][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.420506][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.421134][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.421761][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.423532][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.424160][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.425332][ T1322] ieee802154 phy0 wpan0: encryption failed: -22
+[   75.426024][ T1322] ieee802154 phy1 wpan1: encryption failed: -22
+[   75.428937][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.429566][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.430169][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.430794][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.431438][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.432069][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.451961][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.454269][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.454927][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.455552][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.456172][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.456794][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.457456][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.466261][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.466934][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.467531][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.468141][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.468733][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.469313][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.469953][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.470582][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.471171][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.471776][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.472409][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.492630][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.493263][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.493893][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.494627][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.495294][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.495952][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.497052][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.497669][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.498310][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.498953][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.499578][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.500212][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.500831][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.501461][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.502108][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.505614][    T8] ath9k_htc 6-1:1.0: ath9k_htc: Target is unresponsive
+[   75.506403][    T8] ath9k_htc: Failed to initialize the device
+[   75.508017][    T9] usb 6-1: ath9k_htc: USB layer deinitialized
+[   75.525492][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.526146][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.526782][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.531099][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.531741][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.532337][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.533303][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.533972][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.534592][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.535244][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.535873][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.536472][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.537071][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.539683][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.553364][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.554018][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.554645][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.555267][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.555875][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.556498][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.557125][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.557747][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.558380][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.579481][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.580133][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.580753][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.581370][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.581990][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.589491][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.590109][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.590705][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.591329][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.591957][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.598076][T11726] loop4: detected capacity change from 0 to 1024
+[   75.599302][T11726] hfsplus: Bad value for 'session'
+[   75.601475][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.602071][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.606703][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.607526][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.608167][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.608809][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.609436][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.612191][T11729] sg_write: data in/out 429306/40 bytes for SCSI command 0x67-- guessing data in;
+[   75.612191][T11729]    program syz.5.48 not setting count and/or reply_len properly
+[   75.614110][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.614765][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.615395][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.616028][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.616661][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.617277][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.617907][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.618534][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.619151][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.619779][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.622421][T11732] netlink: 84 bytes leftover after parsing attributes in process `syz.3.47'.
+[   75.632588][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.633223][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.633857][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.634504][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.635130][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.635752][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.636342][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.636948][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.637590][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.638497][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.639193][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.657813][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.658548][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.659316][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.659944][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.660564][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.661165][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.661772][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.662360][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.685539][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.686341][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.687122][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.687934][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.688520][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.690049][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.695606][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.696924][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.708952][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.710224][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.710931][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.711528][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.712120][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.728875][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.733616][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.734251][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.734882][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.735505][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.736119][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.736749][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.737340][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.737954][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.738605][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.739238][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.739863][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.740475][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.741065][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.741661][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.742265][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.743419][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.744049][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.744697][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.745312][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.745937][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.746567][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.747185][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.747810][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.748433][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.751272][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.751904][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.752620][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.753233][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.753865][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.754461][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.755052][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.755684][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.756323][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.756955][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.757572][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.758186][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.758814][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.759434][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.760180][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.760815][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.761450][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.762081][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.762777][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.763430][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.764057][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.764687][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.765314][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.765945][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.766586][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.767243][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.767934][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.768579][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.769218][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.769817][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.770456][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.771088][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.771718][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.772471][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.773493][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.774105][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.774722][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.775336][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.775966][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.776598][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.777221][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.777866][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.781443][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.782105][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.782807][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.783645][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.784448][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.785075][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.785728][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.786498][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.787119][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.787756][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.788389][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.789013][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.789632][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.790248][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.790878][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.801948][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.802720][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.803342][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.803965][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.804592][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.805220][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.805853][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.806453][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.807053][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.807655][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.808254][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.808851][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.809449][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.810074][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.811534][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.812164][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.832943][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.833586][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.834196][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.834841][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.835466][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.836101][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.836738][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.837366][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.838008][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.838636][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.839256][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.839882][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.840512][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.841134][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.841772][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.842400][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.872640][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.873620][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.874487][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.875318][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.889696][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.896225][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.897031][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.899838][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.900789][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.901650][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.910630][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.911329][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.912335][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.919869][T11746] xt_hashlimit: size too large, truncated to 1048576
+[   75.927637][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.929711][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.930565][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.950491][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.951461][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.955723][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.956620][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.965132][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.965902][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.971066][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.971721][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.978862][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.979498][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.981787][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.982450][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.992582][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.993251][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.996126][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.996797][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.997496][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.998166][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   75.998275][T11749] loop5: detected capacity change from 0 to 64
+[   75.999943][T11749] =======================================================
+[   75.999943][T11749] WARNING: The mand mount option has been deprecated and
+[   75.999943][T11749]          and is ignored by this kernel. Remove the mand
+[   75.999943][T11749]          option from the mount to silence this warning.
+[   75.999943][T11749] =======================================================
+[   76.001222][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.009372][T11749] hfs: filesystem was not cleanly unmounted, running fsck.hfs is recommended.  mounting read-only.
+[   76.018713][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.019374][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.023573][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.024245][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.028192][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.028855][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.033904][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.034544][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.038938][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.039604][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.040295][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.040931][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.042416][T11746] xt_CT: You must specify a L4 protocol and not use inversions on it
+[   76.044496][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.045137][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.070400][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.071231][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.072034][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.074751][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.075443][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.076137][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.076790][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.077472][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.078114][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.081368][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.082030][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.088302][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.090491][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.091143][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.112100][T11756] loop5: detected capacity change from 0 to 2048
+[   76.118347][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.119005][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.120782][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.121428][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.135860][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.136497][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.137307][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.137950][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.151434][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.152088][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.155030][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.155679][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.164944][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.167112][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.167773][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.176650][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.177261][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.183164][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.183785][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.191599][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.192260][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.196896][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.202774][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.203395][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.206313][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.206979][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.217429][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.218153][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.218801][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.225916][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.228230][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.232776][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.233393][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.234088][T11760] NILFS (loop5): segctord starting. Construction interval = 5 seconds, CP frequency < 30 seconds
+[   76.243945][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.244611][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.248935][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.249591][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.256009][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.256684][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.262628][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.263299][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.267724][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.268370][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.270302][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.270957][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.279058][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.279764][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.281535][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.282187][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.289640][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.290334][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.291045][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.291691][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.300890][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.301624][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.302241][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.309777][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.310435][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.332736][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.333392][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.334018][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.334659][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.335287][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.335929][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.336576][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.337230][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.337874][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.338509][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.339147][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.339806][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.340447][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.341094][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.341763][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.342420][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.402700][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.403357][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.404025][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.404661][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.405286][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.405927][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.406583][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.407174][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.407797][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.408436][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.409066][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.409698][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.410303][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.410941][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.411590][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.412208][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.420212][   T33] audit: type=1800 audit(1740406121.195:4): pid=11756 uid=0 auid=0 ses=3 subj=_ op=collect_data cause=failed(directio) comm="syz.5.56" name="bus" dev="loop5" ino=18 res=0 errno=0
+[   76.485455][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.486107][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.486766][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.487411][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.488052][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.488700][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.489337][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.489973][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.490590][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.491184][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.491813][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.492440][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.529901][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.530533][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.531134][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.531730][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.532321][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.560030][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.560691][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.561336][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.561987][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.595317][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.595982][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.596596][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.597225][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.597862][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.598495][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.599123][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.599757][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.600397][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.601025][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.601629][ T9448] hid-generic 0000:0000:0000.0001: unknown main item tag 0x0
+[   76.632497][    C1] hrtimer: interrupt took 24696 ns
+[   76.792345][T11760] NILFS error (device loop5): nilfs_sufile_mark_dirty: active segment 4 is erroneous
+[   76.826117][T11760] Remounting filesystem read-only
+[   76.835729][ T9426] NILFS (loop5): disposed unprocessed dirty file(s) when stopping log writer
+[   76.941843][T11786] loop5: detected capacity change from 0 to 64
+[   76.972715][T11786] hfs: unable to locate alternate MDB
+[   76.973197][T11786] hfs: continuing without an alternate MDB
+[   76.989225][T11786] ==================================================================
+[   76.989929][T11786] BUG: KASAN: slab-out-of-bounds in hfs_bnode_read+0xc5/0x230
+[   76.990590][T11786] Write of size 256 at addr ffff88801fee2b00 by task syz.5.59/11786
+[   76.991304][T11786] 
+[   76.991533][T11786] CPU: 0 UID: 0 PID: 11786 Comm: syz.5.59 Not tainted 6.14.0-rc4 #1
+[   76.991547][T11786] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   76.991555][T11786] Call Trace:
+[   76.991559][T11786]  <TASK>
+[   76.991564][T11786]  dump_stack_lvl+0x116/0x1b0
+[   76.991581][T11786]  print_address_description.constprop.0+0x2c/0x420
+[   76.991600][T11786]  ? hfs_bnode_read+0xc5/0x230
+[   76.991615][T11786]  print_report+0xaa/0x270
+[   76.991630][T11786]  ? hfs_bnode_read+0xc5/0x230
+[   76.991645][T11786]  ? kasan_addr_to_slab+0x27/0x80
+[   76.991659][T11786]  ? hfs_bnode_read+0xc5/0x230
+[   76.991674][T11786]  kasan_report+0xbd/0x100
+[   76.991690][T11786]  ? hfs_bnode_read+0xc5/0x230
+[   76.991707][T11786]  kasan_check_range+0x108/0x1e0
+[   76.991727][T11786]  __asan_memcpy+0x3d/0x70
+[   76.991739][T11786]  hfs_bnode_read+0xc5/0x230
+[   76.991755][T11786]  hfs_bnode_read_key+0x149/0x1f0
+[   76.991771][T11786]  ? __pfx_hfs_bnode_read_key+0x10/0x10
+[   76.991787][T11786]  ? block_dirty_folio+0x128/0x1c0
+[   76.991801][T11786]  hfs_brec_insert+0x822/0xbd0
+[   76.991821][T11786]  ? __pfx_hfs_brec_insert+0x10/0x10
+[   76.991840][T11786]  hfs_cat_create+0x6a5/0x840
+[   76.991858][T11786]  ? __pfx_hfs_cat_create+0x10/0x10
+[   76.991875][T11786]  ? __pfx___lock_release+0x10/0x10
+[   76.991893][T11786]  ? mark_lock+0x38/0x400
+[   76.991908][T11786]  ? clear_pending_if_disabled+0x92/0x200
+[   76.991925][T11786]  ? rcu_is_watching+0x12/0xd0
+[   76.991944][T11786]  ? hfs_new_inode+0x4af/0xcf0
+[   76.991956][T11786]  ? __pfx_hfs_create+0x10/0x10
+[   76.991973][T11786]  hfs_create+0x6b/0x100
+[   76.991991][T11786]  lookup_open.isra.0+0x1145/0x1540
+[   76.992006][T11786]  ? __pfx_lookup_open.isra.0+0x10/0x10
+[   76.992023][T11786]  ? __pfx_down_write+0x10/0x10
+[   76.992040][T11786]  ? mnt_get_write_access+0x216/0x310
+[   76.992055][T11786]  open_last_lookups+0x82c/0x13b0
+[   76.992071][T11786]  path_openat+0x182/0x6b0
+[   76.992087][T11786]  ? __pfx_path_openat+0x10/0x10
+[   76.992102][T11786]  ? __lock_acquire+0xb97/0x16a0
+[   76.992120][T11786]  do_filp_open+0x1f8/0x460
+[   76.992135][T11786]  ? __pfx_do_filp_open+0x10/0x10
+[   76.992150][T11786]  ? find_held_lock+0x2d/0x120
+[   76.992163][T11786]  ? alloc_fd+0x30c/0x5b0
+[   76.992180][T11786]  ? alloc_fd+0x30c/0x5b0
+[   76.992195][T11786]  ? rcu_is_watching+0x12/0xd0
+[   76.992213][T11786]  ? _raw_spin_unlock+0x28/0x50
+[   76.992227][T11786]  ? alloc_fd+0x30c/0x5b0
+[   76.992244][T11786]  do_sys_openat2+0x16a/0x1d0
+[   76.992262][T11786]  ? __pfx_do_sys_openat2+0x10/0x10
+[   76.992282][T11786]  __x64_sys_openat+0x140/0x200
+[   76.992300][T11786]  ? __pfx___x64_sys_openat+0x10/0x10
+[   76.992321][T11786]  do_syscall_64+0xcb/0x260
+[   76.992339][T11786]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   76.992357][T11786] RIP: 0033:0x7fdfe0fb85ad
+[   76.992368][T11786] Code: 02 b8 ff ff ff ff c3 66 0f 1f 44 00 00 f3 0f 1e fa 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 c7 c1 a8 ff ff ff f7 d8 64 89 01 48
+[   76.992380][T11786] RSP: 002b:00007fdfe1e8af98 EFLAGS: 00000246 ORIG_RAX: 0000000000000101
+[   76.992401][T11786] RAX: ffffffffffffffda RBX: 00007fdfe1245fa0 RCX: 00007fdfe0fb85ad
+[   76.992409][T11786] RDX: 0000000000141842 RSI: 0000400000000380 RDI: ffffffffffffff9c
+[   76.992417][T11786] RBP: 00007fdfe106a8d6 R08: 0000000000000000 R09: 0000000000000000
+[   76.992424][T11786] R10: 0000000000000000 R11: 0000000000000246 R12: 0000000000000000
+[   76.992432][T11786] R13: 0000000000000000 R14: 00007fdfe1245fa0 R15: 00007fdfe1e6b000
+[   76.992443][T11786]  </TASK>
+[   76.992447][T11786] 
+[   77.022149][T11786] Allocated by task 11786:
+[   77.022538][T11786]  kasan_save_stack+0x24/0x50
+[   77.022955][T11786]  kasan_save_track+0x14/0x40
+[   77.023376][T11786]  __kasan_kmalloc+0xba/0xc0
+[   77.023790][T11786]  __kmalloc_noprof+0x212/0x580
+[   77.024213][T11786]  hfs_find_init+0x95/0x260
+[   77.024619][T11786]  hfs_cat_create+0x155/0x840
+[   77.025032][T11786]  hfs_create+0x6b/0x100
+[   77.025408][T11786]  lookup_open.isra.0+0x1145/0x1540
+[   77.025860][T11786]  open_last_lookups+0x82c/0x13b0
+[   77.026269][T11786]  path_openat+0x182/0x6b0
+[   77.026650][T11786]  do_filp_open+0x1f8/0x460
+[   77.027028][T11786]  do_sys_openat2+0x16a/0x1d0
+[   77.027425][T11786]  __x64_sys_openat+0x140/0x200
+[   77.027829][T11786]  do_syscall_64+0xcb/0x260
+[   77.028208][T11786]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   77.028698][T11786] 
+[   77.028903][T11786] The buggy address belongs to the object at ffff88801fee2b00
+[   77.028903][T11786]  which belongs to the cache kmalloc-96 of size 96
+[   77.030004][T11786] The buggy address is located 0 bytes inside of
+[   77.030004][T11786]  allocated 78-byte region [ffff88801fee2b00, ffff88801fee2b4e)
+[   77.031161][T11786] 
+[   77.031370][T11786] The buggy address belongs to the physical page:
+[   77.031913][T11786] page: refcount:0 mapcount:0 mapping:0000000000000000 index:0x0 pfn:0x1fee2
+[   77.032659][T11786] flags: 0xfff00000000000(node=0|zone=1|lastcpupid=0x7ff)
+[   77.033220][T11786] page_type: f5(slab)
+[   77.033553][T11786] raw: 00fff00000000000 ffff88801b441280 dead000000000100 dead000000000122
+[   77.034276][T11786] raw: 0000000000000000 0000000080200020 00000000f5000000 0000000000000000
+[   77.034950][T11786] page dumped because: kasan: bad access detected
+[   77.035462][T11786] page_owner tracks the page as allocated
+[   77.035914][T11786] page last allocated via order 0, migratetype Unmovable, gfp_mask 0x52820(GFP_ATOMIC|__GFP_NOWARN|__GFP_NORETRY|__GFP_COMP), pid 1081, tgid 1081 (kworker/u9:5), ts 71326560337, free_ts 71320112990
+[   77.037426][T11786]  post_alloc_hook+0x1a3/0x1d0
+[   77.037840][T11786]  get_page_from_freelist+0x8a5/0xfa0
+[   77.038303][T11786]  __alloc_frozen_pages_noprof+0x1d8/0x3b0
+[   77.038799][T11786]  alloc_pages_mpol+0x1f2/0x550
+[   77.039207][T11786]  allocate_slab+0x229/0x310
+[   77.039604][T11786]  ___slab_alloc+0x7f3/0x12b0
+[   77.040006][T11786]  __slab_alloc.constprop.0+0x56/0xc0
+[   77.040476][T11786]  __kmalloc_noprof+0x30d/0x580
+[   77.040901][T11786]  cfg80211_inform_single_bss_data+0x538/0x18d0
+[   77.041422][T11786]  cfg80211_inform_bss_data+0x1a2/0x450
+[   77.041882][T11786]  cfg80211_inform_bss_frame_data+0x20d/0x500
+[   77.042432][T11786]  ieee80211_bss_info_update+0x2f6/0xab0
+[   77.042929][T11786]  ieee80211_rx_bss_info+0x154/0x850
+[   77.043409][T11786]  ieee80211_ibss_rx_queued_mgmt+0x444/0x7d0
+[   77.043941][T11786]  ieee80211_iface_process_skb+0x5b3/0x990
+[   77.044453][T11786]  ieee80211_iface_work+0x201/0x5e0
+[   77.044893][T11786] page last free pid 9427 tgid 9427 stack trace:
+[   77.045418][T11786]  free_frozen_pages+0x71f/0xff0
+[   77.045861][T11786]  vfree+0x172/0x850
+[   77.046194][T11786]  do_ip6t_get_ctl+0x870/0xa60
+[   77.046598][T11786]  nf_getsockopt+0x7c/0xe0
+[   77.046977][T11786]  ipv6_getsockopt+0x1fb/0x280
+[   77.047395][T11786]  tcp_getsockopt+0xa3/0x110
+[   77.047779][T11786]  do_sock_getsockopt+0x317/0x6d0
+[   77.048220][T11786]  __sys_getsockopt+0x131/0x270
+[   77.048636][T11786]  __x64_sys_getsockopt+0xbd/0x170
+[   77.049073][T11786]  do_syscall_64+0xcb/0x260
+[   77.049465][T11786]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   77.049958][T11786] 
+[   77.050162][T11786] Memory state around the buggy address:
+[   77.050627][T11786]  ffff88801fee2a00: fa fb fb fb fb fb fb fb fb fb fb fb fc fc fc fc
+[   77.051275][T11786]  ffff88801fee2a80: fa fb fb fb fb fb fb fb fb fb fb fb fc fc fc fc
+[   77.051925][T11786] >ffff88801fee2b00: 00 00 00 00 00 00 00 00 00 06 fc fc fc fc fc fc
+[   77.052572][T11786]                                               ^
+[   77.053100][T11786]  ffff88801fee2b80: fa fb fb fb fb fb fb fb fb fb fb fb fc fc fc fc
+[   77.053748][T11786]  ffff88801fee2c00: 00 00 00 00 00 00 00 00 00 00 fc fc fc fc fc fc
+[   77.054392][T11786] ==================================================================
+[   77.136412][    T8] usb 5-1: new high-speed USB device number 3 using dummy_hcd
+[   77.281509][T11786] Kernel panic - not syncing: KASAN: panic_on_warn set ...
+[   77.282170][T11786] CPU: 0 UID: 0 PID: 11786 Comm: syz.5.59 Not tainted 6.14.0-rc4 #1
+[   77.282847][T11786] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   77.283593][T11786] Call Trace:
+[   77.283893][T11786]  <TASK>
+[   77.284154][T11786]  dump_stack_lvl+0x3d/0x1b0
+[   77.284571][T11786]  panic+0x6d5/0x790
+[   77.284909][T11786]  ? __pfx_panic+0x10/0x10
+[   77.285286][T11786]  ? irqentry_exit+0x3b/0xa0
+[   77.285713][T11786]  ? preempt_schedule_thunk+0x1a/0x30
+[   77.286187][T11786]  ? preempt_schedule_common+0x44/0xc0
+[   77.286674][T11786]  ? hfs_bnode_read+0xc5/0x230
+[   77.287106][T11786]  ? hfs_bnode_read+0xc5/0x230
+[   77.287519][T11786]  check_panic_on_warn+0xb1/0xc0
+[   77.287958][T11786]  ? hfs_bnode_read+0xc5/0x230
+[   77.288396][T11786]  end_report+0x83/0xa0
+[   77.288770][T11786]  kasan_report+0xcd/0x100
+[   77.289170][T11786]  ? hfs_bnode_read+0xc5/0x230
+[   77.289604][T11786]  kasan_check_range+0x108/0x1e0
+[   77.290039][T11786]  __asan_memcpy+0x3d/0x70
+[   77.290442][T11786]  hfs_bnode_read+0xc5/0x230
+[   77.290849][T11786]  hfs_bnode_read_key+0x149/0x1f0
+[   77.291292][T11786]  ? __pfx_hfs_bnode_read_key+0x10/0x10
+[   77.291778][T11786]  ? block_dirty_folio+0x128/0x1c0
+[   77.292230][T11786]  hfs_brec_insert+0x822/0xbd0
+[   77.292664][T11786]  ? __pfx_hfs_brec_insert+0x10/0x10
+[   77.293126][T11786]  hfs_cat_create+0x6a5/0x840
+[   77.293546][T11786]  ? __pfx_hfs_cat_create+0x10/0x10
+[   77.293996][T11786]  ? __pfx___lock_release+0x10/0x10
+[   77.294470][T11786]  ? mark_lock+0x38/0x400
+[   77.294833][T11786]  ? clear_pending_if_disabled+0x92/0x200
+[   77.295311][T11786]  ? rcu_is_watching+0x12/0xd0
+[   77.295745][T11786]  ? hfs_new_inode+0x4af/0xcf0
+[   77.296146][T11786]  ? __pfx_hfs_create+0x10/0x10
+[   77.296566][T11786]  hfs_create+0x6b/0x100
+[   77.296936][T11786]  lookup_open.isra.0+0x1145/0x1540
+[   77.297380][T11786]  ? __pfx_lookup_open.isra.0+0x10/0x10
+[   77.297859][T11786]  ? __pfx_down_write+0x10/0x10
+[   77.298273][T11786]  ? mnt_get_write_access+0x216/0x310
+[   77.298727][T11786]  open_last_lookups+0x82c/0x13b0
+[   77.299179][T11786]  path_openat+0x182/0x6b0
+[   77.299582][T11786]  ? __pfx_path_openat+0x10/0x10
+[   77.300017][T11786]  ? __lock_acquire+0xb97/0x16a0
+[   77.300460][T11786]  do_filp_open+0x1f8/0x460
+[   77.300862][T11786]  ? __pfx_do_filp_open+0x10/0x10
+[   77.301302][T11786]  ? find_held_lock+0x2d/0x120
+[   77.301703][T11786]  ? alloc_fd+0x30c/0x5b0
+[   77.302067][T11786]  ? alloc_fd+0x30c/0x5b0
+[   77.302437][T11786]  ? rcu_is_watching+0x12/0xd0
+[   77.302836][T11786]  ? _raw_spin_unlock+0x28/0x50
+[   77.303238][T11786]  ? alloc_fd+0x30c/0x5b0
+[   77.303631][T11786]  do_sys_openat2+0x16a/0x1d0
+[   77.304054][T11786]  ? __pfx_do_sys_openat2+0x10/0x10
+[   77.304529][T11786]  __x64_sys_openat+0x140/0x200
+[   77.304972][T11786]  ? __pfx___x64_sys_openat+0x10/0x10
+[   77.305454][T11786]  do_syscall_64+0xcb/0x260
+[   77.305864][T11786]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   77.306386][T11786] RIP: 0033:0x7fdfe0fb85ad
+[   77.306770][T11786] Code: 02 b8 ff ff ff ff c3 66 0f 1f 44 00 00 f3 0f 1e fa 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 c7 c1 a8 ff ff ff f7 d8 64 89 01 48
+[   77.308396][T11786] RSP: 002b:00007fdfe1e8af98 EFLAGS: 00000246 ORIG_RAX: 0000000000000101
+[   77.309114][T11786] RAX: ffffffffffffffda RBX: 00007fdfe1245fa0 RCX: 00007fdfe0fb85ad
+[   77.309779][T11786] RDX: 0000000000141842 RSI: 0000400000000380 RDI: ffffffffffffff9c
+[   77.310463][T11786] RBP: 00007fdfe106a8d6 R08: 0000000000000000 R09: 0000000000000000
+[   77.311146][T11786] R10: 0000000000000000 R11: 0000000000000246 R12: 0000000000000000
+[   77.311827][T11786] R13: 0000000000000000 R14: 00007fdfe1245fa0 R15: 00007fdfe1e6b000
+[   77.312502][T11786]  </TASK>
+[   77.312873][T11786] Kernel Offset: disabled
+[   77.313242][T11786] Rebooting in 86400 seconds..
+
+VM DIAGNOSIS:
+22:08:41  Registers:
+info registers vcpu 0
+RAX=0000000000000020 RBX=00000000000003f8 RCX=0000000000000000 RDX=00000000000003f8
+RSI=0000000000000000 RDI=ffffffff9b037a00 RBP=ffffffff9b0379c0 RSP=ffffc9000296eec8
+R8 =0000000000000000 R9 =0000000000000000 R10=0000000000000000 R11=0000000000000000
+R12=0000000000000000 R13=0000000000000020 R14=ffffffff9b0379c0 R15=0000000000000000
+RIP=ffffffff8540d9bf RFL=00000002 [-------] CPL=0 II=0 A20=1 SMM=0 HLT=0
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 00007fdfe1e8b640 ffffffff 00c00000
+GS =0000 ffff88802b600000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe0000003000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000001000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=000000110c2d7741 CR3=000000002977e000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=ffffffffffffffff ffffffffff000000 XMM01=0101010101010101 0101010100ffff00
+XMM02=6d695f746e756f6d 5f7a797300736678 XMM03=0000000000000000 0000000000000000
+XMM04=0000000000000000 ffffffffffffffff XMM05=00007fdfe0fbbea1 0000000000012a3e
+XMM06=00007ffeba2bd370 0000003000000028 XMM07=b3f261f078f2c100 00007ffeba2bd2b0
+XMM08=a384044cffff0000 017f959817ff7e2b XMM09=0000000000000000 0000000000000000
+XMM10=0000000000000000 0000000000000000 XMM11=0000000000000000 0000000000000000
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000
+info registers vcpu 1
+RAX=0000000000000076 RBX=0000000000000000 RCX=0000000000000838 RDX=0000000000000000
+RSI=0000000000000076 RDI=0000000000000038 RBP=ffff88807ee28400 RSP=ffffc900001f89b8
+R8 =0000000000000000 R9 =0000000000000000 R10=0000000000000000 R11=0000000000000000
+R12=0000000000000076 R13=0000000000000000 R14=0000000000000020 R15=0000000000000000
+RIP=ffffffff816b7f67 RFL=00000046 [---Z-P-] CPL=0 II=0 A20=1 SMM=0 HLT=0
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 00007fd53ce5e640 ffffffff 00c00000
+GS =0000 ffff88807ee00000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe000004a000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000048000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=00007efd72f6dae0 CR3=00000000679b8000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=0000000000989680 0000000000000000 XMM01=0000000000000000 0000000000989680
+XMM02=00007fd53cd7d660 00007fd53cd7d660 XMM03=0000000000000000 0000000000000000
+XMM04=00000000000000ff 0000000000000000 XMM05=0000000000000000 0000000000000000
+XMM06=0000000000000000 000000524f525245 XMM07=0000000000000000 0000000000000000
+XMM08=0000000000000000 00524f5252450040 XMM09=0000000000000000 0000000000000000
+XMM10=0000000000000000 0000000000000000 XMM11=0000000000000000 0000000000000000
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000
