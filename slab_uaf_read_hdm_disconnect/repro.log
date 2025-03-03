@@ -1,0 +1,336 @@
+Warning: Permanently added '[localhost]:39722' (ED25519) to the list of known hosts.
+executing program
+syzkaller login: [   60.623415][  T123] usb 1-1: new high-speed USB device number 2 using dummy_hcd
+[   60.782824][  T123] usb 1-1: Using ep0 maxpacket: 8
+[   60.791337][  T123] usb 1-1: config 0 has an invalid interface number: 237 but max is 0
+[   60.796613][  T123] usb 1-1: config 0 has no interface number 0
+[   60.798307][  T123] usb 1-1: New USB device found, idVendor=0424, idProduct=cf18, bcdDevice=b2.48
+[   60.800670][  T123] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   60.822352][  T123] usb 1-1: config 0 descriptor??
+[   61.053497][   T55] usb 1-1: USB disconnect, device number 2
+[   61.082498][   T55] ==================================================================
+[   61.084607][   T55] BUG: KASAN: slab-use-after-free in hdm_disconnect+0x227/0x250
+[   61.089443][   T55] Read of size 8 at addr ffff888029651898 by task kworker/1:1/55
+[   61.091075][   T55] 
+[   61.091599][   T55] CPU: 1 UID: 0 PID: 55 Comm: kworker/1:1 Not tainted 6.14.0-rc4 #1
+[   61.091637][   T55] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   61.091661][   T55] Workqueue: usb_hub_wq hub_event
+[   61.092562][   T55] Call Trace:
+[   61.092575][   T55]  <TASK>
+[   61.092591][   T55]  dump_stack_lvl+0x116/0x1b0
+[   61.092635][   T55]  print_address_description.constprop.0+0x2c/0x420
+[   61.092689][   T55]  ? hdm_disconnect+0x227/0x250
+[   61.092730][   T55]  print_report+0xaa/0x270
+[   61.092795][   T55]  ? hdm_disconnect+0x227/0x250
+[   61.092849][   T55]  ? kasan_addr_to_slab+0x27/0x80
+[   61.092914][   T55]  ? hdm_disconnect+0x227/0x250
+[   61.092981][   T55]  kasan_report+0xbd/0x100
+[   61.093056][   T55]  ? hdm_disconnect+0x227/0x250
+[   61.093124][   T55]  hdm_disconnect+0x227/0x250
+[   61.093177][   T55]  usb_unbind_interface+0x1e5/0x980
+[   61.093243][   T55]  ? __pfx_usb_unbind_interface+0x10/0x10
+[   61.093313][   T55]  device_remove+0x125/0x170
+[   61.093371][   T55]  device_release_driver_internal+0x443/0x620
+[   61.093438][   T55]  ? put_device+0x1f/0x30
+[   61.093486][   T55]  bus_remove_device+0x22f/0x420
+[   61.093544][   T55]  device_del+0x395/0x9e0
+[   61.093594][   T55]  ? __lock_release+0x103/0x470
+[   61.093640][   T55]  ? __pfx_device_del+0x10/0x10
+[   61.093677][   T55]  ? __pfx___mutex_lock+0x10/0x10
+[   61.093722][   T55]  ? mark_lock+0x38/0x400
+[   61.093781][   T55]  usb_disable_device+0x360/0x7b0
+[   61.093823][   T55]  usb_disconnect+0x2db/0x930
+[   61.093854][   T55]  ? __lock_release+0x103/0x470
+[   61.093897][   T55]  ? hub_port_connect_change+0x268/0x7f0
+[   61.093935][   T55]  ? mark_lock+0x38/0x400
+[   61.093980][   T55]  hub_port_connect+0x1f7/0x2730
+[   61.094018][   T55]  ? hub_port_connect_change+0x268/0x7f0
+[   61.094057][   T55]  ? __mutex_unlock_slowpath+0x145/0x400
+[   61.094104][   T55]  ? __pfx___mutex_unlock_slowpath+0x10/0x10
+[   61.094151][   T55]  ? __pfx_hub_port_connect+0x10/0x10
+[   61.094187][   T55]  ? usb_control_msg+0x39c/0x4b0
+[   61.094241][   T55]  hub_port_connect_change+0x27c/0x7f0
+[   61.094283][   T55]  port_event+0xe3d/0x1220
+[   61.094321][   T55]  ? __pfx_port_event+0x10/0x10
+[   61.094355][   T55]  ? hlock_class+0x4e/0x140
+[   61.094388][   T55]  ? mark_held_locks+0x9f/0xf0
+[   61.094433][   T55]  ? _raw_spin_unlock_irq+0x23/0x60
+[   61.094471][   T55]  ? lockdep_hardirqs_on+0x7c/0x120
+[   61.094516][   T55]  hub_event+0x517/0xca0
+[   61.094556][   T55]  ? __pfx_hub_event+0x10/0x10
+[   61.094592][   T55]  ? process_one_work+0x7e2/0x18c0
+[   61.094631][   T55]  ? rcu_is_watching+0x12/0xd0
+[   61.094680][   T55]  process_one_work+0x109d/0x18c0
+[   61.094722][   T55]  ? __pfx_lock_acquire+0x10/0x10
+[   61.094779][   T55]  ? __pfx_process_one_work+0x10/0x10
+[   61.094822][   T55]  ? assign_work+0x194/0x250
+[   61.094857][   T55]  worker_thread+0x677/0xe90
+[   61.094900][   T55]  ? __pfx_worker_thread+0x10/0x10
+[   61.094938][   T55]  kthread+0x3b3/0x760
+[   61.094973][   T55]  ? __pfx_kthread+0x10/0x10
+[   61.095009][   T55]  ? _raw_spin_unlock_irq+0x23/0x60
+[   61.095047][   T55]  ? __pfx_kthread+0x10/0x10
+[   61.095082][   T55]  ret_from_fork+0x48/0x80
+[   61.095132][   T55]  ? __pfx_kthread+0x10/0x10
+[   61.095166][   T55]  ret_from_fork_asm+0x1a/0x30
+[   61.095208][   T55]  </TASK>
+[   61.095219][   T55] 
+[   61.137311][   T55] Allocated by task 123:
+[   61.137739][   T55]  kasan_save_stack+0x24/0x50
+[   61.138229][   T55]  kasan_save_track+0x14/0x40
+[   61.138707][   T55]  __kasan_kmalloc+0xba/0xc0
+[   61.139183][   T55]  hdm_probe+0xb7/0x18b0
+[   61.139617][   T55]  usb_probe_interface+0x30b/0x9e0
+[   61.140287][   T55]  really_probe+0x252/0xaa0
+[   61.140758][   T55]  __driver_probe_device+0x1df/0x460
+[   61.141302][   T55]  driver_probe_device+0x49/0x120
+[   61.141816][   T55]  __device_attach_driver+0x1e3/0x2f0
+[   61.142361][   T55]  bus_for_each_drv+0x14c/0x1e0
+[   61.142865][   T55]  __device_attach+0x1f2/0x4d0
+[   61.143355][   T55]  bus_probe_device+0x17f/0x1c0
+[   61.143833][   T55]  device_add+0xc5e/0x1490
+[   61.144299][   T55]  usb_set_configuration+0x11a5/0x1c50
+[   61.144867][   T55]  usb_generic_driver_probe+0xbf/0x120
+[   61.145405][   T55]  usb_probe_device+0xed/0x3e0
+[   61.145880][   T55]  really_probe+0x252/0xaa0
+[   61.146322][   T55]  __driver_probe_device+0x1df/0x460
+[   61.146840][   T55]  driver_probe_device+0x49/0x120
+[   61.147336][   T55]  __device_attach_driver+0x1e3/0x2f0
+[   61.147844][   T55]  bus_for_each_drv+0x14c/0x1e0
+[   61.148301][   T55]  __device_attach+0x1f2/0x4d0
+[   61.148777][   T55]  bus_probe_device+0x17f/0x1c0
+[   61.149237][   T55]  device_add+0xc5e/0x1490
+[   61.149668][   T55]  usb_new_device+0x8f4/0x1430
+[   61.150123][   T55]  hub_port_connect+0x1122/0x2730
+[   61.150593][   T55]  hub_port_connect_change+0x27c/0x7f0
+[   61.151104][   T55]  port_event+0xe3d/0x1220
+[   61.151492][   T55]  hub_event+0x517/0xca0
+[   61.151870][   T55]  process_one_work+0x109d/0x18c0
+[   61.152304][   T55]  worker_thread+0x677/0xe90
+[   61.152721][   T55]  kthread+0x3b3/0x760
+[   61.153105][   T55]  ret_from_fork+0x48/0x80
+[   61.153514][   T55]  ret_from_fork_asm+0x1a/0x30
+[   61.153960][   T55] 
+[   61.154172][   T55] Freed by task 55:
+[   61.154500][   T55]  kasan_save_stack+0x24/0x50
+[   61.154910][   T55]  kasan_save_track+0x14/0x40
+[   61.155321][   T55]  kasan_save_free_info+0x3b/0x80
+[   61.155774][   T55]  __kasan_slab_free+0x54/0x80
+[   61.156192][   T55]  kfree+0x12e/0x420
+[   61.156552][   T55]  device_release+0xa6/0x240
+[   61.156976][   T55]  kobject_cleanup+0x136/0x410
+[   61.157398][   T55]  kobject_put+0xf0/0x130
+[   61.157849][   T55]  device_unregister+0x30/0xc0
+[   61.158274][   T55]  hdm_disconnect+0x10b/0x250
+[   61.158696][   T55]  usb_unbind_interface+0x1e5/0x980
+[   61.159155][   T55]  device_remove+0x125/0x170
+[   61.159549][   T55]  device_release_driver_internal+0x443/0x620
+[   61.160065][   T55]  bus_remove_device+0x22f/0x420
+[   61.160480][   T55]  device_del+0x395/0x9e0
+[   61.160840][   T55]  usb_disable_device+0x360/0x7b0
+[   61.161252][   T55]  usb_disconnect+0x2db/0x930
+[   61.161630][   T55]  hub_port_connect+0x1f7/0x2730
+[   61.162037][   T55]  hub_port_connect_change+0x27c/0x7f0
+[   61.162477][   T55]  port_event+0xe3d/0x1220
+[   61.162846][   T55]  hub_event+0x517/0xca0
+[   61.163196][   T55]  process_one_work+0x109d/0x18c0
+[   61.163602][   T55]  worker_thread+0x677/0xe90
+[   61.163984][   T55]  kthread+0x3b3/0x760
+[   61.164324][   T55]  ret_from_fork+0x48/0x80
+[   61.164708][   T55]  ret_from_fork_asm+0x1a/0x30
+[   61.165129][   T55] 
+[   61.165332][   T55] The buggy address belongs to the object at ffff888029650000
+[   61.165332][   T55]  which belongs to the cache kmalloc-8k of size 8192
+[   61.166486][   T55] The buggy address is located 6296 bytes inside of
+[   61.166486][   T55]  freed 8192-byte region [ffff888029650000, ffff888029652000)
+[   61.167583][   T55] 
+[   61.167786][   T55] The buggy address belongs to the physical page:
+[   61.168288][   T55] page: refcount:0 mapcount:0 mapping:0000000000000000 index:0x0 pfn:0x29650
+[   61.168976][   T55] head: order:3 mapcount:0 entire_mapcount:0 nr_pages_mapped:0 pincount:0
+[   61.169637][   T55] anon flags: 0xfff00000000040(head|node=0|zone=1|lastcpupid=0x7ff)
+[   61.170270][   T55] page_type: f5(slab)
+[   61.170610][   T55] raw: 00fff00000000040 ffff88801b442280 0000000000000000 dead000000000001
+[   61.171322][   T55] raw: 0000000000000000 0000000080020002 00000000f5000000 0000000000000000
+[   61.172045][   T55] head: 00fff00000000040 ffff88801b442280 0000000000000000 dead000000000001
+[   61.172729][   T55] head: 0000000000000000 0000000080020002 00000000f5000000 0000000000000000
+[   61.173449][   T55] head: 00fff00000000003 ffffea0000a59401 ffffffffffffffff 0000000000000000
+[   61.174169][   T55] head: 0000000000000008 0000000000000000 00000000ffffffff 0000000000000000
+[   61.174903][   T55] page dumped because: kasan: bad access detected
+[   61.175418][   T55] page_owner tracks the page as allocated
+[   61.175872][   T55] page last allocated via order 3, migratetype Unmovable, gfp_mask 0xd2040(__GFP_IO|__GFP_NOWARN|__GFP_NORETRY|__GFP_COMP|__GFP_NOMEMALLOC), pid 9369, tgid 9369 (sshd), ts 53849506441, free_ts 53643985635
+[   61.177480][   T55]  post_alloc_hook+0x1a3/0x1d0
+[   61.177892][   T55]  get_page_from_freelist+0x8a5/0xfa0
+[   61.178354][   T55]  __alloc_frozen_pages_noprof+0x1d8/0x3b0
+[   61.178848][   T55]  alloc_pages_mpol+0x1f2/0x550
+[   61.179247][   T55]  allocate_slab+0x229/0x310
+[   61.179636][   T55]  ___slab_alloc+0x7f3/0x12b0
+[   61.180074][   T55]  __slab_alloc.constprop.0+0x56/0xc0
+[   61.180514][   T55]  __kmalloc_cache_noprof+0x280/0x450
+[   61.180962][   T55]  tomoyo_print_bprm+0x52/0x820
+[   61.181381][   T55]  tomoyo_init_log+0x1ad/0x560
+[   61.181856][   T55]  tomoyo_supervisor+0x366/0xb70
+[   61.182261][   T55]  tomoyo_env_perm+0x18d/0x200
+[   61.182668][   T55]  tomoyo_environ+0x5c4/0x990
+[   61.183077][   T55]  tomoyo_find_next_domain+0x8f0/0x16c0
+[   61.183562][   T55]  tomoyo_bprm_check_security+0x148/0x1e0
+[   61.184051][   T55]  security_bprm_check+0x1df/0x210
+[   61.184471][   T55] page last free pid 9362 tgid 9362 stack trace:
+[   61.184976][   T55]  free_frozen_pages+0x71f/0xff0
+[   61.185384][   T55]  __put_partials+0x13b/0x190
+[   61.185781][   T55]  qlist_free_all+0x50/0x130
+[   61.186160][   T55]  kasan_quarantine_reduce+0x1a5/0x1f0
+[   61.186630][   T55]  __kasan_slab_alloc+0x6f/0xa0
+[   61.187060][   T55]  kmem_cache_alloc_noprof+0x167/0x400
+[   61.187520][   T55]  getname_flags+0xd2/0x620
+[   61.187910][   T55]  do_readlinkat+0xaa/0x370
+[   61.188286][   T55]  __x64_sys_readlink+0x78/0xc0
+[   61.188686][   T55]  do_syscall_64+0xcb/0x260
+[   61.189067][   T55]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   61.189596][   T55] 
+[   61.189809][   T55] Memory state around the buggy address:
+[   61.190257][   T55]  ffff888029651780: fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb
+[   61.190917][   T55]  ffff888029651800: fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb
+[   61.191576][   T55] >ffff888029651880: fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb
+[   61.192247][   T55]                             ^
+[   61.192650][   T55]  ffff888029651900: fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb
+[   61.193303][   T55]  ffff888029651980: fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb fb
+[   61.193963][   T55] ==================================================================
+[   61.198297][   T55] Kernel panic - not syncing: KASAN: panic_on_warn set ...
+[   61.198932][   T55] CPU: 1 UID: 0 PID: 55 Comm: kworker/1:1 Not tainted 6.14.0-rc4 #1
+[   61.199569][   T55] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   61.200446][   T55] Workqueue: usb_hub_wq hub_event
+[   61.200903][   T55] Call Trace:
+[   61.201193][   T55]  <TASK>
+[   61.201450][   T55]  dump_stack_lvl+0x3d/0x1b0
+[   61.201887][   T55]  panic+0x6d5/0x790
+[   61.202281][   T55]  ? __pfx_panic+0x10/0x10
+[   61.202718][   T55]  ? irqentry_exit+0x3b/0xa0
+[   61.203160][   T55]  ? lockdep_hardirqs_on+0x7c/0x120
+[   61.203661][   T55]  ? preempt_schedule_thunk+0x1a/0x30
+[   61.204171][   T55]  ? preempt_schedule_common+0x44/0xc0
+[   61.204661][   T55]  ? hdm_disconnect+0x227/0x250
+[   61.205109][   T55]  ? hdm_disconnect+0x227/0x250
+[   61.205553][   T55]  check_panic_on_warn+0xb1/0xc0
+[   61.206010][   T55]  ? hdm_disconnect+0x227/0x250
+[   61.206450][   T55]  end_report+0x83/0xa0
+[   61.206849][   T55]  kasan_report+0xcd/0x100
+[   61.207268][   T55]  ? hdm_disconnect+0x227/0x250
+[   61.207736][   T55]  hdm_disconnect+0x227/0x250
+[   61.208173][   T55]  usb_unbind_interface+0x1e5/0x980
+[   61.208644][   T55]  ? __pfx_usb_unbind_interface+0x10/0x10
+[   61.209194][   T55]  device_remove+0x125/0x170
+[   61.209696][   T55]  device_release_driver_internal+0x443/0x620
+[   61.210285][   T55]  ? put_device+0x1f/0x30
+[   61.210701][   T55]  bus_remove_device+0x22f/0x420
+[   61.211150][   T55]  device_del+0x395/0x9e0
+[   61.211552][   T55]  ? __lock_release+0x103/0x470
+[   61.212022][   T55]  ? __pfx_device_del+0x10/0x10
+[   61.212474][   T55]  ? __pfx___mutex_lock+0x10/0x10
+[   61.212935][   T55]  ? mark_lock+0x38/0x400
+[   61.213331][   T55]  usb_disable_device+0x360/0x7b0
+[   61.213790][   T55]  usb_disconnect+0x2db/0x930
+[   61.214214][   T55]  ? __lock_release+0x103/0x470
+[   61.214654][   T55]  ? hub_port_connect_change+0x268/0x7f0
+[   61.215159][   T55]  ? mark_lock+0x38/0x400
+[   61.215555][   T55]  hub_port_connect+0x1f7/0x2730
+[   61.216009][   T55]  ? hub_port_connect_change+0x268/0x7f0
+[   61.216512][   T55]  ? __mutex_unlock_slowpath+0x145/0x400
+[   61.217049][   T55]  ? __pfx___mutex_unlock_slowpath+0x10/0x10
+[   61.217602][   T55]  ? __pfx_hub_port_connect+0x10/0x10
+[   61.218109][   T55]  ? usb_control_msg+0x39c/0x4b0
+[   61.218573][   T55]  hub_port_connect_change+0x27c/0x7f0
+[   61.219085][   T55]  port_event+0xe3d/0x1220
+[   61.219492][   T55]  ? __pfx_port_event+0x10/0x10
+[   61.219953][   T55]  ? hlock_class+0x4e/0x140
+[   61.220380][   T55]  ? mark_held_locks+0x9f/0xf0
+[   61.220828][   T55]  ? _raw_spin_unlock_irq+0x23/0x60
+[   61.221310][   T55]  ? lockdep_hardirqs_on+0x7c/0x120
+[   61.221825][   T55]  hub_event+0x517/0xca0
+[   61.222223][   T55]  ? __pfx_hub_event+0x10/0x10
+[   61.222655][   T55]  ? process_one_work+0x7e2/0x18c0
+[   61.223118][   T55]  ? rcu_is_watching+0x12/0xd0
+[   61.223574][   T55]  process_one_work+0x109d/0x18c0
+[   61.224056][   T55]  ? __pfx_lock_acquire+0x10/0x10
+[   61.224533][   T55]  ? __pfx_process_one_work+0x10/0x10
+[   61.225041][   T55]  ? assign_work+0x194/0x250
+[   61.225459][   T55]  worker_thread+0x677/0xe90
+[   61.225885][   T55]  ? __pfx_worker_thread+0x10/0x10
+[   61.226346][   T55]  kthread+0x3b3/0x760
+[   61.226720][   T55]  ? __pfx_kthread+0x10/0x10
+[   61.227143][   T55]  ? _raw_spin_unlock_irq+0x23/0x60
+[   61.227622][   T55]  ? __pfx_kthread+0x10/0x10
+[   61.228059][   T55]  ret_from_fork+0x48/0x80
+[   61.228483][   T55]  ? __pfx_kthread+0x10/0x10
+[   61.228913][   T55]  ret_from_fork_asm+0x1a/0x30
+[   61.229401][   T55]  </TASK>
+[   61.229921][   T55] Kernel Offset: disabled
+[   61.230311][   T55] Rebooting in 86400 seconds..
+
+VM DIAGNOSIS:
+06:21:03  Registers:
+info registers vcpu 0
+RAX=0000000000000000 RBX=0000000000000000 RCX=0000000000000000 RDX=0000000000000000
+RSI=0000000000000000 RDI=0000000000000000 RBP=0000000000000000 RSP=ffffc90000007fd0
+R8 =0000000000000000 R9 =0000000000000000 R10=0000000000000000 R11=0000000000000000
+R12=0000000000000000 R13=0000000000000000 R14=0000000000000000 R15=0000000000000000
+RIP=ffffffff816283c9 RFL=00000046 [---Z-P-] CPL=0 II=0 A20=1 SMM=0 HLT=1
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 0000000000000000 ffffffff 00c00000
+GS =0000 ffff88802b600000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe0000003000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000001000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=00007f40456fa328 CR3=000000004a62c000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=0000000000000000 0000000000000000 XMM01=2525252525252525 2525252525252525
+XMM02=ffffff00ffffff00 ffff000000000000 XMM03=0000000000000000 0000000000000000
+XMM04=00ffffffffffff00 0000000000000000 XMM05=464e5a6605870c59 f12392555c59aa2b
+XMM06=e50c87e0c208a40f 99fba707ea72f404 XMM07=b0e4e6e12f7018a8 65dc773d2aae4d00
+XMM08=dfc544efb1f1269d 07b997535a07647b XMM09=0000000000000000 0000000000000000
+XMM10=0000000000000000 0000000000000000 XMM11=0000000000000000 0000000000000000
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000
+info registers vcpu 1
+RAX=0000000080000001 RBX=000000253ac99acc RCX=0000000000000000 RDX=0000000000000000
+RSI=0000000000000000 RDI=0000000000000000 RBP=000000253ac33ebe RSP=ffffc900006bf308
+R8 =0000000000000000 R9 =0000000000000000 R10=0000000000000000 R11=0000000000000000
+R12=0000000000000001 R13=0000000000217dab R14=0000000000002613 R15=000000000000000a
+RIP=ffffffff8b624af2 RFL=00000082 [--S----] CPL=0 II=0 A20=1 SMM=0 HLT=0
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 0000000000000000 ffffffff 00c00000
+GS =0000 ffff88807ee00000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe000004a000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000048000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=00007f54940450f8 CR3=00000000280b8000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=2033353a30323a32 3220373220626546 XMM01=6c656e72656b2072 656c6c616b7a7973
+XMM02=5d3736303938312e 31362020205b203a XMM03=5f7972746e652020 5d3535542020205b
+XMM04=0a663778302f3737 78302b656d617266 XMM05=77685f7265746661 5f34365f4c4c4143
+XMM06=5359535f7972746e 6520205d35355420 XMM07=20205b5d37363039 38312e3136202020
+XMM08=3030302038303030 3030303030303030 XMM09=ffff0000000000ff 000000000000ffff
+XMM10=0000000000000000 0000000000000000 XMM11=ffff000000000000 00000000000000ff
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000
