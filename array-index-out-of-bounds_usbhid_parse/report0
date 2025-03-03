@@ -1,0 +1,70 @@
+usb 1-1: new high-speed USB device number 2 using dummy_hcd
+usb 1-1: Using ep0 maxpacket: 32
+usb 1-1: unable to get BOS descriptor or descriptor too short
+usb 1-1: config 1 has an invalid interface number: 170 but max is 1
+usb 1-1: config 1 has an invalid interface number: 234 but max is 1
+usb 1-1: config 1 has no interface number 0
+usb 1-1: config 1 has no interface number 1
+usb 1-1: config 1 interface 170 altsetting 5 endpoint 0x2 has an invalid bInterval 129, changing to 7
+usb 1-1: config 1 interface 170 altsetting 5 has a duplicate endpoint with address 0x4, skipping
+usb 1-1: config 1 interface 170 altsetting 5 endpoint 0x82 has an invalid bInterval 33, changing to 9
+usb 1-1: config 1 interface 170 altsetting 5 has a duplicate endpoint with address 0x4, skipping
+usb 1-1: config 1 interface 170 altsetting 5 has 6 endpoint descriptors, different from the interface descriptor's value: 5
+usb 1-1: config 1 interface 234 altsetting 1 endpoint 0x8 has invalid maxpacket 1024, setting to 64
+usb 1-1: config 1 interface 234 altsetting 1 has an invalid descriptor for endpoint zero, skipping
+usb 1-1: config 1 interface 234 altsetting 1 has a duplicate endpoint with address 0xC, skipping
+usb 1-1: config 1 interface 170 has no altsetting 0
+usb 1-1: config 1 interface 234 has no altsetting 0
+usb 1-1: string descriptor 0 read error: -22
+usb 1-1: New USB device found, idVendor=080e, idProduct=4eb9, bcdDevice=d7.f6
+usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+------------[ cut here ]------------
+UBSAN: array-index-out-of-bounds in drivers/hid/usbhid/hid-core.c:1025:18
+index 1 is out of range for type 'hid_class_descriptor [1]'
+CPU: 1 UID: 0 PID: 9397 Comm: kworker/1:1 Not tainted 6.14.0-rc4 #1
+Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+Workqueue: usb_hub_wq hub_event
+Call Trace:
+ <TASK>
+ __dump_stack lib/dump_stack.c:94 [inline]
+ dump_stack_lvl+0x180/0x1b0 lib/dump_stack.c:120
+ ubsan_epilogue lib/ubsan.c:231 [inline]
+ __ubsan_handle_out_of_bounds+0xdb/0x120 lib/ubsan.c:429
+ usbhid_parse+0x9a4/0xa70 drivers/hid/usbhid/hid-core.c:1025
+ hid_add_device+0x190/0xa90 drivers/hid/hid-core.c:2870
+ usbhid_probe+0xf43/0x1440 drivers/hid/usbhid/hid-core.c:1431
+ usb_probe_interface+0x308/0x9e0 drivers/usb/core/driver.c:396
+ call_driver_probe drivers/base/dd.c:579 [inline]
+ really_probe+0x24f/0xaa0 drivers/base/dd.c:658
+ __driver_probe_device+0x1df/0x460 drivers/base/dd.c:800
+ driver_probe_device+0x49/0x120 drivers/base/dd.c:830
+ __device_attach_driver+0x1e3/0x2f0 drivers/base/dd.c:958
+ bus_for_each_drv+0x149/0x1e0 drivers/base/bus.c:462
+ __device_attach+0x1f2/0x4d0 drivers/base/dd.c:1030
+ bus_probe_device+0x17f/0x1c0 drivers/base/bus.c:537
+ device_add+0xc5e/0x1490 drivers/base/core.c:3665
+ usb_set_configuration+0x11a5/0x1c50 drivers/usb/core/message.c:2210
+ usb_generic_driver_probe+0xbf/0x120 drivers/usb/core/generic.c:250
+ usb_probe_device+0xea/0x3e0 drivers/usb/core/driver.c:291
+ call_driver_probe drivers/base/dd.c:579 [inline]
+ really_probe+0x24f/0xaa0 drivers/base/dd.c:658
+ __driver_probe_device+0x1df/0x460 drivers/base/dd.c:800
+ driver_probe_device+0x49/0x120 drivers/base/dd.c:830
+ __device_attach_driver+0x1e3/0x2f0 drivers/base/dd.c:958
+ bus_for_each_drv+0x149/0x1e0 drivers/base/bus.c:462
+ __device_attach+0x1f2/0x4d0 drivers/base/dd.c:1030
+ bus_probe_device+0x17f/0x1c0 drivers/base/bus.c:537
+ device_add+0xc5e/0x1490 drivers/base/core.c:3665
+ usb_new_device+0x8f4/0x1430 drivers/usb/core/hub.c:2663
+ hub_port_connect+0x1122/0x2730 drivers/usb/core/hub.c:5533
+ hub_port_connect_change+0x27c/0x7f0 drivers/usb/core/hub.c:5673
+ port_event+0xe3d/0x1220 drivers/usb/core/hub.c:5833
+ hub_event+0x517/0xca0 drivers/usb/core/hub.c:5915
+ process_one_work+0x109a/0x18c0 kernel/workqueue.c:3236
+ process_scheduled_works kernel/workqueue.c:3317 [inline]
+ worker_thread+0x677/0xe90 kernel/workqueue.c:3398
+ kthread+0x3b0/0x760 kernel/kthread.c:464
+ ret_from_fork+0x45/0x80 arch/x86/kernel/process.c:148
+ ret_from_fork_asm+0x1a/0x30 arch/x86/entry/entry_64.S:244
+ </TASK>
+---[ end trace ]---

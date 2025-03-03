@@ -1,0 +1,209 @@
+program:
+syz_usb_connect(0x0, 0x23b, &(0x7f0000000280)={{0x12, 0x1, 0x201, 0x22, 0x8f, 0xe7, 0x20, 0x80e, 0x4eb9, 0xd7f6, 0x1, 0x2, 0x3, 0x1, [{{0x9, 0x2, 0x229, 0x2, 0x1, 0x74, 0xb0, 0x40, [{{0x9, 0x4, 0xaa, 0x5, 0x5, 0x3, 0xe9, 0x1e, 0x1, [@uac_as={[@as_header={0x7, 0x24, 0x1, 0x1, 0x81, 0x1005}, @format_type_i_discrete={0x8, 0x24, 0x2, 0x1, 0x80, 0x3, 0x0, 0x6}, @format_type_i_discrete={0x8, 0x24, 0x2, 0x1, 0x1, 0x2, 0x81, 0x5}, @format_type_ii_discrete={0x9, 0x24, 0x2, 0x2, 0x2, 0x2d, 0x6}, @as_header={0x7, 0x24, 0x1, 0x1, 0x0, 0x3}, @format_type_i_continuous={0x8, 0x24, 0x2, 0x1, 0x1, 0x4, 0x63, 0x7}]}], [{{0x9, 0x5, 0xc, 0x10, 0x10, 0x8, 0x7, 0x7, [@generic={0x5b, 0x21, "1b54e5d373854de7f55fab03597e302bd4b089efdaa8f4bde6c5789f178a9e5c7e7dee400eb4abe57cd84c0473000e898a048b82a7e5aa32d8323ab0fe59d5e872a7fa6302bed4075e185016850cea8588c43e9d88d0270cb9"}]}}, {{0x9, 0x5, 0x2, 0x1, 0x10, 0x81, 0x1, 0x33, [@uac_iso={0x7, 0x25, 0x1, 0x1, 0x9e, 0x1}]}}, {{0x9, 0x5, 0x4, 0x0, 0x40, 0x9, 0x7, 0x0, [@uac_iso={0x7, 0x25, 0x1, 0x0, 0x9, 0x9}]}}, {{0x9, 0x5, 0x4, 0x8, 0x20, 0x42, 0x20, 0x4, [@generic={0xc3, 0x5, "8257e51b21dc7d946f737d6e65aabaf964cb2653edba497665c80d258b84dbbfffba9155ac99f9d2b0955f8d12f39455f56076d8f30fc6142c73131543b9d993054c744af968ae669a760b20652a3489272767078ac09be24b0a62af6fd95decc4acc9ea5f1285b12859aa66d202dca715b17320989318169e74450d57a7639791c4f1e650ce38fb4c0a231edadc56e868ddeb5fedb9c32f7423bed8736847753cf2be2a710d76c94e24acb483e82b4abef8b371d0a89812e60b7477758aad3e85"}, @generic={0x2, 0xf}]}}, {{0x9, 0x5, 0x4, 0xc, 0x40, 0x1, 0x81, 0x81, [@uac_iso={0x7, 0x25, 0x1, 0x3, 0x45, 0x1}, @generic={0x2, 0x31}]}}]}}, {{0x9, 0x4, 0xea, 0x1, 0x3, 0xbe, 0x54, 0x96, 0x9, [@cdc_ecm={{0x5}, {0x5, 0x24, 0x0, 0x2}, {0xd, 0x24, 0xf, 0x1, 0x9, 0x3ff, 0x1, 0x9}, [@acm={0x4, 0x24, 0x2, 0xd}, @mdlm={0x15, 0x24, 0x12, 0x9}, @mbim={0xc, 0x24, 0x1b, 0x4, 0x80, 0x7, 0x0, 0x4, 0x3}, @dmm={0x7, 0x24, 0x14, 0x4, 0x2}, @mdlm_detail={0x4, 0x24, 0x13, 0xad}]}], [{{0x9, 0x5, 0x8, 0xc, 0x400, 0x0, 0x2b, 0xe1, [@generic={0x2, 0x22}, @generic={0x2, 0x10}]}}, {{0x9, 0x5, 0x80, 0x0, 0x20, 0x6, 0x7f, 0x5, [@uac_iso={0x7, 0x25, 0x1, 0x2, 0xfb, 0x4022}, @uac_iso={0x7, 0x25, 0x1, 0x1, 0x20}]}}, {{0x9, 0x5, 0xc, 0x0, 0x400, 0x60, 0x9b, 0x4, [@uac_iso={0x7, 0x25, 0x1, 0x2, 0xff, 0x3f91}]}}]}}]}}]}}, &(0x7f0000000840)={0x0, 0x0, 0x0, 0x0, 0x3, [{0x0, 0x0}, {0x0, 0x0}, {0x0, 0x0}]})
+
+[  358.355172][ T9397] usb 1-1: new high-speed USB device number 2 using dummy_hcd
+[  358.504431][ T9397] usb 1-1: Using ep0 maxpacket: 32
+[  358.512211][ T9397] usb 1-1: unable to get BOS descriptor or descriptor too short
+[  358.522124][ T9397] usb 1-1: config 1 has an invalid interface number: 170 but max is 1
+[  358.527339][ T9397] usb 1-1: config 1 has an invalid interface number: 234 but max is 1
+[  358.529934][ T9397] usb 1-1: config 1 has no interface number 0
+[  358.532071][ T9397] usb 1-1: config 1 has no interface number 1
+[  358.534117][ T9397] usb 1-1: config 1 interface 170 altsetting 5 endpoint 0x2 has an invalid bInterval 129, changing to 7
+[  358.539426][ T9397] usb 1-1: config 1 interface 170 altsetting 5 has a duplicate endpoint with address 0x4, skipping
+[  358.542442][ T9397] usb 1-1: config 1 interface 170 altsetting 5 endpoint 0x82 has an invalid bInterval 33, changing to 9
+[  358.545314][ T9397] usb 1-1: config 1 interface 170 altsetting 5 has a duplicate endpoint with address 0x4, skipping
+[  358.547651][ T9397] usb 1-1: config 1 interface 170 altsetting 5 has 6 endpoint descriptors, different from the interface descriptor's value: 5
+[  358.550345][ T9397] usb 1-1: config 1 interface 234 altsetting 1 endpoint 0x8 has invalid maxpacket 1024, setting to 64
+[  358.552772][ T9397] usb 1-1: config 1 interface 234 altsetting 1 has an invalid descriptor for endpoint zero, skipping
+[  358.555704][ T9397] usb 1-1: config 1 interface 234 altsetting 1 has a duplicate endpoint with address 0xC, skipping
+[  358.557692][ T9397] usb 1-1: config 1 interface 170 has no altsetting 0
+[  358.558958][ T9397] usb 1-1: config 1 interface 234 has no altsetting 0
+[  358.567979][ T9397] usb 1-1: string descriptor 0 read error: -22
+[  358.569192][ T9397] usb 1-1: New USB device found, idVendor=080e, idProduct=4eb9, bcdDevice=d7.f6
+[  358.570476][ T9397] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[  358.598200][ T9397] ------------[ cut here ]------------
+[  358.599095][ T9397] UBSAN: array-index-out-of-bounds in drivers/hid/usbhid/hid-core.c:1025:18
+[  358.600286][ T9397] index 1 is out of range for type 'hid_class_descriptor [1]'
+[  358.601321][ T9397] CPU: 1 UID: 0 PID: 9397 Comm: kworker/1:1 Not tainted 6.14.0-rc4 #1
+[  358.601352][ T9397] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[  358.601365][ T9397] Workqueue: usb_hub_wq hub_event
+[  358.601407][ T9397] Call Trace:
+[  358.601416][ T9397]  <TASK>
+[  358.601424][ T9397]  dump_stack_lvl+0x180/0x1b0
+[  358.601480][ T9397]  __ubsan_handle_out_of_bounds+0xdb/0x120
+[  358.601509][ T9397]  ? freedev+0x1a1/0x780
+[  358.601545][ T9397]  usbhid_parse+0x9a4/0xa70
+[  358.601586][ T9397]  ? __pfx_usbhid_parse+0x10/0x10
+[  358.601627][ T9397]  ? hid_match_id+0x25e/0x2f0
+[  358.601660][ T9397]  hid_add_device+0x190/0xa90
+[  358.601697][ T9397]  ? lockdep_init_map_type+0x2e1/0x810
+[  358.601726][ T9397]  ? __pfx_hid_add_device+0x10/0x10
+[  358.601758][ T9397]  ? lockdep_init_map_type+0x2e1/0x810
+[  358.601794][ T9397]  ? __raw_spin_lock_init+0x3a/0x120
+[  358.601819][ T9397]  usbhid_probe+0xf43/0x1440
+[  358.601857][ T9397]  usb_probe_interface+0x308/0x9e0
+[  358.601893][ T9397]  ? __pfx_usb_probe_interface+0x10/0x10
+[  358.601920][ T9397]  really_probe+0x24f/0xaa0
+[  358.601948][ T9397]  __driver_probe_device+0x1df/0x460
+[  358.601979][ T9397]  ? parse_option_str+0x1a2/0x1f0
+[  358.602002][ T9397]  driver_probe_device+0x49/0x120
+[  358.602026][ T9397]  __device_attach_driver+0x1e3/0x2f0
+[  358.602053][ T9397]  bus_for_each_drv+0x149/0x1e0
+[  358.602078][ T9397]  ? __pfx___device_attach_driver+0x10/0x10
+[  358.602104][ T9397]  ? __pfx_bus_for_each_drv+0x10/0x10
+[  358.602121][ T9397]  ? _raw_spin_unlock_irqrestore+0x5e/0x80
+[  358.602145][ T9397]  ? lockdep_hardirqs_on+0x7c/0x120
+[  358.602179][ T9397]  ? _raw_spin_unlock_irqrestore+0x41/0x80
+[  358.602207][ T9397]  __device_attach+0x1f2/0x4d0
+[  358.602230][ T9397]  ? __pfx___device_attach+0x10/0x10
+[  358.602254][ T9397]  ? do_raw_spin_unlock+0x174/0x240
+[  358.602288][ T9397]  bus_probe_device+0x17f/0x1c0
+[  358.602312][ T9397]  device_add+0xc5e/0x1490
+[  358.602339][ T9397]  ? kfree+0x12e/0x420
+[  358.602367][ T9397]  ? __pfx_device_add+0x10/0x10
+[  358.602409][ T9397]  usb_set_configuration+0x11a5/0x1c50
+[  358.602448][ T9397]  ? __pfx_usb_generic_driver_probe+0x10/0x10
+[  358.602468][ T9397]  usb_generic_driver_probe+0xbf/0x120
+[  358.602495][ T9397]  usb_probe_device+0xea/0x3e0
+[  358.602518][ T9397]  ? __pfx_usb_probe_device+0x10/0x10
+[  358.602541][ T9397]  really_probe+0x24f/0xaa0
+[  358.602568][ T9397]  __driver_probe_device+0x1df/0x460
+[  358.602610][ T9397]  ? parse_option_str+0x1a2/0x1f0
+[  358.602634][ T9397]  driver_probe_device+0x49/0x120
+[  358.602658][ T9397]  __device_attach_driver+0x1e3/0x2f0
+[  358.602684][ T9397]  bus_for_each_drv+0x149/0x1e0
+[  358.602711][ T9397]  ? __pfx___device_attach_driver+0x10/0x10
+[  358.602738][ T9397]  ? __pfx_bus_for_each_drv+0x10/0x10
+[  358.602754][ T9397]  ? _raw_spin_unlock_irqrestore+0x5e/0x80
+[  358.602778][ T9397]  ? lockdep_hardirqs_on+0x7c/0x120
+[  358.602809][ T9397]  ? _raw_spin_unlock_irqrestore+0x41/0x80
+[  358.602839][ T9397]  __device_attach+0x1f2/0x4d0
+[  358.602862][ T9397]  ? __pfx___device_attach+0x10/0x10
+[  358.602886][ T9397]  ? do_raw_spin_unlock+0x174/0x240
+[  358.602921][ T9397]  bus_probe_device+0x17f/0x1c0
+[  358.602944][ T9397]  device_add+0xc5e/0x1490
+[  358.602974][ T9397]  ? __pfx_device_add+0x10/0x10
+[  358.603019][ T9397]  usb_new_device+0x8f4/0x1430
+[  358.603048][ T9397]  hub_port_connect+0x1122/0x2730
+[  358.603084][ T9397]  ? __pfx_hub_port_connect+0x10/0x10
+[  358.603124][ T9397]  hub_port_connect_change+0x27c/0x7f0
+[  358.603153][ T9397]  port_event+0xe3d/0x1220
+[  358.603179][ T9397]  ? __pfx_port_event+0x10/0x10
+[  358.603197][ T9397]  ? hlock_class+0x4e/0x140
+[  358.603231][ T9397]  ? mark_held_locks+0x9f/0xf0
+[  358.603257][ T9397]  ? _raw_spin_unlock_irq+0x23/0x60
+[  358.603280][ T9397]  ? lockdep_hardirqs_on+0x7c/0x120
+[  358.603313][ T9397]  hub_event+0x517/0xca0
+[  358.603350][ T9397]  ? __pfx_hub_event+0x10/0x10
+[  358.603373][ T9397]  ? process_one_work+0x7e2/0x18c0
+[  358.603399][ T9397]  ? rcu_is_watching+0x12/0xd0
+[  358.603440][ T9397]  process_one_work+0x109a/0x18c0
+[  358.603471][ T9397]  ? __pfx_lock_acquire+0x10/0x10
+[  358.603498][ T9397]  ? __pfx_process_one_work+0x10/0x10
+[  358.603539][ T9397]  ? assign_work+0x194/0x250
+[  358.603563][ T9397]  worker_thread+0x677/0xe90
+[  358.603595][ T9397]  ? __pfx_worker_thread+0x10/0x10
+[  358.603633][ T9397]  kthread+0x3b0/0x760
+[  358.603667][ T9397]  ? __pfx_kthread+0x10/0x10
+[  358.603692][ T9397]  ? _raw_spin_unlock_irq+0x23/0x60
+[  358.603715][ T9397]  ? __pfx_kthread+0x10/0x10
+[  358.603739][ T9397]  ret_from_fork+0x45/0x80
+[  358.603779][ T9397]  ? __pfx_kthread+0x10/0x10
+[  358.603800][ T9397]  ret_from_fork_asm+0x1a/0x30
+[  358.603835][ T9397]  </TASK>
+[  358.603846][ T9397] ---[ end trace ]---
+[  358.651668][ T9397] Kernel panic - not syncing: UBSAN: panic_on_warn set ...
+[  358.652312][ T9397] CPU: 1 UID: 0 PID: 9397 Comm: kworker/1:1 Not tainted 6.14.0-rc4 #1
+[  358.653024][ T9397] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[  358.653815][ T9397] Workqueue: usb_hub_wq hub_event
+[  358.654279][ T9397] Call Trace:
+[  358.654580][ T9397]  <TASK>
+[  358.654851][ T9397]  dump_stack_lvl+0x3d/0x1b0
+[  358.655279][ T9397]  panic+0x6d5/0x790
+[  358.655647][ T9397]  ? __pfx_panic+0x10/0x10
+[  358.656064][ T9397]  ? __pfx__printk+0x10/0x10
+[  358.656491][ T9397]  ? mark_lock+0x38/0x400
+[  358.656905][ T9397]  check_panic_on_warn+0xb1/0xc0
+[  358.657355][ T9397]  __ubsan_handle_out_of_bounds+0xfb/0x120
+[  358.657887][ T9397]  ? freedev+0x1a1/0x780
+[  358.658287][ T9397]  usbhid_parse+0x9a4/0xa70
+[  358.658727][ T9397]  ? __pfx_usbhid_parse+0x10/0x10
+[  358.659165][ T9397]  ? hid_match_id+0x25e/0x2f0
+[  358.659568][ T9397]  hid_add_device+0x190/0xa90
+[  358.659964][ T9397]  ? lockdep_init_map_type+0x2e1/0x810
+[  358.660427][ T9397]  ? __pfx_hid_add_device+0x10/0x10
+[  358.660878][ T9397]  ? lockdep_init_map_type+0x2e1/0x810
+[  358.661324][ T9397]  ? __raw_spin_lock_init+0x3a/0x120
+[  358.661763][ T9397]  usbhid_probe+0xf43/0x1440
+[  358.662151][ T9397]  usb_probe_interface+0x308/0x9e0
+[  358.662572][ T9397]  ? __pfx_usb_probe_interface+0x10/0x10
+[  358.663035][ T9397]  really_probe+0x24f/0xaa0
+[  358.663416][ T9397]  __driver_probe_device+0x1df/0x460
+[  358.663884][ T9397]  ? parse_option_str+0x1a2/0x1f0
+[  358.664317][ T9397]  driver_probe_device+0x49/0x120
+[  358.664734][ T9397]  __device_attach_driver+0x1e3/0x2f0
+[  358.665171][ T9397]  bus_for_each_drv+0x149/0x1e0
+[  358.665569][ T9397]  ? __pfx___device_attach_driver+0x10/0x10
+[  358.666050][ T9397]  ? __pfx_bus_for_each_drv+0x10/0x10
+[  358.666480][ T9397]  ? _raw_spin_unlock_irqrestore+0x5e/0x80
+[  358.666953][ T9397]  ? lockdep_hardirqs_on+0x7c/0x120
+[  358.667380][ T9397]  ? _raw_spin_unlock_irqrestore+0x41/0x80
+[  358.667873][ T9397]  __device_attach+0x1f2/0x4d0
+[  358.668279][ T9397]  ? __pfx___device_attach+0x10/0x10
+[  358.668732][ T9397]  ? do_raw_spin_unlock+0x174/0x240
+[  358.669167][ T9397]  bus_probe_device+0x17f/0x1c0
+[  358.669576][ T9397]  device_add+0xc5e/0x1490
+[  358.669955][ T9397]  ? kfree+0x12e/0x420
+[  358.670301][ T9397]  ? __pfx_device_add+0x10/0x10
+[  358.670713][ T9397]  usb_set_configuration+0x11a5/0x1c50
+[  358.671166][ T9397]  ? __pfx_usb_generic_driver_probe+0x10/0x10
+[  358.671655][ T9397]  usb_generic_driver_probe+0xbf/0x120
+[  358.672096][ T9397]  usb_probe_device+0xea/0x3e0
+[  358.672488][ T9397]  ? __pfx_usb_probe_device+0x10/0x10
+[  358.672932][ T9397]  really_probe+0x24f/0xaa0
+[  358.673307][ T9397]  __driver_probe_device+0x1df/0x460
+[  358.673741][ T9397]  ? parse_option_str+0x1a2/0x1f0
+[  358.674151][ T9397]  driver_probe_device+0x49/0x120
+[  358.674572][ T9397]  __device_attach_driver+0x1e3/0x2f0
+[  358.675017][ T9397]  bus_for_each_drv+0x149/0x1e0
+[  358.675413][ T9397]  ? __pfx___device_attach_driver+0x10/0x10
+[  358.675902][ T9397]  ? __pfx_bus_for_each_drv+0x10/0x10
+[  358.676333][ T9397]  ? _raw_spin_unlock_irqrestore+0x5e/0x80
+[  358.676815][ T9397]  ? lockdep_hardirqs_on+0x7c/0x120
+[  358.677248][ T9397]  ? _raw_spin_unlock_irqrestore+0x41/0x80
+[  358.677735][ T9397]  __device_attach+0x1f2/0x4d0
+[  358.678142][ T9397]  ? __pfx___device_attach+0x10/0x10
+[  358.678587][ T9397]  ? do_raw_spin_unlock+0x174/0x240
+[  358.679034][ T9397]  bus_probe_device+0x17f/0x1c0
+[  358.679450][ T9397]  device_add+0xc5e/0x1490
+[  358.679854][ T9397]  ? __pfx_device_add+0x10/0x10
+[  358.680271][ T9397]  usb_new_device+0x8f4/0x1430
+[  358.680678][ T9397]  hub_port_connect+0x1122/0x2730
+[  358.681105][ T9397]  ? __pfx_hub_port_connect+0x10/0x10
+[  358.681554][ T9397]  hub_port_connect_change+0x27c/0x7f0
+[  358.682009][ T9397]  port_event+0xe3d/0x1220
+[  358.682396][ T9397]  ? __pfx_port_event+0x10/0x10
+[  358.682804][ T9397]  ? hlock_class+0x4e/0x140
+[  358.683193][ T9397]  ? mark_held_locks+0x9f/0xf0
+[  358.683608][ T9397]  ? _raw_spin_unlock_irq+0x23/0x60
+[  358.684067][ T9397]  ? lockdep_hardirqs_on+0x7c/0x120
+[  358.684552][ T9397]  hub_event+0x517/0xca0
+[  358.684960][ T9397]  ? __pfx_hub_event+0x10/0x10
+[  358.685399][ T9397]  ? process_one_work+0x7e2/0x18c0
+[  358.685874][ T9397]  ? rcu_is_watching+0x12/0xd0
+[  358.686321][ T9397]  process_one_work+0x109a/0x18c0
+[  358.686768][ T9397]  ? __pfx_lock_acquire+0x10/0x10
+[  358.687191][ T9397]  ? __pfx_process_one_work+0x10/0x10
+[  358.687655][ T9397]  ? assign_work+0x194/0x250
+[  358.688038][ T9397]  worker_thread+0x677/0xe90
+[  358.688444][ T9397]  ? __pfx_worker_thread+0x10/0x10
+[  358.688875][ T9397]  kthread+0x3b0/0x760
+[  358.689220][ T9397]  ? __pfx_kthread+0x10/0x10
+[  358.689614][ T9397]  ? _raw_spin_unlock_irq+0x23/0x60
+[  358.690053][ T9397]  ? __pfx_kthread+0x10/0x10
+[  358.690459][ T9397]  ret_from_fork+0x45/0x80
+[  358.690872][ T9397]  ? __pfx_kthread+0x10/0x10
+[  358.691276][ T9397]  ret_from_fork_asm+0x1a/0x30
+[  358.691709][ T9397]  </TASK>
+[  358.692242][ T9397] Kernel Offset: disabled
+[  358.692654][ T9397] Rebooting in 86400 seconds..

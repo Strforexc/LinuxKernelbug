@@ -1,0 +1,276 @@
+Warning: Permanently added '[localhost]:16010' (ED25519) to the list of known hosts.
+executing program
+syzkaller login: [   60.632334][   T25] usb 1-1: new high-speed USB device number 2 using dummy_hcd
+[   60.781727][   T25] usb 1-1: Using ep0 maxpacket: 32
+[   60.793223][   T25] usb 1-1: unable to get BOS descriptor or descriptor too short
+[   60.804191][   T25] usb 1-1: config 1 has an invalid interface number: 170 but max is 1
+[   60.808043][   T25] usb 1-1: config 1 has an invalid interface number: 234 but max is 1
+[   60.811754][   T25] usb 1-1: config 1 has no interface number 0
+[   60.813398][   T25] usb 1-1: config 1 has no interface number 1
+[   60.815068][   T25] usb 1-1: config 1 interface 170 altsetting 5 endpoint 0x2 has an invalid bInterval 129, changing to 7
+[   60.818015][   T25] usb 1-1: config 1 interface 170 altsetting 5 has a duplicate endpoint with address 0x4, skipping
+[   60.820732][   T25] usb 1-1: config 1 interface 170 altsetting 5 endpoint 0x82 has an invalid bInterval 33, changing to 9
+[   60.823420][   T25] usb 1-1: config 1 interface 170 altsetting 5 has a duplicate endpoint with address 0x4, skipping
+[   60.825820][   T25] usb 1-1: config 1 interface 170 altsetting 5 has 6 endpoint descriptors, different from the interface descriptor's value: 5
+[   60.828431][   T25] usb 1-1: config 1 interface 170 has no altsetting 0
+[   60.829828][   T25] usb 1-1: config 1 interface 234 has no altsetting 0
+[   60.838331][   T25] usb 1-1: New USB device found, idVendor=080e, idProduct=4eb9, bcdDevice=d7.f6
+[   60.839960][   T25] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   60.841388][   T25] usb 1-1: Product: syz
+[   60.846086][   T25] usb 1-1: Manufacturer: syz
+[   60.846958][   T25] usb 1-1: SerialNumber: syz
+[   61.092148][   T25] ------------[ cut here ]------------
+[   61.092714][   T25] UBSAN: array-index-out-of-bounds in drivers/hid/usbhid/hid-core.c:1025:18
+[   61.093466][   T25] index 1 is out of range for type 'hid_class_descriptor [1]'
+[   61.094081][   T25] CPU: 1 UID: 0 PID: 25 Comm: kworker/1:0 Not tainted 6.14.0-rc4 #1
+[   61.094094][   T25] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   61.094102][   T25] Workqueue: usb_hub_wq hub_event
+[   61.094138][   T25] Call Trace:
+[   61.094143][   T25]  <TASK>
+[   61.094148][   T25]  dump_stack_lvl+0x180/0x1b0
+[   61.094170][   T25]  __ubsan_handle_out_of_bounds+0xdb/0x120
+[   61.094186][   T25]  ? freedev+0x1a1/0x780
+[   61.094208][   T25]  usbhid_parse+0x9a4/0xa70
+[   61.094232][   T25]  ? __pfx_usbhid_parse+0x10/0x10
+[   61.094252][   T25]  ? hid_match_id+0x25e/0x2f0
+[   61.094269][   T25]  hid_add_device+0x193/0xa90
+[   61.094296][   T25]  ? lockdep_init_map_type+0x2e1/0x810
+[   61.094316][   T25]  ? __pfx_hid_add_device+0x10/0x10
+[   61.094336][   T25]  ? lockdep_init_map_type+0x2e1/0x810
+[   61.094355][   T25]  ? __raw_spin_lock_init+0x3a/0x120
+[   61.094372][   T25]  usbhid_probe+0xf43/0x1440
+[   61.094395][   T25]  usb_probe_interface+0x30b/0x9e0
+[   61.094416][   T25]  ? __pfx_usb_probe_interface+0x10/0x10
+[   61.094434][   T25]  really_probe+0x252/0xaa0
+[   61.094453][   T25]  __driver_probe_device+0x1df/0x460
+[   61.094468][   T25]  ? parse_option_str+0x1a2/0x1f0
+[   61.094484][   T25]  driver_probe_device+0x49/0x120
+[   61.094501][   T25]  __device_attach_driver+0x1e3/0x2f0
+[   61.094518][   T25]  bus_for_each_drv+0x14c/0x1e0
+[   61.094529][   T25]  ? __pfx___device_attach_driver+0x10/0x10
+[   61.094547][   T25]  ? __pfx_bus_for_each_drv+0x10/0x10
+[   61.094558][   T25]  ? _raw_spin_unlock_irqrestore+0x5e/0x80
+[   61.094575][   T25]  ? lockdep_hardirqs_on+0x7c/0x120
+[   61.094592][   T25]  ? _raw_spin_unlock_irqrestore+0x41/0x80
+[   61.094610][   T25]  __device_attach+0x1f2/0x4d0
+[   61.094626][   T25]  ? __pfx___device_attach+0x10/0x10
+[   61.094643][   T25]  ? do_raw_spin_unlock+0x54/0x240
+[   61.094659][   T25]  bus_probe_device+0x17f/0x1c0
+[   61.094675][   T25]  device_add+0xc5e/0x1490
+[   61.094694][   T25]  ? kfree+0x12e/0x420
+[   61.094711][   T25]  ? __pfx_device_add+0x10/0x10
+[   61.094735][   T25]  usb_set_configuration+0x11a5/0x1c50
+[   61.094762][   T25]  ? __pfx_usb_generic_driver_probe+0x10/0x10
+[   61.094774][   T25]  usb_generic_driver_probe+0xbf/0x120
+[   61.094788][   T25]  usb_probe_device+0xed/0x3e0
+[   61.094803][   T25]  ? __pfx_usb_probe_device+0x10/0x10
+[   61.094819][   T25]  really_probe+0x252/0xaa0
+[   61.094836][   T25]  __driver_probe_device+0x1df/0x460
+[   61.094851][   T25]  ? parse_option_str+0x1a2/0x1f0
+[   61.094867][   T25]  driver_probe_device+0x49/0x120
+[   61.094884][   T25]  __device_attach_driver+0x1e3/0x2f0
+[   61.094902][   T25]  bus_for_each_drv+0x14c/0x1e0
+[   61.094913][   T25]  ? __pfx___device_attach_driver+0x10/0x10
+[   61.094930][   T25]  ? __pfx_bus_for_each_drv+0x10/0x10
+[   61.094941][   T25]  ? _raw_spin_unlock_irqrestore+0x5e/0x80
+[   61.094957][   T25]  ? lockdep_hardirqs_on+0x7c/0x120
+[   61.094974][   T25]  ? _raw_spin_unlock_irqrestore+0x41/0x80
+[   61.094993][   T25]  __device_attach+0x1f2/0x4d0
+[   61.095008][   T25]  ? __pfx___device_attach+0x10/0x10
+[   61.095025][   T25]  ? do_raw_spin_unlock+0x54/0x240
+[   61.095042][   T25]  bus_probe_device+0x17f/0x1c0
+[   61.095057][   T25]  device_add+0xc5e/0x1490
+[   61.095078][   T25]  ? __pfx_device_add+0x10/0x10
+[   61.095102][   T25]  usb_new_device+0x8f4/0x1430
+[   61.095120][   T25]  hub_port_connect+0x1122/0x2730
+[   61.095144][   T25]  ? __pfx_hub_port_connect+0x10/0x10
+[   61.095164][   T25]  hub_port_connect_change+0x27c/0x7f0
+[   61.095184][   T25]  port_event+0xe3d/0x1220
+[   61.095202][   T25]  ? __pfx_port_event+0x10/0x10
+[   61.095215][   T25]  ? hlock_class+0x4e/0x140
+[   61.095231][   T25]  ? mark_held_locks+0x9f/0xf0
+[   61.095249][   T25]  ? _raw_spin_unlock_irq+0x23/0x60
+[   61.095265][   T25]  ? lockdep_hardirqs_on+0x7c/0x120
+[   61.095295][   T25]  hub_event+0x517/0xca0
+[   61.095315][   T25]  ? __pfx_hub_event+0x10/0x10
+[   61.095331][   T25]  ? process_one_work+0x7e2/0x18c0
+[   61.095349][   T25]  ? rcu_is_watching+0x12/0xd0
+[   61.095370][   T25]  process_one_work+0x109d/0x18c0
+[   61.095391][   T25]  ? __pfx_lock_acquire+0x10/0x10
+[   61.095410][   T25]  ? __pfx_process_one_work+0x10/0x10
+[   61.095430][   T25]  ? assign_work+0x194/0x250
+[   61.095446][   T25]  worker_thread+0x677/0xe90
+[   61.095467][   T25]  ? __pfx_worker_thread+0x10/0x10
+[   61.095484][   T25]  kthread+0x3b3/0x760
+[   61.095499][   T25]  ? __pfx_kthread+0x10/0x10
+[   61.095514][   T25]  ? _raw_spin_unlock_irq+0x23/0x60
+[   61.095530][   T25]  ? __pfx_kthread+0x10/0x10
+[   61.095545][   T25]  ret_from_fork+0x48/0x80
+[   61.095565][   T25]  ? __pfx_kthread+0x10/0x10
+[   61.095579][   T25]  ret_from_fork_asm+0x1a/0x30
+[   61.095602][   T25]  </TASK>
+[   61.095606][   T25] ---[ end trace ]---
+[   61.137269][   T25] Kernel panic - not syncing: UBSAN: panic_on_warn set ...
+[   61.138263][   T25] CPU: 1 UID: 0 PID: 25 Comm: kworker/1:0 Not tainted 6.14.0-rc4 #1
+[   61.139326][   T25] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014
+[   61.140538][   T25] Workqueue: usb_hub_wq hub_event
+[   61.141256][   T25] Call Trace:
+[   61.141729][   T25]  <TASK>
+[   61.142129][   T25]  dump_stack_lvl+0x3d/0x1b0
+[   61.142572][   T25]  panic+0x6d5/0x790
+[   61.142915][   T25]  ? __pfx_panic+0x10/0x10
+[   61.143308][   T25]  ? __pfx__printk+0x10/0x10
+[   61.143696][   T25]  ? mark_lock+0x38/0x400
+[   61.144065][   T25]  check_panic_on_warn+0xb1/0xc0
+[   61.144518][   T25]  __ubsan_handle_out_of_bounds+0xfb/0x120
+[   61.144991][   T25]  ? freedev+0x1a1/0x780
+[   61.145377][   T25]  usbhid_parse+0x9a4/0xa70
+[   61.145783][   T25]  ? __pfx_usbhid_parse+0x10/0x10
+[   61.146227][   T25]  ? hid_match_id+0x25e/0x2f0
+[   61.146666][   T25]  hid_add_device+0x193/0xa90
+[   61.147088][   T25]  ? lockdep_init_map_type+0x2e1/0x810
+[   61.147571][   T25]  ? __pfx_hid_add_device+0x10/0x10
+[   61.148045][   T25]  ? lockdep_init_map_type+0x2e1/0x810
+[   61.148542][   T25]  ? __raw_spin_lock_init+0x3a/0x120
+[   61.149027][   T25]  usbhid_probe+0xf43/0x1440
+[   61.149467][   T25]  usb_probe_interface+0x30b/0x9e0
+[   61.149932][   T25]  ? __pfx_usb_probe_interface+0x10/0x10
+[   61.150426][   T25]  really_probe+0x252/0xaa0
+[   61.150811][   T25]  __driver_probe_device+0x1df/0x460
+[   61.151247][   T25]  ? parse_option_str+0x1a2/0x1f0
+[   61.151674][   T25]  driver_probe_device+0x49/0x120
+[   61.152096][   T25]  __device_attach_driver+0x1e3/0x2f0
+[   61.152547][   T25]  bus_for_each_drv+0x14c/0x1e0
+[   61.152951][   T25]  ? __pfx___device_attach_driver+0x10/0x10
+[   61.153457][   T25]  ? __pfx_bus_for_each_drv+0x10/0x10
+[   61.153914][   T25]  ? _raw_spin_unlock_irqrestore+0x5e/0x80
+[   61.154437][   T25]  ? lockdep_hardirqs_on+0x7c/0x120
+[   61.154882][   T25]  ? _raw_spin_unlock_irqrestore+0x41/0x80
+[   61.155394][   T25]  __device_attach+0x1f2/0x4d0
+[   61.155814][   T25]  ? __pfx___device_attach+0x10/0x10
+[   61.156265][   T25]  ? do_raw_spin_unlock+0x54/0x240
+[   61.156717][   T25]  bus_probe_device+0x17f/0x1c0
+[   61.157147][   T25]  device_add+0xc5e/0x1490
+[   61.157568][   T25]  ? kfree+0x12e/0x420
+[   61.157933][   T25]  ? __pfx_device_add+0x10/0x10
+[   61.158376][   T25]  usb_set_configuration+0x11a5/0x1c50
+[   61.158856][   T25]  ? __pfx_usb_generic_driver_probe+0x10/0x10
+[   61.159378][   T25]  usb_generic_driver_probe+0xbf/0x120
+[   61.159847][   T25]  usb_probe_device+0xed/0x3e0
+[   61.160287][   T25]  ? __pfx_usb_probe_device+0x10/0x10
+[   61.160766][   T25]  really_probe+0x252/0xaa0
+[   61.161166][   T25]  __driver_probe_device+0x1df/0x460
+[   61.161625][   T25]  ? parse_option_str+0x1a2/0x1f0
+[   61.162034][   T25]  driver_probe_device+0x49/0x120
+[   61.162453][   T25]  __device_attach_driver+0x1e3/0x2f0
+[   61.162906][   T25]  bus_for_each_drv+0x14c/0x1e0
+[   61.163328][   T25]  ? __pfx___device_attach_driver+0x10/0x10
+[   61.163845][   T25]  ? __pfx_bus_for_each_drv+0x10/0x10
+[   61.164321][   T25]  ? _raw_spin_unlock_irqrestore+0x5e/0x80
+[   61.164826][   T25]  ? lockdep_hardirqs_on+0x7c/0x120
+[   61.165288][   T25]  ? _raw_spin_unlock_irqrestore+0x41/0x80
+[   61.165801][   T25]  __device_attach+0x1f2/0x4d0
+[   61.166206][   T25]  ? __pfx___device_attach+0x10/0x10
+[   61.166651][   T25]  ? do_raw_spin_unlock+0x54/0x240
+[   61.167086][   T25]  bus_probe_device+0x17f/0x1c0
+[   61.167529][   T25]  device_add+0xc5e/0x1490
+[   61.167912][   T25]  ? __pfx_device_add+0x10/0x10
+[   61.168331][   T25]  usb_new_device+0x8f4/0x1430
+[   61.168755][   T25]  hub_port_connect+0x1122/0x2730
+[   61.169205][   T25]  ? __pfx_hub_port_connect+0x10/0x10
+[   61.169676][   T25]  hub_port_connect_change+0x27c/0x7f0
+[   61.170152][   T25]  port_event+0xe3d/0x1220
+[   61.170557][   T25]  ? __pfx_port_event+0x10/0x10
+[   61.170973][   T25]  ? hlock_class+0x4e/0x140
+[   61.171376][   T25]  ? mark_held_locks+0x9f/0xf0
+[   61.171791][   T25]  ? _raw_spin_unlock_irq+0x23/0x60
+[   61.172244][   T25]  ? lockdep_hardirqs_on+0x7c/0x120
+[   61.172715][   T25]  hub_event+0x517/0xca0
+[   61.173091][   T25]  ? __pfx_hub_event+0x10/0x10
+[   61.173509][   T25]  ? process_one_work+0x7e2/0x18c0
+[   61.173945][   T25]  ? rcu_is_watching+0x12/0xd0
+[   61.174372][   T25]  process_one_work+0x109d/0x18c0
+[   61.174805][   T25]  ? __pfx_lock_acquire+0x10/0x10
+[   61.175246][   T25]  ? __pfx_process_one_work+0x10/0x10
+[   61.175720][   T25]  ? assign_work+0x194/0x250
+[   61.176108][   T25]  worker_thread+0x677/0xe90
+[   61.176627][   T25]  ? __pfx_worker_thread+0x10/0x10
+[   61.177069][   T25]  kthread+0x3b3/0x760
+[   61.177445][   T25]  ? __pfx_kthread+0x10/0x10
+[   61.177853][   T25]  ? _raw_spin_unlock_irq+0x23/0x60
+[   61.178304][   T25]  ? __pfx_kthread+0x10/0x10
+[   61.178722][   T25]  ret_from_fork+0x48/0x80
+[   61.179120][   T25]  ? __pfx_kthread+0x10/0x10
+[   61.179537][   T25]  ret_from_fork_asm+0x1a/0x30
+[   61.179944][   T25]  </TASK>
+[   61.180379][   T25] Kernel Offset: disabled
+[   61.180788][   T25] Rebooting in 86400 seconds..
+
+VM DIAGNOSIS:
+00:32:32  Registers:
+info registers vcpu 0
+RAX=dffffc0000000000 RBX=ffffc9001197fdb0 RCX=0000000000000000 RDX=1ffff9200232ff49
+RSI=0000000000000000 RDI=ffffc9001197fa48 RBP=ffffc90011978000 RSP=ffffc9001197f9d8
+R8 =0000000000000000 R9 =0000000000000001 R10=ffffc9001197fa6c R11=ffffc9001197fda8
+R12=ffffc9001197fa88 R13=ffffc9001197fa70 R14=ffffffff913bbb32 R15=ffffc9001197fa38
+RIP=ffffffff816cefb7 RFL=00000246 [---Z-P-] CPL=0 II=0 A20=1 SMM=0 HLT=0
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 00007f77edb538c0 ffffffff 00c00000
+GS =0000 ffff88802b600000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe0000003000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000001000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=0000560c13332100 CR3=0000000029c5a000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=0000000000000000 000000000000ff00 XMM01=2c2c2c2c2c2c2c2c 2c2c2c2c2c2c2c2c
+XMM02=ffffffffffffff00 ffffff000000ff00 XMM03=0000000000000000 0000000000000000
+XMM04=0000000000000000 000000000000ff00 XMM05=ffffff0000000000 000000000000ff00
+XMM06=00000002ffffffff 0000560c13318990 XMM07=0000560c132ef1c0 0000560c132ef180
+XMM08=0000560c1337fc40 00000000ff000201 XMM09=ffff000000000000 000000ffff00ffff
+XMM10=0000000000000000 0000000000000000 XMM11=ffff0000ffffffff ffff0000ffffffff
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000
+info registers vcpu 1
+RAX=000000000000003a RBX=00000000000003f8 RCX=0000000000000000 RDX=00000000000003f8
+RSI=0000000000000000 RDI=ffffffff9b037a00 RBP=ffffffff9b0379c0 RSP=ffffc900004ce898
+R8 =0000000000000000 R9 =0000000000000000 R10=0000000000000000 R11=0000000000000000
+R12=0000000000000000 R13=000000000000003a R14=ffffffff9b0379c0 R15=0000000000000000
+RIP=ffffffff8540d9bf RFL=00000002 [-------] CPL=0 II=0 A20=1 SMM=0 HLT=0
+ES =0000 0000000000000000 ffffffff 00c00000
+CS =0010 0000000000000000 ffffffff 00a09b00 DPL=0 CS64 [-RA]
+SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+DS =0000 0000000000000000 ffffffff 00c00000
+FS =0000 0000000000000000 ffffffff 00c00000
+GS =0000 ffff88807ee00000 ffffffff 00c00000
+LDT=0000 0000000000000000 ffffffff 00c00000
+TR =0040 fffffe000004a000 00004087 00008b00 DPL=0 TSS64-busy
+GDT=     fffffe0000048000 0000007f
+IDT=     fffffe0000000000 00000fff
+CR0=80050033 CR2=00007fffcad3f850 CR3=000000002046e000 CR4=000006f0
+DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+DR6=00000000fffe0ff0 DR7=0000000000000400
+EFER=0000000000000d01
+FCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80
+FPR0=0000000000000000 0000 FPR1=0000000000000000 0000
+FPR2=0000000000000000 0000 FPR3=0000000000000000 0000
+FPR4=0000000000000000 0000 FPR5=0000000000000000 0000
+FPR6=0000000000000000 0000 FPR7=0000000000000000 0000
+XMM00=ffffffffffffffff ffffffffffffffff XMM01=0000000000000000 000000ffffffffff
+XMM02=0000000000000000 0000000000000000 XMM03=ffffffffffffff00 ffffffff00000000
+XMM04=0000000000000000 0000000000000000 XMM05=0000560c13314a60 ffffffff00000001
+XMM06=0000000000000002 0000560c13314b40 XMM07=0000560c13314b00 0000560c13314ae0
+XMM08=0000560c1339a0a0 000000ff03020100 XMM09=ffff000000000000 000000ffff00ffff
+XMM10=0000000000000000 0000000000000000 XMM11=ffff0000ffffffff ffff0000ffffffff
+XMM12=0000000000000000 0000000000000000 XMM13=0000000000000000 0000000000000000
+XMM14=0000000000000000 0000000000000000 XMM15=0000000000000000 0000000000000000
